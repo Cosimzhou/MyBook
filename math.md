@@ -47,15 +47,15 @@ $\begin{align}a^n=\underbrace{a\times a\times\cdots\times a}_{n}=\prod_{i=1}^{n}
 
 $\begin{align}n!=\prod_{i=1}^{n}i\end{align}=\underbrace{1\times 2\times\cdots\times n}_{n}$
 
-$\begin{align}C_n^{m}=\frac{n!}{m!(n-m)!}\end{align}$
+$\begin{align}{\rm C}_n^{m}=\frac{n!}{m!(n-m)!}\end{align}$
 
-$\begin{align}A_n^{m}=\frac{n!}{(n-m)!}=\prod_{i=n-m+1}^ni\end{align}$
+$\begin{align}{\rm A}_n^{m}=\frac{n!}{(n-m)!}=\prod_{i=n-m+1}^ni\end{align}$
 
 $\begin{align}\log_ba=\frac{\ln a}{\ln b}\end{align}$
 
 
 
-$\begin{aligned}(a+b)^n=\sum_{i=0}^{n}C_n^{i}a^{n-i}b^{i}\end{aligned}$
+$\begin{aligned}(a+b)^n=\sum_{i=0}^{n}{\rm C}_n^{i}a^{n-i}b^{i}\end{aligned}$
 
 $(a+b)(a-b)=a^2-b^2$
 
@@ -68,6 +68,32 @@ $a^3\pm b^3=(a\pm b)(a^2\mp ab+b^2)$
 $a[n]b=\underbrace{a[n-1](a[n-1](a[n-1](\cdots a[n-1]a)))}_{b\quad coyies \quad of\quad a},n\ge 2$
 
 $a[n]b=a[n-1](a[n](b-1)),n\ge 1$
+
+
+
+
+
+# Combinatorial 【组合】
+
+
+
+* Factorial【阶乘】
+
+$\begin{aligned}f(0)=1,f(n)=nf(n-1)=\prod_{i=1}^ni=n!\quad n>0\end{aligned}$
+
+* Arrangement【排列数】
+
+$\begin{align}{\rm{A}}_n^{m}=\frac{n!}{(n-m)!}=\prod_{i=n-m+1}^ni\end{align}$
+
+* Combination【组合数】
+
+$\begin{align}{\rm{C}}_n^{m}=\frac{n!}{m!(n-m)!}\end{align}$
+
+* Catalan Number【Catalan数】
+
+$\begin{aligned}f(0)=1,f(1)=1,f(n)=\sum\limits_{i=0}^{n-1}f(n-1-i)f(i)=\frac{(2n)!}{(n+1)!n!}=\frac{{\rm{C}}_{2n}^n}{n+1}\end{aligned}$
+
+
 
 
 
@@ -99,7 +125,9 @@ $\begin{aligned}M=\prod_{i=1}^nm_i, \quad M_i=\frac{M}{m_i},\quad t_iM_i\equiv 1
 
 $\begin{aligned}x=kM+\sum_{i=1}^na_it_iM_i\end{aligned},\quad k\in\mathbb{Z}$
 
-# sequence【数列】
+
+
+# Sequence【数列】
 
 #### Artihmetic series【等差数列】
 
@@ -167,7 +195,7 @@ $\begin{aligned}a_n=\left(\frac{1+\sqrt{5} }{2}\right)^n+\left(\frac{1-\sqrt{5}}
 
 Bernoulli number
 
-$\begin{aligned}B_n=\sum^n_{i=0}C^i_nB_i\end{aligned}$
+$\begin{aligned}B_n=\sum^n_{i=0}{\rm C}^i_nB_i\end{aligned}$
 
 
 
@@ -365,9 +393,9 @@ $(\cos\theta+i\sin\theta)^n=\cos n\theta+i\sin n\theta$
 
 $(\sin\alpha+\sin\beta)(\sin\alpha-\sin\beta)=\sin(\alpha+\beta)\sin(\alpha-\beta)$
 
-$\begin{aligned}\cos^n\theta=\frac{1}{2^n}\sum^n_{k=0}C^k_n\cos(2k-n)\theta\end{aligned}$
+$\begin{aligned}\cos^n\theta=\frac{1}{2^n}\sum^n_{k=0}{\rm C}^k_n\cos(2k-n)\theta\end{aligned}$
 
-$\begin{aligned}\sin^n\theta=\frac{1}{2^n}\sum^n_{k=0}(-1)^kC^k_n\cos\left((2k-n)\theta+\frac{n\pi}{2}\right)\end{aligned}$
+$\begin{aligned}\sin^n\theta=\frac{1}{2^n}\sum^n_{k=0}(-1)^k{\rm{C}}^k_n\cos\left((2k-n)\theta+\frac{n\pi}{2}\right)\end{aligned}$
 
 
 
@@ -472,9 +500,27 @@ integrable【可积】
 
 
 
-# Analytic geometry
+# Analytic Geometry
 
-#### cycloid【摆线】
+#### Ellipse【椭圆】
+
+$\begin{aligned}\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\quad a,b\neq0\end{aligned}$
+
+
+
+#### Parabola【抛物线】
+
+$\begin{aligned}y=ax^2+bx+c\quad a\neq 0\end{aligned}$
+
+
+
+#### Hyperbola【双曲线】
+
+$\begin{aligned}\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\quad a,b\neq 0\end{aligned}$
+
+
+
+#### Cycloid【摆线】
 
 $\left\{\begin{array}{l}x=r(t-\sin t)\\y=r(1-\cos t)r\end{array}\right.$
 
@@ -482,7 +528,9 @@ $\left\{\begin{array}{l}x=r(t-\sin t)\\y=r(1-\cos t)r\end{array}\right.$
 
 ### Cantenary【悬链线】
 
-$\begin{aligned}y=\rm{acosh}\left(\frac{x}{a}\right)\end{aligned}$
+$\begin{aligned}y={\rm{acosh}}\left(\frac{x}{a}\right)=\ln\left|\frac{x\pm\sqrt{x^2-a^2}}{a}\right|\end{aligned}$
+
+
 
 
 
@@ -556,7 +604,7 @@ $\begin{aligned}(1+x)^a=1+\frac{a}{1!}x+\frac{a(a-1)}{2!}x^2+\frac{a(a-1)(a-2)}{
 
 
 
-# Indefinite integral【不定积分】
+# Indefinite Integral【不定积分】
 
 $\begin{align}\int x^{k}\mathrm{d}x=\frac{1}{k+1}x^{k+1}+C,\quad k\neq-1\end{align}$
 
@@ -610,6 +658,8 @@ or
 
 $\begin{aligned}(f*g)(n)=\sum^{\infin}_{\tau=-\infin}f(\tau)g(n-\tau)\end{aligned}$
 
+
+
 # Transcendental Functions【超越函数】
 
 analytic function
@@ -630,6 +680,8 @@ $\begin{aligned}\zeta(s)=\sum_{n=1}^{\infin}\frac{1}{n^s}=\frac{1}{\Gamma(s)}\in
 
 $\begin{aligned}W(x)=\sum\limits^{\infin}_{i=0}a^n\cos(b^n\pi x)\end{aligned}$ , which $\begin{aligned}0<a<1,b=2k+1,k\in Z^*, ab>1+\frac{3}{2}\pi\end{aligned}$
 
+
+
 # Partial Derivative【偏导数】
 
 ### Hamiltonian【汉密尔顿算子】
@@ -646,6 +698,8 @@ $\begin{align}\Delta&={\nabla}^{2}=\nabla \cdot \nabla\\&=\frac{\partial^2}{\par
 
 
 
+
+
 ## Field Theroy【场论】
 
 Assume $u=f(x,y,z)$ is a scalar field, then directional derivative and gradient as follow.
@@ -656,7 +710,7 @@ $\begin{align}\vec n=\frac{\vec a}{|\vec a|}=\frac{a_xi}{|\vec a|}+\frac{a_y j}{
 
 
 
-$\begin{aligned}\mathrm{grad}u=\frac{\partial u}{\partial x}i+\frac{\partial u}{\partial y}j+\frac{\partial u}{\partial z}k\end{aligned}$
+$\begin{aligned}{\rm{grad}}u=\frac{\partial u}{\partial x}i+\frac{\partial u}{\partial y}j+\frac{\partial u}{\partial z}k\end{aligned}$
 
 
 
@@ -690,7 +744,7 @@ $\begin{align}\oint_{L} P(x,y)\mathrm{d}x+Q(x,y)\mathrm{d}y=\iint_{D}\left(\frac
 
 $\begin{aligned}\oiint\limits_{\Sigma}P\rm d\mit y\rm d\mit z+Q\rm d\mit z\rm d\mit x+R\rm d\mit x\rm d\mit y=\iiint\limits_{\Omega}\left(\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}\right)\rm d\mit x\rm d\mit y\rm d\mit z\end{aligned}$
 
-$\begin{aligned}\iiint{ \nabla\cdot F\rm d\mit V} =\oiint\limits_{s}{F\cdot\rm d\mit S}\end{aligned}$
+$\begin{aligned}\iiint{\nabla\cdot F\rm d\mit V} =\oiint\limits_{s}{F\cdot\rm d\mit S}\end{aligned}$
 
 
 
