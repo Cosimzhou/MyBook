@@ -174,6 +174,11 @@ $\sqrt{1+(n-1)\sqrt{1+n\sqrt{1+(n+1)\sqrt{1+(n+2)\sqrt{\cdots \infin}}}}}=n$
 $\begin{aligned}\prod^n_{i=1}i=n!=\int_0^{+\infin}t^{n}e^{-t}\mathrm{d}t=\Gamma(n+1)\end{aligned}$
 
 
+$\begin{aligned}\frac{1}{\pi}=\frac{2\sqrt{2}}{99^2}\sum\limits_{k=0}^{\infin}\frac{26390k+1103}{396^{4k}}\frac{(4k)!}{k!}\end{aligned}$
+
+
+$\begin{aligned}-\sqrt[3]{\cos(\frac{\pi}{9})}+\sqrt[3]{\cos(\frac{2\pi}{9})}+\sqrt[3]{\cos(\frac{4\pi}{9})}=\sqrt[3]{\frac{3\sqrt[3]{9}-6}{2}}\end{aligned}$
+
 
 
 
@@ -261,7 +266,7 @@ $\left\{\begin{array}{l}\begin{aligned}x_1=-\frac{b}{4 a}+\frac{1}{2}\Omega+\fra
 
 
 
-![](tfdef.png)
+![Triangular](tfdef.png)
 
 $\begin{align}\sin\theta=\frac{b}{c},\quad\csc\theta=\frac{c}{b}\end{align}$
 
@@ -421,6 +426,7 @@ $\begin{aligned}\cos\alpha-\cos\beta=2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha
 
 
 
+#### 一些可以表示为代数数的三角函数
 
 | $\theta$ | $\sin\theta$ | $\cos\theta$ | $\tan\theta$ | $\cot\theta$ | $\sec\theta$ | $\csc\theta$ |
 | -------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
@@ -428,7 +434,7 @@ $\begin{aligned}\cos\alpha-\cos\beta=2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha
 | $18^{\circ}\quad\frac{\pi}{10}$ | $\frac{\sqrt{5}-1}{4}$ | $\frac{\sqrt{10+2\sqrt{5}}}{4}$ | $\frac{\sqrt{25-10\sqrt{5}}}{5}$ | $\sqrt{5+2\sqrt{5}}$ | $\frac{\sqrt{50-10\sqrt{5}}}{5}$ | $\sqrt{5}+1$ |
 | $22.5^{\circ}\quad\frac{\pi}{8}$ | $\frac{\sqrt{2-\sqrt{2}}}{2}$ | $\frac{\sqrt{2+\sqrt{2}}}{2}$ | $\sqrt{2}-1$ | $\sqrt{2}+1$ | $\sqrt{4-2\sqrt{2}}$ | $\sqrt{4+2\sqrt{2}}$ |
 | $30^{\circ}\quad\frac{\pi}{6}$ | $\frac{1}{2}$ | $\frac{\sqrt{3}}{2}$ | $\frac{\sqrt{3}}{3}$ | $\sqrt{3}$ | $\frac{2\sqrt{3}}{3}$ | $2$ |
-| $36^{\circ}\quad\frac{\pi}{5}$ | $\frac{\sqrt{10-2\sqrt{5}}}{4}$ | $\frac{\sqrt{5}+1}{4}$ | $\sqrt{5-2\sqrt{5}}$ | $\frac{\sqrt{50+10\sqrt{5}}}{5}$ | $\sqrt{5}-1$ | $\frac{\sqrt{25+10\sqrt{5}}}{5}$ |
+| $36^{\circ}\quad\frac{\pi}{5}$ | $\frac{\sqrt{10-2\sqrt{5}}}{4}$ | $\frac{\sqrt{5}+1}{4}$ | $\sqrt{5-2\sqrt{5}}$ |  $\frac{\sqrt{25+10\sqrt{5}}}{5}$ | $\sqrt{5}-1$ | $\frac{\sqrt{50+10\sqrt{5}}}{5}$ |
 | $45^{\circ}\quad\frac{\pi}{4}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{2}}{2}$ | $1$ | $1$ | $\sqrt{2}$ | $\sqrt{2}$ |
 | $54^{\circ}\quad\frac{3\pi}{10}$ | $\frac{\sqrt{5}+1}{4}$ | $\frac{\sqrt{10-2\sqrt{5}}}{4}$ | $\frac{\sqrt{25+10\sqrt{5}}}{5}$ | $\sqrt{5-2\sqrt{5}}$ | $\frac{50+10\sqrt{5}}{5}$ | $\sqrt{5}-1$ |
 | $60^{\circ}\quad\frac{\pi}{3}$ | $\frac{\sqrt{3}}{2}$ | $\frac{1}{2}$ | $\sqrt{3}$ | $\frac{\sqrt{3}}{3}$ | $2$ | $\frac{2\sqrt{3}}{3}$ |
@@ -440,25 +446,6 @@ $\begin{aligned}\cos\alpha-\cos\beta=2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha
 | $270^{\circ}\quad\frac{3\pi}{2}$ | $-1$ | $0$ | $\to\infin$ | $0$ | $\to\infin$ | $-1$ |
 | $360^{\circ}\quad 2\pi$ | $0$ | $1$ | $0$ | $\to\infin$ | $1$ | $\to\infin$ |
 
-
-
-
-
-    α=15°(π/12) sinα=(√6-√2)/4 cosα=(√6+√2)/4 tαnα=2-√3 cotα=2+√3 secα=√6-√2 cscα=√6+√2
-    α=18°(π/10) sinα=(√5-1)/4 cosα=√(10+2√5)/4 tαnα=√(25-10√5)/5 cscα=√5+1 secα=√(50-10√5)/5 cotα=√(5+2√5)
-    α=22.5°(π/8) sinα=√(2-√2)/2 cosα=√(2+√2)/2 tαnα=√2-1 cotα=√2+1 secα=√(4-2√2) cscα=√(4+2√2)
-    α=30°(π/6) sinα=1/2 cosα=√3/2 tαnα=√3/3 cotα=√3 secα=2√3/3 cscα=2
-    α=36°(π/5) sinα=√(10-2√5)/4 cosα=(√5+1)/4 tαnα=√(5-2√5) cscα=√(50+10√5)/5 secα=√5-1 cotα=√(25+10√5)/5
-    α=45°(π/4) sinα=√2/2 cosα=√2/2 tαnα=1 cotα=1 secα=√2 cscα=√2
-    α=54°(3π/10) sinα=(√5+1)/4 cosα=√(10-2√5)/4 tαnα=√(25+10√5)/5 cscα=√5-1 secα=√(50+10√5)/5 cotα=√(5-2√5)
-    α=60°(π/3) sinα=√3/2 cosα=1/2 tαnα=√3 cotα=√3/3 secα=2 cscα=2√3/3
-    α=67.5°(3π/8) sinα=√(2+√2)/2 cosα=√(2-√2)/2 tαnα=√2+1 cotα=√2-1 secα=√(4+2√2) cscα=√(4-2√2)
-    α=72°(2π/5) sinα=√(10+2√5)/4 cosα=(√5-1)/4 tαnα=√(5+2√5) cscα=√(50-10√5)/5 secα=√5+1 cotα=√(25-10√5)/5
-    α=75°(5π/12) sinα=(√6+√2)/4 cosα=(√6-√2)/4 tαnα=2+√3 cotα=2-√3 secα=√6+√2 cscα=√6-√2
-    α=90°(π/2) sinα=1 cosα=0 tαnα→∞ cotα=0 secα→∞ cscα=1
-    α=180°(π) sinα=0 cosα=-1 tαnα=0 cotα→∞ secα=-1 cscα→∞
-    α=270°(3π/2) sinα=-1 cosα=0 tαnα→∞ cotα=0 secα→∞ cscα=-1
-    α=360°(2π) sinα=0 cosα=1 tαnα=0 cotα→∞ secα=1 cscα→∞
 
 
 
@@ -840,5 +827,6 @@ F是洛伦兹力， q是带电粒子的电荷量，E是电场强度， v是带�
 $\begin{align}F=\int V(pE+J\times B)\mathrm{d}r\end{align}$
 
 V是积分的体积，p是电荷密度，J是电流密度，dr是微小体元素。
+
 
 
