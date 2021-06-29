@@ -41,7 +41,7 @@ $\begin{aligned}\pi=\int^1_{-1}\frac{1}{\sqrt{1-x^2}}\mathrm{d}x\end{aligned}$
 
 $a+b=b+a$
 
-$\begin{align}a\times b=\underbrace{a+a+\cdots+a}_{b}=\sum_{i=1}^{n}a\end{align}$
+$\begin{align}a\times b=\underbrace{a+a+\cdots+a}_{b}=\sum_{i=1}^{b}a\end{align}$
 
 $\begin{align}a^n=\underbrace{a\times a\times\cdots\times a}_{n}=\prod_{i=1}^{n}a\end{align}$
 
@@ -162,6 +162,12 @@ $\begin{aligned}\sum\limits_{i=1}^ni^{k+1}=(n+1)\sum\limits_{i=1}^ni^k-\sum_{i=1
 $\begin{aligned}\lim_{n\to+\infin}\sum_{i=1}^{n}i=-\frac{1}{12}\end{aligned}$
 
 
+##### Bernoulli numbers 【伯努利数】
+
+$B_0=1$
+
+$\begin{aligned}B_n=\sum^n_{i=0}{\rm C}^i_nB_i\end{aligned}$
+
 
 ##### Ramanujan Equation
 
@@ -198,16 +204,22 @@ $\begin{aligned}a_n=\left(\frac{1+\sqrt{5} }{2}\right)^n+\left(\frac{1-\sqrt{5}}
 
 
 
-Bernoulli number
-
-$\begin{aligned}B_n=\sum^n_{i=0}{\rm C}^i_nB_i\end{aligned}$
 
 
+#### Fourier series
 
+$\begin{aligned}x(t)=\sum_{k=-\infin}^{+\infin}a_{k}e^{jk(\frac{2\pi}{T})t}\end{aligned}$
 
+Which $\begin{aligned}a_k=\frac{1}{T}\int_Tx(t)e^{-jk(\frac{2\pi}{T})t}\mathrm{d}t\end{aligned}$
 
-Fourier
+Properties
 
+Orthogonality
+* $\begin{aligned}\int_0^{2\pi}\cos(mx)\cos(nx)\mathrm{d}x=0\quad m\neq n\end{aligned}$
+* $\begin{aligned}\int_0^{2\pi}\sin(nx)\sin(nx)\mathrm{d}x=\pi\end{aligned}$
+* $\begin{aligned}\int_0^{2\pi}\cos(nx)\cos(nx)\mathrm{d}x=\pi\end{aligned}$
+
+Parity
 
 
 #### Quadratic Equations【一元二次方程】
@@ -262,7 +274,7 @@ $\left\{\begin{array}{l}\begin{aligned}x_1=-\frac{b}{4 a}+\frac{1}{2}\Omega+\fra
 
 
 
-# Triangular【三角函数】
+# Trigonometric【三角函数】
 
 
 
@@ -557,7 +569,9 @@ $\begin{aligned}f (g(x))'=f'(g(x))g'(x)\end{aligned}$
 
 ## Taylor Formula【泰勒公式】
 
-$\begin{aligned}\begin{array}{cl}f(x)&=\sum\limits^n_{i=0}\frac{f^{(i)}(x_0)}{i!}(x-x_0)^i+R_n(x)\\&=f(x_0)+f^{\prime}(x_0)(x-x_0)+\frac{1}{2}f^{\prime\prime}(x_0)(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x+x_0)^n+R_n(x) \end{array}\end{aligned}$
+$\begin{aligned}\begin{array}{cl}f(x)&=\sum\limits^n_{i=0}\frac{f^{(i)}(x_0)}{i!}(x-x_0)^i+R_n(x)\\
+&=f(x_0)+f^{\prime}(x_0)(x-x_0)+\frac{1}{2}f^{\prime\prime}(x_0)(x-x_0)^2+\cdots+\frac{f^{(n)}(x_0)}{n!}(x+x_0)^n+R_n(x)
+\end{array}\end{aligned}$
 
 
 
