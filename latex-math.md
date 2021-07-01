@@ -67,6 +67,12 @@ $\sum\limits_{i=1}^{n}\frac{1}{n^2+1}$             $\int_{0}^{\frac{\pi}{2}}\sin
 $\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}$        $\begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}$         $\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}$         $\begin{Bmatrix} 1 & 0 \\ 0 & -1 \end{Bmatrix}$          $\begin{vmatrix} a & b \\ c & d \end{vmatrix}$         $\begin{Vmatrix} i & 0 \\ 0 & -i \end{Vmatrix}$
 
 
+### Math
+${2n\choose n}$
+
+${\binom{p+q}{p}}$
+
+${\frac{p+q}{p}}$
 
 ### Examples
 
@@ -92,8 +98,7 @@ $\nabla \times f = \begin{vmatrix} i & j & k\\ \frac{\partial}{\partial x} & \fr
 $\begin{equation}\left\{\begin{aligned}
 \overset{.}x(t) &=A_{ci}x(t)+B_{1ci}w(t)+B_{2ci}u(t) \\
 z(t) &=C_{ci}x(t)+D_{ci}u(t) \\
-\end{aligned}
-\right.\end{equation}$
+\end{aligned} \right.\end{equation}$
 
 
 

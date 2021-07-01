@@ -73,7 +73,7 @@ $a[n]b=a[n-1](a[n](b-1)),n\ge 1$
 
 
 
-# Combinatorial 【组合】
+# Combinatorics【组合】
 
 
 
@@ -95,6 +95,48 @@ $\begin{aligned}f(0)=1,f(1)=1,f(n)=\sum\limits_{i=0}^{n-1}f(n-1-i)f(i)=\frac{(2n
 
 
 
+# Probability Theory
+
+### Expectation
+
+$\begin{aligned}E(X)=\sum X_iP(X_i)\end{aligned}$
+
+$\begin{aligned}E(X)=\frac{\sum_{i=0}^N X_i}{N}\end{aligned}$
+
+### Deviation Variance
+
+$\begin{aligned}D(X)=E[X-E(X)]=\sum X_iP(X_i)\end{aligned}$
+
+Population variance $\begin{aligned}\sigma^2=\frac{\sum (X-\mu)^2}{N}\end{aligned}$, $N$ is the population.
+
+Sample variance $\begin{aligned}S^2=\frac{\sum (X-\overline{X})^2}{n-1}\end{aligned}$, $n$ is the sample quatity.
+
+### Covariance
+
+$Cov(X,Y)=E[(X-E[X])(Y-E[Y])]=E[XY]-E[X]E[Y]$
+
+
+1. $Cov(X,Y)=Cov(Y,X)$
+2. $Cov(aX,bY)=abCov(X,Y)$
+3. $Cov(X+Z,Y)=Cov(X,Y)+Cov(Z,Y)$
+4. $Cov(X+a,Y+b)=Cov(X,Y)$
+5. $D(X)=Cov(X,X)$
+
+Pearson: $\rho_{XY}=\frac{Cov(X,Y)}{\sqrt{D(X)D(Y)}}$
+
+$\lvert\rho_{XY}\rvert\in[0,1]$, $\rho_{XY}=0$ represents the two variables are uncorrelated. $\lvert\rho_{XY}\rvert=1$ is sufficient and necessary condition of that the two variables are linear correlated.
+
+
+### Covariance Matrix
+$X=(X_1,X_2,\dots,X_N)^T$, $Y=(Y_1,Y_2,\dots,Y_N)^T$, which are two N-dimension variables sequences.
+$$\begin{aligned}cov(X,Y)=\begin{pmatrix}c_{1,1}&c_{1,2}&\dots&c_{1,n}\\c_{2,1}&c_{2,2}&\dots&c_{2,n}\\\vdots&\vdots&\ddots&\vdots\\c_{n,1}&c_{n,2}&\dots&c_{n,n}\end{pmatrix}\end{aligned}$$
+which $c_{i,j}=Cov(X_i,Y_j)$
+
+1. $cov(X,Y)=cov(Y,X)^T$
+2. $cov(AX+b,Y)=Acov(X,Y)$
+3. $cov(X+Z,Y)=cov(X,Y)+cov(Z,Y)$
+
+Notice: $Cov(X,X)$ is a number, while $cov(X,X)$ is a matrix. Of course, the $X$ represent different dimension variables.
 
 
 # Number Theory【数论】
@@ -463,7 +505,7 @@ $\begin{aligned}\cos\alpha-\cos\beta=2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha
 
 
 
-## hyperbolic function【双曲函数】
+## Hyperbolic Function【双曲函数】
 
 $\begin{align}\sinh x=\frac{e^{x}-e^{-x}}{2}=-i\sin ix\end{align}$
 
@@ -535,7 +577,13 @@ $\begin{aligned}y={\rm{acosh}}\left(\frac{x}{a}\right)=\ln\left|\frac{x\pm\sqrt{
 
 # Complex【复数】
 
-$i^2=-1$           $\ln(-1)=i\pi$           $e^{i\pi}+1=0$
+$i=\sqrt{-1}$, $i^2=-1$, $i^3=-i$, $i^4=1$
+
+$\ln(-1)=i\pi$
+
+$e^{i\pi}+1=0$
+
+$e^{a+bi}=e^a(\cos b+i\sin b)$, which $a,b\in\mathbb{R}$
 
 $\begin{align}\sin ix=i\sinh x=\frac{e^{x}-e^{-x}}{2}i\end{align}$
 
@@ -543,25 +591,26 @@ $\begin{align}\cos ix=\cosh x=\frac{e^{x}+e^{-x}}{2}\end{align}$
 
 $\begin{align}\tan ix=i\tanh x=\frac{e^x-e^{-x}}{e^x+e^{-x}}i\end{align}$
 
+## Vector representation
+- $(a+bi)\pm(c+di)=(a\pm c)+(b\pm d)i$
+- $\begin{aligned}(a+bi)(c+di)=(ac-bd)+(ad+bc)i=\begin{vmatrix}1&i&0\\-b&a&d\\a&b&c\end{vmatrix}\end{aligned}$
+- $\begin{aligned}\frac{a+bi}{c+di}=\frac{(ac+bd)+(bc-ad)i}{c^2+d^2}=\frac{1}{c^2+d^2}\begin{vmatrix}1&i&0\\d&c&b\\c&-d&a\end{vmatrix}\end{aligned}$
+
 
 
 # Derivable【导数】
 
 
 
-$\begin{align}
-(u \pm v)^{\prime}=u^{\prime} \pm v^{\prime}
-\end{align}$
+$\begin{align}(u\pm v)^{\prime}=u^{\prime}\pm v^{\prime}\end{align}$
 
 $(uv)'=u'v+ uv'$
 
 $\begin{align}\left(\frac{u}{v}\right)'=\frac{u'v-uv'}{v^2}\end{align}$
 
-$\begin{align}
-\left(\frac{C}{u}\right)^{\prime}=-\frac{C u^{\prime}}{u^{2}}
-\end{align}$
+$\begin{align}\left(\frac{C}{u}\right)^{\prime}=-\frac{C u^{\prime}}{u^{2}}\end{align}$
 
-$\begin{aligned}f (g(x))'=f'(g(x))g'(x)\end{aligned}$
+$\begin{aligned}f(g(x))'=f'(g(x))g'(x)\end{aligned}$
 
 
 
