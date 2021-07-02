@@ -52,7 +52,7 @@ $\begin{aligned}\lVert A\rVert_{1}=\max_j\sum_{i=1}^{m}\lvert a_{i,j}\rvert\end{
 
 $\begin{aligned}\lVert A\rVert_{2}=\sqrt{\lambda_1}\end{aligned}$
 
-$\begin{aligned}\lVert A\rVert_{\infin}=\max_j\sum_{j=1}^{m}\lvert a_{i,j}\rvert\end{aligned}$
+$\begin{aligned}\lVert A\rVert_{\infty}=\max_j\sum_{j=1}^{m}\lvert a_{i,j}\rvert\end{aligned}$
 
 $\begin{aligned}\lVert A\rVert_{F}=(\sum_{i=1}^m\sum_{j=1}^na^2_{i,j})^{\frac{1}{2}}\end{aligned}$
 

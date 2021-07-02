@@ -31,7 +31,7 @@ $\mathbb{I}\subsetneqq\mathbb{C}$
 
 $\begin{aligned}\frac{a+b}{a}=\frac{a}{b}\xlongequal{\rm{def}}\varphi=\frac{1+\sqrt{5}}{2}=1.6180339887...\end{aligned}$
 
-$\begin{aligned}e=\sum^{\infin}_{n=0}\frac{1}{n!}=\lim_{n\to\infin}\left(1+\frac{1}{n}\right)^n=2.7182818284590452...\end{aligned}$
+$\begin{aligned}e=\sum^{\infty}_{n=0}\frac{1}{n!}=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n=2.7182818284590452...\end{aligned}$
 
 
 
@@ -201,7 +201,7 @@ $\begin{aligned}\sum\limits_{i=1}^ni^{k+1}=(n+1)\sum\limits_{i=1}^ni^k-\sum_{i=1
 
 
 
-$\begin{aligned}\lim_{n\to+\infin}\sum_{i=1}^{n}i=-\frac{1}{12}\end{aligned}$
+$\begin{aligned}\lim_{n\to+\infty}\sum_{i=1}^{n}i=-\frac{1}{12}\end{aligned}$
 
 
 ##### Bernoulli numbers 【伯努利数】
@@ -213,16 +213,16 @@ $\begin{aligned}B_n=\sum^n_{i=0}{\rm C}^i_nB_i\end{aligned}$
 
 ##### Ramanujan Equation
 
-$\sqrt{1+2\sqrt{1+3\sqrt{1+4\sqrt{1+5\sqrt{\cdots \infin}}}}}=3$
+$\sqrt{1+2\sqrt{1+3\sqrt{1+4\sqrt{1+5\sqrt{\cdots \infty}}}}}=3$
 
-$\sqrt{1+(n-1)\sqrt{1+n\sqrt{1+(n+1)\sqrt{1+(n+2)\sqrt{\cdots \infin}}}}}=n$
-
-
-
-$\begin{aligned}\prod^n_{i=1}i=n!=\int_0^{+\infin}t^{n}e^{-t}\mathrm{d}t=\Gamma(n+1)\end{aligned}$
+$\sqrt{1+(n-1)\sqrt{1+n\sqrt{1+(n+1)\sqrt{1+(n+2)\sqrt{\cdots \infty}}}}}=n$
 
 
-$\begin{aligned}\frac{1}{\pi}=\frac{2\sqrt{2}}{99^2}\sum\limits_{k=0}^{\infin}\frac{26390k+1103}{396^{4k}}\frac{(4k)!}{k!}\end{aligned}$
+
+$\begin{aligned}\prod^n_{i=1}i=n!=\int_0^{+\infty}t^{n}e^{-t}\mathrm{d}t=\Gamma(n+1)\end{aligned}$
+
+
+$\begin{aligned}\frac{1}{\pi}=\frac{2\sqrt{2}}{99^2}\sum\limits_{k=0}^{\infty}\frac{26390k+1103}{396^{4k}}\frac{(4k)!}{k!}\end{aligned}$
 
 
 $\begin{aligned}-\sqrt[3]{\cos(\frac{\pi}{9})}+\sqrt[3]{\cos(\frac{2\pi}{9})}+\sqrt[3]{\cos(\frac{4\pi}{9})}=\sqrt[3]{\frac{3\sqrt[3]{9}-6}{2}}\end{aligned}$
@@ -250,7 +250,7 @@ $\begin{aligned}a_n=\left(\frac{1+\sqrt{5} }{2}\right)^n+\left(\frac{1-\sqrt{5}}
 
 #### Fourier series
 
-$\begin{aligned}x(t)=\sum_{k=-\infin}^{+\infin}a_{k}e^{jk(\frac{2\pi}{T})t}\end{aligned}$
+$\begin{aligned}x(t)=\sum_{k=-\infty}^{+\infty}a_{k}e^{jk(\frac{2\pi}{T})t}\end{aligned}$
 
 Which $\begin{aligned}a_k=\frac{1}{T}\int_Tx(t)e^{-jk(\frac{2\pi}{T})t}\mathrm{d}t\end{aligned}$
 
@@ -495,10 +495,10 @@ $\begin{aligned}\cos\alpha-\cos\beta=2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha
 | $67.5^{\circ}\quad\frac{3\pi}{8}$ | $\frac{\sqrt{2+\sqrt{2}}}{2}$ | $\frac{\sqrt{2-\sqrt{2}}}{2}$ | $\sqrt{2}+1$ | $\sqrt{2}-1$ | $\sqrt{4+2\sqrt{2}}$ | $\sqrt{4-2\sqrt{2}}$ |
 | $72^{\circ}\quad\frac{2\pi}{5}$ | $\frac{\sqrt{10+2\sqrt{5}}}{4}$ | $\frac{\sqrt{5}-1}{4}$ | $\sqrt{5+2\sqrt{5}}$ | $\frac{\sqrt{25-10\sqrt{5}}}{5}$ | $\sqrt{5}+1$ | $\frac{\sqrt{50-10\sqrt{5}}}{5}$ |
 | $75^{\circ}\quad\frac{5\pi}{12}$ | $\frac{\sqrt{6}+\sqrt{2}}{4}$ | $\frac{\sqrt{6}-\sqrt{2}}{4}$ | $2+\sqrt{3}$ | $2-\sqrt{3}$ | $\sqrt{6}+\sqrt{2}$ | $\sqrt{6}-\sqrt{2}$ |
-| $90^{\circ}\quad\frac{\pi}{2}$ | $1$ | $0$ | $\to\infin$ | $0$ | $\to\infin$ | $1$ |
-| $180^{\circ}\quad\pi$ | $0$ | $-1$ | $0$ | $\to\infin$ | $-1$ | $\to\infin$ |
-| $270^{\circ}\quad\frac{3\pi}{2}$ | $-1$ | $0$ | $\to\infin$ | $0$ | $\to\infin$ | $-1$ |
-| $360^{\circ}\quad 2\pi$ | $0$ | $1$ | $0$ | $\to\infin$ | $1$ | $\to\infin$ |
+| $90^{\circ}\quad\frac{\pi}{2}$ | $1$ | $0$ | $\to\infty$ | $0$ | $\to\infty$ | $1$ |
+| $180^{\circ}\quad\pi$ | $0$ | $-1$ | $0$ | $\to\infty$ | $-1$ | $\to\infty$ |
+| $270^{\circ}\quad\frac{3\pi}{2}$ | $-1$ | $0$ | $\to\infty$ | $0$ | $\to\infty$ | $-1$ |
+| $360^{\circ}\quad 2\pi$ | $0$ | $1$ | $0$ | $\to\infty$ | $1$ | $\to\infty$ |
 
 
 
@@ -702,11 +702,11 @@ Which $F^{\prime}(x)=f(x)$
 
 ### Convolution【卷积】
 
-$\begin{aligned}(f*g)(n)=\int^{\infin}_{-\infin}f(\tau)g(n-\tau)\mathrm{d}\tau\end{aligned}$
+$\begin{aligned}(f*g)(n)=\int^{\infty}_{-\infty}f(\tau)g(n-\tau)\mathrm{d}\tau\end{aligned}$
 
 or
 
-$\begin{aligned}(f*g)(n)=\sum^{\infin}_{\tau=-\infin}f(\tau)g(n-\tau)\end{aligned}$
+$\begin{aligned}(f*g)(n)=\sum^{\infty}_{\tau=-\infty}f(\tau)g(n-\tau)\end{aligned}$
 
 
 
@@ -716,7 +716,7 @@ analytic function
 
 
 
-$\begin{align}\Gamma(x)=\int_0^{+\infin}t^{x-1}e^{-t}\mathrm{d}t\end{align}$
+$\begin{align}\Gamma(x)=\int_0^{+\infty}t^{x-1}e^{-t}\mathrm{d}t\end{align}$
 
 $\begin{align}\Beta(m,n) =\frac{\Gamma(n)}{\Gamma(m)\Gamma(n-m)}\end{align}$
 
@@ -724,11 +724,11 @@ $\begin{align}\Gamma(x+1)=x\Gamma(x),\quad\Gamma(n+1)=n!,\quad\Gamma(x)\Gamma(1-
 
 
 
-$\begin{aligned}\zeta(s)=\sum_{n=1}^{\infin}\frac{1}{n^s}=\frac{1}{\Gamma(s)}\int^{\infin}_0\frac{x^{s-1}}{e^x-1}\mathrm{d}x\end{aligned}$
+$\begin{aligned}\zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^s}=\frac{1}{\Gamma(s)}\int^{\infty}_0\frac{x^{s-1}}{e^x-1}\mathrm{d}x\end{aligned}$
 
 
 
-$\begin{aligned}W(x)=\sum\limits^{\infin}_{i=0}a^n\cos(b^n\pi x)\end{aligned}$ , which $\begin{aligned}0<a<1,b=2k+1,k\in Z^*, ab>1+\frac{3}{2}\pi\end{aligned}$
+$\begin{aligned}W(x)=\sum\limits^{\infty}_{i=0}a^n\cos(b^n\pi x)\end{aligned}$ , which $\begin{aligned}0<a<1,b=2k+1,k\in Z^*, ab>1+\frac{3}{2}\pi\end{aligned}$
 
 
 
@@ -825,7 +825,7 @@ $\begin{aligned}f(x|\mu,\sigma^2)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2
 
 Fourier
 $$
-f_l(x)=\frac{a_0}{2}+\sum^{\infin}_{i=0}(a_n\cos(n\omega x)+b_n\sin(n\omega x))
+f_l(x)=\frac{a_0}{2}+\sum^{\infty}_{i=0}(a_n\cos(n\omega x)+b_n\sin(n\omega x))
 \\
 \omega=\frac{\pi}{l}, a_n=\frac{1}{l}\int^l_{-l}f(t)\cos(n\omega x)\mathrm{d}t\\
 b_n=\frac{1}{l}\int^l_{-l}f(t)\sin(n\omega x)\mathrm{d}t
