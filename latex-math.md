@@ -68,11 +68,29 @@ $\begin{matrix} 0 & 1 \\ 1 & 0 \end{matrix}$        $\begin{pmatrix} 0 & -i \\ i
 
 
 ### Math
-${2n\choose n}$
+> {2n \choose n}
+>
+> \biniom{p+q}{p}
+>
+> \frac{p+q}{p}
+>
+> {k_0,k_1,\ldots>0 \atop k_0+k_1+\cdots=n}
 
-${\binom{p+q}{p}}$
 
-${\frac{p+q}{p}}$
+
+${2n\choose n}$          ${\binom{p+q}{p}}$           ${\frac{p+q}{p}}$             ${k_0,k_1,\ldots>0 \atop k_0+k_1+\cdots=n}$
+
+
+
+### Margin
+
+| a             | source    | b      | source | c           | source   |
+| ------------- | --------- | ------ | ------ | ----------- | -------- |
+| $ab$          | ab        | $a\!b$ | a\\!b  | $a\,b$      | a\,b     |
+| $a\ b$        | a\ b      | $a\:b$ | a\;b   | $a \quad b$ | a\quad b |
+| $ a \qquad b$ | a\qquad b |        |        |             |          |
+
+
 
 ### Examples
 
@@ -215,8 +233,9 @@ $\ce{2KClO_3 = 2KCl +3O_2\uparrow}$
 | --------- | ------- | ----------- | --------- | ----------- | --------- | ------------ | ---------- |
 | $\sum$    | \sum    | $\bigcup$   | \bigcup   | $\bigvee$   | \bigvee   | $\bigoplus$  | \bigoplus  |
 | $\prod$   | \prod   | $\bigcap$   | \bigcap   | $\bigwedge$ | \bigwedge | $\bigotimes$ | \bigotimes |
-| $\coprod$ | \coprod | $\bigsqcup$ | \bigsqcup |             |           | $\bigodot$   | \bigodot   |
-| $\int$    | \int    | $\oint$     | \oint     | $\oiint$    | \oiint    | $\biguplus$  | \biguplus  |
+| $\coprod$ | \coprod | $\bigsqcup$ | \bigsqcup | $\biguplus$ | \biguplus | $\bigodot$   | \bigodot   |
+| $\int$    | \int    | $\iint$     | \iint     | $\iiint$    | \iiint    | $\iiiint$    | \iiiint    |
+| $\oint$   | \oint   | $\oiint$    | \oiint    | $\oiiint$   | \oiiint   |              |            |
 
 
 
@@ -414,3 +433,5 @@ $\ce{2KClO_3 = 2KCl +3O_2\uparrow}$
 | $\mathscr{ABC}$     | \mathscr{ABC}     |         |
 | $\mathfrak{ABCdef}$ | \mathfrak{ABCdef} |         |
 | $\mathbb{ABC}$      | \mathbb{ABC}      |         |
+| $\boldsymbol{ABC}$  | \boldsymbol{ABC}  |         |
+

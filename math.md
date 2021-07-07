@@ -29,7 +29,7 @@ $\mathbb{I}\subsetneqq\mathbb{C}$
 
 
 
-$\begin{aligned}\frac{a+b}{a}=\frac{a}{b}\xlongequal{\rm{def}}\varphi=\frac{1+\sqrt{5}}{2}=1.6180339887...\end{aligned}$
+$\begin{aligned}\frac{a+b}{a}=\frac{a}{b}\stackrel{\mathrm{def}}{=}\varphi=\frac{1+\sqrt{5}}{2}=1.6180339887...\end{aligned}$
 
 $\begin{aligned}e=\sum^{\infty}_{n=0}\frac{1}{n!}=\lim_{n\to\infty}\left(1+\frac{1}{n}\right)^n=2.7182818284590452...\end{aligned}$
 
