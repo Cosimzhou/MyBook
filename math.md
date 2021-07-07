@@ -122,7 +122,7 @@ $Cov(X,Y)=E[(X-E[X])(Y-E[Y])]=E[XY]-E[X]E[Y]$
 4. $Cov(X+a,Y+b)=Cov(X,Y)$
 5. $D(X)=Cov(X,X)$
 
-Pearson: $\rho_{XY}=\frac{Cov(X,Y)}{\sqrt{D(X)D(Y)}}$
+Pearson: $\begin{aligned}\rho_{XY}=\frac{Cov(X,Y)}{\sqrt{D(X)D(Y)}}\end{aligned}$
 
 $\lvert\rho_{XY}\rvert\in[0,1]$, $\rho_{XY}=0$ represents the two variables are uncorrelated. $\lvert\rho_{XY}\rvert=1$ is sufficient and necessary condition of that the two variables are linear correlated.
 
@@ -137,6 +137,38 @@ which $c_{i,j}=Cov(X_i,Y_j)$
 3. $cov(X+Z,Y)=cov(X,Y)+cov(Z,Y)$
 
 Notice: $Cov(X,X)$ is a number, while $cov(X,X)$ is a matrix. Of course, the $X$ represent different dimension variables.
+
+
+
+###  Gauss Distribution
+
+$\begin{aligned}f(x|\mu,\sigma^2)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\end{aligned}$
+
+$E(X)=\mu$
+
+$D(X)=\sigma^2$
+
+Poisson
+
+$\begin{aligned}p(X=k)=\frac{\lambda^k}{k!}e^{-\lambda}\end{aligned}$, $k=0,1,2,\dots$
+
+$E(X)=D(X)=\lambda$
+
+
+
+Chi-square
+
+$f(x)=\left\{\begin{array}\qaud\frac{1}{2^{\frac{n}{2}}\Gamma(\frac{n}{2})}x^{-\frac{n}{2}}e^{-\frac{x}{2}},&x>0\\0,&other\end{array}\right.$
+
+
+
+Binomial Distribution
+
+$P(X=k)={n\choose k}p^k(1-p)^{n-k}$
+
+$E(x)=np$ 
+
+$D(X)=np(1-p)$
 
 
 # Number Theory【数论】
@@ -724,9 +756,29 @@ $\begin{align}\Gamma(x+1)=x\Gamma(x),\quad\Gamma(n+1)=n!,\quad\Gamma(x)\Gamma(1-
 
 
 
-$\begin{aligned}\zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^s}=\frac{1}{\Gamma(s)}\int^{\infty}_0\frac{x^{s-1}}{e^x-1}\mathrm{d}x\end{aligned}$
+质数分布定理：$\begin{aligned}\pi(x)\approx\frac{x}{\ln x}\end{aligned}$
+
+对数积分函数：$\begin{aligned}Li(x)=\int^x_2\frac{\rm{d}t}{\ln t}\end{aligned}$
 
 
+
+$\begin{aligned}\zeta(s)=\sum_{n=1}^{\infty}n^{-s}=\frac{1}{\Gamma(s)}\int^{\infty}_0\frac{x^{s-1}}{e^x-1}\mathrm{d}x\end{aligned}$
+
+$\begin{aligned}\zeta(s)=\sum_{n=1}^{\infty}n^{-s}=\prod_{p\in\mathbb{P}}(1-p^{-s})^{-1}\end{aligned}$
+
+$\begin{aligned}\ln\zeta(s)=\int_{0}^{\infty}x^{-s}\rm{d}J(x)\end{aligned}$, which $\begin{aligned}J(x)=\sum_{n=1}^{\infty}\frac{\pi(x^{\frac{1}{n}})}{n}=\frac{1}{2\pi i}\int^{a+i\infty}_{a-i\infty}\frac{\ln\zeta(z)}{z}x^z\mathrm{d}z=Li(x)-\sum_{\mathfrak{I}(\rho)>0}[Li(x^{\rho})+Li(x^{1-\rho})]+\int^{\infty}_{x}\frac{\mathrm{d}t}{t(t^2-1)\ln t}-\ln 2\end{aligned}$
+
+$\begin{aligned}\zeta(s)=\frac{\Gamma(1-s)}{2\pi i}\int^{\infty}_{\infty}\frac{(-x)^{s-1}}{e^x-1}\mathrm{d}x\end{aligned}$ , $s\ne1$ 延拓函数
+
+$\begin{aligned}\zeta(s)=2\Gamma(1-s)(2\pi)^{s-1}\sin(\frac{\pi}{2}s)\zeta(1-s)\end{aligned}$ , $s\ne1$ 延拓函数
+
+黎曼 猜想：$\zeta(s)$的非显然零点都落到临界线$\mathfrak{R}(s)=\frac{1}{2}$上。
+
+
+
+$\begin{aligned}\zeta(2)=\frac{\pi^2}{6}\end{aligned}$
+
+ 
 
 $\begin{aligned}W(x)=\sum\limits^{\infty}_{i=0}a^n\cos(b^n\pi x)\end{aligned}$ , which $\begin{aligned}0<a<1,b=2k+1,k\in Z^*, ab>1+\frac{3}{2}\pi\end{aligned}$
 
@@ -812,10 +864,6 @@ $\begin{align}\iint\limits_{S}\nabla\times F\mathrm{d}S=\oint\limits_{\partial S
 
 
 Gauss
-
-
-
-$\begin{aligned}f(x|\mu,\sigma^2)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}}\end{aligned}$
 
 
 
