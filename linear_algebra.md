@@ -92,3 +92,48 @@ Sufficient and necessary condition
 1. 矩阵有n个不同的特征向量；
 2. 特征向量重根的重数等于基础解系的个数。对于第二个充要条件，则需要出现二重以上的重特征值可验证（一重相当于没有重根）。 [1]
 若矩阵A可对角化，则其对角矩阵Λ的主对角线元素全部为A的特征值，其余元素全部为0。（一个矩阵的对角阵不唯一，其特征值可以换序，但都存在由对应特征向量顺序组成的可逆矩阵P使=Λ）
+
+
+
+
+
+#### Rotation
+
+$\begin{pmatrix}\cos\theta&\sin\theta\\-\sin\theta&\cos\theta\end{pmatrix}$
+
+
+
+3D空间中任意一个 $v$ 沿着单位向量$u$ 旋转 $\theta$ 角度之后的 $v'$ 为：
+
+$v'=v\cos\theta+(u\cdot v)u(1-\cos\theta)+(u\times v)sin\theta$
+
+
+
+$\arctan$
+
+## Quaternions
+
+$Q=ai+bj+ck+\omega$， $a^2+b^2+c^2=1$
+
+$P=(x,y,z)=xi+yj+zk$
+
+$i\times i=j\times j=k\times k=i\times j\times k=-1$
+
+$i\times j=k$,$j\times i=-k$,$j\times k=i$,$k\times j=-i$,$k\times i=j$,$i\times k=-j$
+
+$$QP=aixi+aiyj+aizk+bjxi+bjyj+bjzk+ckxi+ckyj+ckzk+\omega xi+\omega yj+\omega zk\\
+ =-ax+ayk-azj-bxk-by+bzi+cxj-cyi-cz+x\omega i+y\omega j+z\omega k\\
+=(bz-cy+x\omega)i+(cx-az+y\omega)j+(ay-bx+z\omega)k-(ax+by+cz) $$
+
+
+
+欧拉旋转$(\theta,\varphi,\psi)$
+
+$$\begin{aligned}\left\{\begin{array}.x = \sin\frac{\theta}{2}\cos\frac{\varphi}{2}\cos\frac{\psi}{2}+\cos\frac{\theta}{2}\sin\frac{\varphi}{2}\sin\frac{\psi}{2}\\
+y = \cos\frac{\theta}{2}\sin\frac{\varphi}{2}\cos\frac{\psi}{2}+\sin\frac{\theta}{2}\cos\frac{\varphi}{2}\sin\frac{\psi}{2}\\
+z = \cos\frac{\theta}{2}\cos\frac{\varphi}{2}\sin\frac{\psi}{2}-\sin\frac{\theta}{2}\sin\frac{\varphi}{2}\cos\frac{\psi}{2}\\
+w = \cos\frac{\theta}{2}\cos\frac{\varphi}{2}\cos\frac{\psi}{2}-\sin\frac{\theta}{2}\sin\frac{\varphi}{2}\sin\frac{\psi}{2}\end{array}\right.\rarr
+q = ((x, y, z), w)\end{aligned}$$
+
+$$(\theta,\varphi,\psi)^T=\begin{pmatrix}\arctan\frac{2xy+yz}{1-2(x^2+y^2)}\\ \arcsin2() \end{pmatrix}$$
+
