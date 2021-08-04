@@ -668,19 +668,25 @@ $\begin{aligned}\begin{array}{cl}f(x)&=\sum\limits^n_{i=0}\frac{f^{(i)}(x_0)}{i!
 
 
 
-$\begin{aligned}e^x=1+\frac{1}{1!}x+\frac{1}{2!}x^2+\frac{1}{3!}x^3+o(x^3)\end{aligned}$
+$\begin{aligned}e^x=\sum^{\infty}_{n=0}\frac{x^n}{n!}=1+\frac{1}{1!}x+\frac{1}{2!}x^2+\frac{1}{3!}x^3+o(x^3)\end{aligned}$
 
-$\begin{aligned}\ln(1+x)=x-\frac{1}{2}x^2+\frac{1}{3}x^3+o(x^3)\end{aligned}$
+$\begin{aligned}\ln(1+x)=\sum^{\infty}_{n=1}\frac{(-1)^{n+1}}{n}x^n=x-\frac{1}{2}x^2+\frac{1}{3}x^3+o(x^3)\end{aligned}$
 
-$\begin{aligned}\sin x=x-\frac{1}{3!}x^3+\frac{1}{5!}x^5+o(x^5)\end{aligned}$
+$\begin{aligned}\sin x=\sum^{\infty}_{n=0}\frac{(-1)^n}{(2n+1)!}x^{2n+1}=x-\frac{1}{3!}x^3+\frac{1}{5!}x^5+o(x^5)\end{aligned}$
 
-$\begin{aligned}\cos x=1-\frac{1}{2!}x^2+\frac{1}{4!}x^4+o(x^4)\end{aligned}$
+$\begin{aligned}\cos x=\sum^{\infty}_{n=0}\frac{(-1)^n}{(2n)!}x^{2n}=1-\frac{1}{2!}x^2+\frac{1}{4!}x^4+o(x^4)\end{aligned}$
 
-$\begin{aligned}\arcsin x=x+\frac{1}{2}\times \frac{x^3}{3}+\frac{1\times 3}{2\times 4}\times\frac{x^4}{5}+\frac{1\times 3\times 5}{2\times 4\times 6}\times\frac{x^7}{7}+o(x^7)\end{aligned}$
+$\begin{aligned}\tan x=\sum^{\infty}_{n=0}\frac{B_{2n}(-4)^n(1-4^n)}{(2n)!}x^{2n-1}\end{aligned}$
 
-$\begin{aligned}\frac{1}{1-x}=1+x+x^2+x^3+o(x^3)\end{aligned}$
+$\begin{aligned}\arcsin x=\sum^{\infty}_{n=0}\frac{(2n)!}{4^n(n!)^2(2n+1)}x^{2n+1}=x+\frac{1}{2}\times \frac{x^3}{3}+\frac{1\times 3}{2\times 4}\times\frac{x^4}{5}+\frac{1\times 3\times 5}{2\times 4\times 6}\times\frac{x^7}{7}+o(x^7)\end{aligned}$
 
-$\begin{aligned}(1+x)^a=1+\frac{a}{1!}x+\frac{a(a-1)}{2!}x^2+\frac{a(a-1)(a-2)}{3!}x^3+o(x^3)\end{aligned}$
+$\begin{aligned}\arctan x=\sum^{\infty}_{n=0}\frac{(-1)^n}{2n+1} x^{2n+1}\end{aligned}$
+
+$\begin{aligned}\frac{1}{1-x}=\sum^{\infty}_{n=0}x^n=1+x+x^2+x^3+o(x^3)\end{aligned}$
+
+$\begin{aligned}\frac{1}{1+x}=\sum^{\infty}_{n=0}(-1)^nx^n=1-x+x^2-x^3+o(x^3)\end{aligned}$
+
+$\begin{aligned}(1+x)^a=\sum_{i=0}^n=\frac{a!}{(a-i)!i!}x^i+o(x^n)=1+\frac{a}{1!}x+\frac{a(a-1)}{2!}x^2+\frac{a(a-1)(a-2)}{3!}x^3+o(x^3)\end{aligned}$
 
 
 
