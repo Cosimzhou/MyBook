@@ -37,3 +37,15 @@ Let the origin be the center point, the vertices are $(1,0,-\frac{\sqrt{2}}{4}),
 
 Normal vector of four surfaces are $(\frac{\sqrt{2}}{3},\frac{\sqrt{6}}{3},\frac{1}{3}),(\frac{\sqrt{2}}{3},-\frac{\sqrt{6}}{3},\frac{1}{3}),(-\frac{2\sqrt{2}}{3},0,\frac{1}{3}),(0,0,-1)$
 
+
+
+
+
+# Dodecahedron
+
+$\psi=\frac{1+\sqrt{5}}{2}$
+
+
+
+$(0,\pm\psi,\pm\frac{1}{\psi})$, $(\pm\psi,\pm\frac{1}{\psi},0)$, $(\pm\frac{1}{\psi},0,\pm\psi)$, $(\pm1,\pm1,\pm1)$
+
