@@ -20,7 +20,7 @@ a_{m,1} & a_{m,2} & a_{m,3} & \dots & a_{m,n} \end{pmatrix},\quad A\in\mathbb{R}
 | Operation           |        Comment          | Description         |
 | ------------------- | ----------------------- | ------------------- |
 | $A^{-1}$            | 矩阵的逆(Inverse)       | $\begin{aligned}A^{-1}=\frac{1}{\lvert A\rvert}A^{*}\end{aligned}$ |
-| $A^{*}$             | 伴随矩阵(Adjugate) | $\begin{aligned}M_{ij}\in\mathrm{det}\mathbb{R}^{(n-1)\times(n-1)},A_{ij}=(-1)^{i+j}M_{i,j},A^{*}=\begin{pmatrix}A_{1,1}&A_{1,2}&\dots&A_{1,n}\\A_{2,1}&A_{2,2}&\dots&A_{2,n}\\\vdots&\vdots&\ddots&\vdots\\A_{n,1}&A_{n,2}&\dots&A_{n,n}\end{pmatrix}\end{aligned}$ |
+| $A^{*}$             | 伴随矩阵(Adjugate) | $\begin{aligned}M_{ij}\in\mathrm{det}\mathbb{R}^{(n-1)\times(n-1)},A_{ij}=(-1)^{i+j}M_{i,j},A^{*}=\begin{pmatrix}A_{1,1}&A_{2,1}&\dots&A_{n,1}\\A_{1,2}&A_{2,2}&\dots&A_{n,2}\\\vdots&\vdots&\ddots&\vdots\\A_{1,n}&A_{2,n}&\dots&A_{n,n}\end{pmatrix}\end{aligned}$ |
 | $A^{H}$             | 共轭矩阵(Hermite/ Conjugate transpose) | $A^H=(\overline{A})^T=\begin{pmatrix}\overline{a}_{1,1}&\overline{a}_{2,1}&\dots&\overline{a}_{m,1}\\\overline{a}_{1,2}&\overline{a}_{2,2}&\dots&\overline{a}_{m,2}\\\vdots&\vdots&\ddots&\vdots\\\overline{a}_{1,n}&\overline{a}_{2,n}&\dots&\overline{a}_{m,n}\end{pmatrix}$ |
 | $A^{T}$             | 转置矩阵(Transposition) | $\begin{aligned}A\in\mathbb{R}^{m\times n},A^T\in\mathbb{R}^{n\times m},A^T=\begin{pmatrix}a_{1,1}&a_{2,1}&\dots&a_{m,1}\\a_{1,2}&a_{2,2}&\dots&a_{m,2}\\\vdots&\vdots&\ddots&\vdots\\a_{1,n}&a_{2,n}&\dots&a_{m,n}\end{pmatrix}\end{aligned}$ |
 | $\mathrm{tr}A$      | 矩阵的迹(Trace)         | $\begin{aligned}\mathrm{tr}A=\sum_{i=1}^{n}a_{ii}\end{aligned}$ |
@@ -60,6 +60,8 @@ Lower Hessenberg matrix（下海森伯格矩阵）：$A=(a_{ij}),a_{ij}=\left\{\
 
 
 ### Adjugate matrix
+
+$A^*=(a^*_{ij})$ ，其中$a^*_{ij}=(-1)^{i+j}M_{ji}$
 
 #### Properties
 
@@ -276,6 +278,11 @@ $$(\theta,\varphi,\psi)^T=\begin{pmatrix}\arctan\frac{2xy+yz}{1-2(x^2+y^2)}\\ \a
 矩阵的正交分解又称为QR分解，是将矩阵分解为一个正交矩阵Q和一个上三角矩阵的乘积的形式。
 **任意实数方阵A，都能QR分解**。这里的Q为正交单位阵，R是一个上三角矩阵。这种分解被称为QR分解。
 
+
+
+非奇异矩阵$A$的$QR$分解式为$A=QR$，其中$Q$ 是正交矩阵，$R$是非奇异上三角矩阵。
+
+
 ## Gram–Schmidt Decomposition
 
 $n$阶的满秩方阵$A$的列向量：$\alpha_1,\alpha_2,\alpha_3,\dots,\alpha_n$，通过转换变得到$n$个新的向量，$\beta_1,\beta_2,\beta_3,\dots,\beta_n$，其中$\begin{aligned}\beta_i=\alpha_i-\sum_{j=1}^{i-1}\frac{a_i^T\beta_j}{\beta^T_j\beta_j}\beta_j\end{aligned}$
@@ -319,34 +326,20 @@ $\begin{aligned}\begin{array}l\beta_2^T\beta_3&=&\beta_2^T(\alpha_3-\frac{\alpha
 &=&\beta_2^T\alpha_3-\frac{\alpha_3^T\beta_2}{\beta_2^T\beta_2}\beta_2^T\beta_2\\
 &=&0\end{array}\end{aligned}$
 
-假设对于任意$1<t\le i$的$t$都有 $\beta_t^T\beta_{t+1}=0$，则
+假设对于任意$1<i+j<t$的$i,j$都有 $\beta_i^T\beta_j=0$，（且$t=6$时已成立）则当$i<\frac{t}{2}$时，$i<t-i$：
 
-$\begin{aligned}\begin{array}l\beta_{i+1}^T\beta_{i+2}&=&\beta^T_{i+1}(\alpha_{i+2}-\sum\limits_{t=1}^{i+1}\frac{\alpha_{i+2}^T\beta_t}{\beta_t^T\beta_t}\beta_t)\\
-&=&\beta_{i+1}^T\alpha_{i+2}-\frac{\alpha_{i+2}^T\beta_{i+1}}{\beta_{i+1}^T\beta_{i+1}}\beta_{i+1}^T\beta_{i+1}\\
+$\begin{aligned}\begin{array}l\beta_i^T\beta_{t-i}&=&\beta_i^T(\alpha_{t-i}-\sum\limits_{k=1}^{t-i-1}\frac{\alpha_{t-i}^T\beta_k}{\beta_k^T\beta_k}\beta_k)\\
+&=&\beta_i^T\alpha_{t-i}-\sum\limits_{t=1}^{t-i-1}\frac{\alpha_{t-i}^T\beta_k}{\beta_k^T\beta_k}\beta_k^T\beta_i\\
+&=&\beta_i^T\alpha_{t-i}-\frac{\alpha_{t-i}^T\beta_i}{\beta_i^T\beta_i}\beta_i^T\beta_i\\
 &=&0\end{array}\end{aligned}$
+
+易知$\beta_{t-i}^T\beta_i=0$，为此任意$1<i+j<t+1$的$i,j$都有 $\beta_i^T\beta_j=0$
+
+由上可以归纳为得$\forall i< j\le n,\beta_i^T\beta_j=0$
+
+再将之前的假设$i<j$反置，令$i>j$同样可得$\forall j<i\le n,\beta_i^T\beta_j=0$
 
 $\therefore \forall i\neq j\le n,\beta_i^T\beta_j=0$
-
-
-
-$\beta_2^T\alpha_3-\frac{\alpha_3^T\beta_1}{\beta_1^T\beta_1}\beta_2^T\beta_1-\frac{\alpha_3^T\beta_2}{\beta_2^T\beta_2}\beta_2^T\beta_2$
-
-$\begin{aligned}\begin{array}l\beta_2^T\beta_3&=&(\alpha_2-\frac{\alpha_2^T\beta_1}{\beta_1^T\beta_1}\beta_1)^T(\alpha_3-\frac{\alpha_3^T\beta_1}{\beta_1^T\beta_1}\beta_1-\frac{\alpha_3^T\beta_2}{\beta_2^T\beta_2}\beta_2)\\
-&=&\alpha_2^T\alpha_3-\alpha_2^T\frac{\alpha_3^T\alpha_1}{\alpha_1^T\alpha_1}\alpha_1-\alpha_2^T\frac{\alpha_3^T\beta_2}{\beta_2^T\beta_2}\beta_2-\frac{\alpha_2^T\beta_1}{\beta_1^T\beta_1}\beta_1^T\alpha_3+\frac{\alpha_2^T\beta_1}{\beta_1^T\beta_1}\beta_1^T\frac{\alpha_3^T\beta_1}{\beta_1^T\beta_1}\beta_1+\frac{\alpha_2^T\beta_1}{\beta_1^T\beta_1}\beta_1^T\frac{\alpha_3^T\beta_2}{\beta_2^T\beta_2}\beta_2\\
-&=&\alpha_2^T\alpha_3-\frac{\alpha_3^T\alpha_1}{\alpha_1^T\alpha_1}\alpha_2^T\alpha_1-\frac{\alpha_3^T\beta_2}{\beta_2^T\beta_2}\alpha_2^T\beta_2-\frac{\alpha_2^T\beta_1}{\beta_1^T\beta_1}\beta_1^T\alpha_3+\frac{\alpha_2^T\beta_1}{\beta_1^T\beta_1}\frac{\alpha_3^T\beta_1}{\beta_1^T\beta_1}\beta_1^T\beta_1\\
-&=&\alpha_2^T\alpha_3-\frac{\alpha_3^T\alpha_1}{\alpha_1^T\alpha_1}\alpha_2^T\alpha_1-\frac{\alpha_3^T\beta_2}{\beta_2^T\beta_2}\alpha_2^T\beta_2\\
-&=&\alpha_1^T\alpha_3-\alpha_3^T\alpha_1-\frac{\alpha_3^T\beta_2}{\beta_2^T\beta_2}(\alpha_1^T\alpha_2-\alpha_2^T\alpha_1)=0\end{array}\end{aligned}$
-
-
-
-$\alpha_2^T\alpha_3-\frac{\alpha_3^T\alpha_1}{\alpha_1^T\alpha_1}\alpha_2^T\alpha_1-\frac{\alpha_3^T\beta_2}{\beta_2^T\beta_2}\alpha_2^T\beta_2$
-
-$\begin{aligned}\begin{array}l\beta_i^T\beta_j&=&(\alpha_i-\sum\limits_{l=1}^{i-1}\frac{a_i^T\beta_l}{\beta^T_l\beta_l}\beta_l)^T(\alpha_j-\sum\limits_{k=1}^{j-1}\frac{a_j^T\beta_k}{\beta^T_k\beta_k}\beta_k)\\
-&=&\sum\limits_{t=1}^n(a_{it}-\sum\limits_{l=1}^{i-1}\frac{a_i^T\beta_l}{\beta^T_l\beta_l}b_{lt})(a_{jt}-\sum\limits_{k=1}^{j-1}\frac{a_j^T\beta_k}{\beta^T_k\beta_k}b_{kt})\\
-&=&\alpha_i^T\alpha_j+\sum\limits_{t=1}^n(\sum\limits_{l=1}^{i-1}\frac{a_i^T\beta_l}{\beta^T_l\beta_l}b_{lt}\sum\limits_{k=1}^{j-1}\frac{a_j^T\beta_k}{\beta^T_k\beta_k}b_{kt})-\sum\limits_{t=1}^n(a_{jt}\sum\limits_{l=1}^{i-1}\frac{a_i^T\beta_l}{\beta^T_l\beta_l}b_{lt}+a_{it}\sum\limits_{k=1}^{j-1}\frac{a_j^T\beta_k}{\beta^T_k\beta_k}b_{kt})\\
-&=&0\end{array}\end{aligned}$
-
-
 
 3）$Q^TQ=\begin{pmatrix}a_{ij}\end{pmatrix}$
 
@@ -473,6 +466,107 @@ $\begin{array}l |Hu|&=&|(E-2vv^T)u|\\
 &=&\sqrt{u^Tu}=|u|\end{array}$
 
 
+
+#### Practice:
+
+* 上三角矩阵乘以上三角矩阵为上三角矩阵
+* 下三角矩阵乘以下三角矩阵为下三角矩阵
+* 对角矩阵乘以对角矩阵为对角矩阵
+* **次**对角矩阵乘以**次**对角矩阵为**对角矩阵**
+* 上三角矩阵的逆为上三角矩阵
+* 下三角矩阵的逆为下三角矩阵
+* 对角矩阵的逆为对角矩阵，各数取倒数
+* 次对角矩阵的逆为次对角矩阵，各数取倒数并转置
+
+
+
+$n$阶上三角矩阵$D$，$C$，得$DC$也是上三角矩阵。
+
+$D=\begin{pmatrix}d_{ij}\end{pmatrix}$， $d_{ij}=\left\{\begin{array}l0&i>j\\\forall&other\end{array}\right.$
+
+$C=\begin{pmatrix}c_{ij}\end{pmatrix}$ ，$c_{ij}=\left\{\begin{array}l0&i>j\\\forall&other\end{array}\right.$
+
+$G=DC=\begin{pmatrix}g_{ij}\end{pmatrix}$
+
+$\because g_{ij}=\sum\limits_{k=1}^nd_{ik}c_{kj}$，且当$i>k\vee k>j$时$d_{ik}c_{kj}=0$
+
+$\therefore $当$i>j$时，对于$\forall k\le n$都会满足$i>k\vee k>j$这个条件。即$g_{ij}=\left\{\begin{array}l0&i>j\\\forall&other\end{array}\right.$ $DC$也是上三角矩阵
+
+
+
+$n$阶下三角矩阵$D$，$C$，得$DC$也是下三角矩阵。
+
+$D=\begin{pmatrix}d_{ij}\end{pmatrix}$， $d_{ij}=\left\{\begin{array}l0&i<j\\\forall&other\end{array}\right.$
+
+$C=\begin{pmatrix}c_{ij}\end{pmatrix}$ ，$c_{ij}=\left\{\begin{array}l0&i<j\\\forall&other\end{array}\right.$
+
+$G=DC=\begin{pmatrix}g_{ij}\end{pmatrix}$
+
+$\because g_{ij}=\sum\limits_{k=1}^nd_{ik}c_{kj}$，且当$i<k\vee k<j$时$d_{ik}c_{kj}=0$
+
+$\therefore $当$i<j$时，对于$\forall k\le n$都会满足$i<k\vee k<j$这个条件。即$g_{ij}=\left\{\begin{array}l0&i<j\\\forall&other\end{array}\right.$
+
+$DC$也是下三角矩阵
+
+
+
+$n$阶对角矩阵$D$，$C$，得$DC$也是对角矩阵。
+
+$D=\begin{pmatrix}d_{ij}\end{pmatrix}$， $d_{ij}=\left\{\begin{array}l0&i\neq j\\\forall&other\end{array}\right.$
+
+$C=\begin{pmatrix}c_{ij}\end{pmatrix}$ ，$c_{ij}=\left\{\begin{array}l0&i\neq j\\\forall&other\end{array}\right.$
+
+$G=DC=\begin{pmatrix}g_{ij}\end{pmatrix}$
+
+$\because g_{ij}=\sum\limits_{k=1}^nd_{ik}c_{kj}$，且当$i\neq k\vee k\neq j$时$d_{ik}c_{kj}=0$
+
+$\therefore $当$i\neq j$时，对于$\forall k\le n$都会满足$i\neq k\vee k\neq j$这个条件。即$g_{ij}=\left\{\begin{array}l0&i\neq j\\\forall&other\end{array}\right.$
+
+$DC$也对角矩阵
+
+
+
+$n$阶次对角矩阵$D$，$C$，得$DC$是对角矩阵。
+
+$D=\begin{pmatrix}d_{ij}\end{pmatrix}$， $d_{ij}=\left\{\begin{array}l0&i+j\neq n+1\\\forall&other\end{array}\right.$
+
+$C=\begin{pmatrix}c_{ij}\end{pmatrix}$ ，$c_{ij}=\left\{\begin{array}l0&i+j\neq n+1\\\forall&other\end{array}\right.$
+
+$G=DC=\begin{pmatrix}g_{ij}\end{pmatrix}$
+
+$\because g_{ij}=\sum\limits_{k=1}^nd_{ik}c_{kj}$，且当$i+k\neq n+1\vee j+k\neq n+1$时$d_{ik}c_{kj}=0$
+
+$\therefore $当$i\neq j$时，对于$\forall k\le n$都会满足$i+k\neq n+1\vee j+k\neq n+1$这个条件。即$g_{ij}=\left\{\begin{array}l0&i\neq j\\\forall&other\end{array}\right.$
+
+$DC$为对角矩阵
+
+
+
+
+
+$n$阶次对角矩阵$D$，对角矩阵$C$，得$DC$是次对角矩阵。
+
+$D=\begin{pmatrix}d_{ij}\end{pmatrix}$， $d_{ij}=\left\{\begin{array}l0&i+j\neq n+1\\\forall&other\end{array}\right.$
+
+$C=\begin{pmatrix}c_{ij}\end{pmatrix}$ ，$c_{ij}=\left\{\begin{array}l0&i\neq j\\\forall&other\end{array}\right.$
+
+$G=DC=\begin{pmatrix}g_{ij}\end{pmatrix}$
+
+$\because g_{ij}=\sum\limits_{k=1}^nd_{ik}c_{kj}$，且当$i+k\neq n+1\vee j\neq k$时$d_{ik}c_{kj}=0$
+
+$\therefore $当$i\neq j$时，对于$\forall k\le n$都会满足$i+k\neq n+1\vee j+k\neq n+1$这个条件。即$g_{ij}=\left\{\begin{array}l0&i\neq j\\\forall&other\end{array}\right.$
+
+$DC$为次对角矩阵
+
+
+
+上三角阵求逆：分块
+
+$\begin{pmatrix}A&C\\0&B\end{pmatrix}^{-1}=\begin{pmatrix}A^{-1}&-A^{-1}CB^{-1}\\0&B^{-1}\end{pmatrix}$
+
+下三角阵求逆：
+
+$\begin{pmatrix}A&0\\C&B\end{pmatrix}^{-1}=\begin{pmatrix}A^{-1}&0\\-B^{-1}CA^{-1}&B^{-1}\end{pmatrix}$
 
 
 
