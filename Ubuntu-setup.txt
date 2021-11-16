@@ -1,0 +1,59 @@
+sudo apt install libncurses5-dev libncursesw5-dev build-essential
+sudo apt install git tig golang graphviz exuberant-ctags
+
+
+sudo add-apt-repository ppa:jonathonf/vim
+sudo apt update
+sudo apt install vim vim-gtk3
+
+
+###########################################
+# Samba Server
+sudo apt install samba
+smbd --version
+
+#.为smb添加用户及设置密码
+sudo smbpasswd -a <username>
+
+# Add a new samba point
+sudo echo "
+
+[mysmb] #共享时网络上显示的名称
+path = /home/mysmbshare #共享路径
+guest ok = no    #匿名访问
+comment = smb share     #注释信息
+available = yes         #vailable用来指定该共享资源是否可用
+browseable = yes        #browseable用来指定该共享是否可以浏览
+public    = yes         #public用来指定该共享是否允许guest账户访问
+writeable = yes         #writable用来指定该共享路径是否可写
+">> /etc/samba/smb.conf
+
+###########################################
+#
+# Desktop OS Applications
+#
+
+sudo add-apt-repository ppa:embrosyn/cinnamon
+sudo apt update
+sudo apt install cinnamon
+
+# Goldendict
+sudo apt install goldendict goldendict-wordnet
+
+
+sudo apt install flameshot
+# add shortcut in system configure-> keyboard ->shortcut
+# Name: Screen snap; Command: flameshot gui; Shortcut: Ctrl+Alt+A
+
+
+# Sublime Text 2
+curl -fsSL https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+sudo add-apt-repository "deb https://download.sublimetext.com/ apt/stable/"
+sudo apt update
+sudo apt install sublime-text
+
+
+# Qt
+sudo add-apt-repository ppa:beineri/opt-qt-5.15.2-bionic
+sudo apt-get update
+sudo apt install qt5153d qtcreator

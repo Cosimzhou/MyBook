@@ -45,6 +45,8 @@ Hermitian matrix（厄米特矩阵）：$A=A^H$
 
 Orthogonal matrix（正交矩阵）：$A^TA=E$
 
+Unitary matrix（酉矩阵）：$A^HA=E$
+
 Positive definite matrix（正定矩阵）：$\forall x\ne0, x^TAx>0$
 
 Positive semidefinite matrix（半正定矩阵）：$\forall x\ne0, x^TAx\ge0$
@@ -106,10 +108,27 @@ $\begin{aligned}\lVert A\rVert_{F}=(\sum_{i=1}^m\sum_{j=1}^na^2_{i,j})^{\frac{1}
 
 $Av=\lambda v$
 
-$det(A-\lambda E)=0$
+$\mathrm{det}(A-\lambda E)=0$
+
+#### Properties:
+
+1. $\mathrm{tr}(A)=\sum\limits_{i=1}^n\lambda_i$
+2. $\mathrm{det}(A)=\prod\limits_{i=1}^n\lambda_i$
+3. $Av=\lambda v\Rightarrow\exists u,A^2u=\lambda^2u$
+   $\exists A^{-1}\wedge Av=\lambda v\Rightarrow\exists u,A^{-1}u=\lambda^{-1}u$
+4. $A=A^T\wedge Av=\lambda v\Rightarrow \exists\Lambda=v^TAv$
+   $A\neq A^T\wedge Av=\lambda v\Rightarrow \exists\Lambda=v^{-1}Av$
+5. $A\in\mathbb{R}^{n\times n}\wedge A^TA=E\wedge Av_k=\lambda_k v_k\Rightarrow\forall i\neq j,v_i\perp v_j$
 
 ### Eigen Value Decomposition
+
 假设有 $n\times n$ 方阵$A$，其有$n$个特征值：$\lambda_1\le\lambda_2\le\dots\le\lambda_n$，对应的单位化($w_i^Tw_i=1$)后的特征向量为$w_1,w_2,\dots w_n$,$W=(w_1,w_2,\dots,w_n)$为$n$个特征向量所张成的$n\times n$矩阵，而$\Sigma$为这$n$个特征值为主对角线的矩阵，则 $A=W\Sigma W^{-1}$ 。这一过程称为EVD。
+
+#### Practice:
+
+$\begin{array}lAW&=&(\lambda_1w_1,\lambda_2w_2,\dots,\lambda_nw_n)\\&=&W\Sigma \\&=&W\Sigma W^{-1}W\end{array}$
+
+$A=AWW^{-1}=W\Sigma W^{-1}WW^{-1}=W\Sigma W^{-1}$
 
 由EVD分解的形式易知，可进行分解的方阵必然为**对称矩阵**($A=A^T$)
 
@@ -153,7 +172,7 @@ Properties:
 1. $A^T$的各行是单位向量且两两正交
 2. $A^T$的各列是单位向量且两两正交
 3. $(Ax,Ay)=(x,y)x,y\in R$
-4. $|A|=1$或-1
+4. $\mathrm{det}(A)=\pm 1$
 
 
 
@@ -421,7 +440,7 @@ $\begin{array}l |Gv|&=&\sqrt{(Gv)^TGv}\\
 2. $H^T=H$
 3. $\forall u\cdot v=0\Rightarrow Hu=u$
    $\forall\lambda\in\mathbb{R},u=\lambda v\Rightarrow Hu=-u$
-4. $|u|=|Hu|$
+4. $|Hu|=|u|$
 
 #### Householder Decomposition
 
