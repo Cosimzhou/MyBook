@@ -105,6 +105,11 @@ sudo snap install sublime-text --classic # or the follows
 #sudo apt update
 #sudo apt install sublime-text
 
+# CopyQ
+sudo add-apt-repository ppa:hluk/copyq
+sudo apt update
+sudo apt install copyq
+
 # Yinxiangbiji
 sudo add-apt-repository ppa:nvbn-rm/ppa
 sudo apt-get update
