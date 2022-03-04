@@ -24,138 +24,133 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語 |
 |---------|---------|----------|---------|--------|
-| person | person| personne | человек |  |
-| mann | man |homme | мужчина |  |
-| frau | woman | femme | женщина |  |
-| junge | boy | garçon | мальчик |  |
-| mädchen | girl | fille | девочка |  |
-| kind | child | enfant | ребёнка |  |
-| kind | kids | chevreau | дети    |  |
-| ehemann | husband | Mari | муж | |
-| ehefrau | wife | femme | жена | |
-| vater | father | père | отец | |
-| mutter | mother | mère | мать | |
-| sohn | son | fils | сын | |
-| tochter | daughter | fille | дочь | |
-| bruder | brother | frère | брат | |
-| schwester | sister | soeur | сестра | |
-| opa | grandpa | papi | дедушка | |
-| oma | grandma | grand-mère | бабушка | |
-| onkel | uncle | oncle | дядя | |
-| tante | aunt | tante | тетя | |
-| neffe | nephew | neveu | племянник | |
-| vetter | cousin | cousin | двоюродный брат | |
+| person | person| personne | человек | ひと  |
+| mann | man |homme | мужчина | おとこ |
+| frau | woman | femme | женщина | おんな |
+| junge | boy | garçon | мальчик | おとこのこ |
+| mädchen | girl | fille | девочка | おんなのこ |
+| kind | child | enfant | ребёнка | こ |
+| kind | kids | chevreau | дети    | こども |
+| ehemann | husband | Mari | муж | お|
+| ehefrau | wife | femme | жена | つま |
+| vater | father | père | отец |　ちち |
+| mutter | mother | mère | мать | はは|
+| sohn | son | fils | сын | むすこ|
+| tochter | daughter | fille | дочь | むすめ|
+| bruder | brother | frère | брат | あに/おとうと|
+| schwester | sister | soeur | сестра | あね/いもうと|
+| opa | grandpa | papi | дедушка | じじ|
+| oma | grandma | grand-mère | бабушка | ぱぱ|
+| onkel | uncle | oncle | дядя | おじ|
+| tante | aunt | tante | тетя | おば|
+| neffe | nephew | neveu | племянник | おい|
+| vetter | cousin | cousin | двоюродный брат | いとこ|
 
 ### 动物名
 | Deutsch | English | Français | Русская | 日本語 |
 |---------|---------|----------|---------|--------|
-| katze | cat      | chat | кошка    | |
-| hund | dog     | chien | собаки   | |
-| pferd | horse   | cheval | лошадь   | |
-| maus | mouse   | souris | мышь     | |
-| esel | donkey | âne | осел | |
-| schlange | snake     | serpent | змея     | |
-| löwe | lion   | lion | лев      | |
-| kaninchen | rabbit | lapin | кролик | |
-| vogel | bird | oiseau | птица    | |
-| ente | duck | canard | утка     | |
-| wolf | wolf | loup | волк     | |
-| haSchweinhn | cock | coq | петух| |
-| henne | hen | poule | курица   | |
-| schwein | pig | cochon | свинья | |
-| fliegen | fly | mouche | муха     | |
-| bär | bear | ours | медведь  | |
-| fisch | fish | poisson | реба     | |
-| affe | monkey | singe | обезьяна | |
-| giraffe | giraffe | girafe | жираф | |
-| elefant | elephant | éléphant | слон | |
-| krokodil | crocodile | crocodile | крокодил | |
-| lieb | dear | cher | дорогой | |
-| leopard | leopard | léopard | леопард | |
-| fledermaus | bat | chauve-souris | летучая мышь | |
-| Nilpferd | hippo | hippopotame | бегемот | |
-| Nashorn | rhino | rhinocéros | носорог | |
-| Taube | pigeon | pigeon | голубь ||
-| Pinguin | penguin | pingouin | пингвин | |
-| panda | panda | panda | панда | |
-| Waschbär | racoon | raton laveur | енот | |
-| | | | | |
+| katze | cat      | chat | кошка    | ねこ|
+| hund | dog     | chien | собаки   | いぬ|
+| pferd | horse   | cheval | лошадь   | うま|
+| maus | mouse   | souris | мышь     | ねずみ|
+| esel | donkey | âne | осел | かくま|
+| schlange | snake | serpent | змея     | へび|
+| löwe | lion | lion | лев | しし|
+| kaninchen | rabbit | lapin | кролик | うさぎ|
+| vogel | bird | oiseau | птица    | どり|
+| ente | duck | canard | утка     | かも|
+| wolf | wolf | loup | волк     | おおかみ|
+| hahn | cock | coq | петух| にわとり|
+| henne | hen | poule | курица | かんてい|
+| schwein | pig | cochon | свинья | ぶた|
+| fliegen | fly | mouche | муха | はえ|
+| bär | bear | ours | медведь  | くま|
+| fisch | fish | poisson | реба     | さかな|
+| affe | monkey | singe | обезьяна | さる|
+| giraffe | giraffe | girafe | жираф | ジラフ|
+| elefant | elephant | éléphant | слон | ぞう|
+| krokodil | crocodile | crocodile | крокодил | わに|
+| lieb | dear | cher | дорогой | しか|
+| leopard | leopard | léopard | леопард | ひょう|
+| fledermaus | bat | chauve-souris | летучая мышь | こうもり|
+| Nilpferd | hippo | hippopotame | бегемот | かわま|
+| Nashorn | rhino | rhinocéros | носорог | さい|
+| Taube | pigeon | pigeon | голубь |はと|
+| Pinguin | penguin | pingouin | пингвин | ペンギン|
+| panda | panda | panda | панда | パンダ|
+| Waschbär | racoon | raton laveur | енот | たぬき|
+| Fuchs | fox | Renard | лиса | きつね|
 
 
 
 | Deutsch | English | Français | Русская | 日本語 |
 |---------|---------|----------|---------|--------|
-| |   here/there| | здесь     | |
-| |   square    | | Площадь   | |
-| |     lake    | | озеро     | |
-| |     circus  | | цирк      | |
-| |  tree       | | дереве    | |
-| |     thing   | | вещь      | |
-
-| Deutsch | English | Français | Русская | 日本語 |
-|---------|---------|----------|---------|--------|
-| essen | food | nourriture | пища | |
-| mittagessen | lunch | déjeuner | обед | |
-| Abendessen | dinner | dîner | ужин      | |
-| Frühstück | breakfast | petit déjeuner | завтрак   | |
-| Apfel | apple | pomme | яблоко | |
-| Birne | pear | poire | груща | |
-| wasser | water | eau | вода | |
-| ei | egg | oeuf | Яйцо | |
-| Borschtsch | borsch | bortsch | борщ      | |
-| saft | juice | jus | сок | |
-| menü | menu | menu | меню | |
-| sushi | sushi | sushi | цуси | |
-| pizza | pizza | pizza | пицца | |
-| Kakao | cocoa | cacao | какао | |
-| butter | butter | beurre | масло | |
-| reis | rice | riz | риса | |
-| suppe | soup | soupe | суп | |
-| käse | cheese | fromage | сыр | |
-| kartoffel | potato | pomme de terre | картошка  | |
-| pilz | mushroom | champignon | грибы | |
-| salat | salad | salade | салат | |
-| zwiebel | onion | oignon | лук | |
-| brot | bread | pain | хлеб | |
-| Schokolade | chocholate | chocolat | шоколад | |
-| Süßigkeiten | candy | bonbon | конфета | |
-| aubergine | eggplant | aubergine | баклажан | |
-| Koriander | coriander | coriandre | кориандр | |
-| kohl | cabbage | chou | капуста | |
-| Garnele | shrimp | crevette | креветка | |
-| Hummer | lobster | homard | омар | |
-| Krebs | crab | crabe | краб | |
-| gurke | cucumber | concombre | огурец | |
-| Spinat | spinach | épinard | шпинат | |
-| Knoblauch | garlic | ail | чеснок | |
-| Ingwer | ginger | gingembre | имбирь | |
-| | | | | |
-
-
+| essen | food | nourriture | пища | たべもの |
+| mittagessen | lunch | déjeuner | обед |ひるごはん |
+| Abendessen | dinner | dîner | ужин | ゆうしょく|
+| Frühstück | breakfast | petit déjeuner | завтрак | あさごはん|
+| Apfel | apple | pomme | яблоко | りんご|
+| Birne | pear | poire | груща | なし|
+| wasser | water | eau | вода | みず|
+| ei | egg | oeuf | Яйцо | たまご|
+| Borschtsch | borsch | bortsch | борщ | ボルシチ |
+| saft | juice | jus | сок | シュース|
+| menü | menu | menu | меню |メニュー|
+| sushi | sushi | sushi | цуси | すし|
+| pizza | pizza | pizza | пицца | ピザ|
+| Kakao | cocoa | cacao | какао | ココア|
+| butter | butter | beurre | масло | バター|
+| reis | rice | riz | риса | こめ|
+| suppe | soup | soupe | суп | スープ|
+| käse | cheese | fromage | сыр | チーズ|
+| kartoffel | potato | pomme de terre | картошка | ちゃがいも|
+| pilz | mushroom | champignon | грибы | きのこ|
+| salat | salad | salade | салат | サラダ|
+| zwiebel | onion | oignon | лук | たまねぎ|
+| brot | bread | pain | хлеб | パン|
+| Schokolade | chocholate | chocolat | шоколад | チョコレート|
+| Süßigkeiten | candy | bonbon | конфета | あめ|
+| aubergine | eggplant | aubergine | баклажан | なす|
+| Koriander | coriander | coriandre | кориандр | パクチー|
+| kohl | cabbage | chou | капуста | キャベツ|
+| Garnele | shrimp | crevette | креветка | えび|
+| Hummer | lobster | homard | омар | いせえび|
+| Krebs | crab | crabe | краб | かに|
+| gurke | cucumber | concombre | огурец | キュウリ|
+| Spinat | spinach | épinard | шпинат | さんそ|
+| Knoblauch | garlic | ail | чеснок | ニンニク|
+| Ingwer | ginger | gingembre | имбирь | しょうが|
+| Karotte　| carrot | carotte|морковь | にんじん|
 
 
 | Deutsch | English | Français | Русская | 日本語 |
 |---------|---------|----------|---------|--------|
-| Heute | today | Aujourd’hui | сегодня | |
-| Gestern | yesterday | Hier | вчера | |
-| vorgestern | the day before yesterday | avant-hier | позавчера | |
-| morgen | tomorrow | demain | завтра | |
-| übermorgen | the day after tomorrow | après-demain | послезавтра | |
+| Baum | tree | arbre | дереве | き|
+| gras | grass | herbe | трава | くさ|
+| blume | flower | fleur | цветок | はな|
+
+| Deutsch | English | Français | Русская | 日本語 |
+|---------|---------|----------|---------|--------|
+| Heute | today | Aujourd’hui | сегодня | きょう |
+| Gestern | yesterday | Hier | вчера | きのう|
+| vorgestern | the day before yesterday | avant-hier | позавчера | おととい|
+| morgen | tomorrow | demain | завтра | あす|
+| übermorgen | the day after tomorrow | après-demain | послезавтра | あきにち|
 | | | | | |
-| Sonntag | | | воскресенье | 日曜日 |
-| Montag | | | понедельник | 月曜日 |
-| Dienstag | | | вторник | 火曜日 |
-| Mittwoch | | | среда | 水曜日 |
-| Donnerstag | | | четверг | 木曜日 |
-| Freitag | | | пятница | 金曜日 |
-| Samstag | | | суббота | 土曜日 |
+| Sonntag | Sunday | Dimanche | воскресенье | 日曜日 |
+| Montag | Monday | Lundi | понедельник | 月曜日 |
+| Dienstag | Tuesday | Mardi | вторник | 火曜日 |
+| Mittwoch | Wednesday| Mercredi | среда | 水曜日 |
+| Donnerstag | Thursday | Jeudi | четверг | 木曜日 |
+| Freitag | Friday | Vendredi | пятница | 金曜日 |
+| Samstag | Saturday | Samedi | суббота | 土曜日 |
 |         |         |          |         |        |
-| tag | day       |   | день       |   |
-| morgen | morning | matin | утро       |   |
-| mittag | noon | midi | полдень | |
-| nachmittag | afternoon | après-midi | день       |   |
-| abend | evening | soir | вечер      |   |
-| nacht | night | nuit  | ночи       |   |
+| tag | day | jour | день       | ひ  |
+| morgen | morning | matin | утро       | あさ  |
+| mittag | noon | midi | полдень | ひる|
+| nachmittag | afternoon | après-midi | день       | ごご  |
+| abend | evening | soir | вечер      | ゆがた |
+| nacht | night | nuit  | ночи       | よる |
 | Januar | January | Janvier | Январь | |
 | Februar | February | Février | Февраль | |
 | März | March | Mars | Март | |
@@ -169,18 +164,27 @@ Vocabulary
 | November | November | Novembre | Ноябрь | |
 | Dezember | December | Décembre | Декабрь | |
 | Sekunde | second | deuxième |секунда | |
-| minute | minute | minute | минута | |
-| stunde | hour | heure | час | |
-| monat | month | mois | месяц | |
-| woche | week | semaine | неделя | |
-| jahr | year | année | год | |
-| jahrzehnt | decade | décennie | десятилетие | |
-| jahrhundert | century | siècle |век | |
+| minute | minute | minute | минута | ぶん|
+| stunde | hour | heure | час | 時間|
+| monat | month | mois | месяц | がつ|
+| woche | week | semaine | неделя | しゅうかん|
+| jahr | year | année | год | とし|
+| jahrzehnt | decade | décennie | десятилетие | ねんだい|
+| jahrhundert | century | siècle |век | せき|
 | | | | | |
 | | | | | |
 | | | | | |
 | | | | | |
 
+
+
+| Deutsch | English | Français | Русская | 日本語 |
+|---------|---------|----------|---------|--------|
+| |   here/there| | здесь     | |
+| |   square    | | Площадь   | |
+| |     lake    | | озеро     | |
+| |     circus  | | цирк      | |
+| |     thing   | | вещь      | |
 
 | Deutsch | English | Français | Русская | 日本語 |
 |---------|---------|----------|---------|--------|
@@ -222,27 +226,27 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語 |
 |---------|---------|----------|---------|--------|
-| null    | zero    | zéro     | нуль    |        |
-| eins    | one     | une      | один    |        |
-| zwei    | two     | deux     | два     |        |
-| drei    | three   | trois    | три     |        |
-| vier    | four    | quatre   | четыре  |        |
-| fünf    | five    | cinq     | пять    |        |
-| sechs   | six     | six      | шесть   |        |
-| sieben  | seven   | sept     | семь    |        |
-| acht    | eight   | huit     | восемь  |        |
-| neun    | nine    | neuf     | девять  |        |
-| zehn    | ten     | dix      | десять  |        |
-| elf     | eleven  | onze     | одиннадцать |        |
-| zwölf   | twelve  | douze    | двенадцать |        |
-| dreizehn | thirteen | treize   | тринадцать |        |
-| vierzehn | forteen | quatorze | четырнадцать |        |
-| fünfzehn | fifteen | quinze | пятнадцать |        |
-| sechzehn | sixteen | seize  | шестнадцать |         |
-| siebzehn | seventeen | dix-sept | семнадцать |        |
-| achtzehn | eighteen | dix-huit | восемнадцать |        |
-| neunzehn | nineteen | dix-neuf | девятнадцать |        |
-| zwanzig | twenty | vingt | двадцать |        |
+| null    | zero    | zéro     | нуль    | ゼロ       |
+| eins    | one     | une      | один    | ひ       |
+| zwei    | two     | deux     | два     | ふ       |
+| drei    | three   | trois    | три     | み       |
+| vier    | four    | quatre   | четыре  | よ       |
+| fünf    | five    | cinq     | пять    | い       |
+| sechs   | six     | six      | шесть   | む       |
+| sieben  | seven   | sept     | семь    | なな       |
+| acht    | eight   | huit     | восемь  | や       |
+| neun    | nine    | neuf     | девять  | く       |
+| zehn    | ten     | dix      | десять  | と       |
+| elf     | eleven  | onze     | одиннадцать | じゅういち       |
+| zwölf   | twelve  | douze    | двенадцать | じゅうに       |
+| dreizehn | thirteen | treize   | тринадцать | じゅうさん       |
+| vierzehn | forteen | quatorze | четырнадцать | じゅうし       |
+| fünfzehn | fifteen | quinze | пятнадцать | じゅうご       |
+| sechzehn | sixteen | seize  | шестнадцать | じゅうろく        |
+| siebzehn | seventeen | dix-sept | семнадцать | じゅうしち       |
+| achtzehn | eighteen | dix-huit | восемнадцать | じゅうはち       |
+| neunzehn | nineteen | dix-neuf | девятнадцать | じゅうきゅう       |
+| zwanzig | twenty | vingt | двадцать | にじゅう       |
 |         |         |          |         |        |
 | dreißig |         | trente   | тридцать |        |
 |         |         |          |         |        |
@@ -274,12 +278,12 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語 |
 |---------|---------|----------|---------|--------|
-| was     | what    |          | что     |        |
-| klein   | where   | ou       | где     |        |
-| wer     | who     | qui      | кто     |        |
-| zum     | when    | quand    | когда   |        |
-| warum   | why     | pourquoi nous | почему        |        |
-| was/wie | how     | comment  | как     |        |
+| was     | what    |          | что     | なに       |
+| klein   | where   | ou       | где     | どこ       |
+| wer     | who     | qui      | кто     | だれ       |
+| zum     | when    | quand    | когда   | いつ       |
+| warum   | why     | pourquoi nous | почему        | なぜ       |
+| was/wie | how     | comment  | как     | どう       |
 |         |         |          |         |        |
 |         |         |          |         |        |
 
