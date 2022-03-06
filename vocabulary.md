@@ -64,8 +64,15 @@ Vocabulary
 | henne | hen | poule | курица | かんてい|
 | schwein | pig | cochon | свинья | ぶた|
 | fliegen | fly | mouche | муха | はえ|
+| Schmetterling | butterfly | papillon | бабочка | |
+| Mücke | mosquito | moustique | комар | |
+| Käfer | beetle | Scarabée | жук | |
+| Schnecke | snail | escargot | улитка | |
+| Libelle | dragonfly | libellule | стрекоза | |
+| Dinosaurier | dinosaur | dinosaure | динозавр | |
 | bär | bear | ours | медведь  | くま|
-| fisch | fish | poisson | реба     | さかな|
+| fisch | fish | poisson | реба | さかな|
+| Aal | eel | anguille | угорь | |
 | affe | monkey | singe | обезьяна | さる|
 | giraffe | giraffe | girafe | жираф | ジラフ|
 | elefant | elephant | éléphant | слон | ぞう|
@@ -80,6 +87,10 @@ Vocabulary
 | panda | panda | panda | панда | パンダ|
 | Waschbär | racoon | raton laveur | енот | たぬき|
 | Fuchs | fox | Renard | лиса | きつね|
+| Ochse | ox | bœuf | бык | |
+| Kuh | cow | vache | корова | |
+| Schaf | sheep | mouton | овца | |
+| Ziege | goat | chèvre | коза | |
 
 
 
@@ -143,7 +154,7 @@ Vocabulary
 | Mittwoch | Wednesday| Mercredi | среда | 水曜日 |
 | Donnerstag | Thursday | Jeudi | четверг | 木曜日 |
 | Freitag | Friday | Vendredi | пятница | 金曜日 |
-| Samstag | Saturday | Samedi | суббота | 土曜日 |
+| Samstag | Saturday | Samedi | суббота | 土曜日 []|
 |         |         |          |         |        |
 | tag | day | jour | день       | ひ  |
 | morgen | morning | matin | утро       | あさ  |
@@ -171,11 +182,30 @@ Vocabulary
 | jahr | year | année | год | とし|
 | jahrzehnt | decade | décennie | десятилетие | ねんだい|
 | jahrhundert | century | siècle |век | せき|
+| Osten| east | Est| Восток| ひがし|
+| Westen| west | Ouest| Запад| にし|
+| Norden| north| Nord | Север| きた|
+| Süden | south| Sud | Юг| みなみ|
+| oben| up| en haut| вверх| うえ|
+| herab| down| en bas| вниз| した|
+| Links| left| Gauche| Налево| ひだり|
+| Rechts| right| Droite| Правильно| みぎ|
+| China| China | Chine| Китай| ちゅうごく|
+| Deutschland| Germany| Allemagne| Германия| ドイツ|
+| Japan| Japan| Japon| Япония| にほん|
+| Russland| Russia| Russie| Россия| ルアシア|
+| Frankreich| France| France| Франция| フランス|
+| Amerika| America| Amérique| Америка| アメリカ|
+| Kanada| Canada | Canada| Канада| カナダ|
+| Indien| India | Inde | Индия| インド|
 | | | | | |
 | | | | | |
 | | | | | |
 | | | | | |
-
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
 
 
 | Deutsch | English | Français | Русская | 日本語 |
@@ -266,6 +296,32 @@ Vocabulary
 | Deutsch | English | Français | Русская | 日本語 |
 |---------|---------|----------|---------|--------|
 |         |         |          |         |        |
+
+
+можете     can
+скажите     tell
+хочу     want
+вижу     see
+пьёт     drink
+дайте     give
+знать  know
+надо     need
+Читать     read
+приготовить     prepare
+нарезать     slice
+помыть wash
+пусть          let
+готовить     cook
+
+иду          going
+идёт
+идёшь
+
+читаешь     reading
+
+спать          sleep
+
+
 
 
 # 常用形容词
@@ -361,29 +417,6 @@ Sie Ihnen Sie
 у    by / at
 с     with
 в    into/ in/ at
-
-можете     can
-скажите     tell
-хочу     want
-вижу     see
-пьёт     drink
-дайте     give
-знать  know
-надо     need
-Читать     read
-приготовить     prepare
-нарезать     slice
-помыть wash
-пусть          let
-готовить     cook
-
-иду          going
-идёт
-идёшь
-
-читаешь     reading
-
-спать          sleep
 
 
 
