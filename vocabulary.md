@@ -242,33 +242,33 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| film | film | film | фильм       | |
-| Rucksack | backpack | sac à dos| рюкзак      | |
-| Pullover | sweater | chandail| свитер      | |
-| Handtuch | towel | serviette | полотенце   | |
-| Tisch | table | table | стол        | |
-| Bett | bed | lit | кровать     | |
-| Teller | plate | assiette | тарелка     | |
-| Glas | glass | verre | стакан      | |
-| Teetasse | teacup | tasse à thé | чашка       | |
-| Schule| school | école | школа       | |
-| Bier | beer | bière | пиво        | |
-| Schüssel | bowl | bol| миска       | |
-| Löffel | spoon | cuiller | ложка       | |
-| Gabel | fork | fourchette | вилка       | |
-| Messer | knife    | couteau | нож         | |
-| Brille | glasses | lunettes | очки        | |
-| Stuhl | chair   | chaise | стул        | |
-| Seife | soap | savon | мыло        | |
-| Tasche | bag | sac| сумка       | |
-| Geschenk | gift |cadeau| подарок     | |
-| Wort |   word | mot | слово     | |
-| Lehrbuch |   textbook | manuel | тетради   | |
-| Notizbuch |   notebook  | carnet de notes | тетрадь   | |
-| buch | book   | livre | книги     | |
-| Auto| car | voiture | машина    | |
-| Fahrrad | bike | vélo | велосипед | |
-|         |         |          |         |        |
+| film | film | film | фильм       | []|
+| Rucksack | backpack | sac à dos| рюкзак      | []|
+| Pullover | sweater | chandail| свитер      | []|
+| Handtuch | towel | serviette | полотенце   | []|
+| Tisch | table | table | стол        | []|
+| Bett | bed | lit | кровать     | []|
+| Teller | plate | assiette | тарелка     | []|
+| Glas | glass | verre | стакан      | []|
+| Teetasse | teacup | tasse à thé | чашка       | []|
+| Schule| school | école | школа       | []|
+| Bier | beer | bière | пиво        | []|
+| Schüssel | bowl | bol| миска       | []|
+| Löffel | spoon | cuiller | ложка       | []|
+| Gabel | fork | fourchette | вилка       | []|
+| Messer | knife    | couteau | нож         | []|
+| Brille | glasses | lunettes | очки        | []|
+| Stuhl | chair   | chaise | стул        | []|
+| Seife | soap | savon | мыло        | []|
+| Tasche | bag | sac| сумка       | []|
+| Geschenk | gift |cadeau| подарок     | []|
+| Wort |   word | mot | слово     | []|
+| Lehrbuch |   textbook | manuel | тетради   | []|
+| Notizbuch |   notebook  | carnet de notes | тетрадь   | []|
+| buch | book   | livre | книги     | []|
+| Auto| car | voiture | машина    | []|
+| Fahrrad | bike | vélo | велосипед | []|
+|         |         |          |         |        []|
 
 ## 常用抽象名词
 
@@ -320,38 +320,38 @@ Vocabulary
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
 | können| can |pouvoir|мочь|        |
-| wagen| dare| oser| сметь| |
-| wollen| want| vouloir| хотеть| |
-| geben| give| donner| давать| |
-| benötigen| need| besoin| нуждаться| |
-| lassen| let| laisser| разрешать| |
-| sein| be| être| быть| |
-| gehen| go| aller| идти| |
-| kommen| come| venir| приходить| |
-| verlassen| leave| partir| покидать| |
-| leben| live| vivre| жить| |
-| sagen| say| dire| сказать| |
-| Siehe| see| voir| видеть| |
-| muss| must| devoir| должен| |
-| erzählen| tell| raconter| сказать| |
-| fragen| ask| demander| спрашивать| |
-| essen| eat| manger| есть| |
-| trinken| drink| boire| пить| |
-| wissen| know| savoir| знать| |
-| schlafen| sleep| dormir| спать| |
-| haben| have| avoir| иметь| |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
+| wagen| dare| oser| сметь| []|
+| wollen| want| vouloir| хотеть| []|
+| geben| give| donner| давать| []|
+| benötigen| need| besoin| нуждаться| []|
+| lassen| let| laisser| разрешать| []|
+| sein| be| être| быть| []|
+| gehen| go| aller| идти| []|
+| kommen| come| venir| приходить| []|
+| verlassen| leave| partir| покидать| []|
+| leben| live| vivre| жить| []|
+| sagen| say| dire| сказать| []|
+| Siehe| see| voir| видеть| []|
+| muss| must| devoir| должен| []|
+| erzählen| tell| raconter| сказать| []|
+| fragen| ask| demander| спрашивать| []|
+| essen| eat| manger| есть| []|
+| trinken| drink| boire| пить| []|
+| wissen| know| savoir| знать| []|
+| schlafen| sleep| dormir| спать| []|
+| haben| have| avoir| иметь| []|
+| lesen | read | lire | читать| []|
+| lehren | teach | enseigner | учить| []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
 
 //можете     can
 //скажите     tell
@@ -359,9 +359,7 @@ Vocabulary
 //вижу     see
 //пьёт     drink
 // дайте     give
-//знать  know
 //надо     need
-Читать     read
 приготовить     prepare
 нарезать     slice
 помыть wash
@@ -374,7 +372,6 @@ Vocabulary
 
 читаешь     reading
 
-//спать          sleep
 
 
 
@@ -383,19 +380,19 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| gut| good |bon|добрый|        |
-| schlecht| bad| mauvais| плохой| |
-| groß| big| grand| большой| |
-| klein| small| petit| маленький| |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
-| | | | | |
+| gut| good |bon|добрый|        []|
+| schlecht| bad| mauvais| плохой| []|
+| groß| big| grand| большой| []|
+| klein| small| petit| маленький| []|
+| ruhig| quiet | tranquille| спокойной | []|
+| perfekt| perfect| parfait| отлично | []|
+| Vergangenheit | past| passé | прошлый| []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
 
 # 常用代词
 
@@ -405,7 +402,7 @@ Vocabulary
 | klein   | where   | ou       | где     | [どこ]|
 | wer     | who     | qui      | кто     | [だれ]|
 | zum     | when    | quand    | когда   | [いつ]|
-| warum   | why     | pourquoi nous | почему        | [なぜ]|
+| warum   | why     | pourquoi nous | почему | [なぜ]|
 | was/wie | how     | comment  | как     | [どう]|
 |         |         |          |         |        |
 |         |         |          |         |        |
@@ -441,20 +438,17 @@ Sie Ihnen Sie
 |         |中性|оно|его|ему|его|им|(о)нѐм|
 |         |复数|они|их|им|их|ими|(о)них|
 
-это          this/these
-то that
-вот          there
+это         this/these
+то  that
+вот         there
 здесь       here
-там          be there
-тут          be here
+там         be there
+тут         be here
 
-всё              all
-ещё раз      again, one more time
-тоже          too
-Уже         already
-так          so
+ещё раз     again, one more time
+так         so
 ещё         more
-хотя          but
+хотя        but
 но          but/yet/only
 зато        but/on the other hand
 
@@ -462,61 +456,40 @@ Sie Ihnen Sie
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
+| und     | and     | et       | и       |        |
+| oder    | or      | ou       | или     |        |
+| aber    | but     | mais     | а       |        |
+| von     | from    | de       | от/из   |        |
+| an      | to      | à        | к(ому)  |        |
+| über    | about   | environ  | о       |        |
+| in      | in      | dans     | в       |        |
+| mit     | with    | avec     | с       |        |
+| für     | for     | pour     | для     |        |
+| bis     | by      | par      | у       |        |
+| von     | of      | des      | за      |        |
+| ob      | whether | si       | ли      |        |
+|         |         |          |         |        |
+| alle    | all     | tout     | всё     |        |
+| auch    | too     | aussi    | тоже    |        |
+| schon   | already | déjà     | уже     |        |
 |         |         |          |         |        |
 
 
-
-
-
-
-
-
-и         and
-или     or
-ли     whether
 ни     neither...nor
-а     but
-о     about
-от    from
-за     of
-для     for
-Я    I
-у    by / at
-с     with
-в    into/ in/ at
 
-
-
-
-
-читатель     reader
+читатель    reader
 учитель     teacher
 
 
-
-
-
-
-прошлый          past
-Добрый             good
-отлично             perfect
-Спокойной     quiet
 дела             affairs
 дело              a business
-неделя              week
 проблема     problem
-
-
-
 
 У one’s (есть) sth One have sth
 У тебя всё хорошо
 Он у тебя
 как вас зовут
 что это за
-
-
-
 
 
 trinke пью drink
