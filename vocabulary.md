@@ -242,32 +242,32 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| film | film | film | фильм       | []|
+| film | film | film | фильм       | 映画[えいが]|
 | Rucksack | backpack | sac à dos| рюкзак      | []|
 | Pullover | sweater | chandail| свитер      | []|
-| Handtuch | towel | serviette | полотенце   | []|
-| Tisch | table | table | стол        | []|
-| Bett | bed | lit | кровать     | []|
-| Teller | plate | assiette | тарелка     | []|
-| Glas | glass | verre | стакан      | []|
-| Teetasse | teacup | tasse à thé | чашка       | []|
-| Schule| school | école | школа       | []|
-| Bier | beer | bière | пиво        | []|
-| Schüssel | bowl | bol| миска       | []|
-| Löffel | spoon | cuiller | ложка       | []|
+| Handtuch | towel | serviette | полотенце   | タオル|
+| Tisch | table | table | стол        | 机[つくえ]|
+| Bett | bed | lit | кровать     | ベッド|
+| Teller | plate | assiette | тарелка     | 皿[さら]|
+| Glas | glass | verre | стакан      | ガラス|
+| Teetasse | teacup | tasse à thé | чашка | 茶碗[ちゃわん]|
+| Schule| school | école | школа       | 学校[がっこう]|
+| Bier | beer | bière | пиво        | ビル|
+| Schüssel | bowl | bol| миска       | ボウル|
+| Löffel | spoon | cuiller | ложка       | スプーン|
 | Gabel | fork | fourchette | вилка       | []|
-| Messer | knife    | couteau | нож         | []|
-| Brille | glasses | lunettes | очки        | []|
-| Stuhl | chair   | chaise | стул        | []|
-| Seife | soap | savon | мыло        | []|
-| Tasche | bag | sac| сумка       | []|
-| Geschenk | gift |cadeau| подарок     | []|
-| Wort |   word | mot | слово     | []|
+| Messer | knife    | couteau | нож         | 刀[かたな]|
+| Brille | glasses | lunettes | очки        | [ガラセス]|
+| Stuhl | chair   | chaise | стул        | 椅子[いす]|
+| Seife | soap | savon | мыло        | ソープ|
+| Tasche | bag | sac| сумка       | 鞄[かばん]|
+| Geschenk | gift |cadeau| подарок | お土産[おみやげ]|
+| Wort |   word | mot | слово     | 単語[たんご]|
 | Lehrbuch |   textbook | manuel | тетради   | []|
-| Notizbuch |   notebook  | carnet de notes | тетрадь   | []|
-| buch | book   | livre | книги     | []|
-| Auto| car | voiture | машина    | []|
-| Fahrrad | bike | vélo | велосипед | []|
+| Notizbuch |   notebook  | carnet de notes | тетрадь   | ノート[]|
+| buch | book   | livre | книги     | 本[ほん]|
+| Auto| car | voiture | машина    | 車[くるま]|
+| Fahrrad | bike | vélo | велосипед | 自転車[じてんしゃ]|
 |         |         |          |         |        []|
 
 ## 常用抽象名词
@@ -319,29 +319,29 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| können| can |pouvoir|мочь|        |
+| können| can |pouvoir|мочь|できる|
 | wagen| dare| oser| сметь| []|
-| wollen| want| vouloir| хотеть| []|
-| geben| give| donner| давать| []|
+| wollen| want| vouloir| хотеть| [ほしい]|
+| geben| give| donner| давать| [あげる]|
 | benötigen| need| besoin| нуждаться| []|
 | lassen| let| laisser| разрешать| []|
-| sein| be| être| быть| []|
-| gehen| go| aller| идти| []|
-| kommen| come| venir| приходить| []|
-| verlassen| leave| partir| покидать| []|
-| leben| live| vivre| жить| []|
-| sagen| say| dire| сказать| []|
-| Siehe| see| voir| видеть| []|
+| sein| be| être| быть| [です]|
+| gehen| go| aller| идти| [いく]|
+| kommen| come| venir| приходить| [くる]|
+| verlassen| leave| partir| покидать| 離れる[はなれる]|
+| leben| live| vivre| жить| 住む[すむ]|
+| sagen| say| dire| сказать| 言う[いう]|
+| Siehe| see| voir| видеть| 見る[みる]|
 | muss| must| devoir| должен| []|
-| erzählen| tell| raconter| сказать| []|
-| fragen| ask| demander| спрашивать| []|
-| essen| eat| manger| есть| []|
-| trinken| drink| boire| пить| []|
-| wissen| know| savoir| знать| []|
-| schlafen| sleep| dormir| спать| []|
-| haben| have| avoir| иметь| []|
-| lesen | read | lire | читать| []|
-| lehren | teach | enseigner | учить| []|
+| erzählen| tell| raconter| сказать| 伝える[つたえる]|
+| fragen| ask| demander| спрашивать| 問う[とう]|
+| essen| eat| manger| есть| 食べる[たべる]|
+| trinken| drink| boire| пить| 飲む[のむ]|
+| wissen| know| savoir| знать| 知る[しる]|
+| schlafen| sleep| dormir| спать| 寝る[ねる]|
+| haben| have| avoir| иметь| [いる]|
+| lesen | read | lire | читать| 読む[よむ]|
+| lehren | teach | enseigner | учить| 教える[おしえる]|
 | | | | | []|
 | | | | | []|
 | | | | | []|
@@ -380,13 +380,13 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| gut| good |bon|добрый|        []|
-| schlecht| bad| mauvais| плохой| []|
-| groß| big| grand| большой| []|
-| klein| small| petit| маленький| []|
-| ruhig| quiet | tranquille| спокойной | []|
-| perfekt| perfect| parfait| отлично | []|
-| Vergangenheit | past| passé | прошлый| []|
+| gut| good |bon|добрый| 良い[いい]|
+| schlecht| bad| mauvais| плохой| 悪い[わるい]|
+| groß| big| grand| большой| 大きい[おおきい]|
+| klein| small| petit| маленький| 小さい[ちいさい]|
+| ruhig| quiet | tranquille| спокойной | 静か[しずか]|
+| perfekt| perfect| parfait| отлично | 完璧[かんぺき]|
+| Vergangenheit | past| passé | прошлый| 昔[むかし]|
 | | | | | []|
 | | | | | []|
 | | | | | []|
@@ -398,12 +398,12 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| was     | what    |          | что     | [なに]|
-| klein   | where   | ou       | где     | [どこ]|
-| wer     | who     | qui      | кто     | [だれ]|
-| zum     | when    | quand    | когда   | [いつ]|
-| warum   | why     | pourquoi nous | почему | [なぜ]|
-| was/wie | how     | comment  | как     | [どう]|
+| was     | what    |          | что     | 何[なに]|
+| klein   | where   | ou       | где     | 何処[どこ]|
+| wer     | who     | qui      | кто     | 誰[だれ]|
+| zum     | when    | quand    | когда   | 何時[いつ]|
+| warum   | why     | pourquoi nous | почему | 何故[なぜ]|
+| was/wie | how     | comment  | как     | 如何[どう]|
 |         |         |          |         |        |
 |         |         |          |         |        |
 
@@ -438,6 +438,21 @@ Sie Ihnen Sie
 |         |中性|оно|его|ему|его|им|(о)нѐм|
 |         |复数|они|их|им|их|ими|(о)них|
 
+
+僕[ぼく]
+私[わたし・わたくし]
+俺[おれ]
+
+我々[われわれ]
+
+君[きみ]
+お前[おまえ]
+貴方[あなた]
+
+彼[かれ]
+彼女[かのじょ]
+其方[そなた]
+
 это         this/these
 то  that
 вот         there
@@ -456,22 +471,22 @@ Sie Ihnen Sie
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| und     | and     | et       | и       |        |
-| oder    | or      | ou       | или     |        |
-| aber    | but     | mais     | а       |        |
-| von     | from    | de       | от/из   |        |
-| an      | to      | à        | к(ому)  |        |
-| über    | about   | environ  | о       |        |
-| in      | in      | dans     | в       |        |
-| mit     | with    | avec     | с       |        |
-| für     | for     | pour     | для     |        |
-| bis     | by      | par      | у       |        |
-| von     | of      | des      | за      |        |
-| ob      | whether | si       | ли      |        |
+| und     | and     | et       | и       | と       |
+| oder    | or      | ou       | или     | 或いは[あるいは] |
+| aber    | but     | mais     | а       | でも       |
+| von     | from    | de       | от/из   | から   |
+| an      | to      | à        | к(ому)  | へ    |
+| über    | about   | environ  | о       | について |
+| in      | in      | dans     | в       | に・のなかに |
+| mit     | with    | avec     | с       | と共に[とともに]  |
+| für     | for     | pour     | для     | の為に[のために] |
+| bis     | by      | par      | у       | に  |
+| von     | of      | des      | за      | の |
+| ob      | whether | si       | ли      | かどうか |
 |         |         |          |         |        |
-| alle    | all     | tout     | всё     |        |
-| auch    | too     | aussi    | тоже    |        |
-| schon   | already | déjà     | уже     |        |
+| alle    | all     | tout     | всё     | 全て[すべて] |
+| auch    | too     | aussi    | тоже    | も  |
+| schon   | already | déjà     | уже     | 既に[すでに] |
 |         |         |          |         |        |
 
 
