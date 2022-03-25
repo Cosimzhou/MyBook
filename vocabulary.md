@@ -281,7 +281,7 @@ Vocabulary
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
 | null    | zero    | zéro     | нуль    | [ゼロ]|
-| eins    | one     | une      | один    | [ひ]|
+| ein     | one     | une      | один    | [ひ]|
 | zwei    | two     | deux     | два     | [ふ]|
 | drei    | three   | trois    | три     | [み]|
 | vier    | four    | quatre   | четыре  | [よ]|
@@ -301,7 +301,15 @@ Vocabulary
 | achtzehn | eighteen | dix-huit | восемнадцать | [じゅうはち]|
 | neunzehn | nineteen | dix-neuf | девятнадцать | [じゅうきゅう]|
 | zwanzig | twenty | vingt | двадцать | [にじゅう]|
-|         |         |          |         |        |
+| einundzwanzig | twenty one | vingt et un | двадцать один  | [にじゅう]|
+| zweiundzwanzig | twenty two | vingt deux | двадцать два  | [にじゅう]|
+| dreiundzwanzig | twenty three | vingt trois | двадцать три | [にじゅう]|
+| vierundzwanzig | twenty four | vingt quatre | двадцать четыре | [にじゅう]|
+| fünfundzwanzig | twenty five | vingt cinq | двадцать пять | [にじゅう]|
+| sechsundzwanzig | twenty six | vingt six | двадцать шесть | [にじゅう]|
+| siebenundzwanzig | twenty seven | vingt sept | двадцать семь | [にじゅう]|
+| achtundzwanzig | twenty eight | vingt huit | двадцать восемь | [にじゅう]|
+| neunundzwanzig | twenty nine | vingt neuf | двадцать девять | [にじゅう]|
 | dreißig |         | trente   | тридцать |        |
 |         |         |          |         |        |
 | vierzig |         | quarante | сорок |        |

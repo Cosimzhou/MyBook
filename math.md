@@ -166,7 +166,7 @@ Binomial Distribution
 
 $P(X=k)={n\choose k}p^k(1-p)^{n-k}$
 
-$E(x)=np$ 
+$E(x)=np$
 
 $D(X)=np(1-p)$
 
@@ -493,11 +493,11 @@ $\begin{aligned}\sin^n\theta=\frac{1}{2^n}\sum^n_{k=0}(-1)^k{\rm{C}}^k_n\cos\lef
 
 #### Prosthaphaeresis【积化和差】
 
-$\begin{aligned}\sin\alpha\cos\beta=\frac{1}{2}[\sin(\alpha+\beta)+\sin(\alpha-\beta)]\end{aligned}$
+$\begin{aligned}\sin\alpha\cos\beta=\frac{1}{2}\Big[\sin(\alpha+\beta)+\sin(\alpha-\beta)\Big]\end{aligned}$
 
-$\begin{aligned}\sin\alpha\sin\beta=\frac{1}{2}[\cos(\alpha-\beta)-\cos(\alpha+\beta)]\end{aligned}$
+$\begin{aligned}\sin\alpha\sin\beta=\frac{1}{2}\Big[\cos(\alpha-\beta)-\cos(\alpha+\beta)\Big]\end{aligned}$
 
-$\begin{aligned}\cos\alpha\cos\beta=\frac{1}{2}[\cos(\alpha+\beta)+\cos(\alpha-\beta)]\end{aligned}$
+$\begin{aligned}\cos\alpha\cos\beta=\frac{1}{2}\Big[\cos(\alpha+\beta)+\cos(\alpha-\beta)\Big]\end{aligned}$
 
 
 
@@ -642,7 +642,7 @@ $\begin{align}\left(\frac{u}{v}\right)'=\frac{u'v-uv'}{v^2}\end{align}$
 
 $\begin{align}\left(\frac{C}{u}\right)^{\prime}=-\frac{C u^{\prime}}{u^{2}}\end{align}$
 
-$\begin{aligned}f(g(x))'=f'(g(x))g'(x)\end{aligned}$
+$\begin{aligned}f\big(g(x)\big)'=f'\big(g(x)\big)g'(x)\end{aligned}$
 
 
 
@@ -778,13 +778,13 @@ $\begin{aligned}\zeta(s)=\frac{\Gamma(1-s)}{2\pi i}\int^{\infty}_{\infty}\frac{(
 
 $\begin{aligned}\zeta(s)=2\Gamma(1-s)(2\pi)^{s-1}\sin(\frac{\pi}{2}s)\zeta(1-s)\end{aligned}$ , $s\ne1$ 延拓函数
 
-黎曼 猜想：$\zeta(s)$的非显然零点都落到临界线$\mathfrak{R}(s)=\frac{1}{2}$上。
+黎曼猜想：$\zeta(s)$的非显然零点都落到临界线$\mathfrak{R}(s)=\frac{1}{2}$上。
 
 
 
 $\begin{aligned}\zeta(2)=\frac{\pi^2}{6}\end{aligned}$
 
- 
+
 
 $\begin{aligned}W(x)=\sum\limits^{\infty}_{i=0}a^n\cos(b^n\pi x)\end{aligned}$ , which $\begin{aligned}0<a<1,b=2k+1,k\in Z^*, ab>1+\frac{3}{2}\pi\end{aligned}$
 
