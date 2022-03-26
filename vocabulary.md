@@ -39,8 +39,8 @@ Vocabulary
 | tochter | daughter | fille | дочь | 娘[むすめ]|
 | bruder | brother | frère | брат | 兄・弟[あに/おとうと]|
 | schwester | sister | soeur | сестра | 姉・妹[あね/いもうと]|
-| opa | grandpa | papi | дедушка | じじ|
-| oma | grandma | grand-mère | бабушка | [ぱぱ]|
+| opa | grandpa | papi | дедушка |爺[じじ]|
+| oma | grandma | grand-mère | бабушка | 婆[ぱぱ]|
 | onkel | uncle | oncle | дядя | 叔父[おじ]|
 | tante | aunt | tante | тетя | 叔母[おば]|
 | neffe | nephew | neveu | племянник | 甥[おい]|
@@ -50,7 +50,7 @@ Vocabulary
 | freundin| girlfriend| copine| подруга| 彼女[かのじょ]|
 | partner| partner| partenaire| партнёр| 合棒[あいぼう]|
 | führer| leader| chef| лидер| 上司[じょうし]|
-| rivale| rival| rival| соперник| [レバル]|
+| rivale| rival| rival| соперник| レバル|
 | feind| enemy| ennemi| враг| 敵[てき]|
 
 
@@ -83,7 +83,7 @@ Vocabulary
 | fisch | fish | poisson | реба |魚[さかな]|
 | Aal | eel | anguille | угорь | 鰻うなぎ|
 | affe | monkey | singe | обезьяна | 猿[さる]|
-| giraffe | giraffe | girafe | жираф | [ジラフ]|
+| giraffe | giraffe | girafe | жираф | ジラフ|
 | elefant | elephant | éléphant | слон | 象[ぞう]|
 | krokodil | crocodile | crocodile | крокодил | 鰐[わに]|
 | lieb | dear | cher | дорогой | 鹿[しか]|
@@ -92,17 +92,17 @@ Vocabulary
 | Nilpferd | hippo | hippopotame | бегемот | 河馬[かわま]|
 | Nashorn | rhino | rhinocéros | носорог | 犀[さい]|
 | Taube | pigeon | pigeon | голубь |鳩[はと]|
-| Pinguin | penguin | pingouin | пингвин | [ペンギン]|
-| panda | panda | panda | панда | [パンダ]|
+| Pinguin | penguin | pingouin | пингвин | ペンギン|
+| panda | panda | panda | панда | パンダ|
 | Waschbär | racoon | raton laveur | енот | 狸[たぬき]|
 | Fuchs | fox | Renard | лиса | 狐[きつね]|
 | Ochse | ox | bœuf | бык | 牛[うし]|
-| Kuh | cow | vache | корова | |
+| Kuh | cow | vache | корова | カウ|
 | Schaf | sheep | mouton | овца | 羊[ひつじ]|
 | Ziege | goat | chèvre | коза | 山羊[やまひつじ]|
 | Tintenfisch| squid | calmar| кальмар| [イカ]|
-| | tiger| | | |
-| | | | | |
+| Tiger | tiger| tigre | тигр |虎[とら]|
+| Insekt | insect | insecte|насекомое | 虫[むし]|
 | | | | | |
 | | | | | |
 | | | | | |
@@ -120,27 +120,28 @@ Vocabulary
 | apfel | apple | pomme | яблоко | 林檎[りんご]|
 | birne | pear | poire | груща | 梨[なし]|
 | wasser | water | eau | вода | 水[みず]|
+| Milch | milk | lait | молоко | 牛乳[ぎゅうにゅう]|
 | ei | egg | oeuf | Яйцо | 卵[たまご]|
 | borschtsch | borsch | bortsch | борщ | [ボルシチ]|
-| saft | juice | jus | сок | [シュース]|
-| menü | menu | menu | меню |[メニュー]|
+| saft | juice | jus | сок | シュース|
+| menü | menu | menu | меню |メニュー|
 | sushi | sushi | sushi | цуси | 寿司[すし]|
-| pizza | pizza | pizza | пицца | [ピザ]|
-| kakao | cocoa | cacao | какао | [ココア]|
-| butter | butter | beurre | масло | [バター]|
+| pizza | pizza | pizza | пицца | ピザ|
+| kakao | cocoa | cacao | какао | ココア|
+| butter | butter | beurre | масло | バター|
 | reis | rice | riz | риса | 米[こめ]|
-| suppe | soup | soupe | суп | [スープ]|
-| käse | cheese | fromage | сыр | [チーズ]|
+| suppe | soup | soupe | суп | スープ|
+| käse | cheese | fromage | сыр | チーズ|
 | kartoffel | potato | pomme de terre | картошка | 茶が芋[ちゃがいも]|
 | pilz | mushroom | champignon | грибы | 菌[きのこ]|
-| salat | salad | salade | салат | [サラダ]|
+| salat | salad | salade | салат | サラダ|
 | zwiebel | onion | oignon | лук | 玉葱[たまねぎ]|
-| brot | bread | pain | хлеб | [パン]|
-| schokolade | chocholate | chocolat | шоколад | [チョコレート]|
+| brot | bread | pain | хлеб | パン|
+| schokolade | chocholate | chocolat | шоколад | チョコレート|
 | süßigkeiten | candy | bonbon | конфета | 飴[あめ]|
 | aubergine | eggplant | aubergine | баклажан | 茄子[なす]|
-| koriander | coriander | coriandre | кориандр | [パクチー]|
-| kohl | cabbage | chou | капуста | [キャベツ]|
+| koriander | coriander | coriandre | кориандр | パクチー|
+| kohl | cabbage | chou | капуста | キャベツ|
 | garnele | shrimp | crevette | креветка | 海老[えび]|
 | hummer | lobster | homard | омар | 伊勢海老[いせえび]|
 | krebs | crab | crabe | краб | 蟹[かに]|
@@ -186,19 +187,19 @@ Vocabulary
 | nachmittag | afternoon | après-midi | день       | 午後[ごご]|
 | abend | evening | soir | вечер      | 夕方[ゆうがた]|
 | nacht | night | nuit  | ночи       | 夜[よる]|
-| Januar | January | Janvier | Январь | |
-| Februar | February | Février | Февраль | |
-| März | March | Mars | Март | |
-| April | April | Avril | Апрель | |
-| Mai | May | Mai | Май | |
-| Juni | June | Juin | Июнь | |
-| Juli | July | Juillet | Июль | |
-| August | August | Août | Август | |
-| September | September | Septembre | Сентябрь | |
-| Oktober | October | Octobre | Октябрь | |
-| November | November | Novembre | Ноябрь | |
-| Dezember | December | Décembre | Декабрь | |
-| Sekunde | second | deuxième |секунда | |
+| Januar | January | Janvier | Январь | 正月[しょうがつ]|
+| Februar | February | Février | Февраль | 二月[にがつ]|
+| März | March | Mars | Март | 三月[さんがつ]|
+| April | April | Avril | Апрель | 四月[しがつ]|
+| Mai | May | Mai | Май | 五月[ごがつ]|
+| Juni | June | Juin | Июнь |六月[ろくがつ] |
+| Juli | July | Juillet | Июль | 七月[しちがつ]|
+| August | August | Août | Август | 八月[はちがつ]|
+| September | September | Septembre | Сентябрь | 九月[きゅうがつ]|
+| Oktober | October | Octobre | Октябрь | 十月[じゅうがつ]|
+| November | November | Novembre | Ноябрь | 十一月[じゅういちがつ]|
+| Dezember | December | Décembre | Декабрь | 十二月[じゅうにがつ]|
+| Sekunde | second | deuxième |секунда | 秒[びょう]|
 | minute | minute | minute | минута | 分[ぶん]|
 | stunde | hour | heure | час | 時間[じかん]|
 | monat | month | mois | месяц | 月[がつ]|
@@ -222,7 +223,7 @@ Vocabulary
 | Frankreich| France| France| Франция| 法国[フランス]|
 | Amerika| America| Amérique| Америка| 米国[アメリカ]|
 | Kanada| Canada | Canada| Канада| 加国[カナダ]|
-| Indien| India | Inde | Индия| 印[インド]|
+| Indien| India | Inde | Индия| 印度[インド]|
 | | | | | |
 | | | | | |
 | | | | | |
@@ -280,17 +281,17 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| null    | zero    | zéro     | нуль    | 零[ゼロ]|
-| ein     | one     | une      | один    | 一壱[ひ]|
-| zwei    | two     | deux     | два     | 二[ふ]|
-| drei    | three   | trois    | три     | 三[み]|
-| vier    | four    | quatre   | четыре  | 四[よ]|
-| fünf    | five    | cinq     | пять    | 五[い]|
-| sechs   | six     | six      | шесть   | 六[む]|
-| sieben  | seven   | sept     | семь    | 七[なな]|
-| acht    | eight   | huit     | восемь  | 八[や]|
-| neun    | nine    | neuf     | девять  | 九[く]|
-| zehn    | ten     | dix      | десять  | 十[と]|
+| null    | zero    | zéro     | нуль    | 〇/零[ゼロ/れい]|
+| ein     | one     | une      | один    | 一/壱[ひ/いち]|
+| zwei    | two     | deux     | два     | 二/弍[ふ/に]|
+| drei    | three   | trois    | три     | 三/弎[み/さん]|
+| vier    | four    | quatre   | четыре  | 四[よ/し]|
+| fünf    | five    | cinq     | пять    | 五[い/ご]|
+| sechs   | six     | six      | шесть   | 六[む/ろく]|
+| sieben  | seven   | sept     | семь    | 七[なな/しち]|
+| acht    | eight   | huit     | восемь  | 八[や/はち]|
+| neun    | nine    | neuf     | девять  | 九[く/きゅう]|
+| zehn    | ten     | dix      | десять  | 十[と/じゅう]|
 | elf     | eleven  | onze     | одиннадцать | 十一[じゅういち]|
 | zwölf   | twelve  | douze    | двенадцать | 十二[じゅうに]|
 | dreizehn | thirteen | treize   | тринадцать | 十三[じゅうさん]|
@@ -300,8 +301,8 @@ Vocabulary
 | siebzehn | seventeen | dix-sept | семнадцать | 十七[じゅうしち]|
 | achtzehn | eighteen | dix-huit | восемнадцать | 十八[じゅうはち]|
 | neunzehn | nineteen | dix-neuf | девятнадцать | 十九[じゅうきゅう]|
-| zwanzig | twenty | vingt | двадцать | 二十[にじゅう]|
-| einundzwanzig | twenty one | vingt et un | двадцать один  | 二十一[にじゅう]|
+| zwanzig | twenty | vingt | двадцать | 二十/廿[にじゅう]|
+| einundzwanzig | twenty one | vingt et un | двадцать один  | 二十一[にじゅういち]|
 | zweiundzwanzig | twenty two | vingt deux | двадцать два  | 廿二[にじゅう]|
 | dreiundzwanzig | twenty three | vingt trois | двадцать три | 廿三[にじゅう]|
 | vierundzwanzig | twenty four | vingt quatre | двадцать четыре | 廿四[にじゅう]|
@@ -310,41 +311,40 @@ Vocabulary
 | siebenundzwanzig | twenty seven | vingt sept | двадцать семь | 廿七[にじゅう]|
 | achtundzwanzig | twenty eight | vingt huit | двадцать восемь | 廿八[にじゅう]|
 | neunundzwanzig | twenty nine | vingt neuf | двадцать девять | 廿九[にじゅう]|
-| dreißig | thirty | trente   | тридцать |        []|
-| einunddreißig | thirty one | trente et un | тридцать один |       [] |
-| zweiunddreißig | thirty two | trente deux  | тридцать два|        []|
-| dreiunddreißig | thirty three | trente trois   | тридцать |        []|
-| vierunddreißig | thirty four | trente quatre  | тридцать |        []|
-| fünfunddreißig | thirty five | trente cinq  | тридцать |        []|
-| sechsunddreißig | thirty six | trente six  | тридцать |        []|
-| siebenunddreißig | thirty seven | trente sept  | тридцать |        []|
-| achtunddreißig | thirty eight | trente huit  | тридцать |        []|
-| neununddreißig | thirty nine | trente neuf | тридцать |        []|
-|         |         |          |         |        |
-| vierzig |         | quarante | сорок |        []|
-|         |         |          |         |        |
-| fünfzig |         | cinquante | пятьдесят |        []|
-|         |         |          |         |        |
-| sechzig |         | soixante | шестьдесят |        []|
-|         |         |          |         |        |
-| hundert | hundred | cent     | сто     |        []|
-| tausend |         | mille    | Тысяча  |        []|
-|         | million |          |         |        |
-| milliard | billion | milliard | миллиард |        []|
+| dreißig | thirty | trente   | тридцать |       三十/丗 [さんじゅう]|
+| einunddreißig | thirty one | trente et un | тридцать один |     三十一  [さんじゅういち] |
+| zweiunddreißig | thirty two | trente deux  | тридцать два|     三十二   [さんじゅうに]|
+| dreiunddreißig | thirty three | trente trois   | тридцать |     三十三   [さんじゅうさん]|
+| vierunddreißig | thirty four | trente quatre  | тридцать |     三十四   [さんじゅうし]|
+| fünfunddreißig | thirty five | trente cinq  | тридцать |      三十五  [さんじゅうご]|
+| sechsunddreißig | thirty six | trente six  | тридцать |      三十六  [さんじゅうろく]|
+| siebenunddreißig | thirty seven | trente sept  | тридцать |    三十七    [さんじゅうしち]|
+| achtunddreißig | thirty eight | trente huit  | тридцать |      三十八  [さんじゅうはち]|
+| neununddreißig | thirty nine | trente neuf | тридцать |      三十九  [さんじゅうきゅう]|
+| vierzig | forty   | quarante | сорок |      四十  [よんじゅう]|
+| fünfzig | fifty   | cinquante | пятьдесят |     五十   [ごじゅう]|
+| sechzig | sixty   | soixante | шестьдесят |       六十 [ろくじゅう]|
+| siebenzig | seventy   | soixante-dix | семьдесят |    七十    [しちじゅう]|
+| achtzig | eighty   | quatre-vingt | восемьдесят |      八十  [はちじゅう]|
+| neunzig | ninety   | quatre-vingt-dix | девяносто  |      九十  [きゅうじゅう]|
+| hundert | hundred | cent     | сто     |      百 [ひゃく]|
+| tausend | thousand | mille    | Тысяча  |       千 [せん]|
+| million | million | million | миллион |      百万 [ひゃくまん] |
+| milliard | billion | milliard | миллиард |      十億  [じゅうおく]|
 
 # 常用动词
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
 | können| can |pouvoir|мочь|できる|
-| wagen| dare| oser| сметь| 冒す[]|
+| wagen| dare| oser| сметь| 冒す[おかす]|
 | wollen| want| vouloir| хотеть| [ほしい]|
-| geben| give| donner| давать| [あげる]|
+| geben| give| donner| давать| 上げる[あげる]|
 | benötigen| need| besoin| нуждаться| []|
-| lassen| let| laisser| разрешать| []|
+| lassen| let| laisser| разрешать| [させる]|
 | sein| be| être| быть| [です]|
-| gehen| go| aller| идти| [いく]|
-| kommen| come| venir| приходить| [くる]|
+| gehen| go| aller| идти| 行く[いく]|
+| kommen| come| venir| приходить| 来る[くる]|
 | verlassen| leave| partir| покидать| 離れる[はなれる]|
 | leben| live| vivre| жить| 住む[すむ]|
 | sagen| say| dire| сказать| 言う[いう]|
@@ -359,9 +359,9 @@ Vocabulary
 | haben| have| avoir| иметь| [いる]|
 | lesen | read | lire | читать| 読む[よむ]|
 | lehren | teach | enseigner | учить| 教える[おしえる]|
-| schreiben | write | écrire | писать | []|
-| | | | | []|
-| | | | | []|
+| schreiben | write | écrire | писать | 書く[かく]|
+| streiten |contend |lutter | бороться| 争う[]|
+| kämpfen | fight | se battre| сражаться| 戦う[たたかう]|
 | | | | | []|
 | | | | | []|
 | | | | | []|
