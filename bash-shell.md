@@ -2158,32 +2158,25 @@ var='ahjfisifjssfa'
 ${#var}      #获得var的长度
 
 ${var#*※}  　#去掉var的第一个※左面的部分
-
 ${var%%※*}　#去掉var的第一个※右面的部分
-
 ${var##*※}   #去掉var的最后一个※左面的部分
-
 ${var%※*}　 #去掉var的最后一个※右面的部分
 
 ${var:-val}    #var未赋值时，用val的值替换var
-
 ${var:=val}    #var未赋值时，用val的值赋值替换var
-
 ${var:+val}    #var赋值时，用val的值替换var
-
 ${var:?val}    #var错误时，用val的值替换var
 
 ${!i} 遍历i从 1…$#
 
   i=`expr $i + 1`;
 
-  \# let i+=1;
-
-  \# ((i++));
-
-  \# i=$[$i+1];
-
-  \# i=$(( $i + 1 ))
+```
+  # let i+=1;
+  # ((i++));
+  # i=$[$i+1];
+  # i=$(( $i + 1 ))
+```
 
 全局环境变量设置文件：/etc/profile、/etc/bashrc。
 
@@ -2198,20 +2191,15 @@ ${!i} 遍历i从 1…$#
 **#注意，这些变量不宜用于脚本中**
 
 !!       上一条输入的命令
-
 !$       上一条命令的最后一个参数
-
 !str     之前最近一条以’str’开头的命令
-
 !?str?   之前最近一条包含’str’的命令
-
 !1     history中第一条命令
-
 !-1     history中最后一条命令
 
 ------
 
-**正则表达式**
+# **正则表达式**
 
 ^ 行首 $ 行尾
 
@@ -2223,7 +2211,7 @@ ${!i} 遍历i从 1…$#
 
 {} 次数范围 eg:\{2,5\}
 
-**扩展表达式：**
+## **扩展表达式：**
 
 \+ 一个或多个重复的
 
@@ -2293,13 +2281,14 @@ n<&-   表示将n号输入关闭
 
 e.g.:
 
+```
 cat txt0 | sort | comm /dev/fd/0 <(cat txt1|sort)
-
 = comm <(cat txt0|sort) <(cat txt|sort)
+```
 
 ------
 
-**BASH脚本**
+# **BASH脚本**
 
 \#数组操作
 
@@ -2445,75 +2434,49 @@ awk的运行方式
 
    其中，-f选项加载awk-script-file中的awk脚本，input-file(s)跟上面的是一样的。
 
-ARGC        命令行参数个数
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  ARGC       | 命令行参数个数 |
+|  ARGV       | 命令行参数排列 |
+|  ENVIRON     | 支持队列中系统环境变量的使用 |
+|  FILENAME    |  awk浏览的文件名 |
+|  FNR       | 浏览文件的记录数 |
+|  FS        | 设置输入域分隔符，等价于命令行 -F选项 |
+|  NF        | 浏览记录的域的个数 |
+|  NR        | 已读的记录数 |
+|  OFS       | 输出域分隔符 |
+|  ORS       | 输出记录分隔符 |
+|  RS        | 控制记录分隔符 |
+|  BEGIN{}   | 在处理文件之前使用 |
+|  pattern   |  相当于一个if判断，满足条件的才会执行下面的action |
+|  {action}  |  在文件的每行上使用 |
+|  END{}   |  在处理文件结束后使用 |
+|  print   |  同shell的echo |
+|  printf  |  同C语言的printf |
+|  gsub(r,s) | 在整个$0中用s替代r |
+|  gsub(r,s,t) | 在整个t中用s替代r |
+|  index(s,t)  |返回s中字符串t的第一位置 |
+|  length(s) | 返回s长度 |
+|  match(s,r) | 测试s是否包含匹配r的字符串 |
+|  split(s,a,fs) | 在fs上将s分成序列a |
+|  sprint(fmt,exp) | 返回经fmt格式化后的exp |
+|  sub(r,s) | 用$0中最左边最长的子串代替s |
+|  substr(s,p) | 返回字符串s中从p开始的后缀部分 |
+|  substr(s,p,n) | 返回字符串s中从p开始长度为n的后缀部分 详细说明一下各个函数的使用方法。 |
+|  gensub(a,b,c[,d]) |全局替换，匹配正则a， 用b替换，c为指定替换目标是第几次匹配，d为指定替换目标是哪个域如$1,$2，若无d指$0，返回值为target替换后内容(未替换还是返回 target原内容)，与sub、gsub不同的是，target内容替换后不改变。 |
+|  gensub(/123/,"x",1,$1)| 替换$1中 第一次匹配到的123为字符x，返回值为$1替换后的内容，且$1的内容并没有改变 |
+|  gensub(/a(.*)b/,"\\1",1) |返回值为匹配正则第1对()内的内容 |
+|  gensub(/a(.*)b(.*)c/,"\\2",1)| 返回值为匹配正则第2对()内的内容 |
 
-ARGV        命令行参数排列
-
-ENVIRON      支持队列中系统环境变量的使用
-
-FILENAME      awk浏览的文件名
-
-FNR        浏览文件的记录数
-
-FS         设置输入域分隔符，等价于命令行 -F选项
-
-NF         浏览记录的域的个数
-
-NR         已读的记录数
-
-OFS        输出域分隔符
-
-ORS        输出记录分隔符
-
-RS         控制记录分隔符
-
-BEGIN{}   #在处理文件之前使用
-
-pattern    #相当于一个if判断，满足条件的才会执行下面的action
-
-{action}   #在文件的每行上使用
-
-END{}    #在处理文件结束后使用
-
-print    #同shell的echo
-
-printf   #同C语言的printf
-
-gsub(r,s)  在整个$0中用s替代r
-
-gsub(r,s,t)  在整个t中用s替代r
-
-index(s,t)  返回s中字符串t的第一位置
-
-length(s)  返回s长度
-
-match(s,r)  测试s是否包含匹配r的字符串
-
-split(s,a,fs)  在fs上将s分成序列a
-
-sprint(fmt,exp)  返回经fmt格式化后的exp
-
-sub(r,s)  用$0中最左边最长的子串代替s
-
-substr(s,p)  返回字符串s中从p开始的后缀部分
-
-substr(s,p,n)  返回字符串s中从p开始长度为n的后缀部分 详细说明一下各个函数的使用方法。
-
-gensub(a,b,c[,d]) 全局替换，匹配正则a， 用b替换，c为指定替换目标是第几次匹配，d为指定替换目标是哪个域如$1,$2，若无d指$0，返回值为target替换后内容(未替换还是返回 target原内容)，与sub、gsub不同的是，target内容替换后不改变。
-
-gensub(/123/,"x",1,$1) 替换$1中 第一次匹配到的123为字符x，返回值为$1替换后的内容，且$1的内容并没有改变
-
-gensub(/a(.*)b/,"\\1",1) 返回值为匹配正则第1对()内的内容
-
-gensub(/a(.*)b(.*)c/,"\\2",1) 返回值为匹配正则第2对()内的内容
-
+```
 awk '{if($0~/aaa/ && $0!~/bbb/)next}{print $0}'
 
 sed '/aaa/{/bbb/{p};d}'
+```
 
 ------
 
-**系统信号**
+# **系统信号**
 
 Ctrl-C 程序中断
 
@@ -2531,7 +2494,7 @@ erase = ^?; kill = ^U; start = ^Q; stop = ^S; rprnt = ^R; werase = ^W; lnext = ^
 
 ------
 
-**终端控制**
+# **终端控制**
 
 颜色特效控制：
 
@@ -2539,39 +2502,25 @@ printf "\033[1;33m Hello World. \033[0m \n";
 
 颜色如下:
 
-none     = "\033[0m"
-
-black    = "\033[0;30m"
-
-dark_gray  = "\033[1;30m"
-
-blue     = "\033[0;34m"
-
-light_blue  = "\033[1;34m"
-
-green    = "\033[0;32m"
-
-light_green = "\033[1;32m"
-
-cyan     = "\033[0;36m"
-
-light_cyan  = "\033[1;36m"
-
-red     = "\033[0;31m"
-
-light_red  = "\033[1;31m"
-
-purple    = "\033[0;35m"
-
-light_purple = "\033[1;35m"
-
-brown    = "\033[0;33m"
-
-yellow    = "\033[1;33m"
-
-light_gray  = "\033[0;37m"
-
-white    = "\033[1;37m"
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  none     | "\033[0m"  |
+|  black    | "\033[0;30m"  |
+|  dark_gray  | "\033[1;30m"  |
+|  blue     | "\033[0;34m"  |
+|  light_blue  | "\033[1;34m"  |
+|  green    | "\033[0;32m"  |
+|  light_green | "\033[1;32m"  |
+|  cyan     | "\033[0;36m"  |
+|  light_cyan  | "\033[1;36m"  |
+|  red     | "\033[0;31m"  |
+|  light_red  | "\033[1;31m"  |
+|  purple    | "\033[0;35m"  |
+|  light_purple | "\033[1;35m"  |
+|  brown    | "\033[0;33m"  |
+|  yellow    | "\033[1;33m"  |
+|  light_gray  | "\033[0;37m"  |
+|  white    | "\033[1;37m"  |
 
 字背景颜色范围:
 
@@ -2595,45 +2544,28 @@ white    = "\033[1;37m"
 
 输出特效格式控制：
 
-\033[0m 关闭所有属性
-
-\033[1m  设置高亮度
-
-\033[4m  下划线
-
-\033[5m  闪烁
-
-\033[7m  反显
-
-\033[8m  消隐
-
-\033[30m  --  \033[37m  设置前景色
-
-\033[40m  --  \033[47m  设置背景色
-
-光标位置等的格式控制：
-
-\033[nA    光标上移n行
-
-\033[nB    光标下移n行
-
-\033[nC    光标右移n行
-
-\033[nD    光标左移n行
-
-\033[y;xH   设置光标位置
-
-\033[2J    清屏
-
-\033[K    清除从光标到行尾的内容
-
-\033[s    保存光标位置
-
-\033[u    恢复光标位置
-
-\033[?25l  隐藏光标
-
-\033[?25h  显示光标
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| \033[0m | 关闭所有属性 |
+| \033[1m  | 设置高亮度 |
+| \033[4m  | 下划线 |
+| \033[5m  | 闪烁 |
+| \033[7m  | 反显 |
+| \033[8m  | 消隐 |
+| \033[30m  --  \033[37m  | 设置前景色 |
+| \033[40m  --  \033[47m  | 设置背景色 |
+| 光标位置等的格式控制： | |
+| \033[nA    | 光标上移n行 |
+| \033[nB    | 光标下移n行 |
+| \033[nC    | 光标右移n行 |
+| \033[nD    | 光标左移n行 |
+| \033[y;xH   | 设置光标位置 |
+| \033[2J    | 清屏 |
+| \033[K    | 清除从光标到行尾的内容 |
+| \033[s    | 保存光标位置 |
+| \033[u    | 恢复光标位置 |
+| \033[?25l  | 隐藏光标 |
+| \033[?25h  | 显示光标 |
 
 ------
 
@@ -2649,73 +2581,62 @@ syslog日志服务：
 
 4、常见日志文件:
 
-/var/log/dmesg   内核引导信息日志
-
-/var/log/message  标准系统错误信息日志
-
-/var/log/maillog  邮件系统信息日志
-
-/var/log/cron    计划任务日志
-
-/var/log/secure   安全信息日志
-
-/etc/apt/sources.list   # ubuntu/debian apt-get 源列表
-
-/etc/dphys-swapfile   # debian swap 配置
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| /var/log/dmesg  | 内核引导信息日志 |
+| /var/log/message | 标准系统错误信息日志 |
+| /var/log/maillog | 邮件系统信息日志 |
+| /var/log/cron    | 计划任务日志 |
+| /var/log/secure  | 安全信息日志 |
+| /etc/apt/sources.list  | ubuntu/debian apt-get 源列表 |
+| /etc/dphys-swapfile   | debian swap 配置 |
 
 ------
 
-**Examples**
+# **Examples**
 
-**@计算日期**
+## **@计算日期**
 
 date -d "2 months ago" '+%Y-%m'
 
-**@进制转换**
+## **@进制转换**
 
+```
 $((16#40C))
-
 $((2#110101))
-
 $((n#xxx)) n~(2,36)
-
 echo "obase=64;123456"|bc
+```
 
-**@比较列表中多出的部分**
+## **@比较列表中多出的部分**
 
+```
 comm -23 <(sort file1) <(sort file2)   #file1 比file2多出的部分
-
 comm -13 <(sort file1) <(sort file2)   #file1 比file2缺少的部分
-
 comm -12 <(sort file1) <(sort file2)   #file1 和file2共有的部分
+```
 
-**＠创建用户**
+## **＠创建用户**
 
+```
 mkdir /home/<user>
-
 useradd -d /home/<user> -s /bin/bash <user>
-
 passwd <user>  #设置密码
-
 visudo  #添加sudo权限
-
 chown <user>:<user> /home/<user>
-
 chmod 775 /home/<user>
+#su <user>  #测试用户
+```
 
-\#su <user>  #测试用户
+## **＠修改swap大小**
 
-**＠修改swap大小**
-
+```
 swapoff -a
-
 dd if=/dev/zero of=/home/swap bs=1024 count=2048000
-
 mkswap /home/swap
-
 swapon /home/swap
-
-＃echo "/home/swap swap swap defaults 0 0" >>/etc/fstab
+#echo "/home/swap swap swap defaults 0 0" >>/etc/fstab
+```
 
 **@for 循环**
 
@@ -2801,79 +2722,58 @@ echo $?
 
 **@添加新管理员用户**
 
+```
 mkdir /home/<username>
-
 useradd <username> -d /home/<username>
-
 usermod <username> -G <group>
-
 passwd <username>
-
-\# <password>
-
-\# <password>
-
+# <password>
+# <password>
 visudo
-
-\# <username>  ALL=(ALL:ALL) ALL
-
+# <username>  ALL=(ALL:ALL) ALL
 chown /home/<username> <username>:<group>
+```
 
 **@按行读取文件**
 
-\#method 1 (按分隔符读文件)
-
+```
+# method 1 (按分隔符读文件)
 while read line; do
-
   echo $line
-
 done < $filename
 
-\#method 2
-
+# method 2
 cat $filename | while read line; do
-
   echo $line
-
 done
 
-\#method 3 ()
-
+# method 3 ()
 for line in `cat filename` #$(<file)
-
 do
-
   echo $line
-
 done
+```
 
-\#总结：以 < $filename 的方式读取的文件是以分隔符，cat是以行来读的
+总结：以 < $filename 的方式读取的文件是以分隔符，cat是以行来读的
 
-\#按行分段读取文件，分隔符为$IFS
+按行分段读取文件，分隔符为$IFS
 
-cat a | while read a b c d; do echo \"$a\" \"$b\" \"$c\" \"$d\"; done
+`cat a | while read a b c d; do echo \"$a\" \"$b\" \"$c\" \"$d\"; done`
 
 **@自输密码的脚本：**
 
+```
 function remoterun(){
-
   spawn /usr/bin/ssh $1 #root@10.99.0.245
-
   expect "*password:"
-
   send "$2\r"
-
   expect "*~$"
-
   send "$3\r"  #"cd /root"
-
   expect "*~$"
-
   send "exit\r"
-
   expect eof
-
 }
+```
 
 **@免密码sudo**
 
@@ -2885,19 +2785,39 @@ echo "password" | sudo -S $command
 
 **@互信**
 
+```
 ssh-keygen -t rsa
-
 scp ~/.ssh/id_rsa.pub <user>@<host>:~
-
 ssh <user>@<host>
-
 cat id_rsa.pub >> ~/.ssh/authenized_keys
+```
 
 **@挂载**
 
+```
 sudo mount 192.168.11.225:/opt/userfilebase /opt/userfilebase    #linux目标机
-
 sudo mount //192.168.11.107/Share -o iocharset=utf8,username=shixiaofei,password=tiger1990 /mnt/crawlfilebase  #windows目标机
+```
+
+## **@auto mount Network file system**
+
+\* linux
+
+```
+sudo apt-get install autofs
+echo "/- /etc/auto.nfs" | sudo tee -a /etc/auto.master
+echo "/mnt/data -fstype=nfs,intr 10.12.1.100:/mnt/data" | sudo tee -a /etc/auto.nfs
+sudo systemctl restart autofs
+```
+
+\* mac
+
+```
+sudo mkdir -p /mnt/data
+echo "/- auto_nfs -nobrowse,nosuid" | sudo tee -a /etc/auto_master
+echo "/mnt/data -fstype=nfs,rsize=65536,wsize=65536,intr,hard,tcp,rdirplus,readahead=128 nfs://10.12.1.100:/mnt/data" | sudo tee -a /etc/auto_nfs
+sudo automount -cv
+```
 
 **@查找指定目录下中有某字符串的文件**
 
@@ -2905,17 +2825,14 @@ grep -Irn "hello,world!" ./
 
 **@打开socket(bash Only)**
 
+```
 exec 8<>/dev/tcp/127.0.0.1/11211 #使用文件描述符8以<>(<读>写)方式，打开127.0.0.1的tcp11211端口
-
 ls -l /proc/self/fd #查看打开的连接8
-
 echo -e "stats" >&8 #向socket写入数据
-
 cat <&8 #从socket读入数据
-
 exec 8<&- #关闭socket读
-
 exec 8>&- #关闭socket写
+```
 
 **@将静态库编为动态库**
 
@@ -2932,7 +2849,7 @@ gcc -shared -o abc.so a.o b.o c.o
 | .rar         | rar                 | rar e                              | rar a                        |                     |
 | .tar         | tar                 | tar -xvf  <tarfile> <directory>    | tar -cvf                     | tar是打包，不是压缩 |
 | .tar.bz2     | tar                 | tar -jxvf <bzfile> <directory>     | tar -jcvf                    |                     |
-| .tar.gz .tgz | tar                 | tar -zxvf <tgzfile> -C <directory> | tar -zcvf xx.tgz xxx/        |                     |
+| .tar.gz(.tgz)| tar                 | tar -zxvf <tgzfile> -C <directory> | tar -zcvf xx.tgz xxx/        |                     |
 | .tar.Z       | tar                 | tar -Zxvf <Zfile> <directory>      | tar -Zcvf <Zfile>            |                     |
 | .Z           | uncompress compress | uncompress                         | compress                     |                     |
 | .zip         | unzip zip           | unzip [-d <dir>] <zipfile>         | zip -r <zipfile> <directory> |                     |
@@ -2956,27 +2873,6 @@ tar 文件夹在后，tar包在前
 
 Brotli、Deflate、Zopfli、LZMA、LZHAM、Bzip2 、snappy
 
-**@auto mount Network file system**
-
-\* linux
-
-sudo apt-get install autofs
-
-echo "/- /etc/auto.nfs" | sudo tee -a /etc/auto.master
-
-echo "/mnt/data -fstype=nfs,intr 10.12.1.100:/mnt/data" | sudo tee -a /etc/auto.nfs
-
-sudo systemctl restart autofs
-
-\* mac
-
-sudo mkdir -p /mnt/data
-
-echo "/- auto_nfs -nobrowse,nosuid" | sudo tee -a /etc/auto_master
-
-echo "/mnt/data -fstype=nfs,rsize=65536,wsize=65536,intr,hard,tcp,rdirplus,readahead=128 nfs://10.12.1.100:/mnt/data" | sudo tee -a /etc/auto_nfs
-
-sudo automount -cv
 
 **索引**
 

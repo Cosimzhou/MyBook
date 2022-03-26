@@ -13,7 +13,7 @@ Vocabulary
 | Bis bald | See you | A la prochaine | До скорого | じゃね|
 | Auf Wiedersehen | Goodbye | Au revoir   | До свидания | さよなら|
 | Danke dir | Thank you | Merci | Благодарю вас | ありがとう|
-| Guten tag | Good day | Bonne journée | Добрый день/Здорово |  -  |
+| Guten tag | Good day | Bonne journée | Добрый день/Здорово |  こんにちは  |
 | Guten abend | Good evening | Bonsoir | Добрый вечер | こんばんは|
 | Gute Nacht | Good night  | Bonne nuit | Спокойной ночи | おやすみ|
 | Ja      | Yes     | Oui      | Да      | はい|
@@ -45,13 +45,13 @@ Vocabulary
 | tante | aunt | tante | тетя | 叔母[おば]|
 | neffe | nephew | neveu | племянник | 甥[おい]|
 | vetter | cousin | cousin | двоюродный брат | 従兄弟・従姉妹[いとこ]|
-| Freund | friend | Ami| друг| 友達[ともだち]|
-| Freund| boyfriend| petit ami| Бойфренд| 彼氏[かれし]|
-| Freundin| girlfriend| copine| подруга| 彼女[かのじょ]|
-| partner| partner| partenaire| партнёр| |
-| Führer| leader| chef| лидер| 上司[じょうし]|
-| Rivale| rival| rival| соперник| [レバル]|
-| Feind| enemy| ennemi| враг| 敵[てき]|
+| freund | friend | Ami| друг| 友達[ともだち]|
+| freund | boyfriend| petit ami| Бойфренд| 彼氏[かれし]|
+| freundin| girlfriend| copine| подруга| 彼女[かのじょ]|
+| partner| partner| partenaire| партнёр| 合棒[あいぼう]|
+| führer| leader| chef| лидер| 上司[じょうし]|
+| rivale| rival| rival| соперник| [レバル]|
+| feind| enemy| ennemi| враг| 敵[てき]|
 
 
 
@@ -115,18 +115,18 @@ Vocabulary
 |---------|---------|----------|---------|--------|
 | essen | food | nourriture | пища | 食べ物[たべもの]|
 | mittagessen | lunch | déjeuner | обед |昼ご飯[ひるごはん]|
-| Abendessen | dinner | dîner | ужин | 夕食[ゆうしょく]|
-| Frühstück | breakfast | petit déjeuner | завтрак | 朝ご飯[あさごはん]|
-| Apfel | apple | pomme | яблоко | 林檎[りんご]|
-| Birne | pear | poire | груща | 梨[なし]|
+| abendessen | dinner | dîner | ужин | 夕食[ゆうしょく]|
+| frühstück | breakfast | petit déjeuner | завтрак | 朝ご飯[あさごはん]|
+| apfel | apple | pomme | яблоко | 林檎[りんご]|
+| birne | pear | poire | груща | 梨[なし]|
 | wasser | water | eau | вода | 水[みず]|
 | ei | egg | oeuf | Яйцо | 卵[たまご]|
-| Borschtsch | borsch | bortsch | борщ | [ボルシチ]|
+| borschtsch | borsch | bortsch | борщ | [ボルシチ]|
 | saft | juice | jus | сок | [シュース]|
 | menü | menu | menu | меню |[メニュー]|
 | sushi | sushi | sushi | цуси | 寿司[すし]|
 | pizza | pizza | pizza | пицца | [ピザ]|
-| Kakao | cocoa | cacao | какао | [ココア]|
+| kakao | cocoa | cacao | какао | [ココア]|
 | butter | butter | beurre | масло | [バター]|
 | reis | rice | riz | риса | 米[こめ]|
 | suppe | soup | soupe | суп | [スープ]|
@@ -136,19 +136,19 @@ Vocabulary
 | salat | salad | salade | салат | [サラダ]|
 | zwiebel | onion | oignon | лук | 玉葱[たまねぎ]|
 | brot | bread | pain | хлеб | [パン]|
-| Schokolade | chocholate | chocolat | шоколад | [チョコレート]|
-| Süßigkeiten | candy | bonbon | конфета | 飴[あめ]|
+| schokolade | chocholate | chocolat | шоколад | [チョコレート]|
+| süßigkeiten | candy | bonbon | конфета | 飴[あめ]|
 | aubergine | eggplant | aubergine | баклажан | 茄子[なす]|
-| Koriander | coriander | coriandre | кориандр | [パクチー]|
+| koriander | coriander | coriandre | кориандр | [パクチー]|
 | kohl | cabbage | chou | капуста | [キャベツ]|
-| Garnele | shrimp | crevette | креветка | 海老[えび]|
-| Hummer | lobster | homard | омар | 伊勢海老[いせえび]|
-| Krebs | crab | crabe | краб | 蟹[かに]|
+| garnele | shrimp | crevette | креветка | 海老[えび]|
+| hummer | lobster | homard | омар | 伊勢海老[いせえび]|
+| krebs | crab | crabe | краб | 蟹[かに]|
 | gurke | cucumber | concombre | огурец | 胡瓜[キュウリ]|
-| Spinat | spinach | épinard | шпинат | 三草[さんそう]|
-| Knoblauch | garlic | ail | чеснок | 大蒜[ニンニク]|
-| Ingwer | ginger | gingembre | имбирь | 生姜[しょうが]|
-| Karotte　| carrot | carotte|морковь | 人参[にんじん]|
+| spinat | spinach | épinard | шпинат | 三草[さんそう]|
+| knoblauch | garlic | ail | чеснок | 大蒜[ニンニク]|
+| ingwer | ginger | gingembre | имбирь | 生姜[しょうが]|
+| karotte　| carrot | carotte|морковь | 人参[にんじん]|
 | | | | | |
 | | | | | |
 | | | | | |
@@ -160,14 +160,14 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| Baum | tree | arbre | дереве | 木[き]|
+| baum | tree | arbre | дереве | 木[き]|
 | gras | grass | herbe | трава | 草[くさ]|
 | blume | flower | fleur | цветок | 花[はな]|
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| Heute | today | Aujourd’hui | сегодня | 今日[きょう]|
-| Gestern | yesterday | Hier | вчера | 昨日[きのう]|
+| heute | today | Aujourd’hui | сегодня | 今日[きょう]|
+| gestern | yesterday | Hier | вчера | 昨日[きのう]|
 | vorgestern | the day before yesterday | avant-hier | позавчера | 一昨日[おととい]|
 | morgen | tomorrow | demain | завтра | 明日[あす]|
 | übermorgen | the day after tomorrow | après-demain | послезавтра | 秋日[あきにち]|
@@ -280,55 +280,64 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| null    | zero    | zéro     | нуль    | [ゼロ]|
-| ein     | one     | une      | один    | [ひ]|
-| zwei    | two     | deux     | два     | [ふ]|
-| drei    | three   | trois    | три     | [み]|
-| vier    | four    | quatre   | четыре  | [よ]|
-| fünf    | five    | cinq     | пять    | [い]|
-| sechs   | six     | six      | шесть   | [む]|
-| sieben  | seven   | sept     | семь    | [なな]|
-| acht    | eight   | huit     | восемь  | [や]|
-| neun    | nine    | neuf     | девять  | [く]|
-| zehn    | ten     | dix      | десять  | [と]|
-| elf     | eleven  | onze     | одиннадцать | [じゅういち]|
-| zwölf   | twelve  | douze    | двенадцать | [じゅうに]|
-| dreizehn | thirteen | treize   | тринадцать | [じゅうさん]|
-| vierzehn | forteen | quatorze | четырнадцать | [じゅうし]|
-| fünfzehn | fifteen | quinze | пятнадцать | [じゅうご]|
-| sechzehn | sixteen | seize  | шестнадцать | [じゅうろく]|
-| siebzehn | seventeen | dix-sept | семнадцать | [じゅうしち]|
-| achtzehn | eighteen | dix-huit | восемнадцать | [じゅうはち]|
-| neunzehn | nineteen | dix-neuf | девятнадцать | [じゅうきゅう]|
-| zwanzig | twenty | vingt | двадцать | [にじゅう]|
-| einundzwanzig | twenty one | vingt et un | двадцать один  | [にじゅう]|
-| zweiundzwanzig | twenty two | vingt deux | двадцать два  | [にじゅう]|
-| dreiundzwanzig | twenty three | vingt trois | двадцать три | [にじゅう]|
-| vierundzwanzig | twenty four | vingt quatre | двадцать четыре | [にじゅう]|
-| fünfundzwanzig | twenty five | vingt cinq | двадцать пять | [にじゅう]|
-| sechsundzwanzig | twenty six | vingt six | двадцать шесть | [にじゅう]|
-| siebenundzwanzig | twenty seven | vingt sept | двадцать семь | [にじゅう]|
-| achtundzwanzig | twenty eight | vingt huit | двадцать восемь | [にじゅう]|
-| neunundzwanzig | twenty nine | vingt neuf | двадцать девять | [にじゅう]|
-| dreißig |         | trente   | тридцать |        |
+| null    | zero    | zéro     | нуль    | 零[ゼロ]|
+| ein     | one     | une      | один    | 一壱[ひ]|
+| zwei    | two     | deux     | два     | 二[ふ]|
+| drei    | three   | trois    | три     | 三[み]|
+| vier    | four    | quatre   | четыре  | 四[よ]|
+| fünf    | five    | cinq     | пять    | 五[い]|
+| sechs   | six     | six      | шесть   | 六[む]|
+| sieben  | seven   | sept     | семь    | 七[なな]|
+| acht    | eight   | huit     | восемь  | 八[や]|
+| neun    | nine    | neuf     | девять  | 九[く]|
+| zehn    | ten     | dix      | десять  | 十[と]|
+| elf     | eleven  | onze     | одиннадцать | 十一[じゅういち]|
+| zwölf   | twelve  | douze    | двенадцать | 十二[じゅうに]|
+| dreizehn | thirteen | treize   | тринадцать | 十三[じゅうさん]|
+| vierzehn | forteen | quatorze | четырнадцать | 十四[じゅうし]|
+| fünfzehn | fifteen | quinze | пятнадцать | 十五[じゅうご]|
+| sechzehn | sixteen | seize  | шестнадцать | 十六[じゅうろく]|
+| siebzehn | seventeen | dix-sept | семнадцать | 十七[じゅうしち]|
+| achtzehn | eighteen | dix-huit | восемнадцать | 十八[じゅうはち]|
+| neunzehn | nineteen | dix-neuf | девятнадцать | 十九[じゅうきゅう]|
+| zwanzig | twenty | vingt | двадцать | 二十[にじゅう]|
+| einundzwanzig | twenty one | vingt et un | двадцать один  | 二十一[にじゅう]|
+| zweiundzwanzig | twenty two | vingt deux | двадцать два  | 廿二[にじゅう]|
+| dreiundzwanzig | twenty three | vingt trois | двадцать три | 廿三[にじゅう]|
+| vierundzwanzig | twenty four | vingt quatre | двадцать четыре | 廿四[にじゅう]|
+| fünfundzwanzig | twenty five | vingt cinq | двадцать пять | 廿五[にじゅう]|
+| sechsundzwanzig | twenty six | vingt six | двадцать шесть | 廿六[にじゅう]|
+| siebenundzwanzig | twenty seven | vingt sept | двадцать семь | 廿七[にじゅう]|
+| achtundzwanzig | twenty eight | vingt huit | двадцать восемь | 廿八[にじゅう]|
+| neunundzwanzig | twenty nine | vingt neuf | двадцать девять | 廿九[にじゅう]|
+| dreißig | thirty | trente   | тридцать |        []|
+| einunddreißig | thirty one | trente et un | тридцать один |       [] |
+| zweiunddreißig | thirty two | trente deux  | тридцать два|        []|
+| dreiunddreißig | thirty three | trente trois   | тридцать |        []|
+| vierunddreißig | thirty four | trente quatre  | тридцать |        []|
+| fünfunddreißig | thirty five | trente cinq  | тридцать |        []|
+| sechsunddreißig | thirty six | trente six  | тридцать |        []|
+| siebenunddreißig | thirty seven | trente sept  | тридцать |        []|
+| achtunddreißig | thirty eight | trente huit  | тридцать |        []|
+| neununddreißig | thirty nine | trente neuf | тридцать |        []|
 |         |         |          |         |        |
-| vierzig |         | quarante | сорок |        |
+| vierzig |         | quarante | сорок |        []|
 |         |         |          |         |        |
-| fünfzig |         | cinquante | пятьдесят |        |
+| fünfzig |         | cinquante | пятьдесят |        []|
 |         |         |          |         |        |
-| sechzig |         | soixante | шестьдесят |        |
+| sechzig |         | soixante | шестьдесят |        []|
 |         |         |          |         |        |
-| hundert | hundred | cent     | сто     |        |
-| tausend |         | mille    | Тысяча  |        |
+| hundert | hundred | cent     | сто     |        []|
+| tausend |         | mille    | Тысяча  |        []|
 |         | million |          |         |        |
-| milliard | billion | milliard | миллиард |        |
+| milliard | billion | milliard | миллиард |        []|
 
 # 常用动词
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
 | können| can |pouvoir|мочь|できる|
-| wagen| dare| oser| сметь| []|
+| wagen| dare| oser| сметь| 冒す[]|
 | wollen| want| vouloir| хотеть| [ほしい]|
 | geben| give| donner| давать| [あげる]|
 | benötigen| need| besoin| нуждаться| []|
@@ -350,7 +359,7 @@ Vocabulary
 | haben| have| avoir| иметь| [いる]|
 | lesen | read | lire | читать| 読む[よむ]|
 | lehren | teach | enseigner | учить| 教える[おしえる]|
-| | | | | []|
+| schreiben | write | écrire | писать | []|
 | | | | | []|
 | | | | | []|
 | | | | | []|
@@ -395,10 +404,11 @@ Vocabulary
 | ruhig| quiet | tranquille| спокойной | 静か[しずか]|
 | perfekt| perfect| parfait| отлично | 完璧[かんぺき]|
 | Vergangenheit | past| passé | прошлый| 昔[むかし]|
-| | | | | []|
-| | | | | []|
-| | | | | []|
-| | | | | []|
+| groß | tall | | | []|
+| | short | | | []|
+| stark | strong | | | []|
+| | weak | | | []|
+| laut | | | | []|
 | | | | | []|
 | | | | | []|
 
@@ -432,6 +442,28 @@ ihr euch euch
 
 sie ihnen sie
 Sie Ihnen Sie
+
+### 德语人称表
+
+|         |    | 第⼀格(N) | 第二格(G) | 第三格(D) | 第四格(A) | 所有格 | 第六格|
+|---------|----|-----------|-----------|-----------|-----------|--------|--------|--------|--------|
+| 第一人称|单数| ich || mir   | mich | mein  |
+|         |复数| wir || uns   | uns  | unser |
+| 第二人称|单数| du  || dir   | dich | dein  |
+|         |复数| ihr || euch  | euch | euer  |
+|         |尊称| Sie || Ihnen | Sie  | Ihr   |
+| 第三人称|阳性| er  || ihm   | ihn  | sein  |
+|         |阴性| sie || ihr   | sie  | ihr   |
+|         |中性| es  || ihm   | es   | sein  |
+|         |复数| sie || ihnen | sie  | ihr   |
+
+|   | m. | n. | f. |pl. |
+|---|----|----|----|----|
+| N |der |das |die |die |
+| G |des |des |der |der |
+| D |dem |dem |der |den |
+| A |den |das |die |die |
+
 
 ### 俄语人称表
 
