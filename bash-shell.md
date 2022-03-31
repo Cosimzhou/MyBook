@@ -1095,9 +1095,46 @@ seq n #生成1~n
 
 ## **set**
 
-   -e   出错时退出
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -e            | 出错时退出 |
+|  -x            | 执行时输出命令内容 |
+|  -u            | 遇到未定义的变量 |
+|  -E            | 脚本中捕捉某些信号 |
+|  -v            | 显示输入值 |
+|  -o <attrib>   | 设置指定属性，不指定时显示状态 |
 
-   -x 执行时输出命令内容
++/- 关闭或打开
+
+| 属性 | 含义          |
+| -------------- | ------------- |
+| allexport          |  |
+| braceexpand        |  |
+| emacs              |  |
+| errexit            |  |
+| errtrace           |  |
+| functrace          |  |
+| hashall            |  |
+| histexpand         |  |
+| history            |  |
+| ignoreeof          |  |
+| interactive-comments|  |
+| keyword            |  |
+| monitor            |  |
+| noclobber          |  |
+| noexec             |  |
+| noglob             |  |
+| nolog              |  |
+| notify             |  |
+| nounset            |  |
+| onecmd             |  |
+| physical           |  |
+| pipefail           |  |
+| posix              |  |
+| privileged         |  |
+| verbose            |  |
+| vi                 |  |
+| xtrace             |  |
 
 ## **setsid**
 
@@ -1166,8 +1203,8 @@ ProxyCommand nc -v -xlocalhost:7070 %h %p
    配置文件位置：/etc/ssh/sshd\_config
 
 ```
-ssh -o TCPKeepAlive=yes -o ServerAliveInterval=300 [xx@xxx.com](mailto:xx@xxx.com) #避免超时管道断裂
-ssh -v -N -D 0.0.0.0:7070 [user@address](mailto:user@address)
+ssh -o TCPKeepAlive=yes -o ServerAliveInterval=300 xx@xxx.com  #避免超时管道断裂
+ssh -v -N -D 0.0.0.0:7070 user@address
 ```
 
 ## **stat**
@@ -1824,6 +1861,8 @@ eg: mkfs -t ext3 /dev/vdb1
 -S 反编译文件
 
 ## **pkg-config**
+
+在`PKG_CONFIG_PATH`下的pc文件中读取编译参数
 
 ## **pstack**
 

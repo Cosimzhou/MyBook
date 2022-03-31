@@ -177,6 +177,9 @@ sudo snap install --beta office365webdesktop
 sudo apt-get update --fix-missing
 sudo apt-get autoremove && sudo apt-get clean && sudo apt-get install -f
 
+# Gtk Wave Cleaner
+sudo apt-get install gwc
+
 # Printer service
 sudo apt install cups aptitude
 sudo aptitude install ghostscript  foomatic
