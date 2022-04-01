@@ -1116,12 +1116,12 @@ seq n #生成1~n
 | functrace          |  |
 | hashall            |  |
 | histexpand         |  |
-| history            |  |
+| history            | 记录历史 |
 | ignoreeof          |  |
 | interactive-comments|  |
 | keyword            |  |
 | monitor            |  |
-| noclobber          |  |
+| noclobber          | 不允许覆盖 |
 | noexec             |  |
 | noglob             |  |
 | nolog              |  |
@@ -1129,7 +1129,7 @@ seq n #生成1~n
 | nounset            |  |
 | onecmd             |  |
 | physical           |  |
-| pipefail           |  |
+| pipefail           | 管道中任意失败即失败 |
 | posix              |  |
 | privileged         |  |
 | verbose            |  |
@@ -1170,6 +1170,17 @@ seq n #生成1~n
 ## **source**
 
 可继承环境变量的执行shell脚本
+
+## **split**
+
+切分文件
+
+| 参数选项 | 解释  |
+|----|------------|
+| -a n | 后缀位数，默认为2 |
+| -b n| 单片大小，单位字节 |
+| -n form| |
+| -u | 输出时不进行缓冲 |
 
 ## **ss**
 
@@ -2274,43 +2285,37 @@ ${BASH_REMATCH[1]}   匹配到的子串
 
 ------
 
-**管道和重定向**
+# **管道和重定向**
 
-<       输入
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| <      | 输入  |
+| <(xx)  | 执行xx后的结果作为输入 |
+|  >     |  输出 |
+| <>    | 中转对换，前后均接流、文件，e.g: `sed s/del/les/g file 1<>file #在文件中把del替换成les` |
+|  >>   |  追加 |
+|  >│ |强制覆盖 |
+| │     | 连接|
+| <<    | 标志标准输入的结束符，可以用于交互式命令的脚本编写 |
+| -<<    | 同<<，但开关的tab会被去除 |
+| >&-   |  表示将标准输出关闭 |
+| n>&-  |  表示将n号输出关闭 |
+| n>&m  |  表示将n号输出复制到m号 |
+| &>file  |  标准输出、错误定向到文件 |
+| <&-   |  表示关闭标准输入（键盘） |
+| n<&-  |  表示将n号输入关闭 |
+| n<&m  |  表示将m号输入复制到n号 |
 
-<(xx)   执行xx后的结果作为输入
-
-\>       输出
-
-<>     中转对换，前后均接流、文件，e.g: sed s/del/les/g file 1<>file #在文件中把del替换成les
-
-\>>     追加
-
-|       连接
-
-<<     标志标准输入的结束符，可以用于交互式命令的脚本编写，eg：
-
+```
 sftp <user>@<host> <<EOF
-
 put file
-
 .....
-
 quit
-
 EOF
+```
 
 流的优先级：先准备错误、输出，就绪后接入输出
 
-\>&-    表示将标准输出关闭
-
-n>&-   表示将n号输出关闭
-
-n>&m  表示将n号输出合并到m号
-
-<&-    表示关闭标准输入（键盘）
-
-n<&-   表示将n号输入关闭
 
 /dev/fd/0   输入流，即从输入流读取
 
@@ -2329,37 +2334,34 @@ cat txt0 | sort | comm /dev/fd/0 <(cat txt1|sort)
 
 # **BASH脚本**
 
-\#数组操作
+## 数组操作
 
 \1. 使用[]操作符
 
+```
 names[0]='zrong'
-
 names[1]='jacky'
+```
 
 \2. 使用()直接赋值
 
+```
 names=('zrong' 'jacky')
-
-\# 或
-
+ # 或
 names=([0]='zrong' [1]='jacky')
+```
 
 \# 将每一行读取为数组的一个元素
 
+```
 names=(`cat 'names.txt'`)
-
-echo ${#a[@]}
-
-echo ${a[2]}
-
-echo ${a[*]}
-
+echo ${#a[@]}  # Len(a)
+echo ${a[n]}   # a[n-1], Start from 1
+echo ${a[*]}   # All
 unset a[1]
-
-echo ${a[@]:0:3}
-
+echo ${a[@]:n:m}  # 从n到m的子数组
 echo ${a[@]/3/100}
+```
 
 1）判断表达式
 
@@ -2441,7 +2443,7 @@ test -w File 文件存在并且可写
 
 test -x File 文件存在并且可执行
 
-------
+---------
 
 **awk**
 
@@ -2509,7 +2511,6 @@ awk的运行方式
 
 ```
 awk '{if($0~/aaa/ && $0!~/bbb/)next}{print $0}'
-
 sed '/aaa/{/bbb/{p};d}'
 ```
 
@@ -2517,15 +2518,13 @@ sed '/aaa/{/bbb/{p};d}'
 
 # **系统信号**
 
-Ctrl-C 程序中断
-
-Ctrl-D 登录退出
-
-Ctrl-Z 程序挂起
-
-Ctrl-\ 手动吐核
-
-Ctrl-U kill
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  Ctrl-C  | 程序中断 |
+|  Ctrl-D  | 登录退出 |
+|  Ctrl-Z  | 程序挂起 |
+|  Ctrl-\  | 手动吐核 |
+|  Ctrl-U  | kill     |
 
 可见stty -a
 
@@ -2699,19 +2698,15 @@ done
 
 **@if 判断**
 
+```
 if [ -n "jjjjj" ]; then
-
    echo "not empty"
-
 elif [ -z "a" ]; then
-
    echo impossible
-
 else
-
    echo empty
-
 fi
+```
 
 条件写法
 
@@ -2719,23 +2714,18 @@ fi
 
 多行写法：then换行再写，for后可不带分号
 
-**@case 分支**
+## **@case 分支**
 
+```
 case a in
-
 "1")
-
   echo "it is 1"
-
   ;;
-
 "2"|"3*") echo "it is 2 or it starts with 3";;
-
 "*")
-
   ;;
-
 esac
+```
 
 \#分支写法
 
@@ -2793,7 +2783,7 @@ do
 done
 ```
 
-总结：以 < $filename 的方式读取的文件是以分隔符，cat是以行来读的
+总结：以 `< $filename` 的方式读取的文件是以分隔符，cat是以行来读的
 
 按行分段读取文件，分隔符为$IFS
 
@@ -2936,8 +2926,6 @@ mkdir：全拼make directories，其功能是创建目录。
 mv：全拼move，其功能是移动或重命名文件。
 
 pwd：全拼print working directory，其功能是显示当前工作目录的绝对路径。
-
-rename：用于重命名文件。
 
 rm：全拼remove，其功能是删除一个或多个文件或目录。
 

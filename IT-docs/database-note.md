@@ -16,10 +16,6 @@ select * from sqlite_master where type="table" and name="<table name>"; #列出�
 -------------
 #     MySQL
 
-
-
-
-
 mysql -h<host> -P<port> -u<user> -p<password>
 mysql>
 ?         (\?) Synonym for `help'.
@@ -79,20 +75,20 @@ mysqldump -u<user> -p<password> -h<host> <database> <table>
 | \g [filename/command] | 将当前查询输入缓冲送给后端并且（可选的）将输出放到 filename 或通过管道将输出送给一个分离的Unix shell 用以执行 command． |
 | \h [command]          | 给出声明的 SQL 命令的语法帮助．如果 command 不是一个定义的 SQL 命令（或在 psql 里没有文档），或没有声明 command ，这时 psql将列出可获得帮助的所有命令的列表．如果命令 command 是一个通配符（“*”），则给出所有 SQL 命令的语法帮助． |
 | \H                   | 切换 HTML3 输出．等效于 -H 命令行选项． |
-| \i filename | 从文件 filename 中读取查询到输入缓冲． |
+| \i filename         | 从文件 filename 中读取查询到输入缓冲． |
 | \l                  | 列出服务器上所有数据库． |
 | \m                  | 切换老式监视器样的表输出，这时表周围有边界字符包围着．这是标准 SQL 输出．缺省时，psql 只包括列/字段间的分隔符． |
 | \o [filename/command] | 将后面的查询结果输出到文件 filename 或通过管道将后面结果输出到一个独立的Unix shell 里执行 command．如果没有声明参数，将查询结果输出到 stdout． |
 | \p                    | 打印当前查询缓冲区． |
 | \q                    | 退出 psql 程序． |
 | \r                    | 重置（清空）查询缓冲区． |
-| \s [filename]       | 将命令行历史打印出或是存放到 filename．如果省略 filename ，将不会把后继的命令存放到历史文件中．此选项只有在 psql 配置成使用输入行时才有效． |
+| \s [filename]         | 将命令行历史打印出或是存放到 filename．如果省略 filename ，将不会把后继的命令存放到历史文件中．此选项只有在 psql 配置成使用输入行时才有效． |
 | \t                    | 切换输出的列/字段名的信息头和行记数脚注（缺省是开）． |
 | \T table_options      | 允许你在使用HTML 3.0 格式输出时声明放在表 table ... 中的标记选项．例如，border 将给你的表以边框．这必须和 \H 后期命令一起使用． |
 | \x                    | 切换扩展行格式．当打开时，每一行将在左边打印列/字段名而在右边打印列/字段值．这对于那些不能在一行输出的超长行是很有用的．HTML 行输出模式也支持这个标记． |
 | \w filename           | 将当前查询缓冲区输出到文件 filename． |
 | \z                    | 生成一个带有正确 ACL（赋予/禁止 权限）的数据库中所有表的输出列表． |
-| \! [command]        | 回到一个独立的Unix shell或执行一个Unix 命令 command． |
+| \! [command]          | 回到一个独立的Unix shell或执行一个Unix 命令 command． |
 | \?                    | 获得关于反斜杠 (“\”) 命令的帮助． |
 | \c[onnect] [数据库名/-[用户名称]]|     联接到新的数据库 (当前为 "test") |
 | \cd [目录名]          | 改变当前的工作目录 |
