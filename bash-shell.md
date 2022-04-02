@@ -526,7 +526,8 @@ getopt -o v: --long headers:,libs:,cc:,cxx:,with-glog,with-thrift,nodebugsymbols
 | -v | 剔除匹配的行 |
 | -s | 避开二进制文本进行递归 |
 | -r | 递归目录的匹配内容 |
-| -o | 只输出匹配的内容，注意，不要使用单个`*`匹配 |
+| -o | 只输出匹配的内容，注意，不要使用单个\*匹配 |
+| -q | 静默执行 |
 | -E | 扩展正则内容匹配（同 -P） |
 
   eg:
@@ -1123,7 +1124,7 @@ seq n #生成1~n
 | monitor            |  |
 | noclobber          | 不允许覆盖 |
 | noexec             |  |
-| noglob             |  |
+| noglob             | 停止 wildcard 功能 |
 | nolog              |  |
 | notify             |  |
 | nounset            |  |
@@ -1339,6 +1340,20 @@ WantedBy=multi-user.target
   eg: tar -zcvf /tmp/etc.tar.gz /etc
 
   注意：tar 文件夹在后，tar包在前
+
+
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| -a | 按后缀自动选择解压方式 |
+| -I <cmd> | 指定压缩程序|
+| --no-auto-compress | 不自动选择解压 |
+| -j | 以 bzip2方式压缩 |
+| -J | 以 xz方式压缩 |
+| -z | 以 gzip方式压缩 |
+| -Z | 以 compress方式压缩 |
+| --lzip | 以lzip方式压缩   |
+| --lzma | 以lzma方式压缩 |
+| --lzop | 以lzop方式压缩 |
 
 ## **tee**
 

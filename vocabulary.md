@@ -9,7 +9,7 @@ Vocabulary
 | Danke   | Thanks | Merci    | Спасибо  | どうも|
 | Enttäuschen | Excuse me | Veuillez m’excuser | Извините | すみません|
 | Willkommen | Welcome | Bienvenue | Добро пожаловать | ようこそ|
-| Bitte | Please | veuillez  | Пожалуйста | ください|
+| Bitte | Please | veuillez  | Пожалуйста | どうぞ|
 | Bis bald | See you | A la prochaine | До скорого | じゃね|
 | Auf Wiedersehen | Goodbye | Au revoir   | До свидания | さよなら|
 | Danke dir | Thank you | Merci | Благодарю вас | ありがとう|
@@ -18,82 +18,84 @@ Vocabulary
 | Gute Nacht | Good night  | Bonne nuit | Спокойной ночи | おやすみ|
 | Ja      | Yes     | Oui      | Да      | はい|
 | Nein    | No      | Non      | Нет     | いいえ|
+| Wie heißt du? | What's your name? | Comment t’appelles-tu? | Как тебя зовут? | お名前は? |
+| Ich bin X | I am X | Je suis X | Я X | 私はXです |
+| Direkthilfe? | What's this? | Qu’est-ce que c est? |Что это?|これはなんですか? |
+
 
 # 常用名词
 
-
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| person | person| personne | человек | 人[ひと]|
-| mann | man |homme | мужчина | 男[おとこ]|
-| frau | woman | femme | женщина | 女[おんな]|
-| junge | boy | garçon | мальчик | 男の子[おとこのこ]|
-| mädchen | girl | fille | девочка | 女の子[おんなのこ]|
-| kind | child | enfant | ребёнка | 子[こ]|
-| kind | kids | chevreau | дети    | 子供[こども]|
-| ehemann | husband | Mari | муж | 夫[お]|
-| ehefrau | wife | femme | жена | 妻[つま]|
-| vater | father | père | отец |父[ちち]|
-| mutter | mother | mère | мать | 母[はは]|
-| sohn | son | fils | сын | 息子[むすこ]|
-| tochter | daughter | fille | дочь | 娘[むすめ]|
-| bruder | brother | frère | брат | 兄・弟[あに/おとうと]|
-| schwester | sister | soeur | сестра | 姉・妹[あね/いもうと]|
-| opa | grandpa | papi | дедушка |爺[じじ]|
-| oma | grandma | grand-mère | бабушка | 婆[ぱぱ]|
-| onkel | uncle | oncle | дядя | 叔父[おじ]|
-| tante | aunt | tante | тетя | 叔母[おば]|
-| neffe | nephew | neveu | племянник | 甥[おい]|
-| vetter | cousin | cousin | двоюродный брат | 従兄弟・従姉妹[いとこ]|
-| freund | friend | Ami| друг| 友達[ともだち]|
-| freund | boyfriend| petit ami| Бойфренд| 彼氏[かれし]|
-| freundin| girlfriend| copine| подруга| 彼女[かのじょ]|
-| partner| partner| partenaire| партнёр| 合棒[あいぼう]|
-| führer| leader| chef| лидер| 上司[じょうし]|
-| rivale| rival| rival| соперник| レバル|
-| feind| enemy| ennemi| враг| 敵[てき]|
-
+| Person | person| personne | человек | 人[ひと]|
+| Mann | man |homme | мужчина | 男[おとこ]|
+| Frau | woman | femme | женщина | 女[おんな]|
+| Junge | boy | garçon | мальчик | 男の子[おとこのこ]|
+| Mädchen | girl | fille | девочка | 女の子[おんなのこ]|
+| Kind | child | enfant | ребёнка | 子[こ]|
+| Kind | kids | chevreau | дети    | 子供[こども]|
+| Ehemann | husband | Mari | муж | 夫[お]|
+| Ehefrau | wife | femme | жена | 妻[つま]|
+| Vater | father | père | отец |父[ちち]|
+| Mutter | mother | mère | мать | 母[はは]|
+| Sohn | son | fils | сын | 息子[むすこ]|
+| Tochter | daughter | fille | дочь | 娘[むすめ]|
+| Bruder | brother | frère | брат | 兄・弟[あに/おとうと]|
+| Schwester | sister | soeur | сестра | 姉・妹[あね/いもうと]|
+| Opa | grandpa | papi | дедушка |爺[じじ]|
+| Oma | grandma | grand-mère | бабушка | 婆[ぱぱ]|
+| Onkel | uncle | oncle | дядя | 叔父[おじ]|
+| Tante | aunt | tante | тетя | 叔母[おば]|
+| Neffe | nephew | neveu | племянник | 甥[おい]|
+| Vetter | cousin | cousin | двоюродный брат | 従兄弟・従姉妹[いとこ]|
+| Freund | friend | Ami| друг| 友達[ともだち]|
+| Freund | boyfriend| petit ami| Бойфренд| 彼氏[かれし]|
+| Freundin| girlfriend| copine| подруга| 彼女[かのじょ]|
+| Partner| partner| partenaire| партнёр| 合棒[あいぼう]|
+| Führer| leader| chef| лидер| 上司[じょうし]|
+| Rivale| rival| rival| соперник| レバル|
+| Feind | enemy| ennemi| враг| 敵[てき]|
 
 
 ### 动物名
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| katze | cat      | chat | кошка    | 猫[ねこ]|
-| hund | dog     | chien | собаки   | 犬[いぬ]|
-| pferd | horse   | cheval | лошадь   | 馬[うま]|
-| maus | mouse   | souris | мышь     | 鼠[ねずみ]|
-| esel | donkey | âne | осел | 覚馬[かくま]|
-| schlange | snake | serpent | змея     | 蛇[へび]|
-| löwe | lion | lion | лев | 獅子[しし]|
-| kaninchen | rabbit | lapin | кролик | 兎[うさぎ]|
-| vogel | bird | oiseau | птица    | 鳥[どり]|
-| ente | duck | canard | утка     | 鴨[かも]|
-| wolf | wolf | loup | волк     | 狼[おおかみ]|
-| hahn | cock | coq | петух| 鶏[にわとり]|
-| henne | hen | poule | курица | かんてい|
-| schwein | pig | cochon | свинья | 豚[ぶた]|
-| fliegen | fly | mouche | муха | 蝿[はえ]|
+| Katze | cat      | chat | кошка    | 猫[ねこ]|
+| Hund | dog     | chien | собаки   | 犬[いぬ]|
+| Pferd | horse   | cheval | лошадь   | 馬[うま]|
+| Maus | mouse   | souris | мышь     | 鼠[ねずみ]|
+| Esel | donkey | âne | осел | 覚馬[かくま]|
+| Schlange | snake | serpent | змея     | 蛇[へび]|
+| Löwe | lion | lion | лев | 獅子[しし]|
+| Kaninchen | rabbit | lapin | кролик | 兎[うさぎ]|
+| Vogel | bird | oiseau | птица    | 鳥[どり]|
+| Ente | duck | canard | утка     | 鴨[かも]|
+| Wolf | wolf | loup | волк     | 狼[おおかみ]|
+| Hahn | cock | coq | петух| 鶏[にわとり]|
+| Henne | hen | poule | курица | かんてい|
+| Schwein | pig | cochon | свинья | 豚[ぶた]|
+| Fliegen | fly | mouche | муха | 蝿[はえ]|
 | Schmetterling | butterfly | papillon | бабочка | 胡蝶[こちょう]|
 | Mücke | mosquito | moustique | комар | 蚊[か]|
 | Käfer | beetle | Scarabée | жук | カブトムシ|
 | Schnecke | snail | escargot | улитка | カタツムリ|
 | Libelle | dragonfly | libellule | стрекоза | 蜻蛉[トンボ]|
 | Dinosaurier | dinosaur | dinosaure | динозавр | ダイナソー|
-| bär | bear | ours | медведь  | 熊[くま]|
-| fisch | fish | poisson | реба |魚[さかな]|
+| Bär | bear | ours | медведь  | 熊[くま]|
+| Fisch | fish | poisson | реба |魚[さかな]|
 | Aal | eel | anguille | угорь | 鰻うなぎ|
-| affe | monkey | singe | обезьяна | 猿[さる]|
-| giraffe | giraffe | girafe | жираф | ジラフ|
-| elefant | elephant | éléphant | слон | 象[ぞう]|
-| krokodil | crocodile | crocodile | крокодил | 鰐[わに]|
-| lieb | dear | cher | дорогой | 鹿[しか]|
-| leopard | leopard | léopard | леопард | 豹[ひょう]|
-| fledermaus | bat | chauve-souris | летучая мышь | 蝙蝠[こうもり]|
+| Affe | monkey | singe | обезьяна | 猿[さる]|
+| Giraffe | giraffe | girafe | жираф | ジラフ|
+| Elefant | elephant | éléphant | слон | 象[ぞう]|
+| Krokodil | crocodile | crocodile | крокодил | 鰐[わに]|
+| Lieb | dear | cher | дорогой | 鹿[しか]|
+| Leopard | leopard | léopard | леопард | 豹[ひょう]|
+| Fledermaus | bat | chauve-souris | летучая мышь | 蝙蝠[こうもり]|
 | Nilpferd | hippo | hippopotame | бегемот | 河馬[かわま]|
 | Nashorn | rhino | rhinocéros | носорог | 犀[さい]|
 | Taube | pigeon | pigeon | голубь |鳩[はと]|
 | Pinguin | penguin | pingouin | пингвин | ペンギン|
-| panda | panda | panda | панда | パンダ|
+| Panda | panda | panda | панда | パンダ|
 | Waschbär | racoon | raton laveur | енот | 狸[たぬき]|
 | Fuchs | fox | Renard | лиса | 狐[きつね]|
 | Ochse | ox | bœuf | бык | 牛[うし]|
@@ -113,43 +115,43 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| essen | food | nourriture | пища | 食べ物[たべもの]|
-| mittagessen | lunch | déjeuner | обед |昼ご飯[ひるごはん]|
-| abendessen | dinner | dîner | ужин | 夕食[ゆうしょく]|
-| frühstück | breakfast | petit déjeuner | завтрак | 朝ご飯[あさごはん]|
-| apfel | apple | pomme | яблоко | 林檎[りんご]|
-| birne | pear | poire | груща | 梨[なし]|
-| wasser | water | eau | вода | 水[みず]|
+| Essen | food | nourriture | пища | 食べ物[たべもの]|
+| Mittagessen | lunch | déjeuner | обед |昼ご飯[ひるごはん]|
+| Abendessen | dinner | dîner | ужин | 夕食[ゆうしょく]|
+| Frühstück | breakfast | petit déjeuner | завтрак | 朝ご飯[あさごはん]|
+| Apfel | apple | pomme | яблоко | 林檎[りんご]|
+| Birne | pear | poire | груща | 梨[なし]|
+| Wasser | water | eau | вода | 水[みず]|
 | Milch | milk | lait | молоко | 牛乳[ぎゅうにゅう]|
-| ei | egg | oeuf | Яйцо | 卵[たまご]|
-| borschtsch | borsch | bortsch | борщ | [ボルシチ]|
-| saft | juice | jus | сок | シュース|
-| menü | menu | menu | меню |メニュー|
-| sushi | sushi | sushi | цуси | 寿司[すし]|
-| pizza | pizza | pizza | пицца | ピザ|
-| kakao | cocoa | cacao | какао | ココア|
-| butter | butter | beurre | масло | バター|
-| reis | rice | riz | риса | 米[こめ]|
-| suppe | soup | soupe | суп | スープ|
-| käse | cheese | fromage | сыр | チーズ|
-| kartoffel | potato | pomme de terre | картошка | 茶が芋[ちゃがいも]|
-| pilz | mushroom | champignon | грибы | 菌[きのこ]|
-| salat | salad | salade | салат | サラダ|
-| zwiebel | onion | oignon | лук | 玉葱[たまねぎ]|
-| brot | bread | pain | хлеб | パン|
-| schokolade | chocholate | chocolat | шоколад | チョコレート|
-| süßigkeiten | candy | bonbon | конфета | 飴[あめ]|
-| aubergine | eggplant | aubergine | баклажан | 茄子[なす]|
-| koriander | coriander | coriandre | кориандр | パクチー|
-| kohl | cabbage | chou | капуста | キャベツ|
-| garnele | shrimp | crevette | креветка | 海老[えび]|
-| hummer | lobster | homard | омар | 伊勢海老[いせえび]|
-| krebs | crab | crabe | краб | 蟹[かに]|
-| gurke | cucumber | concombre | огурец | 胡瓜[キュウリ]|
-| spinat | spinach | épinard | шпинат | 三草[さんそう]|
-| knoblauch | garlic | ail | чеснок | 大蒜[ニンニク]|
-| ingwer | ginger | gingembre | имбирь | 生姜[しょうが]|
-| karotte　| carrot | carotte|морковь | 人参[にんじん]|
+| Ei | egg | oeuf | Яйцо | 卵[たまご]|
+| Borschtsch | borsch | bortsch | борщ | [ボルシチ]|
+| Saft | juice | jus | сок | シュース|
+| Menü | menu | menu | меню |メニュー|
+| Sushi | sushi | sushi | цуси | 寿司[すし]|
+| Pizza | pizza | pizza | пицца | ピザ|
+| Kakao | cocoa | cacao | какао | ココア|
+| Butter | butter | beurre | масло | バター|
+| Reis | rice | riz | риса | 米[こめ]|
+| Suppe | soup | soupe | суп | スープ|
+| Käse | cheese | fromage | сыр | チーズ|
+| Kartoffel | potato | pomme de terre | картошка | 茶が芋[ちゃがいも]|
+| Pilz | mushroom | champignon | грибы | 菌[きのこ]|
+| Salat | salad | salade | салат | サラダ|
+| Zwiebel | onion | oignon | лук | 玉葱[たまねぎ]|
+| Brot | bread | pain | хлеб | パン|
+| Schokolade | chocholate | chocolat | шоколад | チョコレート|
+| Süßigkeiten | candy | bonbon | конфета | 飴[あめ]|
+| Aubergine | eggplant | aubergine | баклажан | 茄子[なす]|
+| Koriander | coriander | coriandre | кориандр | パクチー|
+| Kohl | cabbage | chou | капуста | キャベツ|
+| Garnele | shrimp | crevette | креветка | 海老[えび]|
+| Hummer | lobster | homard | омар | 伊勢海老[いせえび]|
+| Krebs | crab | crabe | краб | 蟹[かに]|
+| Gurke | cucumber | concombre | огурец | 胡瓜[キュウリ]|
+| Spinat | spinach | épinard | шпинат | 三草[さんそう]|
+| Knoblauch | garlic | ail | чеснок | 大蒜[ニンニク]|
+| Ingwer | ginger | gingembre | имбирь | 生姜[しょうが]|
+| Karotte　| carrot | carotte|морковь | 人参[にんじん]|
 | | | | | |
 | | | | | |
 | | | | | |
@@ -161,17 +163,17 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| baum | tree | arbre | дереве | 木[き]|
-| gras | grass | herbe | трава | 草[くさ]|
-| blume | flower | fleur | цветок | 花[はな]|
+| Baum | tree | arbre | дереве | 木[き]|
+| Gras | grass | herbe | трава | 草[くさ]|
+| Blume | flower | fleur | цветок | 花[はな]|
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| heute | today | Aujourd’hui | сегодня | 今日[きょう]|
-| gestern | yesterday | Hier | вчера | 昨日[きのう]|
-| vorgestern | the day before yesterday | avant-hier | позавчера | 一昨日[おととい]|
-| morgen | tomorrow | demain | завтра | 明日[あす]|
-| übermorgen | the day after tomorrow | après-demain | послезавтра | 秋日[あきにち]|
+| Heute | today | Aujourd’hui | сегодня | 今日[きょう]|
+| Gestern | yesterday | Hier | вчера | 昨日[きのう]|
+| Vorgestern | the day before yesterday | avant-hier | позавчера | 一昨日[おととい]|
+| Morgen | tomorrow | demain | завтра | 明日[あす]|
+| Übermorgen | the day after tomorrow | après-demain | послезавтра | 秋日[あきにち]|
 | | | | | |
 | Sonntag | Sunday | Dimanche | воскресенье | 日曜日[にちようび]|
 | Montag | Monday | Lundi | понедельник | 月曜日[げつようび]|
@@ -181,12 +183,12 @@ Vocabulary
 | Freitag | Friday | Vendredi | пятница | 金曜日[きんようび]|
 | Samstag | Saturday | Samedi | суббота | 土曜日 [どようび]|
 |         |         |          |         |        |
-| tag | day | jour | день       | 日[ひ]|
-| morgen | morning | matin | утро       | 朝[あさ]|
-| mittag | noon | midi | полдень | 昼[ひる]|
-| nachmittag | afternoon | après-midi | день       | 午後[ごご]|
-| abend | evening | soir | вечер      | 夕方[ゆうがた]|
-| nacht | night | nuit  | ночи       | 夜[よる]|
+| Tag | day | jour | день       | 日[ひ]|
+| Morgen | morning | matin | утро       | 朝[あさ]|
+| Mittag | noon | midi | полдень | 昼[ひる]|
+| Nachmittag | afternoon | après-midi | день       | 午後[ごご]|
+| Abend | evening | soir | вечер      | 夕方[ゆうがた]|
+| Nacht | night | nuit  | ночи       | 夜[よる]|
 | Januar | January | Janvier | Январь | 正月[しょうがつ]|
 | Februar | February | Février | Февраль | 二月[にがつ]|
 | März | March | Mars | Март | 三月[さんがつ]|
@@ -200,19 +202,19 @@ Vocabulary
 | November | November | Novembre | Ноябрь | 十一月[じゅういちがつ]|
 | Dezember | December | Décembre | Декабрь | 十二月[じゅうにがつ]|
 | Sekunde | second | deuxième |секунда | 秒[びょう]|
-| minute | minute | minute | минута | 分[ぶん]|
-| stunde | hour | heure | час | 時間[じかん]|
-| monat | month | mois | месяц | 月[がつ]|
-| woche | week | semaine | неделя | 週間[しゅうかん]|
-| jahr | year | année | год | 年[とし]|
-| jahrzehnt | decade | décennie | десятилетие | 年代[ねんだい]|
-| jahrhundert | century | siècle |век | 世紀[せき]|
+| Minute | minute | minute | минута | 分[ぶん]|
+| Stunde | hour | heure | час | 時間[じかん]|
+| Monat | month | mois | месяц | 月[がつ]|
+| Woche | week | semaine | неделя | 週間[しゅうかん]|
+| Jahr | year | année | год | 年[とし]|
+| Jahrzehnt | decade | décennie | десятилетие | 年代[ねんだい]|
+| Jahrhundert | century | siècle |век | 世紀[せき]|
 | Osten| east | Est| Восток| 東[ひがし]|
 | Westen| west | Ouest| Запад| 西[にし]|
 | Norden| north| Nord | Север| 北[きた]|
 | Süden | south| Sud | Юг| 南[みなみ]|
-| oben| up| en haut| вверх| 上[うえ]|
-| herab| down| en bas| вниз| 下[した]|
+| Oben| up| en haut| вверх| 上[うえ]|
+| Herab| down| en bas| вниз| 下[した]|
 | Links| left| Gauche| Налево| 左[ひだり]|
 | Rechts| right| Droite| Правильно| 右[みぎ]|
 | China| China | Chine| Китай| 中国[ちゅうごく]|
@@ -243,7 +245,7 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| film | film | film | фильм       | 映画[えいが]|
+| Film | film | film | фильм       | 映画[えいが]|
 | Rucksack | backpack | sac à dos| рюкзак      | []|
 | Pullover | sweater | chandail| свитер      | []|
 | Handtuch | towel | serviette | полотенце   | タオル|
@@ -266,9 +268,14 @@ Vocabulary
 | Wort |   word | mot | слово     | 単語[たんご]|
 | Lehrbuch |   textbook | manuel | тетради   | []|
 | Notizbuch |   notebook  | carnet de notes | тетрадь   | ノート[]|
-| buch | book   | livre | книги     | 本[ほん]|
+| Buch | book   | livre | книга     | 本[ほん]|
 | Auto| car | voiture | машина    | 車[くるま]|
 | Fahrrad | bike | vélo | велосипед | 自転車[じてんしゃ]|
+| Boot    | boat    | bateau   | лодка   |        []|
+| Zug     | train   | train    | поезд   |        []|
+| U-Bahn  | subway  | metro    | метро   |        []|
+|         |         |          |         |        []|
+|         |         |          |         |        []|
 |         |         |          |         |        []|
 
 ## 常用抽象名词
@@ -311,44 +318,56 @@ Vocabulary
 | siebenundzwanzig | twenty seven | vingt sept | двадцать семь | 廿七[にじゅう]|
 | achtundzwanzig | twenty eight | vingt huit | двадцать восемь | 廿八[にじゅう]|
 | neunundzwanzig | twenty nine | vingt neuf | двадцать девять | 廿九[にじゅう]|
-| dreißig | thirty | trente   | тридцать |       三十/丗 [さんじゅう]|
-| einunddreißig | thirty one | trente et un | тридцать один |     三十一  [さんじゅういち] |
-| zweiunddreißig | thirty two | trente deux  | тридцать два|     三十二   [さんじゅうに]|
-| dreiunddreißig | thirty three | trente trois   | тридцать |     三十三   [さんじゅうさん]|
-| vierunddreißig | thirty four | trente quatre  | тридцать |     三十四   [さんじゅうし]|
-| fünfunddreißig | thirty five | trente cinq  | тридцать |      三十五  [さんじゅうご]|
-| sechsunddreißig | thirty six | trente six  | тридцать |      三十六  [さんじゅうろく]|
-| siebenunddreißig | thirty seven | trente sept  | тридцать |    三十七    [さんじゅうしち]|
-| achtunddreißig | thirty eight | trente huit  | тридцать |      三十八  [さんじゅうはち]|
-| neununddreißig | thirty nine | trente neuf | тридцать |      三十九  [さんじゅうきゅう]|
-| vierzig | forty   | quarante | сорок |      四十  [よんじゅう]|
-| fünfzig | fifty   | cinquante | пятьдесят |     五十   [ごじゅう]|
-| sechzig | sixty   | soixante | шестьдесят |       六十 [ろくじゅう]|
-| siebenzig | seventy   | soixante-dix | семьдесят |    七十    [しちじゅう]|
-| achtzig | eighty   | quatre-vingt | восемьдесят |      八十  [はちじゅう]|
-| neunzig | ninety   | quatre-vingt-dix | девяносто  |      九十  [きゅうじゅう]|
-| hundert | hundred | cent     | сто     |      百 [ひゃく]|
-| tausend | thousand | mille    | Тысяча  |       千 [せん]|
-| million | million | million | миллион |      百万 [ひゃくまん] |
-| milliard | billion | milliard | миллиард |      十億  [じゅうおく]|
+| dreißig | thirty | trente   | тридцать | 三十/丗 [さんじゅう]|
+| einunddreißig | thirty one | trente et un | тридцать один | 三十一[さんじゅういち] |
+| zweiunddreißig | thirty two | trente deux  | тридцать два| 三十二[さんじゅうに]|
+| dreiunddreißig | thirty three | trente trois   | тридцать три | 三十三 [さんじゅうさん]|
+| vierunddreißig | thirty four | trente quatre  | тридцать четыре | 三十四 [さんじゅうし]|
+| fünfunddreißig | thirty five | trente cinq  | тридцать пять | 三十五 [さんじゅうご]|
+| sechsunddreißig | thirty six | trente six  | тридцать шесть | 三十六 [さんじゅうろく]|
+| siebenunddreißig | thirty seven | trente sept  | тридцать семь | 三十七 [さんじゅうしち]|
+| achtunddreißig | thirty eight | trente huit  | тридцать восемь | 三十八 [さんじゅうはち]|
+| neununddreißig | thirty nine | trente neuf | тридцать девять | 三十九 [さんじゅうきゅう]|
+| vierzig | forty | quarante | сорок | 四十 [よんじゅう]|
+| einundvierzig | forty one | quarante et un | сорок один | 四十一 [よんじゅういち]|
+| zweiundvierzig | forty two | quarante deux | сорок два| 四十二 [よんじゅうに]|
+| fünfzig | fifty | cinquante | пятьдесят | 五十[ごじゅう]|
+| sechzig | sixty | soixante | шестьдесят | 六十[ろくじゅう]|
+| siebenzig | seventy | soixante-dix | семьдесят | 七十[しちじゅう]|
+| einundsiebenzig | seventy one | soixante et onze | семьдесят один | 七十一[しちじゅういち]|
+| zweiundsiebenzig | seventy two | soixante douze | семьдесят два | 七十二[しちじゅうに]|
+| achtzig | eighty | quatre-vingt | восемьдесят | 八十[はちじゅう]|
+| einundachtzig | eighty one | quatre-vingt-un | восемьдесят один | 八十一[はちじゅういち]|
+| zweiundachtzig | eighty two | quatre-vingt-deux | восемьдесят два | 八十二[はちじゅうに]|
+| neunzig | ninety | quatre-vingt-dix | девяносто  | 九十[きゅうじゅう]|
+| einundneunzig | ninety one | quatre-vingt-onze | девяносто один | 九十一[きゅうじゅういち]|
+| zweiundneunzig | ninety two | quatre-vingt-douze | девяносто два | 九十二[きゅうじゅうに]|
+| hundert | hundred | cent | сто | 百 [ひゃく]|
+| hundert und eins | hundred and one | cent et un | сто и один | 百一[ひゃくいち]|
+| zweihundert | two hundred | deux cents | двести | 二百[にひゃく]|
+| tausend | thousand | mille | Тысяча  | 千 [せん]|
+| million | million | million | миллион | 百万 [ひゃくまん] |
+| milliard | billion | milliard | миллиард | 十億 [じゅうおく]|
+| Billion | trillion | billion | триллион | 兆[ちょう]|
 
 # 常用动词
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
+| tun | do | faire | делать | する |
 | können| can |pouvoir|мочь|できる|
 | wagen| dare| oser| сметь| 冒す[おかす]|
 | wollen| want| vouloir| хотеть| [ほしい]|
 | geben| give| donner| давать| 上げる[あげる]|
-| benötigen| need| besoin| нуждаться| []|
-| lassen| let| laisser| разрешать| [させる]|
+| benötigen| need| besoin| нуждаться | []|
+| lassen| let| laisser| пусть | [させる]|
 | sein| be| être| быть| [です]|
 | gehen| go| aller| идти| 行く[いく]|
 | kommen| come| venir| приходить| 来る[くる]|
 | verlassen| leave| partir| покидать| 離れる[はなれる]|
 | leben| live| vivre| жить| 住む[すむ]|
 | sagen| say| dire| сказать| 言う[いう]|
-| Siehe| see| voir| видеть| 見る[みる]|
+| sehen | see| voir| видеть| 見る[みる]|
 | muss| must| devoir| должен| []|
 | erzählen| tell| raconter| сказать| 伝える[つたえる]|
 | fragen| ask| demander| спрашивать| 問う[とう]|
@@ -362,9 +381,13 @@ Vocabulary
 | schreiben | write | écrire | писать | 書く[かく]|
 | streiten |contend |lutter | бороться| 争う[]|
 | kämpfen | fight | se battre| сражаться| 戦う[たたかう]|
-| | | | | []|
-| | | | | []|
-| | | | | []|
+| sitzen | sit | s’asseoir | класть| []|
+| stellen | put | mettre | сесть | []|
+| Zubereiten | prepare | préparer |приготовить | []|
+| schneiden | slice | couper | нарезать     | []|
+| waschen | wash | laver | помыть | []|
+| kochen | cook | cuire | готовить| []|
+| beitragen | help | aider | оказать| []|
 | | | | | []|
 | | | | | []|
 | | | | | []|
@@ -377,11 +400,6 @@ Vocabulary
 //пьёт     drink
 // дайте     give
 //надо     need
-приготовить     prepare
-нарезать     slice
-помыть wash
-//пусть          let
-готовить     cook
 
 //иду          going
 идёт
@@ -404,11 +422,15 @@ Vocabulary
 | ruhig| quiet | tranquille| спокойной | 静か[しずか]|
 | perfekt| perfect| parfait| отлично | 完璧[かんぺき]|
 | Vergangenheit | past| passé | прошлый| 昔[むかし]|
-| groß | tall | | | []|
-| | short | | | []|
-| stark | strong | | | []|
-| | weak | | | []|
-| laut | | | | []|
+| groß | tall | grand | высокий | []|
+| kurz | short | court |короткий | []|
+| stark | strong | fort |сильный | []|
+| schwach | weak | faible | слабый | []|
+| laut | loud | fort | громкий | []|
+| laut | noisy | bruyant | шумный | []|
+| schnell | quick | rapide | быстрый | []|
+| langsam | slow | lent | медленный | []|
+| | | | | []|
 | | | | | []|
 | | | | | []|
 
@@ -416,11 +438,11 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| was     | what    |          | что     | 何[なに]|
+| was     | what    | quoi     | что     | 何[なに]|
 | klein   | where   | ou       | где     | 何処[どこ]|
 | wer     | who     | qui      | кто     | 誰[だれ]|
 | zum     | when    | quand    | когда   | 何時[いつ]|
-| warum   | why     | pourquoi nous | почему | 何故[なぜ]|
+| warum   | why     | pourquoi | почему  | 何故[なぜ]|
 | was/wie | how     | comment  | как     | 如何[どう]|
 |         |         |          |         |        |
 |         |         |          |         |        |
@@ -445,17 +467,17 @@ Sie Ihnen Sie
 
 ### 德语人称表
 
-|         |    | 第⼀格(N) | 第二格(G) | 第三格(D) | 第四格(A) | 所有格 | 第六格|
-|---------|----|-----------|-----------|-----------|-----------|--------|--------|--------|--------|
-| 第一人称|单数| ich || mir   | mich | mein  |
-|         |复数| wir || uns   | uns  | unser |
-| 第二人称|单数| du  || dir   | dich | dein  |
-|         |复数| ihr || euch  | euch | euer  |
-|         |尊称| Sie || Ihnen | Sie  | Ihr   |
-| 第三人称|阳性| er  || ihm   | ihn  | sein  |
-|         |阴性| sie || ihr   | sie  | ihr   |
-|         |中性| es  || ihm   | es   | sein  |
-|         |复数| sie || ihnen | sie  | ihr   |
+|   人称  |数/性| 第⼀格(N) | 第二格(G) | 第三格(D) | 第四格(A) | 所有格 | 第六格|
+|---------|-----|-----------|-----------|-----------|-----------|--------|--------|--------|--------|
+| 第一人称|单数 | ich || mir   | mich | mein  |
+|         |复数 | wir || uns   | uns  | unser |
+| 第二人称|单数 | du  || dir   | dich | dein  |
+|         |复数 | ihr || euch  | euch | euer  |
+|         |尊称 | Sie || Ihnen | Sie  | Ihr   |
+| 第三人称|阳性 | er  || ihm   | ihn  | sein  |
+|         |阴性 | sie || ihr   | sie  | ihr   |
+|         |中性 | es  || ihm   | es   | sein  |
+|         |复数 | sie || ihnen | sie  | ihr   |
 
 |   | m. | n. | f. |pl. |
 |---|----|----|----|----|
@@ -464,29 +486,58 @@ Sie Ihnen Sie
 | D |dem |dem |der |den |
 | A |den |das |die |die |
 
+### 英语人称表
+
+|   人称  |数/性| 主格 | 宾格 | 所有格 | 名词性所有格  | 自反       |
+|---------|-----|------|------|--------|---------------|------------|
+| 第一人称|单数 | I  	 | me   | my	   | mine          | myself	    |
+|         |复数 | we	 | us	  | our    | ours          | ourselves  |
+| 第二人称|单数 | you  | you  | your   | yours         | yourself   |
+|         |复数 | you  | you  | your   | yours         | yourselves |
+| 第三人称|单阳 | he   | him  | his	   | his           | himself    |
+|         |单阴 | she	 | her  | her	   | hers          | herself    |
+|         |单中 | it	 | it	  | its	   | its           | itself     |
+|         |复数 | they | them | their  | theirs        | themselves |
+
+
+### 法语人称表
+
+|   人称  |数/性|    主语    | 直宾   | 间宾   | 自反   | 重读   |
+|---------|-----|------------|--------|--------|--------|--------|
+| 第一人称|单数 |      je	   | me	    | me	   | me	    | moi    |
+|         |复数 |      nous	 | nous	  | nous	 | nous	  | nous   |
+| 第二人称|单数 |      tu	   | te	    | te	   | te	    | toi    |
+|         |复数(单敬)| vous	 | vous	  | vous	 | vous	  | vous   |
+| 第三人称|单阳 |      il	   | le	    | lui	   | se	    | lui    |
+|         |单阴 |      elle	 | la	    | lui	   | se	    | elle   |
+|         |复阳 |      ils	 | les	  | leur	 | se	    | eux    |
+|         |复阴 |      elles | les	  | leur	 | se	    | elles  |
+
 
 ### 俄语人称表
 
-|         |    | 第⼀格 | 第二格 | 第三格 | 第四格 | 第五格 | 第六格|
-|---------|----|--------|--------|--------|--------|--------|--------|
-| 第一人称|单数|я	|меня|мне|меня|мной|(обо)мне|
-|         |复数|мы|нас|нам|нас|нами|(о)нас|
-| 第二人称|单数|ты |тебя|тебе|тебя|тобой|(о)тебе|
-|         |复数|вы |вас|вам|вас|вами|(о)вас|
-| 第三人称|阳性|он |его|ему|его|им|(о)нѐм|
-|         |阴性|она|её|ей|её|ей(ею)|(о)ней|
-|         |中性|оно|его|ему|его|им|(о)нѐм|
-|         |复数|они|их|им|их|ими|(о)них|
+|   人称  |数/性| 第⼀格 | 第二格 | 第三格 | 第四格 | 第五格 | 第六格|
+|---------|-----|--------|--------|--------|--------|--------|--------|
+| 第一人称|单数 |я	|меня|мне|меня|мной|(обо)мне|
+|         |复数 |мы|нас|нам|нас|нами|(о)нас|
+| 第二人称|单数 |ты |тебя|тебе|тебя|тобой|(о)тебе|
+|         |复数 |вы |вас|вам|вас|вами|(о)вас|
+| 第三人称|阳性 |он |его|ему|его|им|(о)нѐм|
+|         |阴性 |она|её|ей|её|ей(ею)|(о)ней|
+|         |中性 |оно|его|ему|его|им|(о)нѐм|
+|         |复数 |они|их|им|их|ими|(о)них|
 
 
-僕[ぼく]
-私[わたし・わたくし]
-俺[おれ]
+### 日语人称表
 
-我々[われわれ]
+|   人称  | 单数  | 复数   | 男用词 | 爷用词 | 女用词 |
+|---------|-------|--------|--------|--------|--------|
+| 第一人称|私[わたし・わたくし] |我々[われわれ] |僕[ぼく]/俺[おれ]| | |
+| 第二人称|君[きみ]/お前[おまえ]/貴方[あなた] | | | | | |
+| 第三人称| | | | | |
 
-君[きみ]
-お前[おまえ]
+
+
 貴方[あなた]
 
 彼[かれ]
