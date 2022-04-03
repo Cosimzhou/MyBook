@@ -20,8 +20,8 @@ Vocabulary
 | Nein    | No      | Non      | Нет     | いいえ|
 | Wie heißt du? | What's your name? | Comment t’appelles-tu? | Как тебя зовут? | お名前は? |
 | Ich bin X | I am X | Je suis X | Я X | 私はXです |
-| Direkthilfe? | What's this? | Qu’est-ce que c est? |Что это?|これはなんですか? |
-
+| Direkthilfe? | What's this? | Qu’est-ce que c est? | Что это?| これはなんですか? |
+| Ich bin nicht X| I am not X| Je ne suis pas X |Я не X| 私はXではありません |
 
 # 常用名词
 
@@ -55,6 +55,63 @@ Vocabulary
 | Führer| leader| chef| лидер| 上司[じょうし]|
 | Rivale| rival| rival| соперник| レバル|
 | Feind | enemy| ennemi| враг| 敵[てき]|
+| Schwiegersohn|son in law | Beau-fils| зять| 婿[むこ]|
+| Schwiegertochter| daughter in law| Beau-fille| невестка| 嫁姑[よめしゅうとめ]|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+
+| Deutsch | English | Français | Русская | 日本語|
+|---------|---------|----------|---------|--------|
+| Gesicht| face | visage| лицо| 顔[かお]|
+| Auge| eye| oeil| глаз| 目[め]|
+| Nase| nose| nez| нос| 鼻[はな]|
+| Mund| mouth| bouche| рот| 口[くち]|
+| Ohr| ear| oreille| ухо| 耳[みみ]|
+| Kopf| head| tête| голова| 頭[あたま]|
+| Hals| neck| cou| шея| 首[くび]|
+| Schulter| shoulder| épaule| плечо| 肩[かた]|
+| Körper| body| corps| тело| 体[からだ]|
+| Brust| chest| poitrine| грудь| 胸[むね]|
+| Magen| stomach| estomac| желудок| 胃[い]|
+| Bauch| belly| ventre| живот| 腹[はら]|
+| Herz| heart| cœur| сердце| 心[こころ]|
+| Lunge| lung| poumon| легкое| 肺[はい]|
+| Leber| liver| foie| печень| 肝[きも]|
+| Niere| kidney| rein| почка| 腎[じん]|
+| Bein| leg| jambe| нога| 足[あし]|
+| Oberschenkel| thigh| cuisse| бедро| 股[もも]|
+| Knie| knee| genou| колено| 膝[ひざ]|
+| Fuß| foot| pied| нога| 足[あし]|
+| Zehe| toe| orteil| палец ноги| []|
+| Arm| arm| bras| рука| 腕[うで]|
+| Hand| hand| main| рука| 手[て]|
+| Finger| finger| doigt| палец| 指[ゆび]|
+| Wange| cheek| joue| щека| 頬[ほほ]|
+| Haar| hair| cheveux| волос| 髪[かみ]|
+| Zahn| tooth| dent| зуб| 歯[は]|
+| Zunge| tongue| langue| язык| 舌[した]|
+| Lippe| lip| lèvre| губа| 唇[くちびる]|
+| Blut| blood| sang| кровь| 血[ち]|
+| Haut| skin| peau| кожа| 肌[はだ]|
+| Fingernagel| nail| ongle| ноготь| 爪[つめ]|
+| Penis| penis| pénis| пенис| ちんこ|
+| Hoden| testicle| testicule| яичко| 金玉[きんたま]|
+| Brust| breast| sein| грудь| おっぱい|
+| Handgelenk| wrist| poignet| запястье| 腕[]|
+| Taille| waist| taille| талия| 腰[こし]|
+| Scheide| vagina| vagin| влагалище| マンコ|
+| Muskel| muscle| muscle| мышца| 筋肉[きんにく]|
+| Hintern| butt| derrière| приклад| 尻[しり]|
+| Darm| intestine| intestin| кишка| 腸[ちょう]|
+| After| anus| anus| анус| 尻穴[しりあな]|
+| Ellbogen| elbow| coude| локоть| 肘[ひじ]|
+| Handfläche| palm| paume| ладонь| 掌[てのひら]|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
 
 
 ### 动物名
@@ -258,7 +315,7 @@ Vocabulary
 | Bier | beer | bière | пиво        | ビル|
 | Schüssel | bowl | bol| миска       | ボウル|
 | Löffel | spoon | cuiller | ложка       | スプーン|
-| Gabel | fork | fourchette | вилка       | []|
+| Gabel | fork | fourchette | вилка       | フォーク |
 | Messer | knife    | couteau | нож         | 刀[かたな]|
 | Brille | glasses | lunettes | очки        | [ガラセス]|
 | Stuhl | chair   | chaise | стул        | 椅子[いす]|
@@ -271,9 +328,9 @@ Vocabulary
 | Buch | book   | livre | книга     | 本[ほん]|
 | Auto| car | voiture | машина    | 車[くるま]|
 | Fahrrad | bike | vélo | велосипед | 自転車[じてんしゃ]|
-| Boot    | boat    | bateau   | лодка   |        []|
-| Zug     | train   | train    | поезд   |        []|
-| U-Bahn  | subway  | metro    | метро   |        []|
+| Boot    | boat    | bateau   | лодка   | ボート |
+| Zug     | train   | train    | поезд   | 列車[れっしゃ] |
+| U-Bahn  | subway  | metro    | метро   | 地下鉄[ちかてつ] |
 |         |         |          |         |        []|
 |         |         |          |         |        []|
 |         |         |          |         |        []|
@@ -379,33 +436,21 @@ Vocabulary
 | lesen | read | lire | читать| 読む[よむ]|
 | lehren | teach | enseigner | учить| 教える[おしえる]|
 | schreiben | write | écrire | писать | 書く[かく]|
-| streiten |contend |lutter | бороться| 争う[]|
+| streiten |contend |lutter | бороться| 争う[あらそう] |
 | kämpfen | fight | se battre| сражаться| 戦う[たたかう]|
-| sitzen | sit | s’asseoir | класть| []|
-| stellen | put | mettre | сесть | []|
-| Zubereiten | prepare | préparer |приготовить | []|
+| sitzen | sit | s’asseoir | класть| 座る[すわる] |
+| stellen | put | mettre | сесть | 置く[おく] |
+| Zubereiten | prepare | préparer |приготовить | 用意する[よういする] |
 | schneiden | slice | couper | нарезать     | []|
-| waschen | wash | laver | помыть | []|
-| kochen | cook | cuire | готовить| []|
-| beitragen | help | aider | оказать| []|
-| | | | | []|
-| | | | | []|
+| waschen | wash | laver | помыть | 洗う[あらう] |
+| kochen | cook | cuire | готовить| 料理する[りょうりする] |
+| beitragen | help | aider | оказать| 助ける[たすける] |
+| lieben | love | amour | любить | 愛する[あいする] |
+| rufen | call | appeler | звать | 呼ぶ[よぶ] |
 | | | | | []|
 | | | | | []|
 
-//можете     can
-//скажите     tell
-//хочу     want
-//вижу     see
-//пьёт     drink
-// дайте     give
-//надо     need
 
-//иду          going
-идёт
-идёшь
-
-читаешь     reading
 
 
 
@@ -422,16 +467,16 @@ Vocabulary
 | ruhig| quiet | tranquille| спокойной | 静か[しずか]|
 | perfekt| perfect| parfait| отлично | 完璧[かんぺき]|
 | Vergangenheit | past| passé | прошлый| 昔[むかし]|
-| groß | tall | grand | высокий | []|
-| kurz | short | court |короткий | []|
-| stark | strong | fort |сильный | []|
-| schwach | weak | faible | слабый | []|
-| laut | loud | fort | громкий | []|
-| laut | noisy | bruyant | шумный | []|
-| schnell | quick | rapide | быстрый | []|
-| langsam | slow | lent | медленный | []|
-| | | | | []|
-| | | | | []|
+| groß | tall | grand | высокий | 高い[たかい] |
+| kurz | short | court |короткий | 低い[ひくい] |
+| stark | strong | fort |сильный | 強い[つよい] |
+| schwach | weak | faible | слабый | 弱い[よわい] |
+| laut | loud | fort | громкий | 大きく[おおきく] |
+| laut | noisy | bruyant | шумный | 騒々しい[そうぞうしい] |
+| schnell | quick | rapide | быстрый | 早い[はやい] |
+| langsam | slow | lent | медленный | 遅い[おそい] |
+| viele | many | beaucoup | много | 多い[おおい] |
+| wenige | few | peu | мало | 少ない[すくない] |
 | | | | | []|
 
 # 常用代词
@@ -467,8 +512,8 @@ Sie Ihnen Sie
 
 ### 德语人称表
 
-|   人称  |数/性| 第⼀格(N) | 第二格(G) | 第三格(D) | 第四格(A) | 所有格 | 第六格|
-|---------|-----|-----------|-----------|-----------|-----------|--------|--------|--------|--------|
+|   人称  |数/性| 第⼀格(N) | 第二格(G) | 第三格(D) | 第四格(A) | 所有格　|
+|---------|-----|---------|----------|----------|----------|--------|
 | 第一人称|单数 | ich || mir   | mich | mein  |
 |         |复数 | wir || uns   | uns  | unser |
 | 第二人称|单数 | du  || dir   | dich | dein  |
@@ -532,8 +577,8 @@ Sie Ihnen Sie
 
 |   人称  | 单数  | 复数   | 男用词 | 爷用词 | 女用词 |
 |---------|-------|--------|--------|--------|--------|
-| 第一人称|私[わたし・わたくし] |我々[われわれ] |僕[ぼく]/俺[おれ]| | |
-| 第二人称|君[きみ]/お前[おまえ]/貴方[あなた] | | | | | |
+| 第一人称|私[わたし・わたくし] |我々[われわれ] |僕[ぼく]/俺[おれ]| わし | あたし |
+| 第二人称|君[きみ]/お前[おまえ]/貴方[あなた] | | | | |
 | 第三人称| | | | | |
 
 
@@ -586,7 +631,6 @@ Sie Ihnen Sie
 читатель    reader
 учитель     teacher
 
-
 дела             affairs
 дело              a business
 проблема     problem
@@ -597,14 +641,11 @@ Sie Ihnen Sie
 как вас зовут
 что это за
 
-
-trinke пью drink
 heißt
 habe
 sein ist
 
-Wie heißt du?
-Как тебя зовут?
+
 
 Was koste
 Wann
