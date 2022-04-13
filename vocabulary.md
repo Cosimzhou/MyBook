@@ -331,14 +331,41 @@ Vocabulary
 | Boot    | boat    | bateau   | лодка   | ボート |
 | Zug     | train   | train    | поезд   | 列車[れっしゃ] |
 | U-Bahn  | subway  | metro    | метро   | 地下鉄[ちかてつ] |
-|         |         |          |         |        []|
-|         |         |          |         |        []|
+| Flugzeug| plane   | avion    | самолет |        []|
+| Rakete  | rocket  | fusée    | ракета  |        []|
 |         |         |          |         |        []|
 
 ## 常用抽象名词
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
+| gerechtigkeit | fair    |          |         |        |
+|         | justice | justice | правосудие|        |
+|         | democracy|         |         |        |
+|         | science |          |         |        |
+|         | religion |          |         |        |
+|         | belief  |          |         |        |
+|         | truth  |          |         |        |
+|         | theory |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
+|         |         |          |         |        |
 |         |         |          |         |        |
 
 # 常用数词
@@ -413,10 +440,11 @@ Vocabulary
 |---------|---------|----------|---------|--------|
 | tun | do | faire | делать | する |
 | können| can |pouvoir|мочь|できる|
-| wagen| dare| oser| сметь| 冒す[おかす]|
-| wollen| want| vouloir| хотеть| [ほしい]|
-| geben| give| donner| давать| 上げる[あげる]|
+| muss| must| devoir| должен| []|
 | benötigen| need| besoin| нуждаться | []|
+| wollen| want| vouloir| хотеть| [ほしい]|
+| wagen| dare| oser| сметь| 冒す[おかす]|
+| geben| give| donner| давать| 上げる[あげる]|
 | lassen| let| laisser| пусть | [させる]|
 | sein| be| être| быть| [です]|
 | gehen| go| aller| идти| 行く[いく]|
@@ -424,8 +452,9 @@ Vocabulary
 | verlassen| leave| partir| покидать| 離れる[はなれる]|
 | leben| live| vivre| жить| 住む[すむ]|
 | sagen| say| dire| сказать| 言う[いう]|
-| sehen | see| voir| видеть| 見る[みる]|
-| muss| must| devoir| должен| []|
+| schauen | look | regarder | смотреть | 見る[みる]|
+| sehen | see| voir| видеть| 見える[みえる]|
+| zuhören | listen | écouter | слушать | 聞く[きく]|
 | erzählen| tell| raconter| сказать| 伝える[つたえる]|
 | fragen| ask| demander| спрашивать| 問う[とう]|
 | essen| eat| manger| есть| 食べる[たべる]|
@@ -449,13 +478,30 @@ Vocabulary
 | rufen | call | appeler | звать | 呼ぶ[よぶ] |
 | | | | | []|
 | | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
 
 
 
 
 
 
-
+---------------
 # 常用形容词
 
 | Deutsch | English | Français | Русская | 日本語|
@@ -477,8 +523,346 @@ Vocabulary
 | langsam | slow | lent | медленный | 遅い[おそい] |
 | viele | many | beaucoup | много | 多い[おおい] |
 | wenige | few | peu | мало | 少ない[すくない] |
+| schön | beautiful | belle | красивый | []|
+| hässlich | ugly | laid | уродливый | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
+| | | | | []|
 | | | | | []|
 
+## 比较级
+
+### 法语比较级
+一、形容词的比较级：
+
+1．构成
+较高程度：plus + 形容词. + que
+同等程度：aussi + 形容词. + que
+较低程度：moins +形容词. + que
+
+2．与英语中的形容词比较级相同
+Marie est plus intelligente que son frère.
+Tu es aussi grand que moi, dit Paul.
+En été, il fait moins chaud à Shanghai qu’à Nanjing.
+Y a-t-il un ordinateur moins cher, s’il vous plaît ?
+Paul est moins jeune que Georges.
+Ce texte est beaucoup plus difficile à comprendre.
+Ma soeur est plus jeune que moi de deux ans.
+Son ami est plus grand qu’elle d’une tête.
+
+二、形容词最高级：
+
+1．构成：
+最高程度：le (la, les) + plus + 形容词
+最低程度：le (la, les) + moins + 形容词
+
+2．用法：
+与英语中的形容词最高级相同，但定冠词要与有关形容词的性、数一致，最高级的补语（即比较范围），通常由介词de引导。
+Paris est la plus belle ville de France, je crois.
+Ces deux chambres sont les moins grandes de l’hôtel.
+
+形容词的最高级有时放在名词后面，重复定冠词：
+Paris est la ville la plus belle de France.
+Voilà les romans les plus intéressants de notre bibliothèque.
+Dupont est un de mes plus vieux amis.
+Shanghai est un des ports les plus importants de Chine.
+
+三、几个特殊词形的形容词比较级和最高级
+
+
+
+Bon(ne)(s)(nes)
+
+Meilleur(e)(s)(es)
+
+Le/la/les meilleur
+
+Mauvais(e)(es)
+
+Pire(s)
+
+plus mauvais
+
+Le/la/les pire(s)
+
+Le/la/les plus mauvais
+
+Petit(e)(s)(es)
+
+moindre
+
+plus petit
+
+le moindre
+
+le plus petit
+
+
+
+La plaisanterie la plus courte est souvent la meilleure.
+Ce manuel est pire (plus mauvais) que l’autre.
+C’est la pire (la plus mauvaise) composition de la classe.
+Elle est la plus petite de la famille.
+
+Moindre/le moindre 一般用于抽象名词
+Je n’ai pas la moindre idée de cela
+
+
+### 德语比较级
+
+（一）形容词比较级的构成方式：
+
+形容词+er
+
+形容词构成比较级的一般规律是，在形容词词尾加上er。
+
+leicht  → leichter
+billig → billiger
+fleißig → fleißiger
+schön → schöner
+
+
+
+（二）一般规律之外的其他规律：
+
+a）以el，er结尾的形容词，在构成比较级的时候，需要省略末尾的e。
+
+dunkel → dunkler
+teuer → teurer
+
+b）一些单音节形容词，词干中有a，o，u，在变为比较级时，需要变音。
+
+
+
+含有a的单音节形容词	含有u的单音节形容词	含有o的单音节形容词
+arm → ärmer
+kalt → kälter
+lang → länger
+scharf → schärfer
+stark → stärker
+alt → älter
+
+dumm → dümmer
+jung → jünger
+klug → klüger
+kurz → kürzer	grob → gröber（较粗糙的）
+groß → größer
+hoch → höher
+
+
+
+注意：这里出现的hoch在变为比较级时，除了需要变元音之外，原词中的c在比较级中被省略。
+
+例外：并不是所有符合词干中有a，o，u的单音节形容词都会在比较级中变元音。德语的语法规则中有很多例外情形，这里也有例外。
+比如说我们常见的形容词：voll（满的），schlank（苗条的）这两个词的比较级就不需要变元音。
+
+voll → voller         schlank → schlanker
+
+c）德语形容词中，有一些形容词的比较级变化是没有规律可言的，需要我们记忆。但是这部分形容词并不多，不会给同学的语法学习带来太大的记忆负担。
+
+nah → näher （较近的）
+gut → besser （较好的）
+viel → mehr （较多的）
+gern → lieber （宁愿）
+
+
+
+（三）形容词比较级的用法：
+
+a）形容词比较级 + als
+
+这种用法在德语语法中比较常见，用来表示两种状态或者两个事物之间，某种特性的对比。可以是两个实在存在的事物或者是人之间的对比，也可以是两个不同状态，不同时间下的对比。
+
+Heute ist es wärmer als gestern. 今天比昨天暖和。
+Heute ist der Preis vom Nahrungsmittel höher als früher. 现在食品的物价比以前要高。
+Ich bin größer als du. 我比你要高。
+Diese Wohnung ist schöner als unsere Wohnung. 这个房子比我们的房子要漂亮。
+
+我们也有接触过so ... wie ... 句型的句子。需要注意的是，so + 形容词原级 + wie。这里我们形容词的比较级是搭配的als，而不是wie。als表示比...怎么样，wie表示和...一样。
+
+
+
+b）je+比较级，desto+比较级
+
+Je älter man wird, desto erfahrener wird man. 人年纪越大，经验就越丰富。
+Je mehr er isst, desto dicker wird er. 他吃得越多，变得越胖。
+
+注意：形容词比较级前面可以加上程度副词，来加强比较。可以加在形容词比较级前的副词有：bedeutend，entschiedend，wesentlich，viel，weit。
+
+Mein Artikel war entschieden besser als seiner. 我的文章肯定比他的好。
+*seiner = sein Artikel，因为Artikel是阳性名词，所以用seiner。
+Diese Wohnung ist wesentlich größer als unsere Wohnung. 这套住房比我们的大得多。
+Ich lernt viel besser als du. 我学习的比你好得多。
+Dieses Zimmer ist weit größer als andere. 这个房间比其他房间大得多。
+*andere=andere Zimmer，因为这里的Zimmer是复数，所以用andere。
+
+其实形容词的比较级非常简单，只要记住相关规律，大部分的比较级形式都可以掌握。那些“与众不同”的例外也不是很多，我们只要花时间记住就万事大吉了。
+
+
+### 俄语比较级
+比较级的构成
+　　比较级分单一式和复合式两种形式。
+　　⑴单一形式的比较级
+　　i. 词干以辅音结尾的形容词加后缀-ее（-ей），词干为单音节的形容词构成比较级时，重音一般都在-е~е上，词干为多音节的形容词构成比较级时，重音一般不变动。例如：
+　　трудный-трудне~е
+　　светлый-светле~е
+　　нитересный-интере~снее
+　　полезный-поле~знее
+　　осторожный-осторо~жнее
+　　красивый-краси~вее
+
+　　ii. 词干以-г, -к, -х, -д, -т, -ст结尾的形容词构成比较级时，词干末尾的辅音先发生语音交替（г, д-ж, к,т-ч, х-щ, ст-щ）然后再加后缀-е。例如：
+　　дорогой-дороже
+　　строгий-строже
+　　молодой-моложе
+　　крепкий-крепче
+　　громкий-громче
+　　тихий-тише
+　　сухой-суше
+　　чистый-чище
+　　простой-проще
+
+
+
+
+　　iii. 有些形容词比较级的形式特殊。例如：
+　　близкий-ближе
+　　низкий-ниже
+　　узкий-уже
+　　плохой-хуже
+　　редкий-реже
+　　короткий-короче
+　　ранний-раньше
+　　высокий-выше
+　　далёкий-дальше
+　　широкий-шире
+　　поздний-позже
+　　сладкий-слаще
+　　дешевый-дешевле
+　　долгий-дольше
+　　тонкий-тоньше
+　　большой-больше
+　　хороший-лучше
+　　маленький-меньше
+　　iv. 单一式比较级可以加前缀по-，表示程度稍微加强。例如：попоже, побыстрее, полегче, подороже, подешевле, поинтереснее.
+
+　　⑵复合式比较级的构成
+　　более或менее加形容词原级构成复合式比较级。例如：
+　　старший-более старший, менее старший
+　　глубокий-более глубокий, менее глубокий
+　　широкий-более широкий, менее широкий
+　　умный- более умный, менее умный
+
+
+
+
+### 德语最高级
+形容词最高级的词尾通常是-st，只有以-d，-s，-sch，-，-t，-x，-z结尾的形容词词尾才是-est。形容词最高级一般要和定冠词（或物主代词）一起连用。
+
+
+
+1.通常情况下，最高级的词尾应该是-st，而不是-est，这是和英语中有区别的，只有以-d，-s，-sch，-，-t，-x，-z结尾的形容词词尾才是-est。
+
+2.形容词最高级一般要和定冠词（或物主代词）一起用，如果不做定语时，前面应有am，成为am -sten这样的结构。
+
+3.以-el，-er结尾的形容词在构成比较级和最高级时要去掉l和r前面的e，如dunkel,dunkler,am dunklsten。
+
+4.元音是a，o，u的单音节形容词，需要加上变音符，成为  ä，ö，ü。
+
+
+
+另外，要记住，有些形容词不能构成比较级和最高级：
+
+1.仅做表语的形容词，如pleit，egal，durcheinander。
+
+2.一些地名派生出来的形容词，如chinesisch，franzsisch。
+
+3.表示颜色，职业，时间等的形容词，如rztlich，heutig，rosa。
+
+4.表示否定意义和带-los后缀的形容词，如unntig，arbeitslos。
+
+
+
+和形容词比较等级相关的句型：
+
+so + 形容词原级 + wie
+
+表示两者之间相同程度的比较，其中wie也可以带出从句。
+
+Er arbeitet so fleiig wie die anderen. 他工作和其他人一样努力。
+
+Er arbeitet so fleiig ,wie ich gedacht habe. 他工作和我想的一样努力。
+
+另外，如果强调程度相同，还可以用 ebenso...wie或genauso...wie。在so 前面也可以加上doppelt等表示倍数的词。
+
+
+
+形容词比较级 + als
+
+表示前者的程度超过后者，同样，als也可以带出从句。
+
+Er arbeitet fleiiger als die anderen. 他工作比其他人努力。
+
+Er arbeitet fleiiger ,als ich gedacht habe. 他工作比我想的一样努力。
+
+
+
+另外，也可以用anders（或ander-）als来表示两者的不同。
+
+Es geht anders, als wir geplant haben. 事情进行和和我们所计划的不同。
+
+
+
+je +比较级，desto/umso +比较级
+
+表示“越...，越...”，注意je后面的分句用从句的语序，而desto/umso后面则应紧接变位动词。
+
+Je mehr man arbeitet, desto/umso mehr kann man verdienen. 多劳就能多得。
+
+
+
+### 俄语最高级
+一、最高级的构成
+
+（一）简单式最高级
+
+1.原级形容词词干加后缀-ейш(-ий)构成，例如：чистый-чистейший, бедный-беднейший, новый-новейший, длинный-длиннейший, богатый-богатейший 等。
+
+2．如果词干以г, к, х 结尾，则加后缀айш(-ий)，同时词干末尾辅音发生г-ж, к-ч, х-ш交替，例如: строгий-строжайший, дорогой-дражайший, лёгкий-легчайший, высокий-высочайший, тихий-тишайший等。
+
+3.如果词干以-зк-结尾，则加后缀-айший，后缀-к-脱落，其前辅音发生з-ж交替，例如: низкий-нижайший, близкий-ближайший等。
+
+4. 形容词лучший, худший, высший, низший除表示比较级意义外，还具有最高级的意义。
+
+5. 凡是不能构成单一式比较级的形容词都能构成单一式最高级。许多形容词有单一式比较级，却没有单一式最高级，例如: молодой, частый, сухой, гладкий, ловкий, свежий, душистый, громкий, родной等。
+
+（二）复合式最高级
+
+1. 由самый加原级形容词构成，例如：красивый-самый красивый, умный-самый умный, сильный-самый сильный, твёрдый-самый твёрдый等。
+
+2. 由наиболее或наименее加原级形容词构成，多用于公文和科学著作等书面语体中，例如：точный-наиболее точный, типичный-наиболее типичный, интересный-наименее интересный, характерный-наименее характерный等。
+
+3．凡是不能构成单一式最高级的形容词，都可以构成复合式最高级。
+
+4. 由самый加形容词单一式最高级构成，特殊强调最高级的意义，例如：самый лучший, самый интереснейший, самый отдалённый, самый нужнейший等。
+
+
+---------------
 # 常用代词
 
 | Deutsch | English | Français | Русская | 日本語|
@@ -547,16 +931,16 @@ Sie Ihnen Sie
 
 ### 法语人称表
 
-|   人称  |数/性|    主语    | 直宾   | 间宾   | 自反   | 重读   |
-|---------|-----|------------|--------|--------|--------|--------|
-| 第一人称|单数 |      je	   | me	    | me	   | me	    | moi    |
-|         |复数 |      nous	 | nous	  | nous	 | nous	  | nous   |
-| 第二人称|单数 |      tu	   | te	    | te	   | te	    | toi    |
-|         |复数(单敬)| vous	 | vous	  | vous	 | vous	  | vous   |
-| 第三人称|单阳 |      il	   | le	    | lui	   | se	    | lui    |
-|         |单阴 |      elle	 | la	    | lui	   | se	    | elle   |
-|         |复阳 |      ils	 | les	  | leur	 | se	    | eux    |
-|         |复阴 |      elles | les	  | leur	 | se	    | elles  |
+|   人称  |数/性| 主语  | 直宾 | 间宾 | 自反 | 重读 | 主有阳 | 主有阴 | 主有复 | 主代阳 | 主代阴 | 主代中复 | 主有阴复 |
+|---------|-----|-------|------|------|------|------|--------|--------|--------|--------|--------|----------|----------|
+| 第一人称|单数 | je	  | me	 | me	  | me	 | moi  | mon    | ma     | mes    | le mien|la mienne|les miens|les miennes|
+|         |复数 | nous	| nous | nous | nous | nous | notre  | notre  | nos    | le nôtre|la nôtre|les nôtres|les nôtres|
+| 第二人称|单数 | tu	  | te	 | te	  | te	 | toi  | ton    | ta     | tes    | le tien|la tienne|les tiens|les tiennes|
+|         |复数 | vous	| vous | vous | vous | vous | votre  | votre  | vos    | le vôtre|la vôtre|les vôtres|les vôtres|
+| 第三人称|单阳 | il	  | le	 | lui  | se	 | lui  | son    | sa     | ses    | le sien|la sienne|les siens|les siennes|
+|         |单阴 | elle	| la	 | lui  | se	 | elle | son    | sa     | ses    | le sien|la sienne|les siens|les siennes|
+|         |复阳 | ils	  | les	 | leur | se	 | eux  | leur   | leur   | leurs  | le leur|la leur  |les leurs|les leurs  |
+|         |复阴 | elles | les	 | leur | se	 | elles| leur   | leur   | leurs  | le leur|la leur  |les leurs|les leurs  |
 
 
 ### 俄语人称表
@@ -619,7 +1003,7 @@ Sie Ihnen Sie
 | bis     | by      | par      | у       | に  |
 | von     | of      | des      | за      | の |
 | ob      | whether | si       | ли      | かどうか |
-|         |         |          |         |        |
+| als     | than    | que      | чем     |        |
 | alle    | all     | tout     | всё     | 全て[すべて] |
 | auch    | too     | aussi    | тоже    | も  |
 | schon   | already | déjà     | уже     | 既に[すでに] |

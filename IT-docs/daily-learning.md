@@ -1,4 +1,6 @@
 
+# libunwind
+The libunwind API makes it trivial to implement the stack-manipulation aspects of exception handling. The libunwind API makes it trivial for debuggers to generate the call-chain (backtrace) of the threads in a running program. It is often useful for a running thread to determine its call-chain.
 
 # Accumulo
 Apache Accumulo is a highly scalable sorted, distributed key-value store based on Google's Bigtable. It is a system built on top of Apache Hadoop, Apache ZooKeeper, and Apache Thrift. Written in Java, Accumulo has cell-level access labels and server-side programming mechanisms.

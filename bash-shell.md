@@ -3,6 +3,10 @@ Bash基础及Linux命令
 
 # 入门级命令
 
+## **cal**
+
+  查看日历等时间信息。
+
 ## **cat**
 
   打印文件内容
@@ -96,7 +100,7 @@ date -d @1438617600 "+%Y-%m-%d"  # 输出：2015-08-04
 | │    | 表示管道                                       |
 
 ## **man**
-
+查看命令帮助，命令的词典，更复杂的还有info，但不常用。
 帮助
 
 -f
@@ -189,7 +193,7 @@ e.g. :
 
 ## **bc**
 
-   浮点计算表达式
+   命令行科学计算器。 浮点计算表达式
 
    echo "7/5+2" | bc
 
@@ -650,6 +654,8 @@ eg: `iptables -A INPUT 1 -s $IPADRESS -j DROP`
 
 ## **join**
 
+按两个文件的相同字段合并。
+
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
 |  -t | 指定输入和输出的分隔符 |
@@ -748,9 +754,7 @@ kill 0 #杀死同所有进程，常用于脚本中
 
 ## **locate**
 
-   文件定位，从locatedb中进行搜索，/var/lib/mlocate/mlocate.db
-
-   updatedb进行更新
+   文件定位，从locatedb中进行搜索，/var/lib/mlocate/mlocate.db ，使用updatedb更新库。
 
 ## **lsof**
 
@@ -806,6 +810,7 @@ kill 0 #杀死同所有进程，常用于脚本中
 
    -t 指定文件系统
 
+umount 卸载
 ## **nano**
 
    一种文本编辑器，建议使用vim
@@ -1499,7 +1504,7 @@ tar.xz
 
 ## **uptime**
 
-​
+显示系统运行时间及负载。
 
 ​     23:51:26 up21:31, 1 user, load average: 30.02, 26.43, 19.0212
 
@@ -1627,7 +1632,8 @@ Retype new UNIX password: <comfirm password>
 
 ## **which**
 
-   显示命令位置
+   显示命令位置，按环境变量PATH路径查找。
+
 
 ## **who**
 
@@ -1639,7 +1645,7 @@ Retype new UNIX password: <comfirm password>
 
 ## **whoami**
 
-   显示当前登录的用户名
+   显示当前登录的用户名,相当于执行命令: `id -un`
 
 ## **wget**
 
@@ -1671,7 +1677,7 @@ wget -nH -nd --limit-rate=80m --ftp-user=guest --ftp-password=xxx ftp://….. #�
 
 ## **whereis**
 
-查找（可执行的）文件在什么位置
+查找（可执行的）文件在什么位置，按环境变量PATH路径查找。
 
 | 选项 [options] | 含义                                                     |
 | -------------- | -------------------------------------------------------- |
@@ -1785,13 +1791,16 @@ eg: mkfs -t ext3 /dev/vdb1
 == mkfs.ext3 /dev/vdb1
 
 ## **nmap**
-
+网络扫描命令。
 -sTU localhost  #扫描端口号
 
 ## **rpm**
 
+管理rpm包的命令。
+
 ## **yum**
 
+自动化简单化地管理rpm包的命令。
    list
 
    install
@@ -1830,11 +1839,11 @@ eg: mkfs -t ext3 /dev/vdb1
 
 日志示例：
 
+```
 [1880957.563400]Outofmemory:Killprocess18694(perl)score246orsacrificechild
-
 [1880957.563408]Killedprocess18694(perl)total-vm:1972392kB,anon-rss:1953348kB,file-rss:0kB
-
 [2320864.954447]TCP:PossibleSYNfloodingonport7001.Droppingrequest.CheckSNMPcounters.123456
+```
 
 打印内核环形缓存区中的内容，可以用来查看一些错误；
 
@@ -1874,6 +1883,8 @@ eg: mkfs -t ext3 /dev/vdb1
 
 ## **ltrace**
 
+命令会跟踪进程的库函数调用,它会显现出哪个库函数被调用。
+
 ## **nm**
 
    查看库中的符号
@@ -1896,7 +1907,8 @@ eg: mkfs -t ext3 /dev/vdb1
 
 ## **strace**
 
-dd
+用于诊断、调试Linux用户空间跟踪器。我们用它来监控用户空间进程和内核的交互，比如系统调用、信号传递、进程状态变更等。
+
 
 ## **strip**
 
@@ -2002,7 +2014,7 @@ sudo -u zhichaozhou DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000
 
 ------
 
-**重要系统路径**
+# **重要系统路径**
 
 /dev/null #空桶、黑洞
 
@@ -2161,9 +2173,9 @@ inode   套接字对应的inode
 
 ------
 
-**shell变量**
+# **shell变量**
 
-| 选项 [options] | 含义          |
+| 变量           | 含义          |
 | -------------- | ------------- |
 | \$?  |  上一个命令退出的状态 |
 | \$@  | 参数列表 |
@@ -2270,9 +2282,9 @@ ${!i} 遍历i从 1…$#
 
 [] 集合 eg:[^a-z]
 
-\* 前一字符的0个或多个 eg:000* （代表两个0以上）
+\* 前一字符的0个或多个 eg:000\* （代表两个0以上）
 
-.* 任意串
+.\* 任意串
 
 {} 次数范围 eg:\{2,5\}
 
@@ -2286,7 +2298,7 @@ ${!i} 遍历i从 1…$#
 
 () 小组 eg:g(|a|oo)d
 
-   ()后面可跟+?*
+   ()后面可跟+?\*
 
 \d   [0-9]     \w   [a-zA-Z0-9]     \s   [\t\n\r\f]
 
@@ -2294,9 +2306,9 @@ ${!i} 遍历i从 1…$#
 
 [[ '待匹配字符串' =~ 正则表达式 ]] #注意：要使用双方括号，[[ ]] 以及里面的空格
 
-$BASH_REMATCH     匹配到的内容
+$BASH\_REMATCH     匹配到的内容
 
-${BASH_REMATCH[1]}   匹配到的子串
+${BASH\_REMATCH[1]}   匹配到的子串
 
 ------
 
@@ -2366,101 +2378,83 @@ names=('zrong' 'jacky')
 names=([0]='zrong' [1]='jacky')
 ```
 
-\# 将每一行读取为数组的一个元素
 
 ```
-names=(`cat 'names.txt'`)
+names=(`cat 'names.txt'`)   # 将每一行读取为数组的一个元素
 echo ${#a[@]}  # Len(a)
 echo ${a[n]}   # a[n-1], Start from 1
 echo ${a[*]}   # All
 unset a[1]
 echo ${a[@]:n:m}  # 从n到m的子数组
 echo ${a[@]/3/100}
+echo ${a[@]#※}    #删除开头的模式(懒惰匹配)
+echo ${a[@]##※}   #删除开头的模式(贪婪匹配)
+echo ${a[@]/※/str1}  #替换一次
+echo ${a[@]//※/str1}  #替换全部
+newarr=(${a[@]} ${b[@]})
 ```
+
+## 条件判断
 
 1）判断表达式
 
-if test (表达式为真)
-
-if test !表达式为假
-
-test 表达式1 -a 表达式2 两个表达式都为真
-
-test 表达式1 -o 表达式2 两个表达式有一个为真
+| 表达式         | 含义          |
+| -------------- | ------------- |
+| if test (表达式为真) | |
+| if test !表达式为假 | |
+| test 表达式1 -a 表达式2  | 两个表达式都为真 |
+| test 表达式1 -o 表达式2  | 两个表达式有一个为真 |
 
 2）判断字符串
 
-test -n 字符串 字符串的长度非零
-
-test -z 字符串 字符串的长度为零
-
-test 字符串1=字符串2 字符串相等
-
-test 字符串1!=字符串2 字符串不等
+| 表达式         | 含义          |
+| -------------- | ------------- |
+| test -n 字符串 | 字符串的长度非零 |
+| test -z 字符串 | 字符串的长度为零 |
+| test 字符串1=字符串2 | 字符串相等 |
+| test 字符串1!=字符串2 |  字符串不等 |
 
 3）判断整数
 
-test 整数1 -eq 整数2 整数相等
-
-test 整数1 -ge 整数2 整数1大于等于整数2
-
-test 整数1 -gt 整数2 整数1大于整数2
-
-test 整数1 -le 整数2 整数1小于等于整数2
-
-test 整数1 -lt 整数2 整数1小于整数2
-
-test 整数1 -ne 整数2 整数1不等于整数2
+| 表达式         | 含义          |
+| -------------- | ------------- |
+| test 整数1 -eq 整数2 | 整数相等 |
+| test 整数1 -ge 整数2 | 整数1大于等于整数2 |
+| test 整数1 -gt 整数2 | 整数1大于整数2 |
+| test 整数1 -le 整数2 | 整数1小于等于整数2 |
+| test 整数1 -lt 整数2 | 整数1小于整数2 |
+| test 整数1 -ne 整数2 | 整数1不等于整数2 |
 
 4）判断文件
 
-test File1 -ef File2 两个文件具有同样的设备号和i结点号
-
-test File1 -nt File2 文件1比文件2 新
-
-test File1 -ot File2 文件1比文件2 旧
-
-test -b File 文件存在并且是块设备文件
-
-test -c File 文件存在并且是字符设备文件
-
-test -d File 文件存在并且是目录
-
-test -e File 文件存在
-
-test -f File 文件存在并且是正规文件
-
-test -g File 文件存在并且是设置了组ID
-
-test -G File 文件存在并且属于有效组ID
-
-test -h File 文件存在并且是一个符号链接（同-L）
-
-test -k File 文件存在并且设置了sticky位
-
-test -b File 文件存在并且是块设备文件
-
-test -L File 文件存在并且是一个符号链接（同-h）
-
-test -o File 文件存在并且属于有效用户ID
-
-test -p File 文件存在并且是一个命名管道
-
-test -r File 文件存在并且可读
-
-test -S File 文件存在并且是一个套接字
-
-test -t FD 文件描述符是在一个终端打开的
-
-test -u File 文件存在并且设置了它的set-user-id位
-
-test -w File 文件存在并且可写
-
-test -x File 文件存在并且可执行
+| 表达式         | 含义          |
+| -------------- | ------------- |
+| test File1 -ef File2 | 两个文件具有同样的设备号和i结点号 |
+| test File1 -nt File2  |文件1比文件2 新 |
+| test File1 -ot File2 | 文件1比文件2 旧 |
+| test -b File | 文件存在并且是块设备文件 |
+| test -c File | 文件存在并且是字符设备文件 |
+| test -d File | 文件存在并且是目录 |
+| test -e File | 文件存在 |
+| test -f File | 文件存在并且是正规文件 |
+| test -g File | 文件存在并且是设置了组ID |
+| test -G File | 文件存在并且属于有效组ID |
+| test -h File | 文件存在并且是一个符号链接（同-L） |
+| test -k File | 文件存在并且设置了sticky位 |
+| test -b File | 文件存在并且是块设备文件 |
+| test -L File | 文件存在并且是一个符号链接（同-h） |
+| test -o File | 文件存在并且属于有效用户ID |
+| test -p File | 文件存在并且是一个命名管道 |
+| test -r File | 文件存在并且可读 |
+| test -S File | 文件存在并且是一个套接字 |
+| test -t FD | 文件描述符是在一个终端打开的 |
+| test -u File | 文件存在并且设置了它的set-user-id位 |
+| test -w File | 文件存在并且可写 |
+| test -x File | 文件存在并且可执行 |
 
 ---------
 
-**awk**
+# **awk**
 
    -F 分隔符
 
@@ -2492,37 +2486,37 @@ awk的运行方式
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|  ARGC       | 命令行参数个数 |
-|  ARGV       | 命令行参数排列 |
-|  ENVIRON     | 支持队列中系统环境变量的使用 |
-|  FILENAME    |  awk浏览的文件名 |
-|  FNR       | 浏览文件的记录数 |
-|  FS        | 设置输入域分隔符，等价于命令行 -F选项 |
-|  NF        | 浏览记录的域的个数 |
-|  NR        | 已读的记录数 |
-|  OFS       | 输出域分隔符 |
-|  ORS       | 输出记录分隔符 |
-|  RS        | 控制记录分隔符 |
-|  BEGIN{}   | 在处理文件之前使用 |
-|  pattern   |  相当于一个if判断，满足条件的才会执行下面的action |
-|  {action}  |  在文件的每行上使用 |
-|  END{}   |  在处理文件结束后使用 |
-|  print   |  同shell的echo |
-|  printf  |  同C语言的printf |
-|  gsub(r,s) | 在整个$0中用s替代r |
-|  gsub(r,s,t) | 在整个t中用s替代r |
-|  index(s,t)  |返回s中字符串t的第一位置 |
-|  length(s) | 返回s长度 |
-|  match(s,r) | 测试s是否包含匹配r的字符串 |
-|  split(s,a,fs) | 在fs上将s分成序列a |
-|  sprint(fmt,exp) | 返回经fmt格式化后的exp |
-|  sub(r,s) | 用$0中最左边最长的子串代替s |
-|  substr(s,p) | 返回字符串s中从p开始的后缀部分 |
-|  substr(s,p,n) | 返回字符串s中从p开始长度为n的后缀部分 详细说明一下各个函数的使用方法。 |
-|  gensub(a,b,c[,d]) |全局替换，匹配正则a， 用b替换，c为指定替换目标是第几次匹配，d为指定替换目标是哪个域如$1,$2，若无d指$0，返回值为target替换后内容(未替换还是返回 target原内容)，与sub、gsub不同的是，target内容替换后不改变。 |
-|  gensub(/123/,"x",1,$1)| 替换$1中 第一次匹配到的123为字符x，返回值为$1替换后的内容，且$1的内容并没有改变 |
-|  gensub(/a(.*)b/,"\\1",1) |返回值为匹配正则第1对()内的内容 |
-|  gensub(/a(.*)b(.*)c/,"\\2",1)| 返回值为匹配正则第2对()内的内容 |
+| ARGC       | 命令行参数个数 |
+| ARGV       | 命令行参数排列 |
+| ENVIRON     | 支持队列中系统环境变量的使用 |
+| FILENAME    |  awk浏览的文件名 |
+| FNR       | 浏览文件的记录数 |
+| FS        | 设置输入域分隔符，等价于命令行 -F选项 |
+| NF        | 浏览记录的域的个数 |
+| NR        | 已读的记录数 |
+| OFS       | 输出域分隔符 |
+| ORS       | 输出记录分隔符 |
+| RS        | 控制记录分隔符 |
+| BEGIN{}   | 在处理文件之前使用 |
+| pattern   |  相当于一个if判断，满足条件的才会执行下面的action |
+| {action}  |  在文件的每行上使用 |
+| END{}   |  在处理文件结束后使用 |
+| print   |  同shell的echo |
+| printf  |  同C语言的printf |
+| gsub(r,s) | 在整个$0中用s替代r |
+| gsub(r,s,t) | 在整个t中用s替代r |
+| index(s,t)  |返回s中字符串t的第一位置 |
+| length(s) | 返回s长度 |
+| match(s,r) | 测试s是否包含匹配r的字符串 |
+| split(s,a,fs) | 在fs上将s分成序列a |
+| sprint(fmt,exp) | 返回经fmt格式化后的exp |
+| sub(r,s) | 用$0中最左边最长的子串代替s |
+| substr(s,p) | 返回字符串s中从p开始的后缀部分 |
+| substr(s,p,n) | 返回字符串s中从p开始长度为n的后缀部分 详细说明一下各个函数的使用方法。 |
+| gensub(a,b,c[,d]) |全局替换，匹配正则a， 用b替换，c为指定替换目标是第几次匹配，d为指定替换目标是哪个域如$1,$2，若无d指$0，返回值为target替换后内容(未替换还是返回 target原内容)，与sub、gsub不同的是，target内容替换后不改变。 |
+| gensub(/123/,"x",1,$1)| 替换$1中 第一次匹配到的123为字符x，返回值为$1替换后的内容，且$1的内容并没有改变 |
+| gensub(/a(.*)b/,"\\1",1) |返回值为匹配正则第1对()内的内容 |
+| gensub(/a(.*)b(.*)c/,"\\2",1)| 返回值为匹配正则第2对()内的内容 |
 
 ```
 awk '{if($0~/aaa/ && $0!~/bbb/)next}{print $0}'
@@ -2553,47 +2547,26 @@ erase = ^?; kill = ^U; start = ^Q; stop = ^S; rprnt = ^R; werase = ^W; lnext = ^
 
 printf "\033[1;33m Hello World. \033[0m \n";
 
-颜色如下:
+颜色如下(xx为颜色代码):
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
 |  none     | "\033[0m"  |
-|  black    | "\033[0;30m"  |
-|  dark_gray  | "\033[1;30m"  |
-|  blue     | "\033[0;34m"  |
-|  light_blue  | "\033[1;34m"  |
-|  green    | "\033[0;32m"  |
-|  light_green | "\033[1;32m"  |
-|  cyan     | "\033[0;36m"  |
-|  light_cyan  | "\033[1;36m"  |
-|  red     | "\033[0;31m"  |
-|  light_red  | "\033[1;31m"  |
-|  purple    | "\033[0;35m"  |
-|  light_purple | "\033[1;35m"  |
-|  brown    | "\033[0;33m"  |
-|  yellow    | "\033[1;33m"  |
-|  light_gray  | "\033[0;37m"  |
-|  white    | "\033[1;37m"  |
+|  color    | "\033[0;xxm"  |
+|  dark color  | "\033[1;xxm"  |
 
-字背景颜色范围:
+颜色代码表：
 
-​    40--49          字颜色: 30--39
-
-​    40:黑             30: 黑
-
-​    41:红             31: 红
-
-​    42:绿             32: 绿
-
-​    43:黄             33: 黄
-
-​    44:蓝             34: 蓝
-
-​    45:紫             35: 紫
-
-​    46:深绿            36: 深绿
-
-​    47:白色            37: 白色
+|背景颜色 | 字颜色 | 颜色 |
+|---------|--------|------|
+|  40  |  30 | 黑   |
+|  41  |  31 | 红   |
+|  42  |  32 | 绿   |
+|  43  |  33 | 黄   |
+|  44  |  34 | 蓝   |
+|  45  |  35 | 紫   |
+|  46  |  36 | 深绿 |
+|  47  |  37 | 白色 |
 
 输出特效格式控制：
 
@@ -2607,7 +2580,11 @@ printf "\033[1;33m Hello World. \033[0m \n";
 | \033[8m  | 消隐 |
 | \033[30m  --  \033[37m  | 设置前景色 |
 | \033[40m  --  \033[47m  | 设置背景色 |
-| 光标位置等的格式控制： | |
+
+光标位置等的格式控制：
+
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
 | \033[nA    | 光标上移n行 |
 | \033[nB    | 光标下移n行 |
 | \033[nC    | 光标右移n行 |
@@ -2622,7 +2599,7 @@ printf "\033[1;33m Hello World. \033[0m \n";
 
 ------
 
-**系统日志**
+# **系统日志**
 
 syslog日志服务：
 
@@ -2650,7 +2627,7 @@ syslog日志服务：
 
 ## **@计算日期**
 
-date -d "2 months ago" '+%Y-%m'
+`date -d "2 months ago" '+%Y-%m'`
 
 ## **@进制转换**
 
@@ -2691,19 +2668,17 @@ swapon /home/swap
 #echo "/home/swap swap swap defaults 0 0" >>/etc/fstab
 ```
 
-**@for 循环**
+## **@for 循环**
 
+```
 for i in `seq 10`; do
-
    echo $i
-
 done
 
 for i in ~/doc/ ; do
-
    echo $i
-
 done
+```
 
 循环写法
 
@@ -2711,7 +2686,7 @@ done
 
 多行写法：do换行再写，for后可不带分号
 
-**@if 判断**
+## **@if 判断**
 
 ```
 if [ -n "jjjjj" ]; then
@@ -2744,27 +2719,26 @@ esac
 
 \#分支写法
 
-case $var in 0) ;; *) ;; esac
+`case $var in 0) ;; *) ;; esac`
 
 \#将当前目录下所有的文件中的$1模式，替换为$2
 
 find . -type f | perl -ne 'chomp;print "\"$_\"\n" if -T $_' | xargs perl -pi -e "s/$1/$2/g"
 
-**@计算表达式**
+## **@计算表达式**
 
+```
 square() {
-
    let "res = ($1 * $1 + 1) * 3"
-
    return $res
-
 }
 
+
 square 8
-
 echo $?
+```
 
-**@添加新管理员用户**
+## **@添加新管理员用户**
 
 ```
 mkdir /home/<username>
@@ -2778,7 +2752,7 @@ visudo
 chown /home/<username> <username>:<group>
 ```
 
-**@按行读取文件**
+## **@按行读取文件**
 
 ```
 # method 1 (按分隔符读文件)
@@ -2804,7 +2778,7 @@ done
 
 `cat a | while read a b c d; do echo \"$a\" \"$b\" \"$c\" \"$d\"; done`
 
-**@自输密码的脚本：**
+## **@自输密码的脚本：**
 
 ```
 function remoterun(){
@@ -2819,7 +2793,7 @@ function remoterun(){
 }
 ```
 
-**@免密码sudo**
+## **@免密码sudo**
 
 echo "password" | sudo -S $command
 
@@ -2827,7 +2801,7 @@ echo "password" | sudo -S $command
 
 <username> ALL=(ALL) NOPASSWD:ALL
 
-**@互信**
+## **@互信**
 
 ```
 ssh-keygen -t rsa
@@ -2836,7 +2810,7 @@ ssh <user>@<host>
 cat id_rsa.pub >> ~/.ssh/authenized_keys
 ```
 
-**@挂载**
+## **@挂载**
 
 ```
 sudo mount 192.168.11.225:/opt/userfilebase /opt/userfilebase    #linux目标机
@@ -2863,11 +2837,11 @@ echo "/mnt/data -fstype=nfs,rsize=65536,wsize=65536,intr,hard,tcp,rdirplus,reada
 sudo automount -cv
 ```
 
-**@查找指定目录下中有某字符串的文件**
+## **@查找指定目录下中有某字符串的文件**
 
-grep -Irn "hello,world!" ./
+`grep -Irn "hello,world!" ./`
 
-**@打开socket(bash Only)**
+## **@打开socket(bash Only)**
 
 ```
 exec 8<>/dev/tcp/127.0.0.1/11211 #使用文件描述符8以<>(<读>写)方式，打开127.0.0.1的tcp11211端口
@@ -2878,13 +2852,13 @@ exec 8<&- #关闭socket读
 exec 8>&- #关闭socket写
 ```
 
-**@将静态库编为动态库**
+## **@将静态库编为动态库**
 
 ar -x abc.a
 
 gcc -shared -o abc.so a.o b.o c.o
 
-**@Linux文件夹打包命令**
+## **@Linux文件夹打包命令**
 
 | 文件类型     | 使用的命令          | 解包                               | 打包/压缩                    | comment             |
 | ------------ | ------------------- | ---------------------------------- | ---------------------------- | ------------------- |
@@ -2898,18 +2872,19 @@ gcc -shared -o abc.so a.o b.o c.o
 | .Z           | uncompress compress | uncompress                         | compress                     |                     |
 | .zip         | unzip zip           | unzip [-d <dir>] <zipfile>         | zip -r <zipfile> <directory> |                     |
 | .xz          | xz                  | xz -d file                         | xz -z -k file                |                     |
+| .deb         | ar                  | ar -x <target>                     |                              |                     |
 
+```
 tar.xz tar -xvf
-
-.deb ar -x <target>
-
 gzip xxx.tar # xxx.tar.gz
-
 gunzip xxx.tar.gz # xxx.tar
+```
 
 下载deb文件：
 
+```
 apt-get download $PACKAGE && apt-cache depends -i $PACKAGE|awk '/Depends:/ {print $2}' | xargs apt-get download
+```
 
 tar 文件夹在后，tar包在前
 
@@ -2922,31 +2897,11 @@ Brotli、Deflate、Zopfli、LZMA、LZHAM、Bzip2 、snappy
 
 线上查询及帮助命令(2个)
 
-man：查看命令帮助，命令的词典，更复杂的还有info，但不常用。
-
 help：查看Linux内置命令的帮助，比如cd命令。
 
 文件和目录操作命令(18个)
 
-ls：全拼list，功能是列出目录的内容及其内容属性信息。
-
-cd：全拼change directory，功能是从当前工作目录切换到指定的工作目录。
-
-cp：全拼copy，其功能为复制文件或目录。
-
-find：查找的意思，用于查找目录及目录下的文件。
-
-mkdir：全拼make directories，其功能是创建目录。
-
-mv：全拼move，其功能是移动或重命名文件。
-
-pwd：全拼print working directory，其功能是显示当前工作目录的绝对路径。
-
-rm：全拼remove，其功能是删除一个或多个文件或目录。
-
 rmdir：全拼remove empty directories，功能是删除空目录。
-
-touch：创建新的空文件，改变已有文件的时间戳属性。
 
 tree：功能是以树形结构显示目录下的内容。
 
@@ -2964,91 +2919,15 @@ md5sum：计算和校验文件的MD5值。
 
 查看文件及内容处理命令(21个)
 
-cat：全拼concatenate，功能是用于连接多个文件并且打印到屏幕输出或重定向到指定文件中。
-
-tac：是cat的反向拼写，因此命令的功能为反向显示文件内容。
-
-more：分页显示文件内容。
-
-less：分页显示文件内容，more命令的相反用法。
-
-head：显示文件内容的头部。
-
-tail：显示文件内容的尾部。
-
-cut：将文件的每一行按指定分隔符分割并输出。
-
-split：分割文件为不同的小片段。
-
-paste：按行合并文件内容。
-
-sort：对文件的文本内容排序。
-
-uniq：去除重复行。
-
-wc：统计文件的行数、单词数或字节数。
-
 iconv：转换文件的编码格式。
 
 dos2unix：将DOS格式文件转换成UNIX格式。
 
-diff：全拼difference，比较文件的差异，常用于文本文件。
-
-vimdiff：命令行可视化文件比较工具，常用于文本文件。
-
-rev：反向输出文件内容。
-
-grep/egrep：过滤字符串，三剑客老三。
-
-join：按两个文件的相同字段合并。
-
-tr：替换或删除字符。
-
-vi/vim：命令行文本编辑器。
-
-文件压缩及解压缩命令(4个)
-
-tar：打包压缩。oldboy
-
-unzip：解压文件。
-
-gzipgzip：压缩工具。
-
-zip：压缩工具。
 
 信息显示命令(11个)
 
-uname：显示操作系统相关信息的命令。
-
-hostname：显示或者设置当前系统的主机名。
-
-dmesg：显示开机信息，用于诊断系统故障。
-
-uptime：显示系统运行时间及负载。
-
-stat：显示文件或文件系统的状态。
-
-du：计算磁盘空间使用情况。
-
-df：报告文件系统磁盘空间的使用情况。
-
-top：实时显示系统资源使用情况。
-
 free：查看系统内存。
 
-date：显示与设置系统时间。
-
-cal：查看日历等时间信息。
-
-搜索文件命令(4个)
-
-which：查找二进制命令，按环境变量PATH路径查找。
-
-find：从磁盘遍历查找文件或目录。
-
-whereis：查找二进制命令，按环境变量PATH路径查找。
-
-locate：从数据库 (/var/lib/mlocate/mlocate.db) 查找命令，使用updatedb更新库。
 
 用户管理命令(10个)
 
@@ -3066,21 +2945,10 @@ chage：修改用户密码有效期限。
 
 id：查看用户的uid,gid及归属的用户组。
 
-su：切换用户身份。
-
 visudo：编辑/etc/sudoers文件的专属命令。
 
-sudo：以另外一个用户身份(默认root用户)执行事先在sudoers文件允许的命令。
 
 基础网络操作命令(11个)
-
-telnet：使用TELNET协议远程登录。
-
-ssh：使用SSH加密协议远程登录。
-
-scp：全拼secure copy，用于不同主机之间复制文件。
-
-wget：命令行下载文件。
 
 ping：测试主机之间网络的连通性。
 
@@ -3092,21 +2960,12 @@ ifup：启动网卡。
 
 ifdown：关闭网卡。
 
-netstat：查看网络状态。
-
-ss：查看网络状态。
 
 深入网络操作命令(9个)
-
-nmap：网络扫描命令。
-
-lsof：全名list open files，也就是列举系统中已经被打开的文件。
 
 mail：发送和接收邮件。
 
 mutt：邮件管理命令。
-
-nslookup：交互式查询互联网DNS服务器的命令。
 
 dig：查找DNS解析过程。
 
@@ -3118,13 +2977,7 @@ tcpdump：命令行的抓包工具。
 
 有关磁盘与文件系统的命令(16个)
 
-mount：挂载文件系统。
-
-umount：卸载文件系统。
-
 fsck：检查并修复Linux文件系统。
-
-dd：转换或复制文件。
 
 dumpe2fs：导出ext2/ext3/ext4文件系统信息。
 
@@ -3133,8 +2986,6 @@ dumpe：xt2/3/4文件系统备份工具。
 fdisk：磁盘分区命令，适用于2TB以下磁盘分区。
 
 parted：磁盘分区命令，没有磁盘大小限制，常用于2TB以下磁盘分区。
-
-mkfs：格式化创建Linux文件系统。
 
 partprobe：更新内核的硬盘分区表信息。
 
@@ -3152,23 +3003,9 @@ resize2fs：调整ext2/ext3/ext4文件系统大小。
 
 系统权限及用户授权相关命令(4个)
 
-chmod：改变文件或目录权限。
-
-chown：改变文件或目录的属主和属组。
-
-chgrp：更改文件用户组。
-
 umask：显示或设置权限掩码。
 
 查看系统用户登陆信息的命令(7个)
-
-whoami：显示当前有效的用户名称，相当于执行id -un命令。
-
-who：显示目前登录系统的用户信息。
-
-w：显示已经登陆系统的用户列表，并显示用户正在执行的指令。
-
-last：显示登入系统的用户。
 
 lastlog：显示系统中所有用户最近一次登录信息。
 
@@ -3178,33 +3015,11 @@ finger：查找并显示用户信息。
 
 内置命令及其它(19个)
 
-echo：打印变量，或直接输出指定的字符串
-
-printf：将结果格式化输出到标准输出。
-
-rpm：管理rpm包的命令。
-
-yum：自动化简单化地管理rpm包的命令。
-
 watch：周期性的执行给定的命令，并将命令的输出以全屏方式显示。
-
-alias：设置系统别名。
-
-unalias：取消系统别名。
-
-date：查看或设置系统时间。
 
 clear：清除屏幕，简称清屏。
 
-history：查看命令执行的历史纪录。
-
 eject：弹出光驱。
-
-time：计算命令执行时间。
-
-nc：功能强大的网络工具。
-
-xargs：将标准输入转换成命令行参数。
 
 exec：调用并执行指令的命令。
 
@@ -3213,8 +3028,6 @@ export：设置或者显示环境变量。
 unset：删除变量或函数。
 
 type：用于判断另外一个命令是否是内置命令。
-
-bc：命令行科学计算器。
 
 系统管理与性能监视命令(9个)
 
@@ -3228,14 +3041,6 @@ iostat：统计系统IO。
 
 sar：全面地获取系统的CPU、运行队列、磁盘 I/O、分页(交换区)、内存、 CPU中断和网络等性能数据。
 
-ipcs：用于报告Linux中进程间通信设施的状态，显示的信息包括消息列表、共享内存和信号量的信息。
-
-ipcrm：用来删除一个或更多的消息队列、信号量集或者共享内存标识。
-
-strace：用于诊断、调试Linux用户空间跟踪器。我们用它来监控用户空间进程和内核的交互，比如系统调用、信号传递、进程状态变更等。
-
-ltrace：命令会跟踪进程的库函数调用,它会显现出哪个库函数被调用。
-
 关机/重启/注销和查看系统信息的命令(6个)
 
 shutdown：关机。
@@ -3248,35 +3053,11 @@ logout：退出当前登录的Shell。
 
 exit：退出当前登录的Shell。
 
-Ctrl+d：退出当前登录的Shell的快捷键。
-
 进程管理相关命令(15个)
-
-bg：将一个在后台暂停的命令，变成继续执行 (在后台执行)。
-
-fg：将后台中的命令调至前台继续运行。
-
-jobs：查看当前有多少在后台运行的命令。
-
-kill：终止进程。
-
-killall：通过进程名终止进程。
-
-pkill：通过进程名终止进程。
-
-crontab：定时任务命令。
-
-ps：显示进程的快照。
-
-pstree：树形显示进程。
 
 nice/renice：调整程序运行的优先级。
 
-nohup：忽略挂起信号运行指定的命令。
-
 pgrep：查找匹配条件的进程。
-
-runlevel：查看系统当前运行级别。
 
 init：切换运行级别。
 

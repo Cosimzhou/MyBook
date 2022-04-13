@@ -288,7 +288,7 @@ z = \cos\frac{\theta}{2}\cos\frac{\varphi}{2}\sin\frac{\psi}{2}-\sin\frac{\theta
 w = \cos\frac{\theta}{2}\cos\frac{\varphi}{2}\cos\frac{\psi}{2}-\sin\frac{\theta}{2}\sin\frac{\varphi}{2}\sin\frac{\psi}{2}\end{array}\right.\rarr
 q = ((x, y, z), w)\end{aligned}$$
 
-$$(\theta,\varphi,\psi)^T=\begin{pmatrix}\arctan\frac{2xy+yz}{1-2(x^2+y^2)}\\ \arcsin2() \end{pmatrix}$$
+$$(\theta,\varphi,\psi)^T=\begin{pmatrix}\arctan\frac{2xy+yz}{1-2(x^2+y^2)}\\ \arcsin 2(xw+yz)\\\arctan\frac{2xw+yz}{1-2(z^2+w^2)} \end{pmatrix}$$
 
 
 
