@@ -98,7 +98,7 @@ Vocabulary
 | Penis| penis| pénis| пенис| ちんこ|
 | Hoden| testicle| testicule| яичко| 金玉[きんたま]|
 | Brust| breast| sein| грудь| おっぱい|
-| Handgelenk| wrist| poignet| запястье| 腕[]|
+| Handgelenk| wrist| poignet| запястье| 腕[うで]|
 | Taille| waist| taille| талия| 腰[こし]|
 | Scheide| vagina| vagin| влагалище| マンコ|
 | Muskel| muscle| muscle| мышца| 筋肉[きんにく]|
@@ -117,17 +117,17 @@ Vocabulary
 ### 动物名
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| Katze | cat      | chat | кошка    | 猫[ねこ]|
-| Hund | dog     | chien | собаки   | 犬[いぬ]|
-| Pferd | horse   | cheval | лошадь   | 馬[うま]|
-| Maus | mouse   | souris | мышь     | 鼠[ねずみ]|
+| Katze | cat | chat | кошка | 猫[ねこ]|
+| Hund | dog | chien | собаки | 犬[いぬ]|
+| Pferd | horse | cheval | лошадь | 馬[うま]|
+| Maus | mouse | souris | мышь | 鼠[ねずみ]|
 | Esel | donkey | âne | осел | 覚馬[かくま]|
-| Schlange | snake | serpent | змея     | 蛇[へび]|
+| Schlange | snake | serpent | змея | 蛇[へび]|
 | Löwe | lion | lion | лев | 獅子[しし]|
 | Kaninchen | rabbit | lapin | кролик | 兎[うさぎ]|
-| Vogel | bird | oiseau | птица    | 鳥[どり]|
-| Ente | duck | canard | утка     | 鴨[かも]|
-| Wolf | wolf | loup | волк     | 狼[おおかみ]|
+| Vogel | bird | oiseau | птица | 鳥[どり]|
+| Ente | duck | canard | утка | 鴨[かも]|
+| Wolf | wolf | loup | волк | 狼[おおかみ]|
 | Hahn | cock | coq | петух| 鶏[にわとり]|
 | Henne | hen | poule | курица | かんてい|
 | Schwein | pig | cochon | свинья | 豚[ぶた]|
@@ -240,12 +240,12 @@ Vocabulary
 | Freitag | Friday | Vendredi | пятница | 金曜日[きんようび]|
 | Samstag | Saturday | Samedi | суббота | 土曜日 [どようび]|
 |         |         |          |         |        |
-| Tag | day | jour | день       | 日[ひ]|
-| Morgen | morning | matin | утро       | 朝[あさ]|
+| Tag | day | jour | день | 日[ひ]|
+| Morgen | morning | matin | утро | 朝[あさ]|
 | Mittag | noon | midi | полдень | 昼[ひる]|
-| Nachmittag | afternoon | après-midi | день       | 午後[ごご]|
-| Abend | evening | soir | вечер      | 夕方[ゆうがた]|
-| Nacht | night | nuit  | ночи       | 夜[よる]|
+| Nachmittag | afternoon | après-midi | день | 午後[ごご]|
+| Abend | evening | soir | вечер | 夕方[ゆうがた]|
+| Nacht | night | nuit | ночи | 夜[よる]|
 | Januar | January | Janvier | Январь | 正月[しょうがつ]|
 | Februar | February | Février | Февраль | 二月[にがつ]|
 | März | March | Mars | Март | 三月[さんがつ]|
@@ -294,45 +294,45 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| |   here/there| | здесь     | |
-| |   square    | | Площадь   | |
-| |     lake    | | озеро     | |
-| |     circus  | | цирк      | |
-| |     thing   | | вещь      | |
+| | here/there| | здесь   | |
+| | square    | | Площадь | |
+| | lake      | | озеро   | |
+| | circus    | | цирк    | |
+| | thing     | | вещь    | |
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| Film | film | film | фильм       | 映画[えいが]|
-| Rucksack | backpack | sac à dos| рюкзак      | []|
-| Pullover | sweater | chandail| свитер      | []|
-| Handtuch | towel | serviette | полотенце   | タオル|
-| Tisch | table | table | стол        | 机[つくえ]|
-| Bett | bed | lit | кровать     | ベッド|
-| Teller | plate | assiette | тарелка     | 皿[さら]|
-| Glas | glass | verre | стакан      | ガラス|
+| Film | film | film | фильм | 映画[えいが]|
+| Rucksack | backpack | sac à dos| рюкзак | []|
+| Pullover | sweater | chandail| свитер | []|
+| Handtuch | towel | serviette | полотенце | タオル|
+| Tisch | table | table | стол | 机[つくえ]|
+| Bett | bed | lit | кровать | ベッド|
+| Teller | plate | assiette | тарелка | 皿[さら]|
+| Glas | glass | verre | стакан | ガラス|
 | Teetasse | teacup | tasse à thé | чашка | 茶碗[ちゃわん]|
-| Schule| school | école | школа       | 学校[がっこう]|
-| Bier | beer | bière | пиво        | ビル|
-| Schüssel | bowl | bol| миска       | ボウル|
-| Löffel | spoon | cuiller | ложка       | スプーン|
-| Gabel | fork | fourchette | вилка       | フォーク |
-| Messer | knife    | couteau | нож         | 刀[かたな]|
-| Brille | glasses | lunettes | очки        | [ガラセス]|
-| Stuhl | chair   | chaise | стул        | 椅子[いす]|
-| Seife | soap | savon | мыло        | ソープ|
-| Tasche | bag | sac| сумка       | 鞄[かばん]|
+| Schule| school | école | школа | 学校[がっこう]|
+| Bier | beer | bière | пиво | ビル|
+| Schüssel | bowl | bol| миска | ボウル|
+| Löffel | spoon | cuiller | ложка | スプーン|
+| Gabel | fork | fourchette | вилка | フォーク |
+| Messer | knife | couteau | нож | 刀[かたな]|
+| Brille | glasses | lunettes | очки | [ガラセス]|
+| Stuhl | chair | chaise | стул | 椅子[いす]|
+| Seife | soap | savon | мыло | ソープ|
+| Tasche | bag | sac| сумка | 鞄[かばん]|
 | Geschenk | gift |cadeau| подарок | お土産[おみやげ]|
-| Wort |   word | mot | слово     | 単語[たんご]|
-| Lehrbuch |   textbook | manuel | тетради   | []|
-| Notizbuch |   notebook  | carnet de notes | тетрадь   | ノート[]|
-| Buch | book   | livre | книга     | 本[ほん]|
-| Auto| car | voiture | машина    | 車[くるま]|
+| Wort | word | mot | слово | 単語[たんご]|
+| Lehrbuch | textbook | manuel | тетради | []|
+| Notizbuch | notebook | carnet de notes | тетрадь | ノート[]|
+| Buch | book | livre | книга | 本[ほん]|
+| Auto| car | voiture | машина | 車[くるま]|
 | Fahrrad | bike | vélo | велосипед | 自転車[じてんしゃ]|
-| Boot    | boat    | bateau   | лодка   | ボート |
-| Zug     | train   | train    | поезд   | 列車[れっしゃ] |
-| U-Bahn  | subway  | metro    | метро   | 地下鉄[ちかてつ] |
-| Flugzeug| plane   | avion    | самолет |        []|
-| Rakete  | rocket  | fusée    | ракета  |        []|
+| Boot | boat | bateau | лодка | ボート |
+| Zug | train | train | поезд | 列車[れっしゃ] |
+| U-Bahn | subway | metro | метро | 地下鉄[ちかてつ] |
+| Flugzeug| plane | avion | самолет |        []|
+| Rakete | rocket | fusée | ракета |        []|
 |         |         |          |         |        []|
 
 ## 常用抽象名词
@@ -375,14 +375,14 @@ Vocabulary
 | null    | zero    | zéro     | нуль    | 〇/零[ゼロ/れい]|
 | ein     | one     | une      | один    | 一/壱[ひ/いち]|
 | zwei    | two     | deux     | два     | 二/弍[ふ/に]|
-| drei    | three   | trois    | три     | 三/弎[み/さん]|
-| vier    | four    | quatre   | четыре  | 四[よ/し]|
-| fünf    | five    | cinq     | пять    | 五[い/ご]|
-| sechs   | six     | six      | шесть   | 六[む/ろく]|
+| drei    | three   | trois    | три     | 三/弎/叁[み/さん]|
+| vier    | four    | quatre   | четыре  | 四/[よ/し]|
+| fünf    | five    | cinq     | пять    | 五/[い/ご]|
+| sechs   | six     | six      | шесть   | 六/陆[む/ろく]|
 | sieben  | seven   | sept     | семь    | 七[なな/しち]|
 | acht    | eight   | huit     | восемь  | 八[や/はち]|
 | neun    | nine    | neuf     | девять  | 九[く/きゅう]|
-| zehn    | ten     | dix      | десять  | 十[と/じゅう]|
+| zehn    | ten     | dix      | десять  | 十/拾[と/じゅう]|
 | elf     | eleven  | onze     | одиннадцать | 十一[じゅういち]|
 | zwölf   | twelve  | douze    | двенадцать | 十二[じゅうに]|
 | dreizehn | thirteen | treize   | тринадцать | 十三[じゅうさん]|
@@ -429,7 +429,7 @@ Vocabulary
 | hundert | hundred | cent | сто | 百 [ひゃく]|
 | hundert und eins | hundred and one | cent et un | сто и один | 百一[ひゃくいち]|
 | zweihundert | two hundred | deux cents | двести | 二百[にひゃく]|
-| tausend | thousand | mille | Тысяча  | 千 [せん]|
+| tausend | thousand | mille | Тысяча | 千 [せん]|
 | million | million | million | миллион | 百万 [ひゃくまん] |
 | milliard | billion | milliard | миллиард | 十億 [じゅうおく]|
 | Billion | trillion | billion | триллион | 兆[ちょう]|
@@ -470,7 +470,7 @@ Vocabulary
 | sitzen | sit | s’asseoir | класть| 座る[すわる] |
 | stellen | put | mettre | сесть | 置く[おく] |
 | Zubereiten | prepare | préparer |приготовить | 用意する[よういする] |
-| schneiden | slice | couper | нарезать     | []|
+| schneiden | slice | couper | нарезать | []|
 | waschen | wash | laver | помыть | 洗う[あらう] |
 | kochen | cook | cuire | готовить| 料理する[りょうりする] |
 | beitragen | help | aider | оказать| 助ける[たすける] |
@@ -525,12 +525,12 @@ Vocabulary
 | wenige | few | peu | мало | 少ない[すくない] |
 | schön | beautiful | belle | красивый | []|
 | hässlich | ugly | laid | уродливый | []|
-| | | | | []|
-| | | | | []|
-| | | | | []|
-| | | | | []|
-| | | | | []|
-| | | | | []|
+| | expensive | | дорогой | []|
+| billig | cheap | bon marché | дешёвый | []|
+| leicht| easy | facile| лёгкий | []|
+| schwierig | difficult | difficile | трудный | []|
+| hart | hard | dur | жесткий | []|
+| weich | soft | mou |мягкий | []|
 | | | | | []|
 | | | | | []|
 | | | | | []|
@@ -572,7 +572,7 @@ Son ami est plus grand qu’elle d’une tête.
 最低程度：le (la, les) + moins + 形容词
 
 2．用法：
-与英语中的形容词最高级相同，但定冠词要与有关形容词的性、数一致，最高级的补语（即比较范围），通常由介词de引导。
+定冠词要与有关形容词的性、数一致，最高级的补语（即比较范围），通常由介词de引导。
 Paris est la plus belle ville de France, je crois.
 Ces deux chambres sont les moins grandes de l’hôtel.
 
@@ -705,68 +705,68 @@ Je mehr er isst, desto dicker wird er. 他吃得越多，变得越胖。
 注意：形容词比较级前面可以加上程度副词，来加强比较。可以加在形容词比较级前的副词有：bedeutend，entschiedend，wesentlich，viel，weit。
 
 Mein Artikel war entschieden besser als seiner. 我的文章肯定比他的好。
-*seiner = sein Artikel，因为Artikel是阳性名词，所以用seiner。
+ * seiner = sein Artikel，因为Artikel是阳性名词，所以用seiner。
 Diese Wohnung ist wesentlich größer als unsere Wohnung. 这套住房比我们的大得多。
 Ich lernt viel besser als du. 我学习的比你好得多。
 Dieses Zimmer ist weit größer als andere. 这个房间比其他房间大得多。
-*andere=andere Zimmer，因为这里的Zimmer是复数，所以用andere。
+ * andere=andere Zimmer，因为这里的Zimmer是复数，所以用andere。
 
 其实形容词的比较级非常简单，只要记住相关规律，大部分的比较级形式都可以掌握。那些“与众不同”的例外也不是很多，我们只要花时间记住就万事大吉了。
 
 
 ### 俄语比较级
 比较级的构成
-　　比较级分单一式和复合式两种形式。
-　　⑴单一形式的比较级
-　　i. 词干以辅音结尾的形容词加后缀-ее（-ей），词干为单音节的形容词构成比较级时，重音一般都在-е~е上，词干为多音节的形容词构成比较级时，重音一般不变动。例如：
-　　трудный-трудне~е
-　　светлый-светле~е
-　　нитересный-интере~снее
-　　полезный-поле~знее
-　　осторожный-осторо~жнее
-　　красивый-краси~вее
+比较级分单一式和复合式两种形式。
+⑴ 单一形式的比较级
+i. 词干以辅音结尾的形容词加后缀-ее（-ей），词干为单音节的形容词构成比较级时，重音一般都在-е~е上，词干为多音节的形容词构成比较级时，重音一般不变动。例如：
+трудный-трудне~е
+светлый-светле~е
+нитересный-интере~снее
+полезный-поле~знее
+осторожный-осторо~жнее
+красивый-краси~вее
 
-　　ii. 词干以-г, -к, -х, -д, -т, -ст结尾的形容词构成比较级时，词干末尾的辅音先发生语音交替（г, д-ж, к,т-ч, х-щ, ст-щ）然后再加后缀-е。例如：
-　　дорогой-дороже
-　　строгий-строже
-　　молодой-моложе
-　　крепкий-крепче
-　　громкий-громче
-　　тихий-тише
-　　сухой-суше
-　　чистый-чище
-　　простой-проще
-
-
+ii. 词干以-г, -к, -х, -д, -т, -ст结尾的形容词构成比较级时，词干末尾的辅音先发生语音交替（г, д-ж, к,т-ч, х-щ, ст-щ）然后再加后缀-е。例如：
+дорогой-дороже
+строгий-строже
+молодой-моложе
+крепкий-крепче
+громкий-громче
+тихий-тише
+сухой-суше
+чистый-чище
+простой-проще
 
 
-　　iii. 有些形容词比较级的形式特殊。例如：
-　　близкий-ближе
-　　низкий-ниже
-　　узкий-уже
-　　плохой-хуже
-　　редкий-реже
-　　короткий-короче
-　　ранний-раньше
-　　высокий-выше
-　　далёкий-дальше
-　　широкий-шире
-　　поздний-позже
-　　сладкий-слаще
-　　дешевый-дешевле
-　　долгий-дольше
-　　тонкий-тоньше
-　　большой-больше
-　　хороший-лучше
-　　маленький-меньше
-　　iv. 单一式比较级可以加前缀по-，表示程度稍微加强。例如：попоже, побыстрее, полегче, подороже, подешевле, поинтереснее.
 
-　　⑵复合式比较级的构成
-　　более或менее加形容词原级构成复合式比较级。例如：
-　　старший-более старший, менее старший
-　　глубокий-более глубокий, менее глубокий
-　　широкий-более широкий, менее широкий
-　　умный- более умный, менее умный
+
+iii. 有些形容词比较级的形式特殊。例如：
+близкий-ближе
+низкий-ниже
+узкий-уже
+плохой-хуже
+редкий-реже
+короткий-короче
+ранний-раньше
+высокий-выше
+далёкий-дальше
+широкий-шире
+поздний-позже
+сладкий-слаще
+дешевый-дешевле
+долгий-дольше
+тонкий-тоньше
+большой-больше
+хороший-лучше
+маленький-меньше
+iv. 单一式比较级可以加前缀по-，表示程度稍微加强。例如：попоже, побыстрее, полегче, подороже, подешевле, поинтереснее.
+
+⑵复合式比较级的构成
+более或менее加形容词原级构成复合式比较级。例如：
+старший-более старший, менее старший
+глубокий-более глубокий, менее глубокий
+широкий-более широкий, менее широкий
+умный- более умный, менее умный
 
 
 
@@ -841,11 +841,11 @@ Je mehr man arbeitet, desto/umso mehr kann man verdienen. 多劳就能多得。
 
 （一）简单式最高级
 
-1.原级形容词词干加后缀-ейш(-ий)构成，例如：чистый-чистейший, бедный-беднейший, новый-новейший, длинный-длиннейший, богатый-богатейший 等。
+1. 原级形容词词干加后缀-ейш(-ий)构成，例如：чистый-чистейший, бедный-беднейший, новый-новейший, длинный-длиннейший, богатый-богатейший 等。
 
-2．如果词干以г, к, х 结尾，则加后缀айш(-ий)，同时词干末尾辅音发生г-ж, к-ч, х-ш交替，例如: строгий-строжайший, дорогой-дражайший, лёгкий-легчайший, высокий-высочайший, тихий-тишайший等。
+2. 如果词干以г, к, х 结尾，则加后缀айш(-ий)，同时词干末尾辅音发生г-ж, к-ч, х-ш交替，例如: строгий-строжайший, дорогой-дражайший, лёгкий-легчайший, высокий-высочайший, тихий-тишайший等。
 
-3.如果词干以-зк-结尾，则加后缀-айший，后缀-к-脱落，其前辅音发生з-ж交替，例如: низкий-нижайший, близкий-ближайший等。
+3. 如果词干以-зк-结尾，则加后缀-айший，后缀-к-脱落，其前辅音发生з-ж交替，例如: низкий-нижайший, близкий-ближайший等。
 
 4. 形容词лучший, худший, высший, низший除表示比较级意义外，还具有最高级的意义。
 
@@ -857,13 +857,15 @@ Je mehr man arbeitet, desto/umso mehr kann man verdienen. 多劳就能多得。
 
 2. 由наиболее或наименее加原级形容词构成，多用于公文和科学著作等书面语体中，例如：точный-наиболее точный, типичный-наиболее типичный, интересный-наименее интересный, характерный-наименее характерный等。
 
-3．凡是不能构成单一式最高级的形容词，都可以构成复合式最高级。
+3. 凡是不能构成单一式最高级的形容词，都可以构成复合式最高级。
 
 4. 由самый加形容词单一式最高级构成，特殊强调最高级的意义，例如：самый лучший, самый интереснейший, самый отдалённый, самый нужнейший等。
 
 
 ---------------
 # 常用代词
+
+## 疑问代词
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|

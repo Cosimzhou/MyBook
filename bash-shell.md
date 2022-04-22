@@ -127,6 +127,14 @@ date -d @1438617600 "+%Y-%m-%d"  # 输出：2015-08-04
 
    -f 强行删除
 
+## **watch**
+
+周期性的执行给定的命令，默认值大概2秒，并将命令的输出以全屏方式显示。
+
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| -n  |  指定周期，单位秒 |
+
 ## **wc**
 
 统计字词行数
@@ -395,11 +403,11 @@ e.g: `curl -F "name=Joe Smith" -F "email=[joe@labstack.com](mailto:joe@labstack.
 
 ## **dmesg**
 
-​     显示开机信息，kernel会将开机信息存储在ring buffer中。您若是开机时来不及查看信息，可利用dmesg来查看。开机信息亦保存在/var/log目录中，名称为dmesg的文件里。
+     显示开机信息，kernel会将开机信息存储在ring buffer中。您若是开机时来不及查看信息，可利用dmesg来查看。开机信息亦保存在/var/log目录中，名称为dmesg的文件里。
 
-​     时间戳转时间：
+     时间戳转时间：
 
-​     date -d "1970-01-01 UTC `echo "$(date +%s)-$(cut -f 1 -d' ' /proc/uptime)+38592444.056245"|bc` seconds"
+     date -d "1970-01-01 UTC `echo "$(date +%s)-$(cut -f 1 -d' ' /proc/uptime)+38592444.056245"|bc` seconds"
 
 ## **dstat**
 
@@ -499,9 +507,9 @@ e.g:
 
 ## **fold**
 
-​     按行宽自动换行
+     按行宽自动换行
 
-​     -w    设置行宽
+     -w    设置行宽
 
 ## **getconf**
 
@@ -578,6 +586,26 @@ $HISTCONTROL=ignoredups
 ## **hostname**
 
 查看当前主机名
+
+
+## **iconv**
+
+转换文件的编码格式。
+
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -f <encoding> | 指定来源编码 |
+|  -t <encoding> | 指定来源编码  |
+|  -l  | 列出支持的编码 |
+|  -o <filename> | 指定输出文件 |
+|  -c  | 忽略不能识别的字符 |
+
+  /usr/lib/gconv
+
+  /usr/lib/gconv/gconv-modules
+
+  /usr/lib/gconv/gconv-modules.cache
+
 
 ## **install**
 
@@ -692,7 +720,7 @@ kill 0 #杀死同所有进程，常用于脚本中
 | 18    | CONT   | continue run |
 | 19    | STOP   | stop running |
 
-​        killall  #按名称kill 进程
+        killall  #按名称kill 进程
 
    pkill -f fff  #按全名字kill进程
 
@@ -700,7 +728,7 @@ kill 0 #杀死同所有进程，常用于脚本中
 
 输出登录系统的记录
 
-​     reboot 系统历史启动的时间
+     reboot 系统历史启动的时间
 
 ## **less**
 
@@ -766,17 +794,17 @@ kill 0 #杀死同所有进程，常用于脚本中
 
 列出当前块文件（存储盘）
 
-## **lsb_release**
+## **lsb\_release**
 
    cat /etc/os-release
 
 ## **mesg**
 
-​     设置当前终端的写权限，即是否让其他用户向本终端发信息。将mesg设置y时，其他用户可利用write命令将信息直接显示在您的屏幕上。
+     设置当前终端的写权限，即是否让其他用户向本终端发信息。将mesg设置y时，其他用户可利用write命令将信息直接显示在您的屏幕上。
 
-​     mesg  y   #允许
+     mesg  y   #允许
 
-​     mesg   n   #不允许
+     mesg   n   #不允许
 
 ## **mkfifo**
 
@@ -823,9 +851,9 @@ umount 卸载
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|  -l <port> | 监听端口，nc -l <port> # server listen |
-|  -p <port> | 服务端口 |
-|  -z <host> |   报告端口状况，e.g.   nc -z <host> 80-800 |
+| -l <port> | 监听端口，nc -l <port> # server listen |
+| -p <port> | 服务端口 |
+| -z <host> |   报告端口状况，e.g.   nc -z <host> 80-800 |
 | -4  |  IPv4 |
 | -6  |  IPv6 |
 | -k  |  在监听模式中接受多个连接 |
@@ -847,16 +875,16 @@ mkfifo pp; nc -4 -l $port <pp | tee $req_record_file | nc $srv_host $srv_port | 
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|    -a | (all)显示所有选项，默认不显示LISTEN相关 |
-|    -t | (tcp)仅显示tcp相关选项 |
-|    -u | (udp)仅显示udp相关选项 |
-|    -n | 拒绝显示别名，能显示数字的全部转化成数字。 |
-|    -l | 仅列出有在 Listen (监听) 的服務状态 |
-|    -p | 显示建立相关链接的程序名 |
-|    -r | 显示路由信息，路由表 |
-|    -e | 显示扩展信息，例如uid等 |
-|    -s | (sort)按各个协议进行统计 |
-|    -c | 每隔一个固定时间，执行该netstat命令。 |
+|  -a   | (all)显示所有选项，默认不显示LISTEN相关 |
+|  -t   | (tcp)仅显示tcp相关选项 |
+|  -u   | (udp)仅显示udp相关选项 |
+|  -n   | 拒绝显示别名，能显示数字的全部转化成数字。 |
+|  -l   | 仅列出有在 Listen (监听) 的服務状态 |
+|  -p   | 显示建立相关链接的程序名 |
+|  -r   | 显示路由信息，路由表 |
+|  -e   | 显示扩展信息，例如uid等 |
+|  -s   | (sort)按各个协议进行统计 |
+|  -c   | 每隔一个固定时间，执行该netstat命令。 |
 
 ## **nl**
 
@@ -864,9 +892,9 @@ mkfifo pp; nc -4 -l $port <pp | tee $req_record_file | nc $srv_host $srv_port | 
 
 ## **nice**
 
-     调整后台进程的nice值，nice值的取值范围在-20~19
+     调整后台进程的nice值，nice值的取值范围在`-20~19`
 
-     -n   以指定的nice值运行程序，eg:  nice -n 19 echo hello world
+     -n   以指定的nice值运行程序，eg:  `nice -n 19 echo hello world`
 
 ## **nohup**
 
@@ -912,9 +940,9 @@ Linux Only
 
 ## **perl**
 
-​     执行perl脚本
+     执行perl脚本
 
-​     perl -pi -e 's///g' 文件内替换
+     perl -pi -e 's///g' 文件内替换
 
 ## **popd**
 
@@ -942,14 +970,14 @@ ps -eo pid,lstart,etime | grep 5176
 
 | 状态 | 描述                                            |
 | ---- | ----------------------------------------------- |
-| D    | 不可中断的休眠（通常表示该进程正在进行I/O动作） |
-| R    | 正在执行中                                      |
-| S    | 休眠状态                                        |
-| T    | 暂停执行                                        |
-| W    | 没有足够的内存分页可分配                        |
-| <    | 高优先顺序的进程                                |
-| N    | 低优先顺序的进程                                |
-| L    | 有内存分页分配并锁在内存内（即时系统或定制I/O） |
+|   D  | 不可中断的休眠（通常表示该进程正在进行I/O动作） |
+|   R  | 正在执行中                                      |
+|   S  | 休眠状态                                        |
+|   T  | 暂停执行                                        |
+|   W  | 没有足够的内存分页可分配                        |
+|   <  | 高优先顺序的进程                                |
+|   N  | 低优先顺序的进程                                |
+|   L  | 有内存分页分配并锁在内存内（即时系统或定制I/O） |
 
 ## **pstree**
 
@@ -1200,12 +1228,12 @@ Linux Only
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|  -p  | 端口号 |
-|  -N  | 登录后不执行命令 |
-|  -T  | 验证是否部署公钥 |
+| -p  | 端口号 |
+| -N  | 登录后不执行命令 |
+| -T  | 验证是否部署公钥 |
 | -o <attribute>=<value> | |
 
-   在~/.ssh/authorized_keys下可以导入id_rsa.pub，实现互信，免密登录。
+   在`~/.ssh/authorized_keys`下可以导入`id_rsa.pub`，实现互信，免密登录。
 ```
 git proxy: ~/.ssh/config
 
@@ -1506,9 +1534,9 @@ tar.xz
 
 显示系统运行时间及负载。
 
-​     23:51:26 up21:31, 1 user, load average: 30.02, 26.43, 19.0212
+     23:51:26 up21:31, 1 user, load average: 30.02, 26.43, 19.0212
 
-​     该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。
+     该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。
 
 ## **useradd**
 
@@ -1622,7 +1650,7 @@ Retype new UNIX password: <comfirm password>
 
 ## **wait**
 
-​     等待后台任务结束，如果没有指定任务号，则等待所有任务结束
+   等待后台任务结束，如果没有指定任务号，则等待所有任务结束
 
    e.g.: `wait %2 %3`
 
@@ -1653,10 +1681,10 @@ Retype new UNIX password: <comfirm password>
 
 | 选项 [options] | 含义                                                     |
 | -------------- | -------------------------------------------------------- |
-| -nH   --no-host-directories| 不建立与url中主机对目录 |
-| -nd   --no-directories| 不建立与url对应结构的目录 |
-| -m   --mirror| 无限递归 |
-| -r    --recursive| 递归目录 |
+| -nH --no-host-directories| 不建立与url中主机对目录 |
+| -nd --no-directories| 不建立与url对应结构的目录 |
+| -m --mirror| 无限递归 |
+| -r --recursive| 递归目录 |
 | --cut-dirs=number |  建立与url对应除去前number级目录的路径结构 |
 | --limit-rate=80m |   限制下载速度 |
 | --post-data=data |   发送post请求 |
@@ -1691,9 +1719,9 @@ wget -nH -nd --limit-rate=80m --ftp-user=guest --ftp-password=xxx ftp://….. #�
 
 ## **write**
 
-​     向其它终端发送消息，参数为logname和终端名，进入聊天模式
+     向其它终端发送消息，参数为logname和终端名，进入聊天模式
 
-​     write cosim 1
+     write cosim 1
 
 ## **xargs**
 
@@ -1723,16 +1751,16 @@ printf "00040c: %02x" $bdec | xxd -r - B.bin
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|   list     |列出已安装的软件 |
-|   search    | 搜索软件 |
-| source     |apt软件源的管理 |
-|   install     |下载并安装 |
-|   download     |只下载安装包，而不进行安装 |
-| autoremove     |自动卸载不被依赖的软件 |
-|   remove     |卸载软件 |
-| purge     |卸载软件并删除配置文件 |
-|   update     |更新软件源的可用接入点 |
-|   upgrade       |升级 |
+| list       | 列出已安装的软件 |
+| search     | 搜索软件 |
+| source     | apt软件源的管理 |
+| install    | 下载并安装 |
+| download   | 只下载安装包，而不进行安装 |
+| autoremove | 自动卸载不被依赖的软件 |
+| remove     | 卸载软件 |
+| purge      | 卸载软件并删除配置文件 |
+| update     | 更新软件源的可用接入点 |
+| upgrade    | 升级 |
 
 ## **apt-cache**
 
@@ -1861,13 +1889,13 @@ eg: mkfs -t ext3 /dev/vdb1
 
    -l<lib> 需要注意链接顺序，
 
-​     以库a,b,c中，b与c之间循环依赖的情况下命令应为：ld xx.o -la -lb -lc -lb
+     以库a,b,c中，b与c之间循环依赖的情况下命令应为：ld xx.o -la -lb -lc -lb
 
-​     gcc xx.o -la -lb -lc -lb
+     gcc xx.o -la -lb -lc -lb
 
-​     或者使用-Wl,--start-group/-Wl,--end-group 进行标识
+     或者使用-Wl,--start-group/-Wl,--end-group 进行标识
 
-​     -Wl,--start-group -la -lb- -lc -Wl,--end-group
+     -Wl,--start-group -la -lb- -lc -Wl,--end-group
 
    -l:<lib> 库的文件名为<lib>，而不是lib<lib>.a的形式
 
@@ -1879,7 +1907,7 @@ eg: mkfs -t ext3 /dev/vdb1
 
 ## **ldd**
 
-​     查看依赖库
+     查看依赖库
 
 ## **ltrace**
 
@@ -2515,8 +2543,8 @@ awk的运行方式
 | substr(s,p,n) | 返回字符串s中从p开始长度为n的后缀部分 详细说明一下各个函数的使用方法。 |
 | gensub(a,b,c[,d]) |全局替换，匹配正则a， 用b替换，c为指定替换目标是第几次匹配，d为指定替换目标是哪个域如$1,$2，若无d指$0，返回值为target替换后内容(未替换还是返回 target原内容)，与sub、gsub不同的是，target内容替换后不改变。 |
 | gensub(/123/,"x",1,$1)| 替换$1中 第一次匹配到的123为字符x，返回值为$1替换后的内容，且$1的内容并没有改变 |
-| gensub(/a(.*)b/,"\\1",1) |返回值为匹配正则第1对()内的内容 |
-| gensub(/a(.*)b(.*)c/,"\\2",1)| 返回值为匹配正则第2对()内的内容 |
+| gensub(/a(.\*)b/,"\\1",1) |返回值为匹配正则第1对()内的内容 |
+| gensub(/a(.\*)b(.\*)c/,"\\2",1)| 返回值为匹配正则第2对()内的内容 |
 
 ```
 awk '{if($0~/aaa/ && $0!~/bbb/)next}{print $0}'
@@ -2945,7 +2973,6 @@ chage：修改用户密码有效期限。
 
 id：查看用户的uid,gid及归属的用户组。
 
-visudo：编辑/etc/sudoers文件的专属命令。
 
 
 基础网络操作命令(11个)
@@ -3014,8 +3041,6 @@ users：显示当前登录系统的所有用户的用户列表。
 finger：查找并显示用户信息。
 
 内置命令及其它(19个)
-
-watch：周期性的执行给定的命令，并将命令的输出以全屏方式显示。
 
 clear：清除屏幕，简称清屏。
 
