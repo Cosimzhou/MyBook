@@ -173,6 +173,7 @@ sudo apt install virtualbox-6.1
 
 # slack
 sudo snap install slack --classic
+
 # Microsoft Office 365
 sudo snap install --beta office365webdesktop
 

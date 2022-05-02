@@ -110,8 +110,6 @@ Vocabulary
 | | | | | []|
 | | | | | []|
 | | | | | []|
-| | | | | []|
-| | | | | []|
 
 
 ### 动物名
@@ -145,7 +143,7 @@ Vocabulary
 | Giraffe | giraffe | girafe | жираф | ジラフ|
 | Elefant | elephant | éléphant | слон | 象[ぞう]|
 | Krokodil | crocodile | crocodile | крокодил | 鰐[わに]|
-| Lieb | dear | cher | дорогой | 鹿[しか]|
+| Hirsch | deer | cerf | олень | 鹿[しか]|
 | Leopard | leopard | léopard | леопард | 豹[ひょう]|
 | Fledermaus | bat | chauve-souris | летучая мышь | 蝙蝠[こうもり]|
 | Nilpferd | hippo | hippopotame | бегемот | 河馬[かわま]|
@@ -525,17 +523,33 @@ Vocabulary
 | wenige | few | peu | мало | 少ない[すくない] |
 | schön | beautiful | belle | красивый | []|
 | hässlich | ugly | laid | уродливый | []|
-| | expensive | | дорогой | []|
+| teuer | expensive | cher | дорогой | []|
 | billig | cheap | bon marché | дешёвый | []|
 | leicht| easy | facile| лёгкий | []|
 | schwierig | difficult | difficile | трудный | []|
 | hart | hard | dur | жесткий | []|
-| weich | soft | mou |мягкий | []|
+| weich | soft | mou | мягкий | []|
+| heiß | hot | chaud | горячий | []|
+| kalt | cold | froid | холодный | []|
 | | | | | []|
 | | | | | []|
 | | | | | []|
-| | | | | []|
-| | | | | []|
+| rot | red | rouge | красный | []|
+| weiß | white | blanc | уайт | []|
+| schwarz | black | boudet | блэк | []|
+| blau | blue | bleu | синий | []|
+| lila | purple | pourpre | лиловый | []|
+| rosa | pink | rose | розовый | []|
+| zyan | cyan | cyan | голубой | []|
+| gelb | yellow | jaune | жёлтый | []|
+| braun | brown | Marron | коричневый | []|
+| grau | gray | gris | серый | []|
+| magenta | magenta | magenta | пурпурный | []|
+| säure | acid | acide | кислота | []|
+| lieblich | sweet | sucré | сладкий | []|
+| bitter | bitter | amer | горький | []|
+| würzig | spicy | piquant | пряный | []|
+| salzig | salty | salé | соленый | []|
 | | | | | []|
 | | | | | []|
 | | | | | []|
