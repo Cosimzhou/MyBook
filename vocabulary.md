@@ -329,7 +329,7 @@ Vocabulary
 | Boot | boat | bateau | лодка | ボート |
 | Zug | train | train | поезд | 列車[れっしゃ] |
 | U-Bahn | subway | metro | метро | 地下鉄[ちかてつ] |
-| Flugzeug| plane | avion | самолет |        []|
+| Flugzeug| plane | avion | самолет |飛行機[ひこうき]|
 | Rakete | rocket | fusée | ракета |        []|
 |         |         |          |         |        []|
 
@@ -521,35 +521,36 @@ Vocabulary
 | langsam | slow | lent | медленный | 遅い[おそい] |
 | viele | many | beaucoup | много | 多い[おおい] |
 | wenige | few | peu | мало | 少ない[すくない] |
-| schön | beautiful | belle | красивый | []|
-| hässlich | ugly | laid | уродливый | []|
-| teuer | expensive | cher | дорогой | []|
-| billig | cheap | bon marché | дешёвый | []|
-| leicht| easy | facile| лёгкий | []|
-| schwierig | difficult | difficile | трудный | []|
-| hart | hard | dur | жесткий | []|
-| weich | soft | mou | мягкий | []|
-| heiß | hot | chaud | горячий | []|
-| kalt | cold | froid | холодный | []|
-| | | | | []|
-| | | | | []|
-| | | | | []|
-| rot | red | rouge | красный | []|
-| weiß | white | blanc | уайт | []|
-| schwarz | black | boudet | блэк | []|
-| blau | blue | bleu | синий | []|
-| lila | purple | pourpre | лиловый | []|
-| rosa | pink | rose | розовый | []|
-| zyan | cyan | cyan | голубой | []|
-| gelb | yellow | jaune | жёлтый | []|
-| braun | brown | Marron | коричневый | []|
-| grau | gray | gris | серый | []|
-| magenta | magenta | magenta | пурпурный | []|
-| säure | acid | acide | кислота | []|
-| lieblich | sweet | sucré | сладкий | []|
-| bitter | bitter | amer | горький | []|
-| würzig | spicy | piquant | пряный | []|
-| salzig | salty | salé | соленый | []|
+| schön | beautiful | belle | красивый | 美しい[うつくしい]|
+| hässlich | ugly | laid | уродливый | 醜い[みにくい]|
+| teuer | expensive | cher | дорогой | 高い[たかい]|
+| billig | cheap | bon marché | дешёвый | 安い[やすい]|
+| leicht| easy | facile| лёгкий | やすい[やすい]|
+| schwierig | difficult | difficile | трудный | 難しい[むつかしい]|
+| hart | hard | dur | жесткий | 堅い[かたい]|
+| weich | soft | mou | мягкий | 軟かい[やわらかい]|
+| heiß | hot | chaud | горячий | 熱い[あつい]|
+| kalt | cold | froid | холодный | 寒い[さむい]|
+| trocken| dry| sec| сухой| 乾いた[かわいた]|
+| nass| wet| mouillé| мокрый| 濡れた[ぬれた]|
+| hungrig| hungry| affamé| голодный| 腹減った[はらへった]|
+| durstig| thirsty| assoiffé| жаждущий| 喉渇いた[のどかわいた]|
+| rot | red | rouge | красный | 赤[あか]|
+| weiß | white | blanc | уайт | 白[しろ]|
+| schwarz | black | boudet | блэк | 黒[くろ]|
+| blau | blue | bleu | синий | 青[あお]|
+| lila | purple | pourpre | лиловый | 紫[むらさき]|
+| rosa | pink | rose | розовый | ピンク|
+| zyan | cyan | cyan | голубой | 水色[みずいろ]|
+| gelb | yellow | jaune | жёлтый | 黄色[きいろ]|
+| braun | brown | Marron | коричневый | 褐色[きしょく]|
+| grau | gray | gris | серый | 灰[はい]|
+| magenta | magenta | magenta | пурпурный | マジェンタ|
+| säure | acid | acide | кислота | 酢っぽい[すっぽい]|
+| lieblich | sweet | sucré | сладкий | 甘い[あまい]|
+| bitter | bitter | amer | горький | 苦い[にがい]|
+| würzig | spicy | piquant | пряный | 辛い[からい]|
+| salzig | salty | salé | соленый | 塩辛い[しおからい]|
 | | | | | []|
 | | | | | []|
 | | | | | []|
