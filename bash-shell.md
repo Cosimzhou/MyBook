@@ -2920,6 +2920,14 @@ tar 文件夹在后，tar包在前
 
 Brotli、Deflate、Zopfli、LZMA、LZHAM、Bzip2 、snappy
 
+# --i--
+获取 gpg 公钥
+ sudo gpg --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
+重复执行多次不会改变，也不影响
+
+导出公钥，加入到 apt 信任密钥
+ sudo gpg --export --armor 467B942D3A79BD29 | sudo apt-key add -
+ sudo apt update
 
 **索引**
 

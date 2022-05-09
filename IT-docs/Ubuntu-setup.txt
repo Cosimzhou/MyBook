@@ -62,6 +62,13 @@ sudo ln -s `which pip3` /usr/bin/pip
 sudo apt install openssh-server
 sudo /etc/init.d/ssh start
 
+
+# node.js
+curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
+sudo apt-get install -y nodejs
+# tsc
+npm install -g typescript
+
 ###########################################
 # Samba Server
 sudo apt install samba

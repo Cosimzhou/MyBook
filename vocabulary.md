@@ -207,6 +207,7 @@ Vocabulary
 | Knoblauch | garlic | ail | чеснок | 大蒜[ニンニク]|
 | Ingwer | ginger | gingembre | имбирь | 生姜[しょうが]|
 | Karotte　| carrot | carotte|морковь | 人参[にんじん]|
+| Ginseng　| ginseng | ginseng| женьшень | 朝鮮人参[にんじん]|
 | | | | | |
 | | | | | |
 | | | | | |
@@ -330,7 +331,7 @@ Vocabulary
 | Zug | train | train | поезд | 列車[れっしゃ] |
 | U-Bahn | subway | metro | метро | 地下鉄[ちかてつ] |
 | Flugzeug| plane | avion | самолет |飛行機[ひこうき]|
-| Rakete | rocket | fusée | ракета |        []|
+| Rakete | rocket | fusée | ракета |ロケット|
 |         |         |          |         |        []|
 
 ## 常用抽象名词
@@ -474,10 +475,11 @@ Vocabulary
 | beitragen | help | aider | оказать| 助ける[たすける] |
 | lieben | love | amour | любить | 愛する[あいする] |
 | rufen | call | appeler | звать | 呼ぶ[よぶ] |
-| | | | | []|
-| | | | | []|
-| | | | | []|
-| | | | | []|
+| vergessen | forget | oublier | забывать | []|
+| merken | remember | se souvenir | помнить | []|
+| verzeihen | forgive | pardonner | прощать | []|
+| bedauern | regret | regretter | сожалеть | []|
+| strafen | punish | punir | наказывать | []|
 | | | | | []|
 | | | | | []|
 | | | | | []|
