@@ -267,9 +267,24 @@ eg：
 | -H | 设置http头 |
 | -F | 表单请求|
 | -X | 请求方式POST、GET【默认】|
+| -d, --data, --data-ascii | 指定请求提交的文本内容 |
+| --data-binary | 指定请求提交的二进制内容 |
+| --data-raw | 指定请求提交的内容（不转译‘@’） |
+| --data-urlencode | 指定请求提交的内容 |
+
+
+| 内部格式 | 含义          |
+| -------------- | ------------- |
+| content | 内容本身,不包含‘=’的‘@’ |
+| =content| 内容本身,不包含前导的‘=’ |
+| name=content| 字段名加内容 |
+| @filename| 将文件内容提交 |
+| name@filename | 字段名加文本内容 |
+
 
 e.g: `curl -H "Content-type: application/json" -X POST -d "$data" $url #POST请求 `
-e.g: `curl -F "name=Joe Smith" -F "email=[joe@labstack.com](mailto:joe@labstack.com)" http://localhost:1323/save`
+
+e.g: `curl -F "name=Joe Smith" -F "email=joe@labstack.com" http://localhost:1323/save`
 
 ## **cut**
 
@@ -532,6 +547,7 @@ getopt -o v: --long headers:,libs:,cc:,cxx:,with-glog,with-thrift,nodebugsymbols
 | -C n | 显示上下文n行 |
 | -a | 强制作为文本进行匹配 |
 | -c | 只输出匹配行的计数 |
+| -m n | 对单个文件只显示n条记录 |
 | -n | 显示行号 |
 | -H | 显示文件名称 |
 | -I | 忽略二进制文件 |
@@ -815,15 +831,18 @@ kill 0 #杀死同所有进程，常用于脚本中
   mkfifo recvpipe sendpipe
   recvpipe &
   sendpipe &
-  nc -4 -l $2 > recvpipe < sendpipe &
+  nc -4 -l $3 > recvpipe < sendpipe &
   import_pid=$!
-  nc -4 localhost $1 < recvpipe > sendpipe &
+  nc -4 $1 $2 < recvpipe > sendpipe &
   export_pid=$!
   wait $export_pid
   kill $import_pid
   rm -f sendpipe recvpipe
 ```
 
+## mktemp
+
+     创建一个临时路径
 
 
 ## **more**
@@ -1083,6 +1102,7 @@ eg:
 sed ':x;N;s/\n/,/;b x'
 sed 'H;$!d;g;s/\n\n/;/g'    #将连续的两个换行替换成';'，$!
 sed 'H;$!d;g;s/\n\n/;/g;s/\n//g;s/;/\n/g;s/:/: /g;s/v/v /g;s/file/file /g'  #可以进行组合替换
+sed 's/\(..\)/\\\x\1/g'
 ```
 
 | 命令 | 解释  |
@@ -1469,13 +1489,17 @@ ed 删除
 
 ## **tr**
 
-  替换字符eg: `echo $PATH | tr ':' '\n'`
+  替换字符
 
-   -c 补集
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|   -c           | 补集          |
+|   -d           | 去除字符      |
 
-   -d 去除字符
+可以用于换行符的替换，如行的拆分和合并
+ eg: `echo $PATH | tr ':' '\n' | grep -v "^/home" | tr '\n' ':' `
 
- eg:  `tr '[:upper:]' '[:lower:]'` #转小写
+ eg: `tr '[:upper:]' '[:lower:]'` #转小写
 
 ## **trap**
 

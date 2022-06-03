@@ -50,6 +50,9 @@ kubectl get nodes
 # Java 8
 sudo apt install openjdk-8-jdk
 
+# psql
+sudo apt install postgresql-client
+
 # Starship
 curl -fsSL https://starship.rs/install.sh | zsh
 
@@ -135,6 +138,10 @@ sudo apt install flameshot
 # add shortcut in system configure-> keyboard ->shortcut
 # Name: Screen snap; Command: flameshot gui; Shortcut: Ctrl+Alt+A
 
+# Kazam
+sudo add-apt-repository ppa:sylvain-pineau/kazam
+sudo apt-get update
+sudo apt install kazam
 
 # Sublime Text 2
 sudo snap install sublime-text --classic # or the follows

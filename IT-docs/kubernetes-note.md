@@ -3,11 +3,32 @@ Kubernetes(K8s) Note
 
 kubectl get ns
 cat ~/.kube/config
-kubectl --context <k8s-context> get [namespace|ns]
-kubectl --context <k8s-context> -n <namespace> get [service|svc]
-kubectl --context <k8s-context> -n <namespace> get [ingress|ing]
-kubectl --context <k8s-context> -n <namespace> get pods
-kubectl --context <k8s-context> -n <namespace> get deploy <service> -o yaml
-kubectl --context <k8s-context> -n <namespace> get service <service>
-kubectl --context <k8s-context> -n <namespace> port-forward svc/<service> 8080:8080
-kubectl --context <k8s-context> -n <namespace> exec -it <pod> /bin/sh
+
+NAMESPACE=--context <k8s-context> -n <namespace>
+kubectl $NAMESPACE get [namespace|ns]
+kubectl $NAMESPACE get [service|svc]
+kubectl $NAMESPACE get [ingress|ing]
+kubectl $NAMESPACE get [deployments|deploy]
+kubectl $NAMESPACE get pods
+kubectl $NAMESPACE get configmaps
+kubectl $NAMESPACE get deploy <service> -o yaml
+kubectl $NAMESPACE get service <service>
+kubectl $NAMESPACE describe pods/<pod>
+kubectl $NAMESPACE edit configmaps/<config>
+kubectl $NAMESPACE port-forward svc/<service> 8080:8080
+kubectl $NAMESPACE exec -it <pod> /bin/sh
+
+kubectl cp <pod>:/path /local/path/
+
+kubectl get deploy | grep <dep>
+kubectl scale --replicas=1 deploy <dep>
+kubectl rollout restart deployment <dep>
+
+kubectl annotate pods <pod> app-version="2" --overwrite
+kubectl delete pods --field-selector=status.phase=Failed
+kubectl set env deployment <dep> APP\_VERSION="2"
+kubectl logs <pod> --all-containers
+
+kubectl get configmaps/map-factory-job-config
+kubectl edit configmaps/map-factory-job-config
+

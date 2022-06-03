@@ -59,7 +59,7 @@ mysqldump -u<user> -p<password> -h<host> <database> <table>
 
 | 命令            |  描述                                                                |
 | --------------- | -------------------------------------------------------------------- |
-| \d [table]      | 列出数据库中的表，或（如果声明了）表 table 的列/字段．如果表名是用统配符 （“*”）声明的，列出所有表和表的列/字段信息． |
+| \d [table]      | 列出数据库中的表，或（如果声明了）表 table 的列/字段．如果表名是用统配符 （“\*”）声明的，列出所有表和表的列/字段信息． |
 | \da             | 列出所有可用聚集． |
 | \dd object      | 列出 pg_description 里对声明的对象的描述，对象可以是一个表，表中的列/字段，类型，操作符或聚集．小技巧：并非所有对象在 pg_description 里有描述．此后期命令在快速获取 Postgres 内部特性时很有用． |
 | \df             | 列出函数． |
@@ -143,3 +143,9 @@ mysqldump -u<user> -p<password> -h<host> <database> <table>
 | -w, --no-password       | never prompt for password |
 | -W, --password          | force password prompt (should happen automatically) |
 
+
+pg_dump <database> > dump.sql
+
+psql template1 -c 'drop database database_name;'
+psql template1 -c 'create database database_name with owner your_user_name;
+psql database_name < database_name_20160527.sql
