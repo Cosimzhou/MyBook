@@ -1,6 +1,7 @@
 Kubernetes(K8s) Note
 ====================
 
+```bash
 kubectl get ns
 cat ~/.kube/config
 
@@ -26,9 +27,10 @@ kubectl rollout restart deployment <dep>
 
 kubectl annotate pods <pod> app-version="2" --overwrite
 kubectl delete pods --field-selector=status.phase=Failed
-kubectl set env deployment <dep> APP\_VERSION="2"
+kubectl set env deployment <dep> APP_VERSION="2"
 kubectl logs <pod> --all-containers
 
 kubectl get configmaps/map-factory-job-config
 kubectl edit configmaps/map-factory-job-config
 
+```
