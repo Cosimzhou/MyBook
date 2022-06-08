@@ -1,7 +1,7 @@
 git 笔记
 ========
 
-git log --diff-filter=D --summary | grep delete
+git log --diff-filter=D --summary | grep delete #查看删除文件的记录
 
 回退到历史的某一步，即使commit已不存在
 git reflog
@@ -45,16 +45,6 @@ HEAD~n        # 顺序分支n级父节点
 HEAD^2        # 合并分支的父节点，只有“2”有效
 
 
-分支Diff
-```
-	git diff master.. # 查看分支diff
-	git diff master.. <file> # 查看指定文件，从分支master当前的diff
-
-	@@ -a,b +c,d @@ filename
-# 与diff -u 的位置表述一致，含义如下：
-# a旧文件的起始行数，b旧文件的行数
-# c新文件的起始行数，d新文件的行数
-```
 
 # diff 打包补丁
 git diff --cached > <patch>
@@ -103,8 +93,8 @@ git merge -Xignore-space-change <branch>
 合并commit
 git rebase -i HEAD~n        # 合并当前的n个commit
 git rebase -i <commit id> # 合并commit id前的若干commit
-# 编辑时：第一个pick，之后squash，修改某一个edit
-git commit --amend <title> # 修改标题
+\# 编辑时：第一个pick，之后squash，修改某一个edit
+git commit --amend [<commit_title>] # 修改标题
 
 git rebase -i
 
@@ -141,18 +131,25 @@ git describe --dirty --match "software-v[0-9]*"
 ## 瘦身
 
 先查找大文件，命令如下：
+```
 git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -5 | awk '{print$1}')"
+```
 
 例如删除nspatientList1.txt文件：
+```
 git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch bin/nspatientList1.txt' --prune-empty --tag-name-filter cat -- --s
+```
 
 删除之后会有大量输出，显示已经从各自历史log中剔除掉关于这个大文件的信息，之后可以使用gc命令再次压缩:
+```
 git gc  --prune=now
+```
 
 
 
 初始化
 
+```bash
 # 初始化方式一：
 git clone git@git.github.com:<user>/<repository>.git
 cd <repository>
@@ -175,15 +172,18 @@ git remote rename origin old-origin    #已存在
 git remote add origin git@git.github.com:<user>/<reposit>.git
 git push -u origin --all
 git push -u origin --tags
+```
 
 
 
-常用命令
-# 一、克隆
+# 日常使用场景的命令
+## 一、克隆
+```
 git clone git@192.168.11.147:tigerknows-sphinx     #将192.168.11.147上git仓库里的tigerknows-sphinx项目克隆到本地
+```
 
 
-# 二、日常
+## 二、日常
 git status         #列出未记入本次提交中的变动
 git add .          #在本次提交中添加变动的所有文件
 git commit -m “提交代码的标”     #向“本地”代码库提交本次提交内容
@@ -200,11 +200,11 @@ git config --global user.email zhouzhichao@tigerknows.com
 
 git config --global color.ui true
 
-#全局gitignore
+### 全局gitignore
 git config --get core.excludesfile
 git config --global core.excludesfile ~/.gitignore_global
 
-# 三、分支
+## 三、分支
 git branch          #列出分支
 git remote -v     #列出git仓库的服务器路径
 git branch <new-branch>     #新建分支new-branch
@@ -241,7 +241,7 @@ git checkout <file> --ours     #使用本地修改覆盖远程
 >>>>>>>
 ```
 
-# 四、异常处理
+## 四、异常处理
 git revert HEAD #撤销上次前提交
 git revert HEAD^ #撤销上上次前提交
 git reset --hard      #将项目恢复到上次提交的状态（遗弃掉所有本次未提交完成的修改，不可恢复）
@@ -263,19 +263,23 @@ git remote -v
 git fetch upstream
 git merge upstream/master
 
+---------------------
+子命令分类详述
+==============
 
+# submodule
 git submodule add 仓库地址 路径
 git submodule update --init --recursive
 
-usage: git submodule [--quiet] add [-b <branch>] [-f|--force] [--name <name>] [--reference <repository>] [--] <repository> [<path>]
-or: git submodule [--quiet] status [--cached] [--recursive] [--] [<path>...]
-or: git submodule [--quiet] init [--] [<path>...]
-or: git submodule [--quiet] deinit [-f|--force] (--all| [--] <path>...)
-or: git submodule [--quiet] update [--init] [--remote] [-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--[no-]recommend-shallow] [--reference <repository>] [--recursive] [--] [<path>...]
-or: git submodule [--quiet] summary [--cached|--files] [--summary-limit <n>] [commit] [--] [<path>...]
-or: git submodule [--quiet] foreach [--recursive] <command>
-or: git submodule [--quiet] sync [--recursive] [--] [<path>...]
-or: git submodule [--quiet] absorbgitdirs [--] [<path>...]
+git submodule [--quiet] add [-b <branch>] [-f|--force] [--name <name>] [--reference <repository>] [--] <repository> [<path>]
+git submodule [--quiet] status [--cached] [--recursive] [--] [<path>...]
+git submodule [--quiet] init [--] [<path>...]
+git submodule [--quiet] deinit [-f|--force] (--all| [--] <path>...)
+git submodule [--quiet] update [--init] [--remote] [-N|--no-fetch] [-f|--force] [--checkout|--merge|--rebase] [--[no-]recommend-shallow] [--reference <repository>] [--recursive] [--] [<path>...]
+git submodule [--quiet] summary [--cached|--files] [--summary-limit <n>] [commit] [--] [<path>...]
+git submodule [--quiet] foreach [--recursive] <command>
+git submodule [--quiet] sync [--recursive] [--] [<path>...]
+git submodule [--quiet] absorbgitdirs [--] [<path>...]
 
 删除submodule
 0. mv a/submodule a/submodule_tmp
@@ -287,7 +291,8 @@ or: git submodule [--quiet] absorbgitdirs [--] [<path>...]
 # or, if you want to leave it in your working tree and have done step 0
 3. git rm --cached a/submodule
 
-log命令
+# log命令
+```
 git log -S <keyword> # 搜索历史提交文本内容
 git log -G <regex> # 搜索历史提交内容，按正则表达式
 git log -p  <filename>            #显示这个文件所有的修改提交
@@ -296,8 +301,16 @@ git log --oneline --graph --decorate
 git reflog 参数与git log 相同，可以将所有分支的记录都列出来
 git show <commit id> [<filename>]       # 显示这次提交的这个文件是什么情况
 git ls-files              #列出所有管理的文件
+```
 
-tag命令相关
+git reflog [show] [log-options] [<ref>]：就是显示同可引用的历史版本，同git reflog。就在后边可以加日志的选项。
+git reflog expire [--expire=<time>] [--expire-unreachable=<time>] [--rewrite] [--updateref] [--stale-fix] [--dry-run | -n] [--verbose] [--all | <refs>…]：删除掉更老的reflog条目。
+git reflog delete [--rewrite] [--updateref] [--dry-run | -n] [--verbose] ref@{specifier}…：从reflog中删除一个条目。
+git reflog exists <ref>：检查一个ref是否有一个reflog条目
+
+
+# tag命令相关
+```
 git tag                                                     #列出所有的tag标签
 git tag <tag>                                         #添加轻量级tag
 git tag -l <expr>                                    #列出与表达式匹配的tag
@@ -307,8 +320,10 @@ git show <tag>                                        #显示tag内容
 git push origin <tag>                             #将tag推到服务器上，普通的push是不会推tag的
 git push origin --tags                              #将所有的tag推到服务器上
 git push origin --delete tag <tagname> #删除远程tag
+```
 
-diff命令
+# diff命令
+```
 git diff <branch A>..<branch B>            #显示两个分支间的差异
 git diff <branch A>...<branch B>           #显示分支A、B共有父分支与分支B之间的差异
 git diff [master]...<branch B>            #在master上执行时，B是从master建立的分支，则是显示分支B建立后有了多少修改
@@ -323,26 +338,44 @@ git diff HEAD                 #显示工作目录与上次提交时之间的所�
 git diff <branch>         #显示当前工作目录与另外分支的差别。你也以加上路径限定符，来只比较某一个文件或目录。
 git diff HEAD -- <filename/path>         #显示<filename/path>目录/文件与上次提交之间的差别
 git diff --stat                 #统计一下有哪些文件被改动
+```
 
 
+分支Diff
+```
+	git diff master.. # 查看分支diff
+	git diff master.. <file> # 查看指定文件，从分支master当前的diff
+
+	@@ -a,b +c,d @@ filename
+# 与diff -u 的位置表述一致，含义如下：
+# a旧文件的起始行数，b旧文件的行数
+# c新文件的起始行数，d新文件的行数
+```
 
 
-stash命令
+# stash命令
+```
 git stash
+git stash push -m "leave message"
 git stash save "what you want to say"
 
-git stash apply      #应用stash
-git stash list            #查看所有的搁置版本
-git stash pop         #恢复一个stash
-git stash drop <stash id>     #删除一个stash
-git stash clear         #删除所有stash
+git stash apply              #应用stash
+git stash list               #查看所有的搁置版本
+git stash pop                #恢复一个stash
+git stash pop <stash{n}>     #恢复一个指定的stash
+git stash show <stash id>    #显示一个stash的git diff --stat
+git stash drop <stash id>    #删除一个stash
+git stash clear              #删除所有stash
+```
 
 
-cherry-pick命令
+# cherry-pick命令
+```
 git cherry-pick <commit id>
 
 git checkout <old_cc>
 git cherry-pick <commit id>     #
+```
 
 
 

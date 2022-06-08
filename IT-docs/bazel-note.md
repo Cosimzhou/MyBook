@@ -32,23 +32,23 @@ bazel query 'allpaths\(deepmap_api_impl/feature_service:feature_service_impl, @a
 
 
 ```
-mkdir -p {cpp,python}/public/deepmap_api/protos
+package_path=public/deepmap_api/protos
+mkdir -p {cpp,python}/${package_path}
 bazel build --compilation_mode=dbg -s //deepmap_api_impl/map_engine:map_engine_grpc_server
-cp bazel-out/k8-dbg/bin/public/deepmap_api/protos/*.pb.{cc,h} \
-bazel-out/k8-dbg/bin/public/deepmap_api/protos/map_engine_service_grpc_lib_pb/public/deepmap_api/protos/* \
-cpp/public/deepmap_api/protos
+cp bazel-out/k8-dbg/bin/${package_path}/*.pb.{cc,h} \
+bazel-out/k8-dbg/bin/${package_path}/map_engine_service_grpc_lib_pb/${package_path}/* cpp/${package_path}
 
-bazel build --compilation_mode=dbg -s //public/deepmap_api/protos/...
-cp bazel-bin/public/deepmap_api/protos/*_python_proto/public/deepmap_api/protos/*.py python/public/deepmap_api/protos
+bazel build --compilation_mode=dbg -s //${package_path}/...
+cp bazel-bin/${package_path}/*_python_proto/${package_path}/*.py python/${package_path}
 
 bazel build --compilation_mode=dbg -s //root/path:target
 bazel info
-cp bazel-out/k8-dbg/bin/public/deepmap_api/protos/*.pb.{cc,h} \
-bazel-out/k8-dbg/bin/public/deepmap_api/protos/map_engine_service_grpc_lib_pb/public/deepmap_api/protos/* \
-cpp/public/deepmap_api/protos
+cp bazel-out/k8-dbg/bin/${package_path}/*.pb.{cc,h} \
+bazel-out/k8-dbg/bin/${package_path}/map_engine_service_grpc_lib_pb/${package_path}/* \
+cpp/${package_path}
 
-bazel build --compilation_mode=dbg -s //public/deepmap_api/protos/...
-cp bazel-bin/public/deepmap_api/protos/*_python_proto/public/deepmap_api/protos/*.py python/public/deepmap_api/protos
+bazel build --compilation_mode=dbg -s //${package_path}/...
+cp bazel-bin/${package_path}/*_python_proto/${package_path}/*.py python/${package_path}
 ```
 
 dazel runs bazel in a certain docker container. 

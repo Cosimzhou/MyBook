@@ -10,8 +10,10 @@ Vocabulary
 | Enttäuschen | Excuse me | Veuillez m’excuser | Извините | すみません|
 | Willkommen | Welcome | Bienvenue | Добро пожаловать | ようこそ|
 | Bitte | Please | veuillez  | Пожалуйста | どうぞ|
-| Bis bald | See you | A la prochaine | До скорого | じゃね|
+| Bis bald | See you | A la prochaine | До скорого | まだ |
+| Ade | Bye | Ciao   | Пока | じゃあ |
 | Auf Wiedersehen | Goodbye | Au revoir   | До свидания | さよなら|
+| Guten tag | Good day | Bonne journée | Добрый день/Здорово |  こんにちは  |
 | Danke dir | Thank you | Merci | Благодарю вас | ありがとう|
 | Guten tag | Good day | Bonne journée | Добрый день/Здорово |  こんにちは  |
 | Guten abend | Good evening | Bonsoir | Добрый вечер | こんばんは|
