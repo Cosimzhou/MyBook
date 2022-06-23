@@ -353,6 +353,8 @@
 
 **ODBC**     Open Database Connectivity，开放数据库连接
 
+**OIDC**    Open ID Connect，开放身份认证连接
+
 **OOM**     Out Of Memory，内存不足
 
 **ORM**    Object Relational Mapping，对象关系映射，一种用于实现面向对象编程语言里不同类型系统的数据之间的转换的技术
@@ -582,9 +584,9 @@
 
 
 
-
-# 非技术性术语
-
+-------------------
+非技术性术语
+============
 
 
 ## B
@@ -614,6 +616,9 @@
 **CTO**     Chief Technology Officer，首席技术官
 
 
+## D
+
+**DRI**   Direct Response Individual，直接责任人
 
 ## E
 
@@ -671,6 +676,9 @@
 
 ## P
 
+
+**PLC**  Product Life Cycle，产品生命周期
+
 **PM**     Product Manager，产品经理
 
 **PMO**   Project Management Office，项目管理办公室
@@ -703,6 +711,8 @@
 
 **SOP**     Standard Operating Procedure，标准作业程序
 
+**SoW**     1) Scope of Work，工作内容; 2) Statement of Work
+
 
 
 ## U
@@ -720,6 +730,8 @@
 **VP**     Vice President，副总裁
 
 
+## W
 
+**WIP**     Work in Progress
 
 

@@ -61,7 +61,11 @@ Vocabulary
 | Schwiegertochter| daughter in law| Beau-fille| невестка| 嫁姑[よめしゅうとめ]|
 | | | | | []|
 | | | | | []|
-| | | | | []|
+
+| Deutsch | English | Français | Русская | 日本語|
+|---------|---------|----------|---------|--------|
+| Kühlschrank | Refrigerator | Réfrigérateur |холодильнике | 冷蔵庫[]|
+| Computer | computer | ordinateur | компьютер | コンピュータ/パソコン|
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
