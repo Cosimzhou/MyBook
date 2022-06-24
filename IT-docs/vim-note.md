@@ -315,6 +315,7 @@ h 隐藏缓冲区，缓冲区被加载但不显示。
 :set vb #(visual bell)
 
 @二进制编辑
+vim -b -c "set noeol" xxxx    #可以避免在文件尾追加换行符
 vim -b xxxx
 :%!xxd
 :%!xxd -r  #退出二进制编辑后保存
