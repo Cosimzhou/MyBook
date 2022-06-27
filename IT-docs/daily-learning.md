@@ -2,6 +2,18 @@
 # Dependence Inject
 
 
+# Protobuf serialization
+| Type | Meaning       | Used For                                                  |
+|------+---------------+-----------------------------------------------------------|
+| 0    | Varint        | int32, int64, uint32, uint64, sint32, sint64, bool, enum  |
+| 1	   | 64-bit	       | fixed64, sfixed64, double                                 |
+| 2	   | Length-delimi | string, bytes, embedded messages, packed repeated fields  |
+| 3	   | Start group   | Groups (deprecated)                                       |
+| 4	   | End group     | Groups (deprecated)                                       |
+| 5	   | 32-bit        | fixed32, sfixed32, float                                  |
+
+The field index will left shift 3 bit to provide room for the type info.
+
 # libunwind
 The libunwind API makes it trivial to implement the stack-manipulation aspects of exception handling. The libunwind API makes it trivial for debuggers to generate the call-chain (backtrace) of the threads in a running program. It is often useful for a running thread to determine its call-chain.
 
@@ -14,17 +26,19 @@ Covariance represent the relationship between two variables. If covariance is 0,
 # Gosper's Hack
 An algorithm to list all the k elements subset in a n elements set. You can use the binary sequence to represent the elements selection state. Travel from the 0..0111..1 to the 111..10..0. The key operation is how do you transfer the current binary to next one. You can follow this rule: turn the last 01 to 10 and move all of the 1 is on right side of this 01 to the least bits.
 
+```
 void GospersHack(int k, int n) {
-    int curmask = (1 << k) - 1;
-    int limit = (1 << n);
-    while (curmask < limit) {
-        // do something
-        int last_bit = cur_mask & -cur_mask;   // the last bit which is 1
-        int last_01_10 = cur_mask + last_bit;
-        int least_1_bits = (last_01_10 ^ cur_mask) >> (__builtin_ctz(last_bit) + 2);
-        cur_mask = least_1_bits | last_01_10;
-    }
+  int curmask = (1 << k) - 1;
+  int limit = (1 << n);
+  while (curmask < limit) {
+    // do something
+    int last_bit = cur_mask & -cur_mask;   // the last bit which is 1
+    int last_01_10 = cur_mask + last_bit;
+    int least_1_bits = (last_01_10 ^ cur_mask) >> (__builtin_ctz(last_bit) + 2);
+    cur_mask = least_1_bits | last_01_10;
+  }
 }
+```
 
 
 # Pollard Rho
