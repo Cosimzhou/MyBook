@@ -1171,12 +1171,12 @@ seq n #生成1~n
 
 +/- 关闭或打开
 
-| 属性 | 含义          |
-| -------------- | ------------- |
-| allexport          |  |
+| 属性               | 含义          |
+| ------------------ | ------------- |
+| allexport          | set -a, 导出所有变量  |
 | braceexpand        |  |
 | emacs              |  |
-| errexit            |  |
+| errexit            | set -e |
 | errtrace           |  |
 | functrace          |  |
 | hashall            |  |
@@ -1187,12 +1187,12 @@ seq n #生成1~n
 | keyword            |  |
 | monitor            |  |
 | noclobber          | 不允许覆盖 |
-| noexec             |  |
+| noexec             | set -n, 不执行，仅读取命令 |
 | noglob             | 停止 wildcard 功能 |
 | nolog              |  |
 | notify             |  |
 | nounset            |  |
-| onecmd             |  |
+| onecmd             | 一次性终端（执行一个命令后自动退出） |
 | physical           |  |
 | pipefail           | 管道中任意失败即失败 |
 | posix              |  |
