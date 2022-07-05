@@ -5,6 +5,7 @@ adequate
 ambivalent
 attorney
 allegation
+arbitrary
 
 bully
 

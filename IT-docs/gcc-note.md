@@ -44,17 +44,16 @@ gcc -E -dD -xc /dev/null
 4. 参数 -Og 是在 -O1 的基础上，去掉了那些影响调试的优化，所以如果最终是为了调试程序，可以使用这个参数。不过光有这个参数也是不行的，这个参数只是告诉编译器，编译后的代码不要影响调试，但调试信息的生成还是靠 -g 参数的。
 5. 参数 -Os 是在 -O2 的基础上，去掉了那些会导致最终可执行程序增大的优化，如果想要更小的可执行程序，可选择这个参数。
 6. 参数 -Ofast 是在 -O3 的基础上，添加了一些非常规优化，这些优化是通过打破一些国际标准（比如一些数学函数的实现标准）来实现的，所以一般不推荐使用该参数。
-7. 如果想知道上面的优化参数具体做了哪些优化，可以使用 gcc -Q --help=optimizers 命令来查询，比如下面是查询 -O3 参数开启了哪些优化：
+7. 如果想知道上面的优化参数具体做了哪些优化，可以使用`gcc -Q --help=optimizers`命令来查询，比如下面是查询 -O3 参数开启了哪些优化：
 
+```bash
 $ gcc -Q --help=optimizers -O3
 
  ...
-
  -fassociative-math       [disabled]
-
  -fassume-phsa          [enabled]
-
  ...
+```
 
 ```
 gcc -fPIC -c func.c -o func.o
@@ -63,18 +62,20 @@ gcc -shared func.o -o libfunc.so
 gcc -shared -o c.so -Wl,--whole-archive a.a b.a -Wl,--no-whole-archive
 ```
 
+`gcc -shared -o c.so -Wl,--rpath=$XX_PATH`
+
 # **g++**
 
 与gcc相同的cpp编译器
 
-g++ -E -dD -xc++ /dev/null > a
+`g++ -E -dD -xc++ /dev/null > a`
 
 # **ar**
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
 | -x  | 抽取所有obj文件 |
-| -p  | 打印指定obj文件内容，eg: ar -p file.a xxx.o |
+| -p  | 打印指定obj文件内容，eg: `ar -p file.a xxx.o` |
 | -r  | 添加或替换obj文件 |
 | -t  | 列出obj文件 |
 | -d  | 删除obj文件 |
@@ -88,6 +89,10 @@ save
 end
 ```
 
+# **as**
+
+汇编语言的编译器
+
 # **c++filt**
 
 名字正规化
@@ -98,21 +103,27 @@ end
 
 一个用于进行覆盖率测试的工具
 
-编译时添加选项：-fprofile-arcs -ftest-coverage，或者--coverage
-链接时添加选项：-lgcov
+1. 编译时添加选项：`-fprofile-arcs -ftest-coverage`，或者`--coverage`
+2. 链接时添加选项：`-lgcov`
+3. 编译后会生成`.gcno`，执行`gcov $EXEBIN_NAME`, 会将`xxx.gcno` 转为`xxx.gcov`
 
-
-编译后会生成.gcno
-gcov xxx # 会将xxx.gcno 转为xxx.gcov
-
-__gcov_flush();
+`__gcov_flush();`
 .gcda的gcov data文件
 
-\# 有一个web辅助工具叫做lcov，需要自行安装
+有一个web辅助工具叫做lcov，需要自行安装。
 用lcov生成一个output.info文件
+```
 lcov -b ./ -d ./ --gcov-tool /usr/bin/gcov -c -o output.info
+```
+
 然后用genhtml生成web页面：
+```
 genhtml -o gcovdir/ output.info
+```
+
+# **gprof**
+
+性能分析工具
 
 # **ld**
 
@@ -128,7 +139,7 @@ e.g.:
 ld object.o -L<gcc>/lib64 **-lstdc++ -lc -lgcc_s -lc -m** -o target.out
 ```
 
-` __dso_handle` 一般是因为没有stdc++或没有iostream等导致的。
+`__dso_handle` 一般是因为没有stdc++或没有iostream等导致的。
 
 # **ldd**
 
@@ -142,9 +153,14 @@ ld object.o -L<gcc>/lib64 **-lstdc++ -lc -lgcc_s -lc -m** -o target.out
 
 # **ldconfig**
 
-   对so建立必要的符号连接，并配置/etc/ld.so.conf等，方便ld定位so
+   对so建立必要的符号连接，并配置`/etc/ld.so.conf`等，方便ld定位so
 
-   -p   打印安装的lib
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|   -C cache     | 使用指定的cache,而非默认的`/etc/ld.so.cache` |
+|   -f file      | 使用指定的config,而非默认的`/etc/ld.so.conf` |
+|   -l           | 为指定的lib创建链接 |
+|   -p           | 打印安装的lib |
 
 # **libtool**
 
@@ -159,6 +175,8 @@ libtool --mode=link cc -static -o libaz.la libabc.la libxyz.la
    按当前目录的Makefile执行构建活动
 
 注意选项中的路径配置，一定要用绝对路径
+
+[详见makefile-note.md](./makefile-note.md)
 
 # **nm**
 
@@ -189,7 +207,7 @@ nm <object file | executable file | library file>
 
 复制转换obj文件
 
-e.g. objcopy src.o dest.o
+e.g. `objcopy src.o dest.o`
 
 # **objdump**
 
@@ -205,17 +223,21 @@ e.g. objcopy src.o dest.o
 
 # **pkg-config**
 
-显示已安装包的meta信息
+显示已安装包的meta信息。
+它会在`/usr/lib/pkgconfig/`下和`$PKG_CONFIG_PATH`的`xxxx.pc`文件中寻找对应包，并列出信息
 
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  --libs        |  显示ld的选项 |
+|  --cflags      |  显示编译的include选项 |
+
+```
 pkg-config --libs --cflags opencv
+```
 
 向用户向程序提供相应库的路径、版本号等信息的程序
 
-它会在/usr/lib/pkgconfig/下和$PKG_CONFIG_PATH的.pc文件中寻找对应包，并列出信息
 
---libs      显示ld的选项
-
---cflags    显示编译的include选项
 
 # **readelf**
 
@@ -237,7 +259,7 @@ e.g: `readelf --relocs foo.o | egrep '(GOT|PLT|JU?MP_SLOT)'`
 
 # **gdb**
 
-   [详见gdb](http://xn--gdb-tq0jmh/)
+   [详见gdb](./gdb-note.md)
 
 # **addr2line**
 

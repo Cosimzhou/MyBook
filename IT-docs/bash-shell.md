@@ -1767,6 +1767,8 @@ wget -nH -nd --limit-rate=80m --ftp-user=guest --ftp-password=xxx ftp://….. #�
    hexdump或反转
 
    -r   将hex内容转为二进制内容
+   -p   不依赖行号的转换
+
 ```
 # read 1 byte at offset 40C
 bhex=$(xxd -seek $((16#40C)) -l 1 -ps A.bin -)
@@ -1775,6 +1777,10 @@ bdec=$(($((16#$bhex)) & $((2#11111000))))
 cp A.bin B.bin
 # write 1 byte back at offset 40C
 printf "00040c: %02x" $bdec | xxd -r - B.bin
+```
+
+```
+echo '0103000000014240'|xxd -r -p
 ```
 
 
