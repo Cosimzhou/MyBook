@@ -1326,21 +1326,18 @@ ssh -v -N -D 0.0.0.0:7070 user@address
 
 ## **stty**
 
--a 显示所有信息
-
-cols N 设置终端有N列
-
-rows N 设置终端有N行
-
-size 显示行列尺寸
-
--echo 不显示键入内容
-
--ctlecho 将控制字符输出成'^X'形式
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -a            | 显示所有信息 |
+|  cols N        | 设置终端有N列 |
+|  rows N        | 设置终端有N行 |
+|  size          | 显示行列尺寸 |
+|  -echo         | 不显示键入内容 |
+|  -ctlecho      | 将控制字符输出成'^X'形式 |
 
 ## **systemctl**
 
-   在/etc/init.d/或/etc下的\*.service文件启动服务
+   在`/etc/init.d/`或`/etc/*.service`文件启动服务
 
 /etc/rc.local
 
@@ -1370,7 +1367,9 @@ WantedBy=multi-user.target
 
    按行倒序输出，是cat的倒序记录
 
-   -s    指定分隔符
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|   -s           |  指定分隔符   |
 
 ## **tail**
 
@@ -1382,9 +1381,9 @@ WantedBy=multi-user.target
 |  -F   | 循环读取指定文件名（而非指定文件，即使文件更名也会自动切换到新文件里去  ） |
 |  -q   | 不显示处理信息 |
 |  -v   | 显示详细的处理信息 |
-|  -c<数目> | 显示的字节数 |
+|  -c <数目> | 显示的字节数 |
 |  -c +<行数>  | 从数目开始，直到结尾 |
-|  -n<行数>  | 显示行数 |
+|  -n <行数>  | 显示行数 |
 |  -n +<行数>  | 从数目开始，直到结尾 |
 |  --pid=PID  | 与-f合用,表示在进程ID,PID死掉之后结束. |
 |  -q, --quiet, --silent  | 从不输出给出文件名的首部 |
@@ -1401,7 +1400,7 @@ WantedBy=multi-user.target
 |  --delete  | 删除文件 |
 |  -t  | 列出文件 |
 
-  eg: tar -zcvf /tmp/etc.tar.gz /etc
+  eg: `tar -zcvf /tmp/etc.tar.gz /etc`
 
   注意：tar 文件夹在后，tar包在前
 
@@ -1421,11 +1420,12 @@ WantedBy=multi-user.target
 
 ## **tee**
 
-管道复制传递，eg: echo "dfasdf" | tee -a log #向log中写入的同时还会在stdout输出
+管道复制传递，eg: `echo "dfasdf" | tee -a log` #向log中写入的同时还会在stdout输出
 
--a 向文件追加
-
--i 忽略中断
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -a | 向文件追加 |
+|  -i | 忽略中断 |
 
 ## **telnet**
 
@@ -1476,27 +1476,19 @@ WantedBy=multi-user.target
 
 设置或查询终端信息
 
--T 设置信息
-
-cols
-
-lines
-
-bold 粗体字
-
-setb 设置背景色
-
-setf 设置前景色
-
-cup w h 移动光标到(w,h)
-
-longname 名称
-
-smul 设置下划线开始
-
-rmul 设置下划线结束
-
-ed 删除
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|   -T           | 设置信息 |
+|   cols         | |
+|   lines        | |
+|   bold         | 粗体字 |
+|   setb         | 设置背景色 |
+|   setf         | 设置前景色 |
+|   cup w h      | 移动光标到(w,h) |
+|   longname     | 名称 |
+|   smul         | 设置下划线开始 |
+|   rmul         | 设置下划线结束 |
+|   ed           | 删除 |
 
 ## **tr**
 
@@ -1516,13 +1508,19 @@ ed 删除
 
    消息陷阱，消息触发时，执行指定的命令func
 
-   e.g.: trap func SIGINT
+   e.g.: `trap func SIGINT`
 
  trap func SIGINT
 
 ## **tty**
 
 打印终端符号
+
+```
+$ tty
+/dev/tty1     #
+/dev/pts/7    #
+```
 
 ## **ulimit**
 
@@ -1559,11 +1557,11 @@ tar.xz
 
 ## **uniq**
 
--c 重复次数
-
--d 仅显示重复的行
-
--u 不显示重复的行
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -c     |   重复次数   |
+|  -d     |   仅显示重复的行   |
+|  -u     |   不显示重复的行   |
 
 ## **uptime**
 
@@ -1702,9 +1700,10 @@ Retype new UNIX password: <comfirm password>
 
    显示当前登录的用户
 
--b 查看最后一次系统启动的时间
-
--t 查看当前系统运行时间
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|   -b      | 查看最后一次系统启动的时间 |
+|   -t      | 查看当前系统运行时间 |
 
 ## **whoami**
 
@@ -1766,8 +1765,10 @@ wget -nH -nd --limit-rate=80m --ftp-user=guest --ftp-password=xxx ftp://….. #�
 
    hexdump或反转
 
-   -r   将hex内容转为二进制内容
-   -p   不依赖行号的转换
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -r    | 将hex内容转为二进制内容 |
+|  -p    | 不依赖行号的转换 |
 
 ```
 # read 1 byte at offset 40C
@@ -1837,9 +1838,10 @@ apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests --n
 
 ## **dpkg**
 
-   -L <package> 列出安装内容
-
-   -i <deb> 安装包
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -L <package>  | 列出安装内容 |
+|  -i <deb>      | 安装包 |
 
 ## **fdisk**
 
@@ -2085,71 +2087,62 @@ sudo -u zhichaozhou DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000
 
 # **重要系统路径**
 
-/dev/null #空桶、黑洞
+| 路径           | 含义          |
+| -------------- | ------------- |
+| /dev/null |空桶、黑洞 |
+| /dev/zero |零桶、生成零的白洞 |
+| /dev/random |源源不断的随机源、白噪洞 |
+| /etc/hosts | |
+| /etc/fstab   | 磁盘文件表信息 |
+| /tmp      |临时文件，重启后会清理或10天后清理|
+| /var/log/messages |系统日志 |
+| /var/tmp   |30天后清理的临时文件|
+| /var/log | |
 
-/dev/zero #零桶、生成零的白洞
 
-/dev/random #源源不断的随机源、白噪洞
+cgroups
 
-/etc/hosts
-
-/etc/fstab   # 磁盘文件表信息
-
-\# cgroups
-
-/sys/fs/cgroup/cpu/$group/cpu.cfs_period_us   # cpu 时间
-
-/sys/fs/cgroup/cpu/$group/cpu.cfs_quota_us   # 使用限制， -1表示不限制
-
-/sys/fs/cgroup/cpu/$group/cgroup.procs     # 向其写0，加入当前进程；向其写PID，该PID的所有线程会立即加入此cgroup
-
-/sys/fs/cgroup/cpu/$group/tasks           # 线程id
-
-一般而言，主线程的TID会与该进程的PID相同，子线程TID会大于PID
-
-/sys/fs/cgroup/memory/$group/memory.limit_in_bytes   #内存使用总数上限
-
-/sys/fs/cgroup/memory/$group/memory.oom_control     # 关闭oom，oom_kill_disable 1
-
-/sys/fs/cgroup/blkio/$group/blkio.throttle.read_bps_device     #磁盘读速上限
-
-/sys/fs/cgroup/blkio/$group/blkio.throttle.write_bps_device     #磁盘写速上限
+| 路径                                                         | 含义          |
+| ------------------------------------------------------------ | ------------- |
+| /sys/fs/cgroup/cpu/$group/cpu.cfs_period_us                  | cpu 时间 |
+| /sys/fs/cgroup/cpu/$group/cpu.cfs_quota_us                   | 使用限制， -1表示不限制 |
+| /sys/fs/cgroup/cpu/$group/cgroup.procs                       | 向其写0，加入当前进程；向其写PID，该PID的所有线程会立即加入此cgroup|
+| /sys/fs/cgroup/cpu/$group/tasks                              | 线程id( 一般而言，主线程的TID会与该进程的PID相同，子线程TID会大于PID)|
+| /sys/fs/cgroup/memory/$group/memory.limit_in_bytes           | 内存使用总数上限|
+| /sys/fs/cgroup/memory/$group/memory.oom_control              | 关闭oom，oom_kill_disable 1|
+| /sys/fs/cgroup/blkio/$group/blkio.throttle.read_bps_device   | 磁盘读速上限|
+| /sys/fs/cgroup/blkio/$group/blkio.throttle.write_bps_device  | 磁盘写速上限|
 
 /proc
 
-/proc/${pid}/
-
-/proc/${pid}/auxv    #传递给进程的ELF解释器信息
-
-/proc/${pid}/cwd      #进程的当前路径
-
-/proc/${pid}/cmdline   #启动命令行
-
-/proc/${pid}/comm    #进程名
-
-/proc/${pid}/environ   # 启动环境变量
-
-/proc/${pid}/limits      # 进程的ulimit限制
-
-/proc/${pid}/latency     #显示哪些代码造成的延时比较大，依赖/proc/sys/kernel/latencytop 为1
-
-/proc/${pid}/maps      #进程的内存区域映射信息，字段含义：address，perms，offset，dev，inode，pathname
-
-/proc/${pid}/cgroup
-
-/proc/${pid}/exe       # binary 的符号连接
-
-/proc/${pid}/io         # 读写字节统计
-
-/proc/${pid}/syscall     #在用的系统调用
-
-/proc/${pid}/stack      #内核调用栈
-
-/proc/${pid}/loginuid   # 启动用户的登录id
-
-/proc/${pid}/task/   # 进程下的线程id
-
-/proc/${pid}/statm      #进程所占用内存大小的统计信息，字段信息如下
+| 路径                          | 含义          |
+| ----------------------------- | ------------- |
+| /proc/sys/kernel/core_pattern | 系统core dump文件的名称格式  |
+| /proc/sys/kernel/latencytop   | 打开latency性能统计  |
+| /proc/cpuinfo                 | 记录CPU信息  |
+| /proc/meminfo                 | 记录内存信息  |
+| /proc/swaps                   | 记录交换区信息  |
+| /proc/net/tcp                 | 当前的tcp连接信息  |
+| /proc/net/protocols           | 支持的网络协议  |
+| /proc/${pid}/                 |  |
+| /proc/${pid}/auxv             | 传递给进程的ELF解释器信息  |
+| /proc/${pid}/cwd              | 进程的当前路径  |
+| /proc/${pid}/cmdline          | 启动命令行  |
+| /proc/${pid}/comm             | 进程名  |
+| /proc/${pid}/environ          | 启动环境变量  |
+| /proc/${pid}/limits           | 进程的ulimit限制  |
+| /proc/${pid}/latency          | 显示哪些代码造成的延时比较大，依赖/proc/sys/kernel/latencytop 为1  |
+| /proc/${pid}/maps             | 进程的内存区域映射信息，字段含义：address，perms，offset，dev，inode，pathname  |
+| /proc/${pid}/cgroup           |  |
+| /proc/${pid}/exe              | binary 的符号连接  |
+| /proc/${pid}/io               | 读写字节统计  |
+| /proc/${pid}/syscall          | 在用的系统调用  |
+| /proc/${pid}/stack            | 内核调用栈  |
+| /proc/${pid}/loginuid         | 启动用户的登录id  |
+| /proc/${pid}/task/            | 进程下的线程id  |
+| /proc/${pid}/wchan            |wait时的内核态函数内容，可以用于反调试  |
+| /proc/${pid}/net/tcp          | 当前的tcp连接信息  |
+| /proc/${pid}/statm            | 进程所占用内存大小的统计信息，字段信息如下  |
 
 a）进程占用的总的内存；
 
@@ -2165,31 +2158,6 @@ f）进程的堆栈；
 
 g）dirty pages（从2.6版本起，这个值为0）
 
-/proc/${pid}/wchan      #wait时的内核态函数内容，可以用于反调试
-
-/proc/${pid}/net/tcp   #当前的tcp连接信息
-
-/proc/sys/kernel/core_pattern #系统core dump文件的名称格式
-
-/proc/sys/kernel/latencytop   # 打开latency性能统计
-
-/proc/cpuinfo #记录CPU信息
-
-/proc/meminfo #记录内存信息
-
-/proc/swaps #记录交换区信息
-
-/proc/net/tcp #当前的tcp连接信息
-
-/proc/net/protocols #支持的网络协议
-
-/var/log
-
-/var/log/messages #系统日志
-
-/tmp      #临时文件，重启后会清理或10天后清理
-
-/var/tmp   #30天后清理的临时文件
 
 **文件解读**
 

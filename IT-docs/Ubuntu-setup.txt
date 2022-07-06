@@ -11,8 +11,10 @@ sudo add-apt-repository ppa:jonathonf/vim
 sudo apt update
 sudo apt install vim vim-gtk3
 
+sudo apt install sl figlet cmatrix
+sudo gem install lolcat
 
-# docker 
+# docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
@@ -117,8 +119,8 @@ sudo apt update
 sudo apt install cinnamon
 
 
-sudo apt-get install fcitx fcitx-table-al 
-sudo apt-get install fcitx-configtool fcitx-config-gtk 
+sudo apt-get install fcitx fcitx-table-al
+sudo apt-get install fcitx-configtool fcitx-config-gtk
 
 sudo apt install joystick joy2key
 sudo modprobe joydev
