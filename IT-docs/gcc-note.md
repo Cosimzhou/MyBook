@@ -1,4 +1,4 @@
-Gcc note
+GCC Note
 ========
 # **gcc 选项**
 
@@ -93,6 +93,38 @@ end
 
 汇编语言的编译器
 
+|          |      nasm     |     as          |
+| -------- | ------------- | --------------- |
+| 注释     | `;`           | `#`             |
+| 赋值     | `Mov ax, 0 ; dest <- src` | `Mov 0, ax # src -> dest` |
+| 内存取值 | `[100]      ` | `100          ` |
+|          | `[es:100]   ` | `%es:100      ` |
+|          | `[eax]      ` | `(%eax)       ` |
+|          | `[eax+ebx]  ` | `(%eax,%ebx)  ` |
+|          | `[ecx+ebx*2]` | `(%ecx,%ebx,2)` |
+|          | `[ebx*2]    ` | `(,%ebx,2)    ` |
+|          | `[eax-10]   ` | `-10(%eax)    ` |
+|          | `[ds:ebp-10]` | `%ds:-10(%ebp)` |
+| 调用、跳转 | `jmp near [100]` | `jmp *100`       |
+|          | `call near [100]`  | `call *100    `  |
+|          | `jmp near eax   `  | `jmp *%eax    `  |
+|          | `call near ecx  `  | `jmp *%ecx    `  |
+|          | `jmp near [eax] `  | `jmp *(%eax)  `  |
+|          | `call near [ebx]`  | `call *(%ebx) `  |
+|          | `jmp far [100]  `  | `ljmp *100    `  |
+|          | `call far [100] `  | `lcall *100   `  |
+|          | `jmp far [eax]  `  | `ljmp *(%eax) `  |
+|          | `call far [ebx] `  | `lcall *(%ebx)`  |
+|          | `retn           `  | `ret          `  |
+|          | `retf           `  | `lret         `  |
+|          | `retf 0x100     `  | `lret $0x100  `  |
+
+
+```
+nasm xxx.asm -o xxxx.bin -l xxxx.lst     #xxxx.lst 输出对应表
+ndisasm -o0x7c00 sss.bin   #反编译
+```
+
 # **c++filt**
 
 名字正规化
@@ -132,7 +164,7 @@ genhtml -o gcovdir/ output.info
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
 | -L  | 库路径 |
-| -l  | 库命名，:namespec 为全名，无冒号的为libnamespec.a |
+| -l namespec  | 库命名，`:namespec` 为全名，无冒号的为`libnamespec.a` |
 
 e.g.:
 ```

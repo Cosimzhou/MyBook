@@ -1,0 +1,29 @@
+sudo scutil --set HostName xxxxx
+sudo scutil --set ComputerName xxxxx
+
+
+# 安装brew：
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# brew search <package>
+# brew install <package>@<version>
+
+brew install sl figlet lolcat cmatrix
+
+defaults write com.apple.finder AppleShowAllFiles -bool true  # 显示/隐藏Mac隐藏文件的命令
+defaults write com.apple.finder AppleShowAllFiles -bool false
+
+# typora
+brew cask install typora
+
+
+# 三指手动是在辅助功能中设置的
+# 查看密码：  security find-generic-password -ga "Chrome"
+
+#关闭内核保护
+# 启动时cmd+R进入恢复模式
+# csrutil disable; reboot
+
+
+
+# codesign -s [证书的名字] ［gdb的完整路径名］
+# codesign --remove-signature ［gdb的完整路径名］

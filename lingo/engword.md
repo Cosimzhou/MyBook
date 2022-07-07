@@ -68,6 +68,7 @@ Show sb up = Sb lose face.
 What a shame!
 Bummer.
 
+under current circumstance
 
 * share my two cents: I will talk about something in my mind
 * take a grain of salt: be careful to treat
@@ -91,3 +92,7 @@ headwinds - tailwinds
 
 lockdown
 
+
+lmk   let me know
+lgtm  looks good to me
+fyi   for you information
