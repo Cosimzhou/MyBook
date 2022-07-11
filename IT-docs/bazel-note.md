@@ -10,6 +10,9 @@ bazel build --compilation_mode=opt -s //root/path:target    # = -c opt
 
 bazel build --copt //root/package:target
 
+bazel build //root/path:target
+bazel build --config <config_setting> //root/path:target
+
 bazel test //root/package:target_name
 bazel test //package/...
 

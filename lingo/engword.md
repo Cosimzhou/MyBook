@@ -12,10 +12,12 @@ bully
 cease
 chronic
 competitive
+complaint 抱怨  compliment 赞美
 compliance
 consolidated
 courtesy
 
+ditto    同上
 decouple
 deliberate
 distinction ~ difference
@@ -31,8 +33,10 @@ harrass
 hesitate
 hypothesis ~ assumption
 
+imitate  模仿
 incendiary
 insomnia
+
 
 legitimate
 
@@ -50,6 +54,8 @@ reluctant ~ hesitating
 reimbursement
 retroactive
 
+snip  略
+specific
 spoof
 spinal
 standoff

@@ -1,11 +1,48 @@
+Tmux note
+=========
 
+| 分类      | 按键         |  含义                        |
+| --------- | ------------ | ---------------------------- |
+| 引导键    | Ctrl+b       | 激活控制台；此时以下按键生效 |
+| 系统操作  | ?            | 列出所有快捷键；按q返回 |
+|           | d            | 脱离当前会话；这样可以暂时返回Shell界面，输入tmux attach能够重新进入之前的会话 |
+|           | D            | 选择要脱离的会话；在同时开启了多个会话时使用 |
+|           | Ctrl+z       | 挂起当前会话 |
+|           | r            | 强制重绘未脱离的会话 |
+|           | s            | 选择并切换会话；在同时开启了多个会话时使用 |
+|           | :            | 进入命令行模式；此时可以输入支持的命令，例如kill-server可以关闭服务器 |
+|           | [            | 进入复制模式；此时的操作与vi/emacs相同，按q/Esc退出, space 开始复制选区，enter确认复制。<c-b>+] 粘贴 |
+|           | ~            | 列出提示信息缓存；其中包含了之前tmux返回的各种提示信息 |
+| 窗口操作  | c            | 创建新窗口 |
+|           | &            | 关闭当前窗口 |
+|           | ,            | 重命名当前窗口；这样便于识别 |
+|           | .            | 修改当前窗口编号；相当于窗口重新排序 |
+|           | f            | 在所有窗口中查找指定文本 |
+|           | p            | 切换至上一窗口 |
+|           | n            | 切换至下一窗口 |
+|           | l            | 在前后两个窗口间互相切换 |
+|           | w            | 通过窗口列表切换窗口 |
+|           | 数字键       | 切换至指定窗口 |
+| 面板操作  | ”            | 将当前面板平分为上下两块 |
+|           | %            | 将当前面板平分为左右两块 |
+|           | x            | 关闭当前面板 |
+|           | !            | 将当前面板置于新窗口；即新建一个窗口，其中仅包含当前面板 |
+|           | Ctrl+方向键  | 以1个单元格为单位移动边缘以调整当前面板大小 |
+|           | Alt+方向键   | 以5个单元格为单位移动边缘以调整当前面板大小 |
+|           | Space        | 在预置的面板布局中循环切换；依次包括even-horizontal、even-vertical、main-horizontal、main-vertical、tiled |
+|           | q            | 显示面板编号 |
+|           | t            | 显示时钟 |
+|           | o            | 在当前窗口中选择下一面板 |
+|           | 方向键       | 移动光标以选择面板 |
+|           | {            | 向前置换当前面板 |
+|           | }            | 向后置换当前面板 |
+|           | Alt+o        | 逆时针旋转当前窗口的面板 |
+|           | Ctrl+o       | 顺时针旋转当前窗口的面板 |
 
 <C-x>[
 <C-x>y
 
 tmux capture-pane -pS-3|xclip -i -sel clip
-
-
 
 set prefix key <c-x>
 set -g prefix C-x
@@ -33,21 +70,10 @@ Sessions
 :new<CR>  new session
 s  list sessions
 $  name session
-Windows (tabs)
-c  create window
-w  list windows
-n  next window
-p  previous window
-f  find window
-,  name window
-&  kill window
 Panes (splits)
 %  vertical split
 "  horizontal split
 
-o  swap panes
-q  show pane numbers
-x  kill pane
 +  break pane into window (e.g. to select text by mouse to copy)
 -  restore pane from window
 ⍽  space - toggle between layouts
@@ -55,6 +81,7 @@ x  kill pane
 <prefix> { (Move the current pane left)
 <prefix> } (Move the current pane right)
 <prefix> z toggle pane zoom
+
 Sync Panes
 You can do this by switching to the appropriate window, typing your Tmux prefix (commonly Ctrl-B or Ctrl-A) and then a colon to bring up a Tmux command line, and typing:
 
@@ -115,11 +142,7 @@ For example, we can use "w" to jump to the next word and "b" to jump back one wo
    Start of line           0              C-a
    Start selection         Space          C-Space
    Transpose chars                        C-t
-Misc
-d  detach
-t  big clock
-?  list shortcuts
-:  prompt
+
 Configurations Options:
 # Mouse support - set to on if you want to use the mouse
 * setw -g mode-mouse off
@@ -147,41 +170,4 @@ How to reorder windows
 
 
 
-
-| 分类      | 按键         |  含义                        |
-| --------- | ------------ | ---------------------------- |
-| 引导键    | Ctrl+b       | 激活控制台；此时以下按键生效 |
-| 系统操作  | ?            | 列出所有快捷键；按q返回 |
-|           | d            | 脱离当前会话；这样可以暂时返回Shell界面，输入tmux attach能够重新进入之前的会话 |
-|           | D            | 选择要脱离的会话；在同时开启了多个会话时使用 |
-|           | Ctrl+z       | 挂起当前会话 |
-|           | r            | 强制重绘未脱离的会话 |
-|           | s            | 选择并切换会话；在同时开启了多个会话时使用 |
-|           | :            | 进入命令行模式；此时可以输入支持的命令，例如kill-server可以关闭服务器 |
-|           | [            | 进入复制模式；此时的操作与vi/emacs相同，按q/Esc退出, space 开始复制选区，enter确认复制。<c-b>+] 粘贴 |
-|           | ~            | 列出提示信息缓存；其中包含了之前tmux返回的各种提示信息 |
-| 窗口操作  | c            | 创建新窗口 |
-|           | &            | 关闭当前窗口 |
-|           | ,            | 重命名当前窗口；这样便于识别 |
-|           | .            | 修改当前窗口编号；相当于窗口重新排序 |
-|           | f            | 在所有窗口中查找指定文本 |
-|           | p            | 切换至上一窗口 |
-|           | n            | 切换至下一窗口 |
-|           | l            | 在前后两个窗口间互相切换 |
-|           | w            | 通过窗口列表切换窗口 |
-|           | 数字键       | 切换至指定窗口 |
-| 面板操作  | ”            | 将当前面板平分为上下两块 |
-|           | %            | 将当前面板平分为左右两块 |
-|           | x            | 关闭当前面板 |
-|           | !            | 将当前面板置于新窗口；即新建一个窗口，其中仅包含当前面板 |
-|           | Ctrl+方向键  | 以1个单元格为单位移动边缘以调整当前面板大小 |
-|           | Alt+方向键   | 以5个单元格为单位移动边缘以调整当前面板大小 |
-|           | Space        | 在预置的面板布局中循环切换；依次包括even-horizontal、even-vertical、main-horizontal、main-vertical、tiled |
-|           | q            | 显示面板编号 |
-|           | o            | 在当前窗口中选择下一面板 |
-|           | 方向键       | 移动光标以选择面板 |
-|           | {            | 向前置换当前面板 |
-|           | }            | 向后置换当前面板 |
-|           | Alt+o        | 逆时针旋转当前窗口的面板 |
-|           | Ctrl+o       | 顺时针旋转当前窗口的面板 |
 

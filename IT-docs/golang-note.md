@@ -1,4 +1,8 @@
-# ** go build**
+Golang Note
+===========
+
+
+# **go build**
 
 通过go build加上要编译的Go源文件名，我们即可得到一个可执行文件，默认情况下这个文件的名字为源文件名字去掉.go后缀。
 
@@ -88,8 +92,6 @@ $ go tool cover -html=./coverage.cov -o coverage.html
 ```golang
 //go:generate go run github.com/deepmap/oapi-codegen/cmd/oapi-codegen --package map_delivery -o map_delivery.gen.go map_delivery.yaml
 ```
-
-
 
 # **go embed**
 ```
