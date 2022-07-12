@@ -297,93 +297,79 @@ e.g: `curl -F "name=Joe Smith" -F "email=joe@labstack.com" http://localhost:1323
 
 ## **dd**
 
-   if =输入文件(或设备名称)。
 
-   of =输出文件(或设备名称)。
+| 选项 [options] | 含义                                            |
+| -------------- | ----------------------------------------------- |
+| if=file        | 输入文件(或设备名称)。                          |
+| of=file        | 输出文件(或设备名称)。                          |
+| ibs=bytes      | 一次读取bytes字节，即读入缓冲区的字节数。       |
+| skip=blocks    | 跳过读入缓冲区开头的ibs\*blocks块。             |
+| obs=bytes      | 一次写入bytes字节，即写 入缓冲区的字节数。      |
+| bs=bytes       | 同时设置读/写缓冲区的字节数(等于设置obs和obs)。 |
+| cbs=bytes      | 一次转换bytes字节。                             |
+| count=blocks   | 只拷贝输入的blocks块。                          |
+| conv=ASCII     | 把EBCDIC码转换为ASCII码。                       |
+| iflags=FLAGS   | 输入FLAGS                                       |
+| oflags=FLAGS   | 输出FLAGS                                       |
 
-   ibs = bytes 一次读取bytes字节，即读入缓冲区的字节数。
+conv encode
 
-   skip = blocks 跳过读入缓冲区开头的ibs*blocks块。
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| ebcdic         | 把ASCII码转换为EBCDIC码。|
+| ibm            | 把ASCII码转换为alternate EBCDIC码。|
+| blick          | 把变动位转换成固定字符。|
+| ublock         | 把固定们转换成变动位|
+| ucase          | 把字母由小写变为大写。|
+| lcase          | 把字母由大写变为小写。|
+| notrunc        | 不截短输出文件。|
+| swab           | 交换每一对输入字节。|
+| noerror        | 出错时不停止处理。|
+| sync           | 把每个输入记录的大小都调到ibs的大小(用ibs填充)。|
 
-   obs = bytes 一次写入bytes字节，即写 入缓冲区的字节数。
 
-   bs = bytes 同时设置读/写缓冲区的字节数(等于设置obs和obs)。
+flags
 
-   cbs = bytes 一次转换bytes字节。
+| 选项 [options] | 含义                                            |
+| -------------- | ----------------------------------------------- |
+| append         | append mode (makes sense only for output; conv=notrunc suggested) |
+| direct         | use direct I/O for data |
+| directory      | 写目录否则失败 |
+| dsync          | use synchronized I/O for data |
+| sync           | likewise, but also for metadata |
+| fullblock      | accumulate full blocks of input (iflag only) |
+| nonblock       | 非块 I/O |
+| noatime        | 不更新访问时间 |
+| nocache        | Request to drop cache. See also oflag=sync |
+| noctty         | do not assign controlling terminal from file |
+| nofollow       | 不跟入符号链接 |
+| count_bytes    | 将'count=N'以byte为单位 (iflag only) |
+| skip_bytes     | 将'skip=N'以byte为单位 (iflag only) |
+| seek_bytes     | 将'seek=N'以byte为单位 (oflag only) |
 
-   count = blocks 只拷贝输入的blocks块。
-
-   conv = ASCII 把EBCDIC码转换为ASCII码。
-
-       ebcdic 把ASCII码转换为EBCDIC码。
-
-       ibm 把ASCII码转换为alternate EBCDIC码。
-
-       blick 把变动位转换成固定字符。
-
-       ublock 把固定们转换成变动位
-
-       ucase 把字母由小写变为大写。
-
-       lcase 把字母由大写变为小写。
-
-       notrunc 不截短输出文件。
-
-       swab 交换每一对输入字节。
-
-       noerror 出错时不停止处理。
-
-       sync 把每个输入记录的大小都调到ibs的大小(用ibs填充)。
-
-  iflags=FLAGS
-
-  oflags=FLAGS
-
-    append append mode (makes sense only for output; conv=notrunc suggested)
-
-    direct       use direct I/O for data
-
-    directory     写目录否则失败
-
-    dsync       use synchronized I/O for data
-
-    sync       likewise, but also for metadata
-
-    fullblock     accumulate full blocks of input (iflag only)
-
-    nonblock      非块 I/O
-
-    noatime     不更新访问时间
-
-    nocache     Request to drop cache. See also oflag=sync
-
-    noctty       do not assign controlling terminal from file
-
-    nofollow     不跟入符号链接
-
-    count_bytes   将'count=N'以byte为单位 (iflag only)
-
-    skip_bytes    将'skip=N'以byte为单位 (iflag only)
-
-    seek_bytes   将'seek=N'以byte为单位 (oflag only)
 
    fdformat命令
 
    先用dd做一个全是零的1440KB的文件
 
-   dd if=/dev/zero of=main.img bs=512 count=2880
+```
+dd if=/dev/zero of=main.img bs=512 count=2880
+```
 
    然后再用dd把编译好的二进制文件写进去，为了不改变镜像剩下的部分，加上conv=notrunc选项：
 
-   dd if=main.bin of=main.img conv=notrunc
+```
+dd if=main.bin of=main.img conv=notrunc
+```
 
 
 
    备份、还原硬盘主引导记录
 
+```
    dd if=/dev/hda of=/disk.mbr bs=512 count=1
-
    dd if=/disk.mbr of=/dev/hda bs=512 count=1
+```
 
 ## **df**
 
