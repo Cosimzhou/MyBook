@@ -1,33 +1,91 @@
 Makefile note
 =============
 
+# make 参数
+
+可以用 make 的参数来盖过 Makefile 里，用变数所指定的参数。例：
+
+make CFLAGS="-g -O2"
+
+您可以使用 override 来避免在 Makefile 里的变量的值被 make 的参数所取代。例：
+
+override CFLAGS = -Wall -g
+
+可以在 make 后指定要重新建立的 target。例：
+
+make clean
+
+以上会执行 Makefile 中的 clean 区段。
+
+
+# 内部变量
+
+|  选项  | 含义          |
+| ------ | ------------- |
+|  `$<`  | 代表第一个依赖的值。 |
+|  `$^`  | 代表所有依赖的值。 |
+|  `$+`  | 代表所有依赖的值(不去重的结果)。 |
+|  `$?`  | 代表已被更新的依赖的值。也就是依赖中，比 targets 还新的值。 |
+|  `$@`  | 代表 targets 的值。 |
+|  `$*`  | 代表 targets 所指定的文件名，但不包含扩展名。 |
+
+
+下例可帮助理解变量的含义：
+
+```bash
+print.o: foo1.c foo2.c foo3.c
+	@echo "\$$?" $?
+	@echo "\$$@" $@
+	@echo "\$$*" $*
+	@echo "\$$^" $^
+	@echo "\$$<" $<
+	@echo "\$$+" $+
+	touch print.o
+
+foo3.c: foo.c
+	@echo $$RANDOM > $@
+
+.PHONY: foo3.c
+```
+
+输出结果如下：
+```
+$? foo3.c
+$@ print.o
+$* print
+$^ foo1.c foo2.c foo3.c
+$< foo1.c
+$+ foo1.c foo2.c foo3.c foo1.c
+touch print.o
+```
+
+`$(VAR:<pat1>=<pat2>)`  替换
+
+# 函数
+
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  if            | `$(if <condition>, <then>, <else>)` |
+|  filter        | `$(filter <pattern1, 2, 3...>, <text>)` |
+|  filter-out    | `$(filter-out <pattern1, 2, 3...>, <text>)` |
+|  addprefix     | `$(addprefix <prefix>, <name1, 2, 3...>)` |
+|  addsuffix     | `$(addsuffix <suffix>, <name1, 2, 3...>)` |
+|  wildcard      | `$(wildcard <pattern1, 2, 3...>)` |
+|  call          | `$(call <expression>, <param1>, <param2>, ...)` |
+|  patsubst      | `$(patsubst <pattern_from>, <pattern_to>, <text>)` |
+|  subst         | `$(subst <pattern_from>, <pattern_to>, <text>)` |
+
+```makefile
+listfile = $(filter $(if $(2), $(addprefix %.,$(2)),%), $(wildcard $(addsuffix $(SLASH)*, $(1))))
+list_cc = $(call listfile, src, c cpp)
+```
+
+宏定义，与shell不同，**赋值号前后必须加空格**, 如：MACRO = value
+":="与"="的区别是，":="赋值的变量是依执行顺序展开的，而"="则是以最后一次赋值展开
+?= 条件赋值
++= 追加赋值
 
 #Makefile
-
-```Makefile
-CFLAGS:=-I/usr/local/include/qt -fPIC
-LINKOPT:=-Wl,-no-as-needed
-LIBS:=-L/usr/lib -lQt5Widgets -lQt5Core -lstdc++ -lc -lQt5Gui -lm -lgcc_s
-BUILD_DIR:=build
-
-%.o: %.cc prepare
- gcc $(CFLAGS) -c $< -o $(BUILD_DIR)/$@
-
-SRCS := $(wildcard *.cc)
-OBJS := $(SRCS:%.cc=%.o)
-
-run: main
- cd $(BUILD_DIR) && ./main
-
-main: $(OBJS)
- cd $(BUILD_DIR) && gcc -o main $(LINKOPT) $(LIBS) $^
-
-prepare:
- mkdir -p $(BUILD_DIR)
-
-clean:
- rm -rf $(BUILD_DIR)
-```
 
 
 
@@ -58,10 +116,6 @@ Makefile 语法简介
 
 注释同shell，以 # 开头
 
-宏定义，与shell不同，赋值号前后必须加空格如：MACRO = value
-“:=”与“=”的区别是，“:=”赋值的变量是依执行顺序展开的，而“=”则是以最后一次赋值展开
-?=条件赋值
-+= 追加赋值
 
 define  x
 ……
@@ -284,22 +338,6 @@ foo.o: common.h
 foo.o: common.h
 <Tab>
 
-内部变数：
-
-$?：代表已被更新的 dependencies 的值。也就是 dependencies 中，比 targets 还新的值。
-$@：代表 targets 的值。
-$<：代表第一个 dependencies 的值。
-$^: 代表所有 dependencies 的值。
-$* : 代表 targets 所指定的档案，但不包含扩展名。
-
-
-例：
-
-print: foo1.c foo2.c foo3.c
-    lpr -p $?
-    touch print
-
-这样会将 foo1.c foo2.c foo3.c 中已有更新的内容印至打印机。
 
 内部函数：
 
@@ -344,7 +382,7 @@ else
     ....
 endif
 
-引入档案：
+引入文件：
 
 将外部档案引入 Makefile 中。可以视为直接在此将该档案全数插入 Makefile 中。
 
@@ -364,72 +402,90 @@ include foo.in common*.in $(MAKEINCS)
 
 cd dir;$(MAKE)
 
-例：
 
+
+### Example 1
+
+```Makefile
 SUBDIRS = dir1 dir2 dir3
 all:
-        for i in $(SUBDIRS); do
-                (cd $$i; make);
-        done
+  for i in $(SUBDIRS); do
+    (cd $$i; make);
+  done
 
 clean:
-        for i in $(SUBDIRS); do
-                (cd $$i; make clean);
-        done
+  for i in $(SUBDIRS); do
+    (cd $$i; make clean);
+  done
 
 install:
-        for i in $(SUBDIRS); do
-                (cd $$i; make install);
-        done
+  for i in $(SUBDIRS); do
+    (cd $$i; make install);
+  done
+```
 
-make 参数：
+### Example 2
 
-可以用 make 的参数来盖过 Makefile 里，用变数所指定的参数。例：
-
-make CFLAGS="-g -O2"
-
-您可以使用 override 来避免在 Makefile 里的变量的值被 make 的参数所取代。例：
-
-override CFLAGS = -Wall -g
-
-可以在 make 后指定要重新建立的 target。例：
-
-make clean
-
-以上会执行 Makefile 中的 clean 区段。
-Examples
-
-
+```Makefile
 HOME_PATH:=/Users/cosim
 PROXY_FILE:=route_broker_proxy.thrift
 ITS_THRIFT_PATH:=$(HOME_PATH)/workspace/route-broker-go/src/route-broker/vendor/its-thrift/src
 ITS_OUTPUT_PATH:=$(HOME_PATH)/workspace/its-thrift-gen/py
-sys=$(uname)
+sys = $(uname)
 
 
 all: clean prepare build tideup
 .PHONY: all
 
 clean:
-    @echo "clean its"
-    rm -rf its
+  @echo "clean its"
+  rm -rf its
 
 prepare:
-    @echo "prepare"
-    cp $(PROXY_FILE) $(ITS_THRIFT_PATH)
-    @echo ""
+  @echo "prepare"
+  cp $(PROXY_FILE) $(ITS_THRIFT_PATH)
+  @echo ""
 
 build:
-    @echo "build idl in python"
+  @echo "build idl in python"
 ifeq ($(sys), Linux)
-    src-thrift.sh
+  src-thrift.sh
 else
-    build-idl.sh
+  build-idl.sh
 endif
-    @echo "output idl source"
-    cp -r $(ITS_OUTPUT_PATH) ./its
+  @echo "output idl source"
+  cp -r $(ITS_OUTPUT_PATH) ./its
 
 tideup:
-    @echo "tideup"
-    rm $(ITS_THRIFT_PATH)/$(PROXY_FILE)
+  @echo "tideup"
+  rm $(ITS_THRIFT_PATH)/$(PROXY_FILE)
+```
+
+
+### Example 3
+```Makefile
+CFLAGS:=-I/usr/local/include/qt -fPIC
+LINKOPT:=-Wl,-no-as-needed
+LIBS:=-L/usr/lib -lQt5Widgets -lQt5Core -lstdc++ -lc -lQt5Gui -lm -lgcc_s
+BUILD_DIR:=build
+
+%.o: %.cc prepare
+ gcc $(CFLAGS) -c $< -o $(BUILD_DIR)/$@
+
+SRCS := $(wildcard *.cc)
+OBJS := $(SRCS:%.cc=%.o)
+
+run: main
+ cd $(BUILD_DIR) && ./main
+
+main: $(OBJS)
+ cd $(BUILD_DIR) && gcc -o main $(LINKOPT) $(LIBS) $^
+
+prepare:
+ mkdir -p $(BUILD_DIR)
+
+clean:
+ rm -rf $(BUILD_DIR)
+```
+
 
