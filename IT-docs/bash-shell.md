@@ -1019,11 +1019,13 @@ Linux Only
 
 读变量，默认会存入REPLY中，eg：read a; echo $a
 
+bash 与 zsh 表现不同
+
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|  -p  | 显示提示，eg: read -p "please press any key" |
+|  -p msg  | 显示提示，eg: read -p "please press any key" |
 |  -t  | 计时，若干秒后自动跳过，eg: read -t 5 #只等待5秒 |
-|  -n  | 限制输入字符数，eg: read -n1 #只需要一个字符 |
+|  -n num  | 限制输入字符数，eg: read -n1 #只需要一个字符 |
 |  -s  | 默读，输入不显示在屏幕上 |
 
 ## **rev**
@@ -2783,16 +2785,42 @@ while read line; do
   echo $line
 done < $filename
 
-# method 2
+# method 2 (按行读取文件)
 cat $filename | while read line; do
   echo $line
 done
 
-# method 3 ()
+awk '{print $1,$2}' gbk-ext.txt|while read l; do echo $l;done|head
+<?f8 a1?>
+<?f8 b8?>
+<?f8 ba?>
+<?a6 ec?>
+<?aa a5?>
+<?aa ad?>
+<?aa b2?>
+<?aa ce?>
+<?ab e7?>
+<?ab e9?>
+
+
+# method 3 (按分隔符读文件)
 for line in `cat filename` #$(<file)
 do
   echo $line
 done
+
+for l in `awk '{print $1,$2}' gbk-ext.txt`;do echo $l;done|head
+<?f8
+a1?>
+<?f8
+b8?>
+<?f8
+ba?>
+<?a6
+ec?>
+<?aa
+a5?>
+
 ```
 
 总结：以 `< $filename` 的方式读取的文件是以分隔符，cat是以行来读的

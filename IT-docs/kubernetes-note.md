@@ -19,6 +19,9 @@ kubectl $NAMESPACE edit configmaps/<config>
 kubectl $NAMESPACE port-forward svc/<service> 8080:8080
 kubectl $NAMESPACE exec -it <pod> /bin/sh
 kubectl $NAMESPACE get replicaset
+kubectl $NAMESPACE describe replicaset <relicaset_name>
+
+kubectl --context dev.deepmap.ai -n project-mapshop delete deploy mapshop
 
 kubectl cp <pod>:/path /local/path/
 

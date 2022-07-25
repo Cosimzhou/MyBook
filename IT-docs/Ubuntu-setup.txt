@@ -224,9 +224,8 @@ vim /etc/cups/cupsd.conf
 	</Location>
 
 
+# Bluetooth
+sudo service bluetooth start
+sudo apt-get install blueman -y && blueman-manager
 
-###################################################
-##
-##	Python
-##
-pip install opencv-python numpy matplotlib pytorch
+

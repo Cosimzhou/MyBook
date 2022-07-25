@@ -202,6 +202,12 @@ git config --global color.ui true
 git config --get core.excludesfile
 git config --global core.excludesfile ~/.gitignore_global
 
+        $  git config --global diff.tool vimdiff
+
+        $  git config --global difftool.prompt false
+
+        $  git config --global alias.d difftool
+
 ## 三、分支
 ```
 git branch                              #列出分支

@@ -131,9 +131,21 @@ merge(arr1,arr2)
 
 
 from collections import Counter, defaultdict
-points_dict = Counter(“google")
+points_dict = Counter("google")
 # points_dict： {'o': 2, 'g': 2, 'e': 1, 'l': 1}
 ```
+
+```
+import queue
+
+q = queue.Queue()
+q.put(1)
+q.put(3)
+while not q.empty():
+  print(q.get())
+# output: 1, 3
+```
+
 
 
 python3 -m http.server
@@ -966,6 +978,11 @@ S.splitlines([keepends])
 
 
 
+###################################################
+##
+##	Python
+##
+pip install opencv-python numpy matplotlib pytorch
 
 第三方神包：
 PIL

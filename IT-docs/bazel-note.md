@@ -13,10 +13,16 @@ bazel build --copt //root/package:target
 bazel build //root/path:target
 bazel build --config <config_setting> //root/path:target
 
+bazel build //:myproject --action_env=MYENV=myvalue
+
 bazel test //root/package:target_name
 bazel test //package/...
 
+bazel test //package/...  --test_env=MYENV=myvalue
+
 bazel run //root/package:target_name
+
+MYRUN=value bazel run //root/package:target_name
 
 bazel clean
 
@@ -32,7 +38,10 @@ bazel query 'allpaths\(deepmap_api_impl/feature_service:feature_service_impl, @p
 bazel query 'allpaths\(deepmap_api_impl/feature_service:feature_service_impl, @aws_sdk_lib//:aws_lib\)'
 ```
 
-
+~/.bazelrc
+```
+build --jobs 4 --spawn_strategy=standalone --genrule_strategy=standalone --test_env=DISPLAY=:0
+```
 
 ```
 package_path=public/deepmap_api/protos
