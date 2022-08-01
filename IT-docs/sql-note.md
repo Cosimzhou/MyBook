@@ -135,6 +135,14 @@ WHERE city_code = '110000'
 ```
 原因很简单，由于上一句有三个select而下一句只需要两次
 
+```
+SELECT t2.name, t2.model_name,
+   t1.create_timestamp, t1.calibration_configuration
+FROM mapshop.calibrations as t1
+JOIN mapshop.devices as t2
+On t1.device_id = t2.id
+WHERE t2.id = 3;
+```
 
 # PostGres命令
 ```

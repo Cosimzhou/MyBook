@@ -607,6 +607,8 @@
 
 **CIO**     Chief Information Officer，首席信息官
 
+**CL**     Change List，cr的修改记录
+
 **CPO**     Call per Order，进线率
 
 **CR**     Code Review，代码复查

@@ -14,6 +14,8 @@ sudo apt install vim vim-gtk3
 sudo apt install sl figlet cmatrix
 sudo gem install lolcat
 
+####################################
+#
 # docker
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 echo \
@@ -22,6 +24,21 @@ echo \
 
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+# add docker groups
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp docker
+
+# add docker proxy if necessary
+sudo bash -c "cat > /etc/systemd/system/docker.service.d/proxy.conf" <<EOF
+[Service]
+Environment="HTTP_PROXY=http://myspn:7071/"
+Environment="HTTPS_PROXY=http://myspn:7071/"
+Environment="NO_PROXY=localhost,127.0.0.1,.example.com"
+EOF
+
+sudo systemctl daemon-reload && sudo systemctl restart docker
 
 
 # kubernetes
@@ -139,6 +156,9 @@ sudo apt install goldendict goldendict-wordnet
 sudo apt install flameshot
 # add shortcut in system configure-> keyboard ->shortcut
 # Name: Screen snap; Command: flameshot gui; Shortcut: Ctrl+Alt+A
+
+# xclip
+sudo apt install xclip
 
 # Kazam
 sudo add-apt-repository ppa:sylvain-pineau/kazam

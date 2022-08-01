@@ -283,6 +283,22 @@ append(slice, slice...)// ...表示解为分立的单个参数的调用
 
 
 
+// 泛型
+func Contains[T comparable](s []T, e T) bool {
+    for _, v := range s {
+        if v == e {
+            return true
+        }
+    }
+    return false
+}
+
+type Dictionay[K comparable, V any]    map[K]V
+type Set[T comparable]                 map[T]struct{}
+
+func min[T ~int|~float64](x, y T) T { … }
+
+
 range 是用于遍历Slice/Array，
 
   channel until it has been closed

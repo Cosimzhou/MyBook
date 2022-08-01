@@ -1559,92 +1559,6 @@ tar.xz
 
      该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。
 
-## **useradd**
-
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-|  -c  | 加上备注文字，备注文字保存在passwd的备注栏中。　|
-|  -d  | 指定用户登入时的启始目录。|
-|  -D  | 变更预设值。|
-|  -e  | 指定账号的有效期限，缺省表示永久有效。|
-|  -f  | 指定在密码过期后多少天即关闭该账号。|
-|  -g  | 指定用户所属的群组。|
-|  -G  | 指定用户所属的附加群组。|
-|  -m  | 自动建立用户的登入目录。|
-|  -M  | 不要自动建立用户的登入目录。|
-|  -n  | 取消建立以用户名称为名的群组。|
-|  -r  | 建立系统账号。|
-|  -s  | 指定用户登入后所使用的shell。|
-|  -u  | 指定用户ID号。|
-
-/etc/passwd 为用户列表
-
-## **userdel**
-
-删除用户：userdel [-r][用户帐号]
-
- -f 删除用户登入目录以及目录中所有文件。
-
-## **usermod**
-
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-|  -c<备注>  |  修改用户帐号的备注文字； |
-|  -d<登入目录>  |  修改用户登入时的目录； |
-|  -e<有效期限>  |  修改帐号的有效期限； |
-|  -f<缓冲天数>  |  修改在密码过期后多少天即关闭该帐号； |
-|  -g<群组>  |  修改用户所属的群组； |
-|  -G<群组>  |  修改用户所属的附加群组； |
-|  -l<帐号名称>  |  修改用户帐号名称； |
-|  -L  |  锁定用户密码，使密码无效； |
-|  -s  |  修改用户登入后所使用的shell； |
-|  -u  |  修改用户ID； |
-|  -U  |  解除密码锁定。 |
-
-gpasswd -a USER group
-
-## **groupadd**
-
-命令可以创建一个新的用户组，其最基本用法为：
-
-groupadd <groupname>
-
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-| -g <gid> | 指定新建用户组的GID，该GID必须唯一，不能和其他用户组的GID重复 |
-| -o | 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同 |
-
-## **groupdel**
-
-命令用于删除一个已存在的用户组，其用法为：
-
-## **groupdel**
-
-用于删除空的用户组，eg:  `groupdel  <groupname>`
-
-
-## **groups**
-
-查询用户所在的组 eg: `groups <user>`
-
-
-## **newgrp**
-
-主要用于在多个用户组之间进行切换，语法格式  `newgrp <用户组>`
-
-newgrp指令类似login指令，当它是以相同的帐号，另一个群组名称，再次登入系统。欲使用newgrp指令切换群组，您必须是该群组的用户，否则将无法登入指定的群组。
-
-## **passwd**
-
-修改密码，用法如下：
-
-```
-passwd <username>
-(current) UNIX password: <old password>
-Enter new UNIX password: <new password>
-Retype new UNIX password: <comfirm password>
-```
-
 ## **pr**
 
 | 选项 [options] | 含义          |
@@ -1777,6 +1691,92 @@ echo '0103000000014240'|xxd -r -p
 
    重复输入字符串，默认为‘y’
 
+------------------------
+# 权限及组相关命令
+
+## **useradd**
+
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -c  | 加上备注文字，备注文字保存在passwd的备注栏中。　|
+|  -d  | 指定用户登入时的启始目录。|
+|  -D  | 变更预设值。|
+|  -e  | 指定账号的有效期限，缺省表示永久有效。|
+|  -f  | 指定在密码过期后多少天即关闭该账号。|
+|  -g  | 指定用户所属的群组。|
+|  -G  | 指定用户所属的附加群组。|
+|  -m  | 自动建立用户的登入目录。|
+|  -M  | 不要自动建立用户的登入目录。|
+|  -n  | 取消建立以用户名称为名的群组。|
+|  -r  | 建立系统账号。|
+|  -s  | 指定用户登入后所使用的shell。|
+|  -u  | 指定用户ID号。|
+
+/etc/passwd 为用户列表
+
+## **userdel**
+
+删除用户：userdel [-r][用户帐号]
+
+ -f 删除用户登入目录以及目录中所有文件。
+
+## **usermod**
+
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -c<备注>  |  修改用户帐号的备注文字； |
+|  -d<登入目录>  |  修改用户登入时的目录； |
+|  -e<有效期限>  |  修改帐号的有效期限； |
+|  -f<缓冲天数>  |  修改在密码过期后多少天即关闭该帐号； |
+|  -g<群组>  |  修改用户所属的群组； |
+|  -G<群组>  |  修改用户所属的附加群组； |
+|  -l<帐号名称>  |  修改用户帐号名称； |
+|  -L  |  锁定用户密码，使密码无效； |
+|  -s  |  修改用户登入后所使用的shell； |
+|  -u  |  修改用户ID； |
+|  -U  |  解除密码锁定。 |
+
+gpasswd -a USER group
+
+## **groupadd**
+
+命令可以创建一个新的用户组，其最基本用法为： `groupadd <groupname>`
+
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| -g <gid> | 指定新建用户组的GID，该GID必须唯一，不能和其他用户组的GID重复 |
+| -o | 一般与-g选项同时使用，表示新用户组的GID可以与系统已有用户组的GID相同 |
+
+## **groupdel**
+
+命令用于删除一个已存在的用户组，其用法为：`groupdel  <groupname>`
+
+
+## **groups**
+
+查询用户所在的组 eg: `groups <user>`
+
+
+## **newgrp**
+
+主要用于在多个用户组之间进行切换，语法格式  `newgrp <用户组>`
+
+newgrp指令类似login指令，当它是以相同的帐号，另一个群组名称，再次登入系统。欲使用newgrp指令切换群组，您必须是该群组的用户，否则将无法登入指定的群组。
+
+## **passwd**
+
+修改密码，用法如下：
+
+```
+passwd <username>
+(current) UNIX password: <old password>
+Enter new UNIX password: <new password>
+Retype new UNIX password: <comfirm password>
+```
+
+---------------------
+# 包管理相关命令
+
 ## **apt-get**
 
 | 选项 [options] | 含义          |
@@ -1831,6 +1831,38 @@ apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests --n
 |  -L <package>  | 列出安装内容 |
 |  -i <deb>      | 安装包 |
 
+## **rpm**
+
+管理rpm包的命令。
+
+## **yum**
+
+自动化简单化地管理rpm包的命令。
+   list
+
+   install
+
+   uninstall
+
+   upgrade
+
+----------------
+## **dmesg**
+
+   查看系统日志
+
+日志示例：
+
+```
+[1880957.563400]Outofmemory:Killprocess18694(perl)score246orsacrificechild
+[1880957.563408]Killedprocess18694(perl)total-vm:1972392kB,anon-rss:1953348kB,file-rss:0kB
+[2320864.954447]TCP:PossibleSYNfloodingonport7001.Droppingrequest.CheckSNMPcounters.123456
+```
+
+打印内核环形缓存区中的内容，可以用来查看一些错误；
+
+上面的例子中，显示进程18694 因引内存越界被kill掉以及TCP request被丢弃的错误。通过dmesg可以快速判断是否有导致系统性能异常的问题。
+
 ## **fdisk**
 
 分区命令
@@ -1849,24 +1881,14 @@ eg: mkfs -t ext3 /dev/vdb1
 
 == mkfs.ext3 /dev/vdb1
 
+## **swapon/swapoff**
+
+## **mkswap**
+
 ## **nmap**
 网络扫描命令。
 -sTU localhost  #扫描端口号
 
-## **rpm**
-
-管理rpm包的命令。
-
-## **yum**
-
-自动化简单化地管理rpm包的命令。
-   list
-
-   install
-
-   uninstall
-
-   upgrade
 
 ## **lsmod**
 
@@ -1891,22 +1913,6 @@ eg: mkfs -t ext3 /dev/vdb1
 ------
 
 **特殊用途命令**
-
-## **dmesg**
-
-   查看系统日志
-
-日志示例：
-
-```
-[1880957.563400]Outofmemory:Killprocess18694(perl)score246orsacrificechild
-[1880957.563408]Killedprocess18694(perl)total-vm:1972392kB,anon-rss:1953348kB,file-rss:0kB
-[2320864.954447]TCP:PossibleSYNfloodingonport7001.Droppingrequest.CheckSNMPcounters.123456
-```
-
-打印内核环形缓存区中的内容，可以用来查看一些错误；
-
-上面的例子中，显示进程18694 因引内存越界被kill掉以及TCP request被丢弃的错误。通过dmesg可以快速判断是否有导致系统性能异常的问题。
 
 ## **g++**
 
@@ -1975,9 +1981,6 @@ eg: mkfs -t ext3 /dev/vdb1
 
 ## **ar**
 
-## **swapon/swapoff**
-
-## **mkswap**
 
 pvchange -- Change attributes of a Physical Volume.
 
@@ -2303,27 +2306,20 @@ ${!i} 遍历i从 1…$#
 
 # **正则表达式**
 
-^ 行首 $ 行尾
+|      |         |      |              |
+| ---- | ------- | ---- | ------------ |
+| `^` | 行首| `$` | 行尾 |
+| `[]` | 集合 eg:`[^a-z]` | `{}` | 次数范围 eg:`\{2,5\}` |
+| `.` |  任意个字     | `*` | 前一字符的0个或多个 eg:`000*` （代表两个0以上） |
+| `.*` | 任意串 | | |
 
-[] 集合 eg:[^a-z]
-
-\* 前一字符的0个或多个 eg:000\* （代表两个0以上）
-
-.\* 任意串
-
-{} 次数范围 eg:\{2,5\}
 
 ## **扩展表达式：**
 
-\+ 一个或多个重复的
-
-? 零个或一个
-
-| 或
-
-() 小组 eg:g(|a|oo)d
-
-   ()后面可跟+?\*
+|      |         |      |              |
+| ---- | ------- | ---- | ------------ |
+| `+`  | 一个或多个重复的 | `?` | 零个或一个 |
+| `│`  | 或      | `()` | 小组,后面可跟`+?*` eg: `g(|a|oo)d` |
 
 \d   [0-9]     \w   [a-zA-Z0-9]     \s   [\t\n\r\f]
 
@@ -2359,7 +2355,7 @@ ${BASH\_REMATCH[1]}   匹配到的子串
 | n<&m  |  表示将m号输入复制到n号 |
 
 ```
-sftp <user>@<host> <<EOF
+sftp <user>@<host> << EOF
 put file
 .....
 quit
@@ -2408,7 +2404,7 @@ names=([0]='zrong' [1]='jacky')
 names=(`cat 'names.txt'`)   # 将每一行读取为数组的一个元素
 echo ${#a[@]}  # Len(a)
 echo ${a[n]}   # a[n-1], Start from 1
-echo ${a[*]}   # All
+echo ${a[ * ]}   # All
 unset a[1]
 echo ${a[@]:n:m}  # 从n到m的子数组
 echo ${a[@]/3/100}
@@ -2482,8 +2478,6 @@ newarr=(${a[@]} ${b[@]})
 # **awk**
 
    -F 分隔符
-
-
 
 awk的运行方式
 
@@ -2946,7 +2940,7 @@ Brotli、Deflate、Zopfli、LZMA、LZHAM、Bzip2 、snappy
 # --i--
 获取 gpg 公钥
  sudo gpg --keyserver keyserver.ubuntu.com --recv-keys 467B942D3A79BD29
-重复执行多次不会改变，也不影响
+重复执行多次不会改变，也不影响 (幂等)
 
 导出公钥，加入到 apt 信任密钥
  sudo gpg --export --armor 467B942D3A79BD29 | sudo apt-key add -
