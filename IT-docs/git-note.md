@@ -7,16 +7,6 @@ git log --diff-filter=D --summary | grep delete #查看删除文件的记录
 git reflog
 git reset xxxx
 
-git clean -d -f # 清理没有track的文件
-
-git pull --rebase
-
-git commit --amend # 在提交时使用会与前一commit 整合
-
-# 使用远端内容
-git fetch origin branch
-git reset --hard origin/branch
-
 查看commit所属的分支
 ```
 #查本地所有分支
@@ -138,7 +128,7 @@ git filter-branch --force --index-filter 'git rm -rf --cached --ignore-unmatch b
 
 删除之后会有大量输出，显示已经从各自历史log中剔除掉关于这个大文件的信息，之后可以使用gc命令再次压缩:
 ```
-git gc  --prune=now
+git gc --prune=now
 ```
 
 
@@ -175,7 +165,7 @@ git push -u origin --tags
 # 日常使用场景的命令
 ## 一、克隆
 ```
-git clone git@192.168.11.147:tigerknows-sphinx     #将192.168.11.147上git仓库里的tigerknows-sphinx项目克隆到本地
+git clone git@host:group/repo                    #将host上git仓库里的group/repo项目克隆到本地
 ```
 
 
@@ -183,30 +173,38 @@ git clone git@192.168.11.147:tigerknows-sphinx     #将192.168.11.147上git仓�
 ```
 git status                                       #列出未记入本次提交中的变动
 git add .                                        #在本次提交中添加变动的所有文件
+git add -A                                       #在本次提交中添加变动的所有文件
 git commit -m "提交代码的标"                     #向“本地”代码库提交本次提交内容
+git commit --amend                               #修改当前前的commit
 git push                                         #将本地代码库推送至仓库服务器中
 git pull                                         #从仓库服务器上拉取代码
+git pull --rebase                                #从仓库服务器上拉取代码,不一致处进行rebase，而非merge
 git rm <filename>                                #同时删除文件和对其的跟踪
 =>  git rm --cached <filename>                   #删除对文件的跟踪，保留文件
 git push origin <local branch>:<remote branch>   #提交本地<local branch>分支到远程<remote branch>
 git push --set-upstream origin <local branch>    #提交本地<local branch>分支到远程
 git push --force origin <branch>                 # 覆盖远程的分支
 
+git clean -df   # 清理没有track的文件
+
+# 使用远端内容
+git fetch origin branch
+git reset --hard origin/branch
+
+
 git config --global user.name <username>
 git config --global user.email <user email>
 
 git config --global color.ui true
-```
 
-### 全局gitignore
 git config --get core.excludesfile
-git config --global core.excludesfile ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global  # 全局gitignore
 
-        $  git config --global diff.tool vimdiff
+git config --global diff.tool vimdiff
+git config --global difftool.prompt false
+git config --global alias.d difftool
 
-        $  git config --global difftool.prompt false
-
-        $  git config --global alias.d difftool
+```
 
 ## 三、分支
 ```
@@ -319,6 +317,13 @@ git reflog delete [--rewrite] [--updateref] [--dry-run | -n] [--verbose] ref@{sp
 git reflog exists <ref>：检查一个ref是否有一个reflog条目
 ```
 
+ --diff-filter=[(A|C|D|M|R|T|U|X|B)...[*]]
+Select only files that are
+Added (A), Copied (C), Deleted (D), Modified (M),
+Renamed (R), have their type (i.e. regular file, symlink, submodule, ...) changed
+(T), are Unmerged (U), are Unknown (X), or have had their pairing Broken (B).
+mode
+
 
 # grep
 
@@ -356,7 +361,7 @@ git diff <branch A>...<branch B>           #显示分支A、B共有父分支与�
 git diff [master]...<branch B>             #在master上执行时，B是从master建立的分支，则是显示分支B建立后有了多少修改
 git diff 是一个难以置信的有用的工具，可以找出你项目上任意两点间 的改动，或是用来查看别人提交进来的新分支。
 哪些内容会被提交(commit)
-你通常用git diff来找你当前工作目录和上次提交与本地索引间的差异。
+git diff用来找你当前工作目录和上次提交与本地索引间的差异。
 git diff                                   #显示当前的工作目录里的，没有 staged(添加到索引中)，且在下次提交时不会被提交的修改。
 如果你要看在下次提交时要提交的内容(staged,添加到索引中),你可以运行：
 git diff --cached                          #显示当前的索引和上次提交间的差异；这些内容在不带"-a"参数运行 "git commit"命令时就会被提交。

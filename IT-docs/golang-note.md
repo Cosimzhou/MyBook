@@ -190,6 +190,14 @@ var str string = string(data[:])
 resp, _ := http.Get(url)
 buf, _ := ioutil.ReadAll(resp.Body)
 str := string(buf)
+
+
+// Client
+dump, _ := httputil.DumpRequestOut(req, true)
+fmt.Println(string(dump))
+// Server
+dump, _ := httputil.DumpRequest(req, true)
+fmt.Println(string(dump))
 ```
 
 itoa //在const 中模拟enum

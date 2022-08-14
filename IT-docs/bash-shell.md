@@ -62,7 +62,9 @@ date -R -d @1438617600
 date +%s  # 输出：1438617600
 date -d "2015-08-04 00:00:00" +%s  # 输出：1438617600
 date -d @1438617600 "+%Y-%m-%d"  # 输出：2015-08-04
+date -d "2 months ago" '+%Y-%m'
 ```
+
 
 ## **echo**
 
@@ -225,32 +227,39 @@ e.g. :
 
    -R  递归其子目录下的所有内容
 
+
+## **comm**
+
+列表集合的交并差
+
+```
+comm -23 <(sort file1) <(sort file2)   #file1 比file2多出的部分
+comm -13 <(sort file1) <(sort file2)   #file1 比file2缺少的部分
+comm -12 <(sort file1) <(sort file2)   #file1 和file2共有的部分
+```
+
 ## **crontab**
 
   计划任务
 
-  -e  编辑计划任务
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -e            | 编辑计划任务  |
 
 ```
+# 分 时　 日　 月　 周　 命令
 *　　*　　*　　*　　*　　command
 ```
 
-分　时　日　月　周　命令
 
-第1列表示分钟1～59 每分钟用\*或者 \*/1表示
-
-第2列表示小时1～23（0表示0点）
-
-第3列表示日期1～31
-
-第4列表示月份1～12
-
-第5列标识号星期0～6（0表示星期天）
-
-第6列要运行的命令
+* 第1列表示分钟1～59 每分钟用`*`或者 `*/1`表示
+* 第2列表示小时1～23（0表示0点）
+* 第3列表示日期1～31
+* 第4列表示月份1～12
+* 第5列标识号星期0～6（0表示星期天）
+* 第6列要运行的命令
 
 eg：
-
 ```
 # 每月最后一天执行
 59 23 28-31 * * [[ "$(date --date=tomorrow +%d)" == "01" ]] && $COMMAND
@@ -303,7 +312,7 @@ e.g: `curl -F "name=Joe Smith" -F "email=joe@labstack.com" http://localhost:1323
 | if=file        | 输入文件(或设备名称)。                          |
 | of=file        | 输出文件(或设备名称)。                          |
 | ibs=bytes      | 一次读取bytes字节，即读入缓冲区的字节数。       |
-| skip=blocks    | 跳过读入缓冲区开头的ibs\*blocks块。             |
+| skip=blocks    | 跳过读入缓冲区开头的ibs x blocks块。             |
 | obs=bytes      | 一次写入bytes字节，即写 入缓冲区的字节数。      |
 | bs=bytes       | 同时设置读/写缓冲区的字节数(等于设置obs和obs)。 |
 | cbs=bytes      | 一次转换bytes字节。                             |
@@ -343,14 +352,14 @@ flags
 | nocache        | Request to drop cache. See also oflag=sync |
 | noctty         | do not assign controlling terminal from file |
 | nofollow       | 不跟入符号链接 |
-| count_bytes    | 将'count=N'以byte为单位 (iflag only) |
-| skip_bytes     | 将'skip=N'以byte为单位 (iflag only) |
-| seek_bytes     | 将'seek=N'以byte为单位 (oflag only) |
+| count bytes    | 将'count=N'以byte为单位 (iflag only) |
+| skip bytes     | 将'skip=N'以byte为单位 (iflag only) |
+| seek bytes     | 将'seek=N'以byte为单位 (oflag only) |
 
 
    fdformat命令
 
-   先用dd做一个全是零的1440KB的文件
+先用dd做一个全是零的1440KB的文件
 
 ```
 dd if=/dev/zero of=main.img bs=512 count=2880
@@ -367,21 +376,25 @@ dd if=main.bin of=main.img conv=notrunc
    备份、还原硬盘主引导记录
 
 ```
-   dd if=/dev/hda of=/disk.mbr bs=512 count=1
-   dd if=/disk.mbr of=/dev/hda bs=512 count=1
+dd if=/dev/hda of=/disk.mbr bs=512 count=1
+dd if=/disk.mbr of=/dev/hda bs=512 count=1
 ```
 
 ## **df**
 
   统计文件系统可用大小
 
-   -h 可读部分大小
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|   -h           | 可读部分大小  |
 
 ## **diff**
 
    比较两个文本文件的区别，与patch结合，可将区别更新至源文件
 
-   -c n
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|   -c n         |  n            |
 
 ## **dirs**
 
@@ -404,7 +417,8 @@ dd if=main.bin of=main.img conv=notrunc
 
 ## **dmesg**
 
-     显示开机信息，kernel会将开机信息存储在ring buffer中。您若是开机时来不及查看信息，可利用dmesg来查看。开机信息亦保存在/var/log目录中，名称为dmesg的文件里。
+     显示开机信息，kernel会将开机信息存储在ring buffer中。
+     若是开机时来不及查看信息，可利用dmesg来查看。开机信息亦保存在/var/log目录中，名称为dmesg的文件里。
 
      时间戳转时间：
 
@@ -455,9 +469,10 @@ Linux Only
 
 设置期待终端反馈并自动交互
 
--f 执行expect脚本文件
-
--c 执行命令
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -f            | 执行expect脚本文件 |
+|  -c            | 执行命令   |
 
 ```
 set variable "'$variable'" #
@@ -546,6 +561,13 @@ getopt -o v: --long headers:,libs:,cc:,cxx:,with-glog,with-thrift,nodebugsymbols
 
   eg:
 
+多个模式的筛选，**| 要加转译**
+```
+grep "aaa\|bbbb\|ccc" file        #筛选多个关键字
+
+grep -v 'aaa\|bbb\|ccc' file        #排除多个关键字
+```
+
 ```
 #提取文件中正则匹配的内容
 grep -Eo \@\"[^\"]*\.png\" file
@@ -555,8 +577,8 @@ grep -r \.png\" . | grep -Eo \@\"[^\"]*\.png\" | sort | uniq >~/pnglist
 
 grep -rl sdmap . | xargs sed -i "s/sdmap/amap/g"
 
-# 多个模式的筛选，| 要加转译
-grep "aaa\|bbbb\|ccc" file
+# 查找指定目录下中有某字符串的文件
+grep -Irn "hello,world!" ./
 ```
 
 ## **head**
@@ -696,7 +718,9 @@ eg: `iptables -A INPUT 1 -s $IPADRESS -j DROP`
 
 杀死进程
 
--l 列出所有支持的信号
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -l            | 列出所有支持的信号 |
 
 eg:
 
@@ -826,7 +850,7 @@ kill 0 #杀死同所有进程，常用于脚本中
   rm -f sendpipe recvpipe
 ```
 
-## mktemp
+## **mktemp**
 
      创建一个临时路径
 
@@ -839,11 +863,26 @@ kill 0 #杀死同所有进程，常用于脚本中
 
    挂载
 
-   -o 指定编码
-
-   -t 指定文件系统
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -o            | 指定编码      |
+|  -t            | 指定文件系统  |
 
 umount 卸载
+
+
+```
+# 挂载
+#linux目标机
+sudo mount <host>:/opt/userfilebase /opt/userfilebase
+
+#windows目标机
+sudo mount //<host>/Share \
+           -o iocharset=utf8,username=<user>,password=<passwd> \
+           /mnt/crawlfilebase
+```
+
+
 ## **nano**
 
    一种文本编辑器，建议使用vim
@@ -915,15 +954,19 @@ mkfifo pp; nc -4 -l $port <pp | tee $req_record_file | nc $srv_host $srv_port | 
 
      以八进制等形式输出文件
 
-     -A   起始地址
-
-     -t   设置格式，x1 16进制单字节
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|    -A          | 起始地址      |
+|    -t          | 设置格式，x1 16进制单字节 |
 
 ## **paste**
 
      按行拼接多个流
 
-     -d 指定分隔符
+
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|    -d          | 指定分隔符    |
 
 ## **patch**
 
@@ -1062,7 +1105,9 @@ rsync -av src-dir/ dest-dir/   #拷贝src-dir文件夹下的内容
 
    远程复制文件。eg: scp test user@remotehost
 
-   -P 端口号，与ssh的-p不同，是大写的
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -P port       | 端口号，与ssh的-p不同，是大写的 |
 
 ## **screen**
 
@@ -1197,7 +1242,9 @@ seq n #生成1~n
 
 进入ftp方式传输文件，eg: sftp username@host
 
--o ssh参数，如Port=8080
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| -o             | ssh参数，如Port=8080 |
 
 进入命令行后，put 文件，get 文件
 
@@ -1264,20 +1311,29 @@ ProxyCommand nc -v -xlocalhost:7070 %h %p
 ```
 
 
-   配置文件位置：/etc/ssh/sshd\_config
+   配置文件位置：`/etc/ssh/sshd_config`
 
 ```
 ssh -o TCPKeepAlive=yes -o ServerAliveInterval=300 xx@xxx.com  #避免超时管道断裂
 ssh -v -N -D 0.0.0.0:7070 user@address
+```
+e.g.: **@互信**
+
+```
+ssh-keygen -t rsa
+scp ~/.ssh/id_rsa.pub <user>@<host>:~
+ssh <user>@<host>
+cat id_rsa.pub >> ~/.ssh/authenized_keys
 ```
 
 ## **stat**
 
    显示文件属性信息
 
-   -f 显示文件系统
-
-   -L 跟随符号连接
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -f            | 显示文件系统  |
+|  -L            | 跟随符号连接  |
 
 ## **su**
 
@@ -1425,7 +1481,9 @@ WantedBy=multi-user.target
 
   计算命令耗时
 
-  -p  以秒为单位显示
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| -p             | 以秒为单位显示 |
 
   eg: time -p `sleep 5` #`sleep 5`为待计算时间的命令，可不带``号
 
@@ -1433,7 +1491,10 @@ WantedBy=multi-user.target
 
    查看进程运行情况
 
-   -p <pid> 查看指定进程
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|   -p <pid>     | 查看指定进程  |
+
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
@@ -1555,9 +1616,9 @@ tar.xz
 
 显示系统运行时间及负载。
 
-     23:51:26 up21:31, 1 user, load average: 30.02, 26.43, 19.0212
+23:51:26 up21:31, 1 user, load average: 30.02, 26.43, 19.0212
 
-     该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。
+该命令可以大致的看出计算机的整体负载情况，load average后的数字分别表示计算机在1min、5min、15min内的平均负载。
 
 ## **pr**
 
@@ -1718,7 +1779,9 @@ echo '0103000000014240'|xxd -r -p
 
 删除用户：userdel [-r][用户帐号]
 
- -f 删除用户登入目录以及目录中所有文件。
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| -f             | 删除用户登入目录以及目录中所有文件。|
 
 ## **usermod**
 
@@ -1867,7 +1930,9 @@ apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests --n
 
 分区命令
 
--l 查看所有存储介质
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| -l             | 查看所有存储介质 |
 
 eg：fdisk /dev/vdb1    #m 打印帮助
 
@@ -1875,7 +1940,9 @@ eg：fdisk /dev/vdb1    #m 打印帮助
 
 创建文件系统
 
--t format 分区为format的文件系统
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| -t format | 分区为format的文件系统 |
 
 eg: mkfs -t ext3 /dev/vdb1
 
@@ -1887,6 +1954,7 @@ eg: mkfs -t ext3 /dev/vdb1
 
 ## **nmap**
 网络扫描命令。
+
 -sTU localhost  #扫描端口号
 
 
@@ -2068,11 +2136,16 @@ lvscan -- Scan (all disks) for Logical Volumes.
 
 ## **notify-send**
 
-   -u low/normal/critical
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -u level | low/normal/critical |
+|  -i icon_path | |
 
-   -i icon_path
-
-sudo -u zhichaozhou DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus notify-send 'data transfer succeeded'
+```
+sudo -u zhichaozhou DISPLAY=:0 \
+     DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus \
+     notify-send 'data transfer succeeded' 'message content body'
+```
 
 ------
 
@@ -2080,15 +2153,15 @@ sudo -u zhichaozhou DISPLAY=:0 DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000
 
 | 路径           | 含义          |
 | -------------- | ------------- |
-| /dev/null |空桶、黑洞 |
-| /dev/zero |零桶、生成零的白洞 |
-| /dev/random |源源不断的随机源、白噪洞 |
-| /etc/hosts | |
-| /etc/fstab   | 磁盘文件表信息 |
-| /tmp      |临时文件，重启后会清理或10天后清理|
-| /var/log/messages |系统日志 |
-| /var/tmp   |30天后清理的临时文件|
-| /var/log | |
+| /dev/null      | 空桶、黑洞 |
+| /dev/zero      | 零桶、生成零的白洞 |
+| /dev/random    | 源源不断的随机源、白噪洞 |
+| /etc/hosts     | |
+| /etc/fstab     | 磁盘文件表信息 |
+| /tmp           | 临时文件，重启后会清理或10天后清理|
+| /var/log/messages | 系统日志 |
+| /var/tmp       | 30天后清理的临时文件|
+| /var/log       | |
 
 
 cgroups
@@ -2205,54 +2278,55 @@ inode   套接字对应的inode
 
 | 变量           | 含义          |
 | -------------- | ------------- |
-| \$?  |  上一个命令退出的状态 |
-| \$@  | 参数列表 |
-| \$#   | 参数列表的长度 |
-| \$$  |  shell的pid，在脚本中可用于获取脚本运行进程的pid |
-| \$0   | shell的名称 |
-| \$!  |  上一个后台命令编号 |
-| \$ENV |  |
-| \$HOME |  主目录路径 |
-| \$PWD  | 当前目录 |
-| \$IFS  |  系统分隔符 |
-| \$PATH |  系统变量路径 |
-| \$PPID |  父进程pid |
-| \$PS1  |  命令提示符格式 |
-| \$PS2  |  命令提示符分隔号 |
-| \$PS4 | |
-| \$BASH | Bash Shell的全路径 |
-| \$CDPATH | 用于快速进入某个目录。 |
-| \$HISTSIZE | 历史记录数 |
-| \$LOGNAME  |当前用户的登录名 |
-| \$HOSTNAME  |指主机的名称 |
-| \$SHELL  |当前用户Shell类型 |
-| \$LANGUGE  |语言相关的环境变量，多语言可以修改此环境变量 |
-| \$MAIL  |当前用户的邮件存放目录 |
-| \$LANG  |  语言环境 |
-| \$LC\_ALL | |
-| \$LC\_CTYPE |  语言符号及其分类 |
-| \$LC\_NUMERIC |   数字显示格式 |
-| \$LC\_COLLATE|  比较和排序习惯 |
-| \$LC\_TIME | 时间显示格式 |
-| \$LC\_MONETARY | 货币单位 |
-| \$LC\_MESSAGE | 信息主要是提示信息,错误信息,状态信息,标题,标签,按钮和菜单等 |
-| \$LC\_NAME   | 姓名书写方式 |
-| \$LC\_ADDRESS | 地址书写方式 |
-| \$LC\_TELEPHONE | 电话号码书写方式 |
-| \$LC\_MEASUREMENT | 度量衡表达方式 |
-| \$LC\_PAPER | 默认纸张尺寸大小 |
-| \$LC\_IDENTIFICATION | 对locale自身包含信息的概述 |
-| \$RANDOM  | 随机数 |
-| \$LINENO  |  刚执行的行号 |
-| \$NLSPATH |  应用程序搜索消息目录的目录路径 |
-| \${n:def} | n<10时，同$n |
-| \${var:-val} | 未赋值时替换         ${var:=val}未赋值时赋值并替换 |
-| \${var:+val} | 赋值时替换           ${var:?val}错误检查替换 |
-| \${var:n} | 从n起始的串 |
-| \${var:n:l} | 从n起始，长度为l的串 |
-| \${var/pattern/replacement} |  $var 中第一个pattern 模式替换为 replacement |
-| \${var//pattern/replacement} |  $var 中所有 pattern 模式全部替换为 replacment |
-注：**抹除**以▢为分隔的字符串一个字符串，其可以为一个较长的子串，*代表被**抹除**的部分
+| `$?`  |  上一个命令退出的状态 |
+| `$@`  | 参数列表 |
+| `$#`   | 参数列表的长度 |
+| `$$`  |  shell的pid，在脚本中可用于获取脚本运行进程的pid |
+| `$0`   | shell的名称 |
+| `$!`  |  上一个后台命令编号 |
+| `$ENV` |  |
+| `$HOME` |  主目录路径 |
+| `$PWD`  | 当前目录 |
+| `$IFS`  |  系统分隔符 |
+| `$PATH` |  系统变量路径 |
+| `$PPID` |  父进程pid |
+| `$PS1`  |  命令提示符格式 |
+| `$PS2`  |  命令提示符分隔号 |
+| `$PS4` | |
+| `$BASH` | Bash Shell的全路径 |
+| `$CDPATH` | 用于快速进入某个目录。 |
+| `$HISTSIZE` | 历史记录数 |
+| `$LOGNAME`  |当前用户的登录名 |
+| `$HOSTNAME`  |指主机的名称 |
+| `$SHELL`  |当前用户Shell类型 |
+| `$LANGUGE`  |语言相关的环境变量，多语言可以修改此环境变量 |
+| `$MAIL`  |当前用户的邮件存放目录 |
+| `$LANG`  |  语言环境 |
+| `$LC_ALL` | |
+| `$LC_CTYPE` |  语言符号及其分类 |
+| `$LC_NUMERIC` |   数字显示格式 |
+| `$LC_COLLATE`|  比较和排序习惯 |
+| `$LC_TIME` | 时间显示格式 |
+| `$LC_MONETARY` | 货币单位 |
+| `$LC_MESSAGE` | 信息主要是提示信息,错误信息,状态信息,标题,标签,按钮和菜单等 |
+| `$LC_NAME`   | 姓名书写方式 |
+| `$LC_ADDRESS` | 地址书写方式 |
+| `$LC_TELEPHONE` | 电话号码书写方式 |
+| `$LC_MEASUREMENT` | 度量衡表达方式 |
+| `$LC_PAPER` | 默认纸张尺寸大小 |
+| `$LC_IDENTIFICATION` | 对locale自身包含信息的概述 |
+| `$RANDOM`  | 随机数 |
+| `$LINENO`  |  刚执行的行号 |
+| `$NLSPATH` |  应用程序搜索消息目录的目录路径 |
+| `${n:def}` | n<10时，同$n |
+| `${var:-val}` | 未赋值时替换         ${var:=val}未赋值时赋值并替换 |
+| `${var:+val}` | 赋值时替换           ${var:?val}错误检查替换 |
+| `${var:n}` | 从n起始的串 |
+| `${var:n:l}` | 从n起始，长度为l的串 |
+| `${var/pattern/replacement}` |  $var 中第一个pattern 模式替换为 replacement |
+| `${var//pattern/replacement}` |  $var 中所有 pattern 模式全部替换为 replacment |
+
+注：**抹除**以▢为分隔的字符串一个字符串，其可以为一个较长的子串，`*`代表被**抹除**的部分
 ${var#*▢}    去掉最左面一个▢及其左面的部分      ${var##*▢}  去掉最右面一个▢及其左面的部分
 ${var%%▢*} 去掉最左面一个▢及其右面的部分      ${var%▢*}  去掉最右面一个▢及其右面的部分
 
@@ -2308,28 +2382,30 @@ ${!i} 遍历i从 1…$#
 
 |      |         |      |              |
 | ---- | ------- | ---- | ------------ |
-| `^` | 行首| `$` | 行尾 |
+| `^`  | 行首    | `$`  | 行尾         |
 | `[]` | 集合 eg:`[^a-z]` | `{}` | 次数范围 eg:`\{2,5\}` |
-| `.` |  任意个字     | `*` | 前一字符的0个或多个 eg:`000*` （代表两个0以上） |
-| `.*` | 任意串 | | |
+| `.`  | 任意个字| `*`  | 前一字符的0个或多个 eg:`000*` （代表两个0以上） |
+| `.*` | 任意串  |      |              |
 
 
-## **扩展表达式：**
+## **扩展表达式**
 
 |      |         |      |              |
 | ---- | ------- | ---- | ------------ |
 | `+`  | 一个或多个重复的 | `?` | 零个或一个 |
 | `│`  | 或      | `()` | 小组,后面可跟`+?*` eg: `g(|a|oo)d` |
 
-\d   [0-9]     \w   [a-zA-Z0-9]     \s   [\t\n\r\f]
-
-\D  [^0-9]     \W   [^a-zA-Z0-9]    \S   [^\t\n\r\f]
+|      |               |      |              |
+| ---- | ------------- | ---- | ------------ |
+| `\d` | `[0-9]`       | `\D` | `[^0-9]`  |
+| `\w` | `[a-zA-Z0-9]` | `\W` | `[^a-zA-Z0-9]` |
+| `\s` | `[\t\n\r\f]`  | `\S` | `[^\t\n\r\f]` |
 
 [[ '待匹配字符串' =~ 正则表达式 ]] #注意：要使用双方括号，[[ ]] 以及里面的空格
 
-$BASH\_REMATCH     匹配到的内容
+`$BASH_REMATCH`     匹配到的内容
 
-${BASH\_REMATCH[1]}   匹配到的子串
+`${BASH_REMATCH[0]}`   匹配到的子串
 
 ------
 
@@ -2337,22 +2413,22 @@ ${BASH\_REMATCH[1]}   匹配到的子串
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-| <      | 输入  |
-| <(xx)  | 执行xx后的结果作为输入 |
-|  >     |  输出 |
-| <>    | 中转对换，前后均接流、文件，e.g: `sed s/del/les/g file 1<>file #在文件中把del替换成les` |
-|  >>   |  追加 |
-|  >│ |强制覆盖 |
-| │     | 连接|
-| <<    | 标志标准输入的结束符，可以用于交互式命令的脚本编写 |
-| -<<    | 同<<，但开关的tab会被去除 |
-| >&-   |  表示将标准输出关闭 |
-| n>&-  |  表示将n号输出关闭 |
-| n>&m  |  表示将n号输出复制到m号 |
-| &>file  |  标准输出、错误定向到文件 |
-| <&-   |  表示关闭标准输入（键盘） |
-| n<&-  |  表示将n号输入关闭 |
-| n<&m  |  表示将m号输入复制到n号 |
+| <              | 输入          |
+| <(xx)          | 执行xx后的结果作为输入 |
+|  >             | 输出          |
+| <>             | 中转对换，前后均接流、文件，e.g: `sed s/del/les/g file 1<>file #在文件中把del替换成les` |
+|  >>            | 追加          |
+|  >│            | 强制覆盖      |
+| │              | 连接          |
+| <<             | 标志标准输入的结束符，可以用于交互式命令的脚本编写 |
+| -<<            | 同<<，但开关的tab会被去除 |
+| >&-            | 表示将标准输出关闭 |
+| n>&-           | 表示将n号输出关闭 |
+| n>&m           | 表示将n号输出复制到m号 |
+| &>file         | 标准输出、错误定向到文件 |
+| <&-            | 表示关闭标准输入（键盘） |
+| n<&-           | 表示将n号输入关闭 |
+| n<&m           | 表示将m号输入复制到n号 |
 
 ```
 sftp <user>@<host> << EOF
@@ -2365,11 +2441,11 @@ EOF
 流的优先级：先准备错误、输出，就绪后接入输出
 
 
-/dev/fd/0   输入流，即从输入流读取
-
-/dev/fd/1   输出流，即向输出流写入
-
-/dev/fd/2   错误流，即从错误流写入
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| /dev/fd/0      | 输入流，即从输入流读取 |
+| /dev/fd/1      | 输出流，即向输出流写入 |
+| /dev/fd/2      | 错误流，即从错误流写入 |
 
 e.g.:
 
@@ -2468,7 +2544,7 @@ newarr=(${a[@]} ${b[@]})
 | test -p File | 文件存在并且是一个命名管道 |
 | test -r File | 文件存在并且可读 |
 | test -S File | 文件存在并且是一个套接字 |
-| test -t FD | 文件描述符是在一个终端打开的 |
+| test -t FD   | 文件描述符是在一个终端打开的 |
 | test -u File | 文件存在并且设置了它的set-user-id位 |
 | test -w File | 文件存在并且可写 |
 | test -x File | 文件存在并且可执行 |
@@ -2477,7 +2553,9 @@ newarr=(${a[@]} ${b[@]})
 
 # **awk**
 
-   -F 分隔符
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -F            | 分隔符        |
 
 awk的运行方式
 
@@ -2564,39 +2642,41 @@ erase = ^?; kill = ^U; start = ^Q; stop = ^S; rprnt = ^R; werase = ^W; lnext = ^
 
 颜色特效控制：
 
+```
 printf "\033[1;33m Hello World. \033[0m \n";
+```
 
 颜色如下(xx为颜色代码):
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|  none     | "\033[0m"  |
-|  color    | "\033[0;xxm"  |
-|  dark color  | "\033[1;xxm"  |
+| none           | "\033[0m"  |
+| color          | "\033[0;xxm"  |
+| dark color     | "\033[1;xxm"  |
 
 颜色代码表：
 
 |背景颜色 | 字颜色 | 颜色 |
 |---------|--------|------|
-|  40  |  30 | 黑   |
-|  41  |  31 | 红   |
-|  42  |  32 | 绿   |
-|  43  |  33 | 黄   |
-|  44  |  34 | 蓝   |
-|  45  |  35 | 紫   |
-|  46  |  36 | 深绿 |
-|  47  |  37 | 白色 |
+|  40     |  30    | 黑   |
+|  41     |  31    | 红   |
+|  42     |  32    | 绿   |
+|  43     |  33    | 黄   |
+|  44     |  34    | 蓝   |
+|  45     |  35    | 紫   |
+|  46     |  36    | 深绿 |
+|  47     |  37    | 白色 |
 
 输出特效格式控制：
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-| \033[0m | 关闭所有属性 |
-| \033[1m  | 设置高亮度 |
-| \033[4m  | 下划线 |
-| \033[5m  | 闪烁 |
-| \033[7m  | 反显 |
-| \033[8m  | 消隐 |
+| \033[0m        | 关闭所有属性 |
+| \033[1m        | 设置高亮度 |
+| \033[4m        | 下划线 |
+| \033[5m        | 闪烁 |
+| \033[7m        | 反显 |
+| \033[8m        | 消隐 |
 | \033[30m  --  \033[37m  | 设置前景色 |
 | \033[40m  --  \033[47m  | 设置背景色 |
 
@@ -2644,9 +2724,6 @@ syslog日志服务：
 
 # **Examples**
 
-## **@计算日期**
-
-`date -d "2 months ago" '+%Y-%m'`
 
 ## **@进制转换**
 
@@ -2657,13 +2734,6 @@ $((n#xxx)) n~(2,36)
 echo "obase=64;123456"|bc
 ```
 
-## **@比较列表中多出的部分**
-
-```
-comm -23 <(sort file1) <(sort file2)   #file1 比file2多出的部分
-comm -13 <(sort file1) <(sort file2)   #file1 比file2缺少的部分
-comm -12 <(sort file1) <(sort file2)   #file1 和file2共有的部分
-```
 
 ## **＠创建用户**
 
@@ -2742,7 +2812,9 @@ esac
 
 \#将当前目录下所有的文件中的$1模式，替换为$2
 
+```
 find . -type f | perl -ne 'chomp;print "\"$_\"\n" if -T $_' | xargs perl -pi -e "s/$1/$2/g"
+```
 
 ## **@计算表达式**
 
@@ -2846,23 +2918,29 @@ echo "password" | sudo -S $command
 
 <username> ALL=(ALL) NOPASSWD:ALL
 
-## **@互信**
-
-```
-ssh-keygen -t rsa
-scp ~/.ssh/id_rsa.pub <user>@<host>:~
-ssh <user>@<host>
-cat id_rsa.pub >> ~/.ssh/authenized_keys
-```
-
-## **@挂载**
-
-```
-sudo mount 192.168.11.225:/opt/userfilebase /opt/userfilebase    #linux目标机
-sudo mount //192.168.11.107/Share -o iocharset=utf8,username=shixiaofei,password=tiger1990 /mnt/crawlfilebase  #windows目标机
-```
 
 ## **@auto mount Network file system**
+
+```
+sudo apt install nfs-kernel-server
+sudo mkdir /mnt/myshareddir
+sudo chown nobody:nogroup /mnt/myshareddir #no-one is owner
+sudo chmod 777 /mnt/myshareddir #everyone can modify files
+
+# All the directives below use the options rw,
+#     which enables both read and write, sync, which writes changes
+#     to disk before allowing users to access the modified file, and
+#     no_subtree_check, which means NFS doesn’t check if each subdirectory
+#     is accessible to the user.
+cat > /etc/exports <<EOF
+/mnt/myshareddir {clientIP}(rw,sync,no_subtree_check)
+/mnt/myshareddir {clientIP-1}(rw,sync,no_subtree_check){clientIP-2}(...){clientIP-3}(...)
+/mnt/myshareddir {subnetIP}/{subnetMask}(rw,sync,no_subtree_check)
+EOF
+
+sudo exportfs -a #making the file share available
+sudo systemctl restart nfs-kernel-server #restarting the NFS kernel
+```
 
 \* linux
 
@@ -2882,9 +2960,6 @@ echo "/mnt/data -fstype=nfs,rsize=65536,wsize=65536,intr,hard,tcp,rdirplus,reada
 sudo automount -cv
 ```
 
-## **@查找指定目录下中有某字符串的文件**
-
-`grep -Irn "hello,world!" ./`
 
 ## **@打开socket(bash Only)**
 

@@ -731,6 +731,7 @@
 
 **VP**     Vice President，副总裁
 
+**VIE**    Variable Interest Entity，可变利益实体
 
 ## W
 

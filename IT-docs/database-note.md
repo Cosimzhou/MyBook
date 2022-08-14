@@ -64,6 +64,7 @@ mysqldump -u<user> -p<password> -h<host> <database> <table>
 | \dd object      | 列出 pg_description 里对声明的对象的描述，对象可以是一个表，表中的列/字段，类型，操作符或聚集．小技巧：并非所有对象在 pg_description 里有描述．此后期命令在快速获取 Postgres 内部特性时很有用． |
 | \df             | 列出函数． |
 | \di             | 只列出索引． |
+| \dn             | 只列出Schema． |
 | \do             | 只列出操作符． |
 | \ds             | 只列出序列． |
 | \dS             | 列出系统表和索引． |
@@ -90,7 +91,7 @@ mysqldump -u<user> -p<password> -h<host> <database> <table>
 | \z                    | 生成一个带有正确 ACL（赋予/禁止 权限）的数据库中所有表的输出列表． |
 | \! [command]          | 回到一个独立的Unix shell或执行一个Unix 命令 command． |
 | \?                    | 获得关于反斜杠 (“\”) 命令的帮助． |
-| \c[onnect] [数据库名/-[用户名称]]|     联接到新的数据库 (当前为 "test") |
+| \c[onnect] [数据库名/-[用户名称]]| 联接到新的数据库 (当前为 "test") |
 | \cd [目录名]          | 改变当前的工作目录 |
 | \copyright            | 显示 PostgreSQL 用法和发布信息 |
 | \encoding [编码]      |  显示或设置客户端编码 |

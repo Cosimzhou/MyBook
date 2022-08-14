@@ -11,12 +11,13 @@ bully
 
 cease
 chronic
+clumsy
 competitive
 complaint 抱怨  compliment 赞美
 compliance
 consolidated
 courtesy
-combersome
+cumbersome
 
 ditto    同上
 decouple
@@ -93,7 +94,7 @@ pfft psst
 oof
 
 
-
+Sb be in the middle of doing sth.
 
 headwinds - tailwinds
 
