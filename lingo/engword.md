@@ -22,6 +22,7 @@ cumbersome
 ditto    同上
 decouple
 deliberate
+disciplince
 distinction ~ difference
 dude bro mate
 
@@ -63,6 +64,7 @@ spinal
 standoff
 
 vigorous
+vowel - consonant
 
 whore - bitch
 

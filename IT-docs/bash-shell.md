@@ -387,6 +387,11 @@ dd if=/disk.mbr of=/dev/hda bs=512 count=1
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
 |   -h           | 可读部分大小  |
+|   -T           | 显示文件系统类型  |
+
+```
+df -Th|grep /mnt
+```
 
 ## **diff**
 

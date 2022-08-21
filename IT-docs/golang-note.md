@@ -52,7 +52,7 @@ go mod init $modname
 ```
 go install <uri>  #等价于下面的两条命令
 
-go build -o <binname> [<](http://git.xiaojukeji.com/geomining/OrderRouteTask/cmd)uri>
+go build -o <binname> http://git.xiaojukeji.com/geomining/OrderRouteTask/cmd
 mv   <binname> $GOPATH/bin
 ```
 
@@ -75,10 +75,15 @@ $ go run path/filename.go
 执行单元测试，
 
 ```
-$ go test -v --run Test____ <package path> --count=1
-$ go test -c -covermode=count -o main.test
-$ ./main.test -systemTest -test.coverprofile coverage.cov
-$ go tool cover -html=./coverage.cov -o coverage.html
+go test -v --run Test <package path> --count=1
+go test -c -covermode=count -o main.test
+./main.test -systemTest -test.coverprofile coverage.cov
+go tool cover -html=./coverage.cov -o coverage.html
+```
+
+```
+go list ./...|grep -v 'xxx\|eiei\|eyww'
+go test -run ^TestMapshopService/map_apis$
 ```
 
 # **go tool**
@@ -155,7 +160,7 @@ go 1.11版本新增了 GOPROXY 环境变量，go get会根据这个环境变量�
 
 其中，[https://goproxy.io](https://goproxy.io/) 是一个goproxy.io这个开源项目提供的公开代理服务。
 
-export GOPROXY=[https://goproxy.io](https://goproxy.io/)
+export GOPROXY=https://goproxy.io
 
 ------
 
