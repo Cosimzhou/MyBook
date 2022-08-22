@@ -1,6 +1,5 @@
 # wget https://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso
 
-
 sudo apt install libncurses5-dev libncursesw5-dev build-essential \
                  git tig golang graphviz exuberant-ctags zsh tmux curl \
                  python3-pip ca-certificates gnupg lsb-release clang-format
@@ -13,6 +12,10 @@ sudo apt install vim vim-gtk3
 
 sudo apt install sl figlet cmatrix
 sudo gem install lolcat
+
+# sshd server
+sudo apt install openssh-server
+sudo /etc/init.d/ssh start
 
 ####################################
 #
@@ -41,6 +44,12 @@ EOF
 sudo systemctl daemon-reload && sudo systemctl restart docker
 
 
+# docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.2.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+
+
 # kubernetes
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
 sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
@@ -48,12 +57,12 @@ sudo apt-get install kubeadm kubelet kubectl
 sudo apt-mark hold kubeadm kubelet kubectl
 kubeadm version
 
-sudo swapoff –a
 
 # Step 7: Assign Unique Hostname for Each Server Node
 sudo hostnamectl set-hostname master-node
 sudo hostnamectl set-hostname worker01
 # Step 8: Initialize Kubernetes on Master Node
+sudo swapoff –a
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
@@ -66,6 +75,7 @@ kubeadm join --discovery-token abcdef.1234567890abcdef --discovery-token-ca-cert
 kubectl get nodes
 
 
+####################################################
 # Java 8
 sudo apt install openjdk-8-jdk
 
@@ -80,16 +90,18 @@ curl -fsSL https://starship.rs/install.sh | zsh
 sudo ln -sfn /usr/bin/python3 /usr/bin/python
 sudo ln -s `which pip3` /usr/bin/pip
 
-# sshd server
-sudo apt install openssh-server
-sudo /etc/init.d/ssh start
 
+# yarn
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt update && sudo apt install yarn
 
 # node.js
 curl -fsSL https://deb.nodesource.com/setup_15.x | sudo -E bash -
 sudo apt-get install -y nodejs
 # tsc
 npm install -g typescript
+npm install --global yarn
 
 ###########################################
 # Samba Server
@@ -102,16 +114,17 @@ sudo smbpasswd -a <username>
 # Add a new samba point
 sudo echo "
 
-[mysmb] #共享时网络上显示的名称
-path = /home/mysmbshare #共享路径
-guest ok = no    #匿名访问
-comment = smb share     #注释信息
-available = yes         #vailable用来指定该共享资源是否可用
-browseable = yes        #browseable用来指定该共享是否可以浏览
-public    = yes         #public用来指定该共享是否允许guest账户访问
-writeable = yes         #writable用来指定该共享路径是否可写
+[mysmb]                    # 共享时网络上显示的名称
+path = /home/mysmbshare    # 共享路径
+guest ok = no              # 匿名访问
+comment = smb share        # 注释信息
+available = yes            # vailable用来指定该共享资源是否可用
+browseable = yes           # browseable用来指定该共享是否可以浏览
+public    = yes            # public用来指定该共享是否允许guest账户访问
+writeable = yes            # writable用来指定该共享路径是否可写
 ">> /etc/samba/smb.conf
 
+###########################################
 # Bazelisk install
 go install github.com/bazelbuild/bazelisk@latest
 
@@ -122,6 +135,7 @@ sudo mv bazel.gpg /etc/apt/trusted.gpg.d/
 echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
 sudo apt update && sudo apt install bazel
 
+# buildifier
 wget https://github.com/bazelbuild/buildtools/releases/download/4.2.5/buildifier-linux-amd64
 mv buildifier-linux-amd64 /usr/local/bin/buildifier
 
@@ -141,6 +155,10 @@ sudo apt-get install fcitx-configtool fcitx-config-gtk
 
 sudo apt install joystick joy2key
 sudo modprobe joydev
+
+# Bluetooth
+sudo service bluetooth start
+sudo apt-get install blueman -y && blueman-manager
 
 # Terminator
 sudo apt install terminator
@@ -235,17 +253,11 @@ sudo apt install cups aptitude
 sudo aptitude install ghostscript  foomatic
 cp /etc/cups/cupsd.conf /etc/cups/cupsd.conf.bak
 vim /etc/cups/cupsd.conf
-	#将监听地址改成服务器ip，或者0.0.0.0，不然无法访问
-	Listen localhost:631
-	#本配置文件采用了apache的配置文件语法，在Order allow,deny下添加Allow all，例如：
-	<Location />
-	  Order allow,deny
-	  Allow all
-	</Location>
 
-
-# Bluetooth
-sudo service bluetooth start
-sudo apt-get install blueman -y && blueman-manager
-
-
+#将监听地址改成服务器ip，或者0.0.0.0，不然无法访问
+Listen localhost:631
+#本配置文件采用了apache的配置文件语法，在Order allow,deny下添加Allow all，例如：
+<Location />
+  Order allow,deny
+  Allow all
+</Location>

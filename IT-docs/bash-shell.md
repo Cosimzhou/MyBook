@@ -2969,12 +2969,12 @@ sudo automount -cv
 ## **@打开socket(bash Only)**
 
 ```
-exec 8<>/dev/tcp/127.0.0.1/11211 #使用文件描述符8以<>(<读>写)方式，打开127.0.0.1的tcp11211端口
-ls -l /proc/self/fd #查看打开的连接8
-echo -e "stats" >&8 #向socket写入数据
-cat <&8 #从socket读入数据
-exec 8<&- #关闭socket读
-exec 8>&- #关闭socket写
+exec 8<>/dev/tcp/127.0.0.1/11211       #使用文件描述符8以<>(<读>写)方式，打开127.0.0.1的tcp11211端口
+ls -l /proc/self/fd                    #查看打开的连接8
+echo -e "stats" >&8                    #向socket写入数据
+cat <&8                                #从socket读入数据
+exec 8<&-                              #关闭socket读
+exec 8>&-                              #关闭socket写
 ```
 
 ## **@将静态库编为动态库**
@@ -2985,19 +2985,20 @@ gcc -shared -o abc.so a.o b.o c.o
 
 ## **@Linux文件夹打包命令**
 
-| 文件类型     | 使用的命令          | 解包                               | 打包/压缩                    | comment             |
-| ------------ | ------------------- | ---------------------------------- | ---------------------------- | ------------------- |
-| .bz2 .bz     | bunzip2 bzip2       | bunzip2 bzip2 -d                   | bzip2 -z                     |                     |
-| .gz          | gunzip gzip         | gunzip gzip -d                     | gzip                         |                     |
-| .rar         | rar                 | rar e                              | rar a                        |                     |
-| .tar         | tar                 | tar -xvf  <tarfile> <directory>    | tar -cvf                     | tar是打包，不是压缩 |
-| .tar.bz2     | tar                 | tar -jxvf <bzfile> <directory>     | tar -jcvf                    |                     |
-| .tar.gz(.tgz)| tar                 | tar -zxvf <tgzfile> -C <directory> | tar -zcvf xx.tgz xxx/        |                     |
-| .tar.Z       | tar                 | tar -Zxvf <Zfile> <directory>      | tar -Zcvf <Zfile>            |                     |
-| .Z           | uncompress compress | uncompress                         | compress                     |                     |
-| .zip         | unzip zip           | unzip [-d <dir>] <zipfile>         | zip -r <zipfile> <directory> |                     |
-| .xz          | xz                  | xz -d file                         | xz -z -k file                |                     |
-| .deb         | ar                  | ar -x <target>                     |                              |                     |
+| 文件类型       | 使用的命令            | 解包                                 | 打包/压缩                      | comment             |
+| -------------- | --------------------- | ------------------------------------ | ------------------------------ | ------------------- |
+| `.bz2/.bz`     | `bunzip2/bzip2`       | `bunzip2 bzip2 -d`                   | `bzip2 -z`                     |                     |
+| `.gz`          | `gunzip/gzip`         | `gunzip gzip -d`                     | `gzip`                         |                     |
+| `.rar`         | `rar`                 | `rar e `                             | `rar a`                        |                     |
+| `.tar`         | `tar`                 | `tar -xvf  <tarfile> <directory>`    | `tar -cvf`                     | tar是打包，不是压缩 |
+| `.tar.bz2`     | `tar`                 | `tar -jxvf <bzfile> <directory>`     | `tar -jcvf`                    |                     |
+| `.tar.gz/.tgz` | `tar`                 | `tar -zxvf <tgzfile> -C <directory>` | `tar -zcvf xx.tgz xxx/`        |                     |
+| `.tar.Z`       | `tar`                 | `tar -Zxvf <Zfile> <directory>`      | `tar -Zcvf <Zfile>`            |                     |
+| `.Z`           | `uncompress/compress` | `uncompress`                         | `compress`                     |                     |
+| `.zip`         | `unzip/zip`           | `unzip [-d <dir>] <zipfile>`         | `zip -r <zipfile> <directory>` |                     |
+| `.xz`          | `xz`                  | `xz -d file`                         | `xz -z -k file`                |                     |
+| `.7z`          | `7zzs`                | `7zzs x <file.7z>`                   | `7zzs a <file.7z> <files...>`  | [7zzs下载](https://www.7-zip.org/a/7z2201-linux-x64.tar.xz)  |
+| `.deb`         | `ar`                  | `ar -x <target>`                     | ``                             |                     |
 
 ```
 tar.xz tar -xvf
