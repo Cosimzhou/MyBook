@@ -79,6 +79,7 @@ What a shame!
 Bummer.
 
 under current circumstance
+to make it simple / in brief
 
 * share my two cents: I will talk about something in my mind
 * take a grain of salt: be careful to treat

@@ -5,13 +5,13 @@ Tmux note
 | --------- | ------------ | ---------------------------- |
 | 引导键    | Ctrl+b       | 激活控制台；此时以下按键生效 |
 | 系统操作  | ?            | 列出所有快捷键；按q返回 |
-|           | d            | 脱离当前会话；这样可以暂时返回Shell界面，输入tmux attach能够重新进入之前的会话 |
+|           | d            | *脱离*当前会话；这样可以暂时返回Shell界面，输入tmux attach能够重新进入之前的会话 |
 |           | D            | 选择要脱离的会话；在同时开启了多个会话时使用 |
 |           | Ctrl+z       | 挂起当前会话 |
 |           | r            | 强制重绘未脱离的会话 |
 |           | s            | 选择并切换会话；在同时开启了多个会话时使用 |
 |           | :            | 进入命令行模式；此时可以输入支持的命令，例如kill-server可以关闭服务器 |
-|           | [            | 进入复制模式；此时的操作与vi/emacs相同，按q/Esc退出, space 开始复制选区，enter确认复制。<c-b>+] 粘贴 |
+|           | [            | 进入复制模式；此时的操作与vi/emacs相同，按q/Esc退出, space 开始复制选区，enter确认复制。<c-b>+] 粘贴, <C-x>+y 复制 |
 |           | ~            | 列出提示信息缓存；其中包含了之前tmux返回的各种提示信息 |
 | 窗口操作  | c            | 创建新窗口 |
 |           | &            | 关闭当前窗口 |
@@ -39,9 +39,6 @@ Tmux note
 |           | Alt+o        | 逆时针旋转当前窗口的面板 |
 |           | Ctrl+o       | 顺时针旋转当前窗口的面板 |
 
-<C-x>[
-<C-x>y
-
 tmux capture-pane -pS-3|xclip -i -sel clip
 
 set prefix key <c-x>
@@ -49,14 +46,13 @@ set -g prefix C-x
 unbind C-b
 bind C-x send-prefix
 
-<C-x> arrow
-<C-x> z
 
 tmux shortcuts & cheatsheet
 
 tmux     # start new
 tmux new -s myname  # start new with session name
 tmux a  #  (or at, or attach)  attach
+tmux a -d  #  (or at, or attach)  attach and disconnect all other sessions first
 tmux a -t myname          # attach to named
 tmux ls          # list sessions
 tmux kill-session -t myname          kill session

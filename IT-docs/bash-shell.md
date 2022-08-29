@@ -238,6 +238,17 @@ comm -13 <(sort file1) <(sort file2)   #file1 比file2缺少的部分
 comm -12 <(sort file1) <(sort file2)   #file1 和file2共有的部分
 ```
 
+## **command**
+
+在系统中查找命令是否存在
+
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+|  -p  | 在标准PATH变量下找，保证在各发行版中通用 |
+|  -v  | 打印 `type' builtin |
+|  -V  | 打印 详细信息 |
+
+
 ## **crontab**
 
   计划任务
@@ -422,12 +433,14 @@ df -Th|grep /mnt
 
 ## **dmesg**
 
-     显示开机信息，kernel会将开机信息存储在ring buffer中。
-     若是开机时来不及查看信息，可利用dmesg来查看。开机信息亦保存在/var/log目录中，名称为dmesg的文件里。
+显示开机信息，kernel会将开机信息存储在ring buffer中。
+若是开机时来不及查看信息，可利用dmesg来查看。开机信息亦保存在/var/log目录中，名称为dmesg的文件里。
 
-     时间戳转时间：
+时间戳转时间：
 
-     date -d "1970-01-01 UTC `echo "$(date +%s)-$(cut -f 1 -d' ' /proc/uptime)+38592444.056245"|bc` seconds"
+```
+date -d "1970-01-01 UTC `echo "$(date +%s)-$(cut -f 1 -d' ' /proc/uptime)+38592444.056245"|bc` seconds"
+```
 
 ## **dstat**
 
@@ -469,6 +482,9 @@ Linux Only
 显示环境变量
 
 -u, --unset=NAME   删除变量
+
+## **exec**
+
 
 ## **expect**
 
