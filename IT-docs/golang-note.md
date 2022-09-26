@@ -178,7 +178,11 @@ export GOPROXY=https://goproxy.io
 * ^ 可用作单目运算符，表示取反，同C语言的：~
 * defer 推迟一句，进入defer栈
 
-_ 可用作点位符
+`_` 可用作点位符
+
+```
+var _ AuthHelper = (*MockAuthHelper)(nil)
+```
 
 
 chan的有buffer和无buffer的区别：写满后写入阻塞
@@ -188,6 +192,7 @@ chan的有buffer和无buffer的区别：写满后写入阻塞
 switch、select的case是不需要加break的
 
 类型转换： 基本型：`int32(varname)` 接口型：`varname.(*interface{})`
+注： `p, ok := interf.(*Type)`中，如果`interf==nil`，则 ok必为false
 
 ```
 var data []byte = []byte(str)
@@ -205,7 +210,15 @@ dump, _ := httputil.DumpRequest(req, true)
 fmt.Println(string(dump))
 ```
 
-itoa //在const 中模拟enum
+iota //在const 中模拟enum
+```
+const (
+  a type1 = 1 << iota
+  b
+  c
+  d
+)
+```
 
 类型使用：
 

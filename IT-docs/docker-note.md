@@ -69,9 +69,15 @@ docker-compose up -d
 ```
 
 
+一些运行实例
 ```
 docker run --rm -p5432:5432  --name postgres -e POSTGRES_PASSWORD=postgres postgres
+
+# Nginx 1.20.2
 docker run -v `pwd`:/usr/share/nginx/html:ro -p 8080:80 nginx
+docker run --name some-nginx -v /some/content:/usr/share/nginx/html:ro -d nginx
+docker run --name my-custom-nginx-container -v /host/path/nginx.conf:/etc/nginx/nginx.conf:ro -d nginx
+
 ```
 
 

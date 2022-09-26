@@ -60,6 +60,12 @@ SQL note
     ALTER TABLE <table-old> RENAME TO <table-new>;
 ```
 
+```sql
+ALTER SEQUENCE mapshop.devices_id_seq RESTART WITH 20;
+
+TRUNCATE xxx_seq RESTART identity;  -- truncating a table back to 1
+```
+
 # DISTINCT 去重
 ```sql
     SELECT DISTINCT <columns> FROM <table> [WHERE <condition>] [LIMIT <num>] [ORDER BY <column> [DESC|ASC]] [GROUP BY <column>]
@@ -101,6 +107,14 @@ WHERE name in (
 ); 
 ```
 
+```sql
+SELECT *
+FROM table
+WHERE batch in (......)
+ORDER BY id ASC
+LIMIT 20
+OFFSET 2000;
+```
 
 # 内连连表查询
 ```sql

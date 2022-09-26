@@ -4,9 +4,14 @@ Helm Charts Note
 
 
 ```
-# infra-helm/index.yaml
+# URL 下是需要一个 index.yaml 文件
 helm repo add infra-helm https://artifactory.deepmap.ai/artifactory/infra-helm
+
+helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
+
+helm pull <repo>/<chart> --version <version>
+helm pull bitnami/keycloak --version 7.0.1
 
 helm repo list
 

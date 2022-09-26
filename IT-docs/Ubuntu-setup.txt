@@ -168,6 +168,24 @@ sudo modprobe joydev
 sudo service bluetooth start
 sudo apt-get install blueman -y && blueman-manager
 
+# Fingerprint scanner
+sudo add-apt-repository ppa:fingerprint/fingerprint-gui
+sudo apt update
+sudo apt upgrade -y
+sudo apt-get install libbsapi policykit-1-fingerprint-gui fingerprint-gui
+
+# Virtual Display
+cd ~
+git clone https://github.com/dianariyanto/virtual-display-linux.git
+cd virtual-display-linux
+sudo chmod +x vdl-monitor
+# Change your own resolution setup vdl-monitor.conf.
+./vdl-monitor
+# For first running, you will prompt to reboot or relogin current session.
+cd ~/virtual-display-linux/
+./vdl-monitor
+
+
 # Terminator
 sudo apt install terminator
 
