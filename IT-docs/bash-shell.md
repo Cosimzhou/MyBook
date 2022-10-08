@@ -2341,41 +2341,42 @@ inode   套接字对应的inode
 | `$LC_PAPER` | 默认纸张尺寸大小 |
 | `$LC_IDENTIFICATION` | 对locale自身包含信息的概述 |
 | `$RANDOM`  | 随机数 |
-| `$LINENO`  |  刚执行的行号 |
+| `$LINENO`  | 刚执行的行号 |
 | `$NLSPATH` |  应用程序搜索消息目录的目录路径 |
-| `${n:def}` | n<10时，同$n |
-| `${var:-val}` | 未赋值时替换         ${var:=val}未赋值时赋值并替换 |
-| `${var:+val}` | 赋值时替换           ${var:?val}错误检查替换 |
+| `${n:def}` | n<1时，同$n |
+
+
+变量处理
+
+| 变量           | 含义          |
+| -------------- | ------------- |
+| `${var#*※}`    | 去掉var的第一个※左面的部分 |
+| `${var%%※*}`   | 去掉var的第一个※右面的部分 |
+| `${var##*※}`   | 去掉var的最后一个※左面的部分 |
+| `${var%※*}`    | 去掉var的最后一个※右面的部分 |
+| `${var:-val}`  | 当var未赋值时，用val的值替换var |
+| `${var:=val}`  | 当var未赋值时，用val的值赋值替换var |
+| `${var:+val}`  | 当var赋值时，用val的值替换var |
+| `${var:?val}`  | 当var错误时，用val的值替换var |
+| `${#var}`      | 获得var的长度 |
 | `${var:n}` | 从n起始的串 |
 | `${var:n:l}` | 从n起始，长度为l的串 |
 | `${var/pattern/replacement}` |  $var 中第一个pattern 模式替换为 replacement |
-| `${var//pattern/replacement}` |  $var 中所有 pattern 模式全部替换为 replacment |
+| `${var//pattern/replacement}` |  $var中所有 pattern 模式全部替换为 replacment |
 
 注：**抹除**以▢为分隔的字符串一个字符串，其可以为一个较长的子串，`*`代表被**抹除**的部分
-${var#*▢}    去掉最左面一个▢及其左面的部分      ${var##*▢}  去掉最右面一个▢及其左面的部分
+${var#*▢}    去掉最左面一个▢及其左面的部分      ${var##*▢} 去掉最右面一个▢及其左面的部分
 ${var%%▢*} 去掉最左面一个▢及其右面的部分      ${var%▢*}  去掉最右面一个▢及其右面的部分
 
 **记忆方法**：#(3) $(4) %(5)，去左面的部分用#，因为它在键盘上在$的左面，同样*也在▢的左面。而双左或双右只需一个，否则就要两个
 
-var='ahjfisifjssfa'
-
-${#var}      #获得var的长度
-
-${var#*※}  　#去掉var的第一个※左面的部分
-${var%%※*}　#去掉var的第一个※右面的部分
-${var##*※}   #去掉var的最后一个※左面的部分
-${var%※*}　 #去掉var的最后一个※右面的部分
-
-${var:-val}    #var未赋值时，用val的值替换var
-${var:=val}    #var未赋值时，用val的值赋值替换var
-${var:+val}    #var赋值时，用val的值替换var
-${var:?val}    #var错误时，用val的值替换var
-
 ${!i} 遍历i从 1…$#
 
-  i=`expr $i + 1`;
+
+变量数值计算
 
 ```
+  i=`expr $i + 1`;
   # let i+=1;
   # ((i++));
   # i=$[$i+1];
@@ -2388,9 +2389,12 @@ ${!i} 遍历i从 1…$#
 
 读取顺序：① /etc/profile、② ~/.bash_profile、③ ~/.bashrc、④ /etc/bashrc。
 
-| 环境变量不透出         | 环境变量透出      |      |
-| ---------------------- | ----------------- | ---- |
-| sh a.shbash a.sh./a.sh | . a.shsource a.sh |      |
+| 环境变量不透出  | 环境变量透出  |      |
+| --------------- | ------------- | ---- |
+| sh a.sh         | . a.sh        |      |
+| bash a.sh       | source a.sh   |      |
+| ./a.sh          |               |      |
+
 
 **#注意，这些变量不宜用于脚本中**
 

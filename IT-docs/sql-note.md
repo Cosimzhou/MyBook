@@ -158,6 +158,21 @@ On t1.device_id = t2.id
 WHERE t2.id = 3;
 ```
 
+# Trigger
+```sql
+CREATE OR REPLACE FUNCTION "update_timestamp"()
+RETURNS TRIGGER AS $$
+BEGIN
+  NEW.update_time = new();
+  RETURN NEW;
+END;
+$$ language 'plpgsql';
+
+CREATE TRIGGER "update_time" BEFORE UPDATE ON "users"
+FOR EACH ROW
+EXECUTE PROCEDURE "update_timestamp"();
+```
+
 # PostGres命令
 ```
 copy t_aa  from '/tmp/aa.csv' with delimiter ',';

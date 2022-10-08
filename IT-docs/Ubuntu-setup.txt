@@ -174,6 +174,13 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt-get install libbsapi policykit-1-fingerprint-gui fingerprint-gui
 
+sudo apt remove fprintd
+sudo add-apt-repository ppa:uunicorn/open-fprintd
+sudo apt-get update
+sudo apt install open-fprintd fprintd-clients python3-validity
+fprintd-enroll
+sudo pam-auth-update
+
 # Virtual Display
 cd ~
 git clone https://github.com/dianariyanto/virtual-display-linux.git
@@ -198,8 +205,10 @@ sudo apt install goldendict goldendict-wordnet
 
 # Flameshot
 sudo apt install flameshot
+# sudo ln -s /snap/bin/flameshot /usr/bin/flameshot
 # add shortcut in system configure-> keyboard ->shortcut
 # Name: Screen snap; Command: flameshot gui; Shortcut: Ctrl+Alt+A
+
 
 # xclip
 sudo apt install xclip
@@ -263,6 +272,23 @@ sudo apt-get autoremove && sudo apt-get clean && sudo apt-get install -f
 
 # Gtk Wave Cleaner
 sudo apt-get install gwc
+
+#######################################################
+#
+# Manipulate GUI in Shell
+#
+xlsclients
+xwininfo
+xwininfo -name xxxx -id 0xXXXX -all
+xprop
+xrandr -o right -s 1440x2560
+sudo apt install xdotool
+
+xwininfo -name 'dclock'
+xprop -id 0x7400005 -format _NET_WM_STATE 32a -set _NET_WM_STATE _NET_WM_STATE_ABOVE
+xprop -id 0x7400005 -format _MOTIF_WM_HINTS 32c -set _MOTIF_WM_HINTS 2
+xdotool windowmove --sync 0x7400005 1287 2465
+xdotool windowsize --sync 0x7400005 96 44
 
 #######################################################
 # Remote desktop

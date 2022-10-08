@@ -13,7 +13,7 @@ docker run -p 4000:80 <username>/<repository>:<tag name>
 ```
 
 docker exec -ti <container id> /bin/bash #进入已退出的docker
-docker ps -a #查看运行中的docker
+docker ps -a #查看运行中的docker, 类似 docker container ls
 docker stop <instance name>
 docker container stop <container id>
 docker commit <container id> <image name:user/image> #保存image
