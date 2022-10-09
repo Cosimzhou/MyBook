@@ -2348,21 +2348,30 @@ inode   套接字对应的inode
 
 变量处理
 
-| 变量           | 含义          |
-| -------------- | ------------- |
-| `${var#*※}`    | 去掉var的第一个※左面的部分 |
-| `${var%%※*}`   | 去掉var的第一个※右面的部分 |
-| `${var##*※}`   | 去掉var的最后一个※左面的部分 |
-| `${var%※*}`    | 去掉var的最后一个※右面的部分 |
-| `${var:-val}`  | 当var未赋值时，用val的值替换var |
-| `${var:=val}`  | 当var未赋值时，用val的值赋值替换var |
-| `${var:+val}`  | 当var赋值时，用val的值替换var |
-| `${var:?val}`  | 当var错误时，用val的值替换var |
-| `${#var}`      | 获得var的长度 |
-| `${var:n}` | 从n起始的串 |
-| `${var:n:l}` | 从n起始，长度为l的串 |
-| `${var/pattern/replacement}` |  $var 中第一个pattern 模式替换为 replacement |
-| `${var//pattern/replacement}` |  $var中所有 pattern 模式全部替换为 replacment |
+| 变量           | 含义          |   备注             |
+| -------------- | ------------- | ------------------ |
+| `${var:-val}`  | 当var未赋值时，用val的值替换var | |
+| `${var:=val}`  | 当var未赋值时，用val的值赋值替换var | |
+| `${var:+val}`  | 当var赋值时，用val的值替换var | |
+| `${var:?val}`  | 当var未赋值时，用val的值替换var并报错误 | |
+| `${#var}`      | 获得var的长度 | |
+| `${var:n}` | 从n起始的串 | |
+| `${var:n:l}` | 从n起始，长度为l的串 | |
+| `${var/pattern/replacement}` |  $var 中第一个pattern 模式替换为 replacement | |
+| `${var//pattern/replacement}` |  $var中所有 pattern 模式全部替换为 replacment | |
+| `${var#prefix}`    | 懒惰地去掉var的prefix前缀部分 | |
+| `${var##prefix}`   | 贪心地去掉var的prefix前缀部分 | |
+| `${var%suffix}`    | 懒惰地去掉var的suffix后缀部分 | |
+| `${var%%suffix}`   | 贪心地去掉var的suffix后缀部分 | |
+| `${var#*※}`    | 去掉var的第一个※左面的部分 | |
+| `${var%%※*}`   | 去掉var的第一个※右面的部分 | |
+| `${var##*※}`   | 去掉var的最后一个※左面的部分 | |
+| `${var%※*}`    | 去掉var的最后一个※右面的部分 | |
+| `${var^pattern}` | 将pattern匹配的部分首字母大写 | Bash Only |
+| `${var^^pattern}` | 将pattern匹配的部分全部字母大写 | Bash Only |
+| `${var,pattern}` | 将pattern匹配的部分首字母小写 | Bash Only |
+| `${var,,pattern}` | 将pattern匹配的部分全部字母小写 | Bash Only |
+| `${var@Q}` | 将var以单引号括起 | Bash Only |
 
 注：**抹除**以▢为分隔的字符串一个字符串，其可以为一个较长的子串，`*`代表被**抹除**的部分
 ${var#*▢}    去掉最左面一个▢及其左面的部分      ${var##*▢} 去掉最右面一个▢及其左面的部分
