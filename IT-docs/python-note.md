@@ -151,6 +151,10 @@ while not q.empty():
 python3 -m http.server
 python -m SimpleHTTPServer
 
+python -m pip --version
+python -m pip install xxxx # pip install xxxx
+
+
 
 # §系统操作
 shutil.copy(src, dest)

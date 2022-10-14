@@ -116,6 +116,11 @@ LIMIT 20
 OFFSET 2000;
 ```
 
+# Sequence
+```
+SELECT pg_catalog.setval('mapshop.calibrations_id_seq', 4, true);
+```
+
 # 内连连表查询
 ```sql
 SELECT COUNT(*)
@@ -160,17 +165,17 @@ WHERE t2.id = 3;
 
 # Trigger
 ```sql
-CREATE OR REPLACE FUNCTION "update_timestamp"()
+CREATE OR REPLACE FUNCTION update_timestamp()
 RETURNS TRIGGER AS $$
 BEGIN
-  NEW.update_time = new();
+  NEW.last_updated = now() at time zone 'UTC';
   RETURN NEW;
 END;
-$$ language 'plpgsql';
+$$ LANGUAGE plpgsql VOLATILE;
 
-CREATE TRIGGER "update_time" BEFORE UPDATE ON "users"
+CREATE TRIGGER update_time_trigger BEFORE UPDATE ON mapshop.devices
 FOR EACH ROW
-EXECUTE PROCEDURE "update_timestamp"();
+EXECUTE PROCEDURE update_timestamp();
 ```
 
 # PostGres命令

@@ -604,6 +604,9 @@ grep -rl sdmap . | xargs sed -i "s/sdmap/amap/g"
 
 # 查找指定目录下中有某字符串的文件
 grep -Irn "hello,world!" ./
+
+# 查找多行匹配
+grep -Pzo '(?s)COPY.*?\\\.' db-dump.sql
 ```
 
 ## **head**
