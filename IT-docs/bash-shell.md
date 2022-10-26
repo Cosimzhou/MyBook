@@ -105,6 +105,11 @@ date -d "2 months ago" '+%Y-%m'
 ls -d */
 ```
 
+## **help**
+  查看Linux内置命令的帮助，比如cd命令。
+
+  Bash Only
+
 ## **man**
 查看命令帮助，命令的词典，更复杂的还有info，但不常用。
 帮助
@@ -213,11 +218,11 @@ e.g. :
 
 ## **bg**
 
-将挂起的任务放到后台继续执行，又见**fg **
+将挂起的任务放到后台继续执行，又见 **fg**
 
 ## **chgrp**
 
-   更改文件用户组，eg：`chgrp root file `
+   更改文件用户组，eg：`chgrp root file`
 
 ## **chmod**
 
@@ -550,13 +555,17 @@ e.g:
 
      按行宽自动换行
 
-     -w    设置行宽
+| 变量           | 含义          |
+| -------------- | ------------- |
+|     -b   | 字节数 |
+|     -s   | 空白 |
+|     -w   | 设置行宽 |
 
 ## **getconf**
 
-   getconf LONG_BIT   # 是否为64位机器
+   `getconf LONG_BIT`   # 是否为64位机器
 
-   PAGESIZE # 页大小
+   `PAGESIZE` # 页大小
 
 ## **getopt**
 
@@ -828,7 +837,7 @@ kill 0 #杀死同所有进程，常用于脚本中
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-| -s | 建立软链 eg: ln -s 目标 链接符号 |
+| -s  | 建立软链 eg: ln -s 目标 链接符号 |
 |  -f | 更新符号对象 |
 |  -n | 不对符号目标进行解析追踪 |
 
@@ -908,6 +917,9 @@ sudo mount <host>:/opt/userfilebase /opt/userfilebase
 sudo mount //<host>/Share \
            -o iocharset=utf8,username=<user>,password=<passwd> \
            /mnt/crawlfilebase
+
+# 将/var/tmp绑定到/tmp
+mount -o rw,noexec,nosuid,nodev,bind /tmp /var/tmp
 ```
 
 
@@ -1006,9 +1018,9 @@ mkfifo pp; nc -4 -l $port <pp | tee $req_record_file | nc $srv_host $srv_port | 
 
 perf list 列出可分析的指标
 
-perf stat 列出执行程序的性能统计，perf stat ./program
+perf stat 列出执行程序的性能统计，`perf stat ./program`
 
-perf record 记录执行程序的性能统计，perf record ./program
+perf record 记录执行程序的性能统计，`perf record ./program`
 
 perf report 查看程序的性能统计
 
@@ -1141,11 +1153,11 @@ rsync -av src-dir/ dest-dir/   #拷贝src-dir文件夹下的内容
 
 新建一个会话窗口
 
--dmS <*session name>* 创建一个会话并指定名字
-
--list 列出所有会话
-
--r <*session name>* 重连会话
+| 选项 [options] | 含义          |
+| -------------- | ------------- |
+| -dmS <*session name>* | 创建一个会话并指定名字 |
+| -list  |列出所有会话 |
+| -r <*session name>*  |重连会话
 
 ## **sed**
 
@@ -2181,74 +2193,68 @@ sudo -u zhichaozhou DISPLAY=:0 \
 
 | 路径           | 含义          |
 | -------------- | ------------- |
-| /dev/null      | 空桶、黑洞 |
-| /dev/zero      | 零桶、生成零的白洞 |
-| /dev/random    | 源源不断的随机源、白噪洞 |
-| /etc/hosts     | |
-| /etc/fstab     | 磁盘文件表信息 |
-| /tmp           | 临时文件，重启后会清理或10天后清理|
-| /var/log/messages | 系统日志 |
-| /var/tmp       | 30天后清理的临时文件|
-| /var/log       | |
+| `/dev/null`      | 空桶、黑洞 |
+| `/dev/zero`      | 零桶、生成零的白洞 |
+| `/dev/random`    | 源源不断的随机源、白噪洞 |
+| `/etc/hosts`     | |
+| `/etc/fstab`     | 磁盘文件表信息 |
+| `/tmp`           | 临时文件，重启后会清理或10天后清理|
+| `/var/log/messages` | 系统日志 |
+| `/var/tmp`       | 30天后清理的临时文件|
+| `/var/log`       | |
 
 
 cgroups
 
 | 路径                                                         | 含义          |
 | ------------------------------------------------------------ | ------------- |
-| /sys/fs/cgroup/cpu/$group/cpu.cfs_period_us                  | cpu 时间 |
-| /sys/fs/cgroup/cpu/$group/cpu.cfs_quota_us                   | 使用限制， -1表示不限制 |
-| /sys/fs/cgroup/cpu/$group/cgroup.procs                       | 向其写0，加入当前进程；向其写PID，该PID的所有线程会立即加入此cgroup|
-| /sys/fs/cgroup/cpu/$group/tasks                              | 线程id( 一般而言，主线程的TID会与该进程的PID相同，子线程TID会大于PID)|
-| /sys/fs/cgroup/memory/$group/memory.limit_in_bytes           | 内存使用总数上限|
-| /sys/fs/cgroup/memory/$group/memory.oom_control              | 关闭oom，oom_kill_disable 1|
-| /sys/fs/cgroup/blkio/$group/blkio.throttle.read_bps_device   | 磁盘读速上限|
-| /sys/fs/cgroup/blkio/$group/blkio.throttle.write_bps_device  | 磁盘写速上限|
+| `/sys/fs/cgroup/cpu/$group/cpu.cfs_period_us`                  | cpu 时间 |
+| `/sys/fs/cgroup/cpu/$group/cpu.cfs_quota_us`                   | 使用限制， -1表示不限制 |
+| `/sys/fs/cgroup/cpu/$group/cgroup.procs`                       | 向其写0，加入当前进程；向其写PID，该PID的所有线程会立即加入此cgroup|
+| `/sys/fs/cgroup/cpu/$group/tasks`                              | 线程id( 一般而言，主线程的TID会与该进程的PID相同，子线程TID会大于PID)|
+| `/sys/fs/cgroup/memory/$group/memory.limit_in_bytes`           | 内存使用总数上限|
+| `/sys/fs/cgroup/memory/$group/memory.oom_control`              | 关闭oom，`oom_kill_disable 1`|
+| `/sys/fs/cgroup/blkio/$group/blkio.throttle.read_bps_device`   | 磁盘读速上限|
+| `/sys/fs/cgroup/blkio/$group/blkio.throttle.write_bps_device`  | 磁盘写速上限|
 
 /proc
 
-| 路径                          | 含义          |
-| ----------------------------- | ------------- |
-| /proc/sys/kernel/core_pattern | 系统core dump文件的名称格式  |
-| /proc/sys/kernel/latencytop   | 打开latency性能统计  |
-| /proc/cpuinfo                 | 记录CPU信息  |
-| /proc/meminfo                 | 记录内存信息  |
-| /proc/swaps                   | 记录交换区信息  |
-| /proc/net/tcp                 | 当前的tcp连接信息  |
-| /proc/net/protocols           | 支持的网络协议  |
-| /proc/${pid}/                 |  |
-| /proc/${pid}/auxv             | 传递给进程的ELF解释器信息  |
-| /proc/${pid}/cwd              | 进程的当前路径  |
-| /proc/${pid}/cmdline          | 启动命令行  |
-| /proc/${pid}/comm             | 进程名  |
-| /proc/${pid}/environ          | 启动环境变量  |
-| /proc/${pid}/limits           | 进程的ulimit限制  |
-| /proc/${pid}/latency          | 显示哪些代码造成的延时比较大，依赖/proc/sys/kernel/latencytop 为1  |
-| /proc/${pid}/maps             | 进程的内存区域映射信息，字段含义：address，perms，offset，dev，inode，pathname  |
-| /proc/${pid}/cgroup           |  |
-| /proc/${pid}/exe              | binary 的符号连接  |
-| /proc/${pid}/io               | 读写字节统计  |
-| /proc/${pid}/syscall          | 在用的系统调用  |
-| /proc/${pid}/stack            | 内核调用栈  |
-| /proc/${pid}/loginuid         | 启动用户的登录id  |
-| /proc/${pid}/task/            | 进程下的线程id  |
-| /proc/${pid}/wchan            |wait时的内核态函数内容，可以用于反调试  |
-| /proc/${pid}/net/tcp          | 当前的tcp连接信息  |
-| /proc/${pid}/statm            | 进程所占用内存大小的统计信息，字段信息如下  |
+| 路径                            | 含义          |
+| ------------------------------- | ------------- |
+| `/proc/sys/kernel/core_pattern` | 系统core dump文件的名称格式  |
+| `/proc/sys/kernel/latencytop`   | 打开latency性能统计  |
+| `/proc/cpuinfo`                 | 记录CPU信息  |
+| `/proc/meminfo`                 | 记录内存信息  |
+| `/proc/swaps`                   | 记录交换区信息  |
+| `/proc/net/tcp`                 | 当前的tcp连接信息  |
+| `/proc/net/protocols`           | 支持的网络协议  |
+| `/proc/${pid}/`                 |  |
+| `/proc/${pid}/auxv`             | 传递给进程的ELF解释器信息  |
+| `/proc/${pid}/cwd`              | 进程的当前路径  |
+| `/proc/${pid}/cmdline`          | 启动命令行  |
+| `/proc/${pid}/comm`             | 进程名  |
+| `/proc/${pid}/environ`          | 启动环境变量  |
+| `/proc/${pid}/limits`           | 进程的ulimit限制  |
+| `/proc/${pid}/latency`          | 显示哪些代码造成的延时比较大，依赖`/proc/sys/kernel/latencytop` 为1  |
+| `/proc/${pid}/maps`             | 进程的内存区域映射信息，字段含义：address，perms，offset，dev，inode，pathname  |
+| `/proc/${pid}/cgroup`           |  |
+| `/proc/${pid}/exe`              | binary 的符号连接  |
+| `/proc/${pid}/io`               | 读写字节统计  |
+| `/proc/${pid}/syscall`          | 在用的系统调用  |
+| `/proc/${pid}/stack`            | 内核调用栈  |
+| `/proc/${pid}/loginuid`         | 启动用户的登录id  |
+| `/proc/${pid}/task/`            | 进程下的线程id  |
+| `/proc/${pid}/wchan`            |wait时的内核态函数内容，可以用于反调试  |
+| `/proc/${pid}/net/tcp`          | 当前的tcp连接信息  |
+| `/proc/${pid}/statm`            | 进程所占用内存大小的统计信息，字段信息如下  |
 
-a）进程占用的总的内存；
-
-b）进程当前时刻占用的物理内存；
-
-c）同其它进程共享的内存；
-
-d）进程的代码段；
-
-e）共享库（从2.6版本起，这个值为0）；
-
-f）进程的堆栈；
-
-g）dirty pages（从2.6版本起，这个值为0）
+1. 进程占用的总的内存；
+2. 进程当前时刻占用的物理内存；
+3. 同其它进程共享的内存；
+4. 进程的代码段；
+5. 共享库（从2.6版本起，这个值为0）；
+6. 进程的堆栈；
+7. dirty pages（从2.6版本起，这个值为0）
 
 
 **文件解读**
@@ -2263,14 +2269,14 @@ rem_address   远端IP地址(网络序)，端口号(本地主机序)的十六进
 
 st   套接字状态，不同状态的数值表示如下：
 
-| 数值 | 字值 | 状态            | 数值 | 字值 | 状态           |
-| ---- | ---- | --------------- | ---- | ---- | -------------- |
-| 1    | 01   | TCP_ESTABLISHED | 7    | 07   | TCP_CLOSE      |
-| 2    | 02   | TCP_SYN_SENT    | 8    | 08   | TCP_CLOSE_WAIT |
-| 3    | 03   | TCP_SYN_RECV    | 9    | 09   | TCP_LAST_ACK   |
-| 4    | 04   | TCP_FIN_WAIT1   | 10   | 0A   | TCP_LISTEN     |
-| 5    | 05   | TCP_FIN_WAIT2   | 11   | 0B   | TCP_CLOSING    |
-| 6    | 06   | TCP_TIME_WAIT   |      |      |                |
+| 数值 | 字值 | 状态              | 数值 | 字值 | 状态             |
+| ---- | ---- | ----------------- | ---- | ---- | ---------------- |
+| 1    | 01   | `TCP_ESTABLISHED` | 7    | 07   | `TCP_CLOSE`      |
+| 2    | 02   | `TCP_SYN_SENT`    | 8    | 08   | `TCP_CLOSE_WAIT` |
+| 3    | 03   | `TCP_SYN_RECV`    | 9    | 09   | `TCP_LAST_ACK`   |
+| 4    | 04   | `TCP_FIN_WAIT1`   | 10   | 0A   | `TCP_LISTEN`     |
+| 5    | 05   | `TCP_FIN_WAIT2`   | 11   | 0B   | `TCP_CLOSING`    |
+| 6    | 06   | `TCP_TIME_WAIT`   |      |      |                  |
 
 Tx_queue 发送队列数据长度，
 
@@ -2358,8 +2364,8 @@ inode   套接字对应的inode
 | `${var:+val}`  | 当var赋值时，用val的值替换var | |
 | `${var:?val}`  | 当var未赋值时，用val的值替换var并报错误 | |
 | `${#var}`      | 获得var的长度 | |
-| `${var:n}` | 从n起始的串 | |
-| `${var:n:l}` | 从n起始，长度为l的串 | |
+| `${var:n}`     | 从n起始的串 | |
+| `${var:n:l}`    | 从n起始，长度为l的串 | |
 | `${var/pattern/replacement}` |  $var 中第一个pattern 模式替换为 replacement | |
 | `${var//pattern/replacement}` |  $var中所有 pattern 模式全部替换为 replacment | |
 | `${var#prefix}`    | 懒惰地去掉var的prefix前缀部分 | |
@@ -2377,10 +2383,10 @@ inode   套接字对应的inode
 | `${var@Q}` | 将var以单引号括起 | Bash Only |
 
 注：**抹除**以▢为分隔的字符串一个字符串，其可以为一个较长的子串，`*`代表被**抹除**的部分
-${var#*▢}    去掉最左面一个▢及其左面的部分      ${var##*▢} 去掉最右面一个▢及其左面的部分
-${var%%▢*} 去掉最左面一个▢及其右面的部分      ${var%▢*}  去掉最右面一个▢及其右面的部分
+`${var#*▢}`    去掉最左面一个▢及其左面的部分      `${var##*▢}` 去掉最右面一个▢及其左面的部分
+`${var%%▢*}` 去掉最左面一个▢及其右面的部分      `${var%▢*}`  去掉最右面一个▢及其右面的部分
 
-**记忆方法**：#(3) $(4) %(5)，去左面的部分用#，因为它在键盘上在$的左面，同样*也在▢的左面。而双左或双右只需一个，否则就要两个
+**记忆方法**：`#(3) $(4) %(5)`，去左面的部分用#，因为它在键盘上在`$`的左面，同样`*`也在▢的左面。而双左或双右只需一个，否则就要两个
 
 ${!i} 遍历i从 1…$#
 
@@ -2395,17 +2401,17 @@ ${!i} 遍历i从 1…$#
   # i=$(( $i + 1 ))
 ```
 
-全局环境变量设置文件：/etc/profile、/etc/bashrc。
+全局环境变量设置文件：`/etc/profile`、`/etc/bashrc`。
 
-用户环境变量设置文件：~/.bash_profile、~/.bashrc。
+用户环境变量设置文件：`~/.bash_profile`、`~/.bashrc`。
 
-读取顺序：① /etc/profile、② ~/.bash_profile、③ ~/.bashrc、④ /etc/bashrc。
+读取顺序：① `/etc/profile`、② `~/.bash_profile`、③ `~/.bashrc`、④ `/etc/bashrc`。
 
 | 环境变量不透出  | 环境变量透出  |      |
 | --------------- | ------------- | ---- |
-| sh a.sh         | . a.sh        |      |
-| bash a.sh       | source a.sh   |      |
-| ./a.sh          |               |      |
+| `sh a.sh`       | `. a.sh`      |      |
+| `bash a.sh`     | `source a.sh` |      |
+| `./a.sh`        |               |      |
 
 
 **#注意，这些变量不宜用于脚本中**
@@ -2454,22 +2460,22 @@ ${!i} 遍历i从 1…$#
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-| <              | 输入          |
-| <(xx)          | 执行xx后的结果作为输入 |
-|  >             | 输出          |
-| <>             | 中转对换，前后均接流、文件，e.g: `sed s/del/les/g file 1<>file #在文件中把del替换成les` |
-|  >>            | 追加          |
-|  >│            | 强制覆盖      |
-| │              | 连接          |
-| <<             | 标志标准输入的结束符，可以用于交互式命令的脚本编写 |
-| -<<            | 同<<，但开关的tab会被去除 |
-| >&-            | 表示将标准输出关闭 |
-| n>&-           | 表示将n号输出关闭 |
-| n>&m           | 表示将n号输出复制到m号 |
-| &>file         | 标准输出、错误定向到文件 |
-| <&-            | 表示关闭标准输入（键盘） |
-| n<&-           | 表示将n号输入关闭 |
-| n<&m           | 表示将m号输入复制到n号 |
+| `<`              | 输入          |
+| `<(xx)`          | 执行xx后的结果作为输入 |
+| `>`             | 输出          |
+| `<>`             | 中转对换，前后均接流、文件，e.g: `sed s/del/les/g file 1<>file #在文件中把del替换成les` |
+| `>>`            | 追加          |
+| `>│`            | 强制覆盖      |
+| `│`              | 连接          |
+| `<<`             | 标志标准输入的结束符，可以用于交互式命令的脚本编写 |
+| `-<<`            | 同`<<`，但开头的tab会被去除 |
+| `>&-`            | 表示将标准输出关闭 |
+| `n>&-`           | 表示将n号输出关闭 |
+| `n>&m`           | 表示将n号输出复制到m号 |
+| `&>file`         | 标准输出、错误定向到文件 |
+| `<&-`            | 表示关闭标准输入（键盘） |
+| `n<&-`           | 表示将n号输入关闭 |
+| `n<&m`           | 表示将m号输入复制到n号 |
 
 ```
 sftp <user>@<host> << EOF
@@ -2538,57 +2544,57 @@ newarr=(${a[@]} ${b[@]})
 
 | 表达式         | 含义          |
 | -------------- | ------------- |
-| if test (表达式为真) | |
-| if test !表达式为假 | |
-| test 表达式1 -a 表达式2  | 两个表达式都为真 |
-| test 表达式1 -o 表达式2  | 两个表达式有一个为真 |
+| `if test (表达式为真)` | |
+| `if test !表达式为假` | |
+| `test 表达式1 -a 表达式2`  | 两个表达式都为真 |
+| `test 表达式1 -o 表达式2`  | 两个表达式有一个为真 |
 
 2）判断字符串
 
 | 表达式         | 含义          |
 | -------------- | ------------- |
-| test -n 字符串 | 字符串的长度非零 |
-| test -z 字符串 | 字符串的长度为零 |
-| test 字符串1=字符串2 | 字符串相等 |
-| test 字符串1!=字符串2 |  字符串不等 |
+| `test -n 字符串` | 字符串的长度非零 |
+| `test -z 字符串` | 字符串的长度为零 |
+| `test 字符串1=字符串2` | 字符串相等 |
+| `test 字符串1!=字符串2` |  字符串不等 |
 
 3）判断整数
 
 | 表达式         | 含义          |
 | -------------- | ------------- |
-| test 整数1 -eq 整数2 | 整数相等 |
-| test 整数1 -ge 整数2 | 整数1大于等于整数2 |
-| test 整数1 -gt 整数2 | 整数1大于整数2 |
-| test 整数1 -le 整数2 | 整数1小于等于整数2 |
-| test 整数1 -lt 整数2 | 整数1小于整数2 |
-| test 整数1 -ne 整数2 | 整数1不等于整数2 |
+| `test 整数1 -eq 整数2` | 整数相等 |
+| `test 整数1 -ge 整数2` | 整数1大于等于整数2 |
+| `test 整数1 -gt 整数2` | 整数1大于整数2 |
+| `test 整数1 -le 整数2` | 整数1小于等于整数2 |
+| `test 整数1 -lt 整数2` | 整数1小于整数2 |
+| `test 整数1 -ne 整数2` | 整数1不等于整数2 |
 
 4）判断文件
 
 | 表达式         | 含义          |
 | -------------- | ------------- |
-| test File1 -ef File2 | 两个文件具有同样的设备号和i结点号 |
-| test File1 -nt File2  |文件1比文件2 新 |
-| test File1 -ot File2 | 文件1比文件2 旧 |
-| test -b File | 文件存在并且是块设备文件 |
-| test -c File | 文件存在并且是字符设备文件 |
-| test -d File | 文件存在并且是目录 |
-| test -e File | 文件存在 |
-| test -f File | 文件存在并且是正规文件 |
-| test -g File | 文件存在并且是设置了组ID |
-| test -G File | 文件存在并且属于有效组ID |
-| test -h File | 文件存在并且是一个符号链接（同-L） |
-| test -k File | 文件存在并且设置了sticky位 |
-| test -b File | 文件存在并且是块设备文件 |
-| test -L File | 文件存在并且是一个符号链接（同-h） |
-| test -o File | 文件存在并且属于有效用户ID |
-| test -p File | 文件存在并且是一个命名管道 |
-| test -r File | 文件存在并且可读 |
-| test -S File | 文件存在并且是一个套接字 |
-| test -t FD   | 文件描述符是在一个终端打开的 |
-| test -u File | 文件存在并且设置了它的set-user-id位 |
-| test -w File | 文件存在并且可写 |
-| test -x File | 文件存在并且可执行 |
+| `test File1 -ef File2` | 两个文件具有同样的设备号和i结点号 |
+| `test File1 -nt File2` | 文件1比文件2 新 |
+| `test File1 -ot File2` | 文件1比文件2 旧 |
+| `test -b File` | 文件存在并且是块设备文件 |
+| `test -c File` | 文件存在并且是字符设备文件 |
+| `test -d File` | 文件存在并且是目录 |
+| `test -e File` | 文件存在 |
+| `test -f File` | 文件存在并且是正规文件 |
+| `test -g File` | 文件存在并且是设置了组ID |
+| `test -G File` | 文件存在并且属于有效组ID |
+| `test -h File` | 文件存在并且是一个符号链接（同-L） |
+| `test -k File` | 文件存在并且设置了sticky位 |
+| `test -b File` | 文件存在并且是块设备文件 |
+| `test -L File` | 文件存在并且是一个符号链接（同-h） |
+| `test -o File` | 文件存在并且属于有效用户ID |
+| `test -p File` | 文件存在并且是一个命名管道 |
+| `test -r File` | 文件存在并且可读 |
+| `test -S File` | 文件存在并且是一个套接字 |
+| `test -t FD`   | 文件描述符是在一个终端打开的 |
+| `test -u File` | 文件存在并且设置了它的set-user-id位 |
+| `test -w File` | 文件存在并且可写 |
+| `test -x File` | 文件存在并且可执行 |
 
 ---------
 

@@ -16,6 +16,7 @@ kubectl $NAMESPACE get pods
 kubectl $NAMESPACE get configmaps
 kubectl $NAMESPACE get deploy <service> -o yaml
 kubectl $NAMESPACE get service <service>
+kubectl $NAMESPACE get secret <secret>
 kubectl $NAMESPACE describe pods/<pod>
 kubectl $NAMESPACE edit configmaps/<config>
 kubectl $NAMESPACE port-forward svc/<service> 8080:8080
@@ -58,6 +59,12 @@ kubectl top node <NODE_NAME> # Show metrics for a given node
 
 
 kubectl get pods -o jsonpath='{range .items[*]}{@.metadata.name}{" "}{@.spec.containers[*].image}{"\n"}{end}'| column -t
+
+
+kubect l getsecret <secret-name> -o jsonpath='{.data}'
+
+
+kubectl get deployments,statefulsets,daemonsets,cronjobs,jobs,pods -n namespace-name -o yaml
 ```
 
 
@@ -81,7 +88,6 @@ kubectl get -f pod.yaml -o json # List a pod identified by type and name specifi
 kubectl get -k dir/ # List resources from a directory with kustomization.yaml - e.g. dir/kustomization.yaml
 
 kubectl get -o template pod/web-pod-13je7 --template={{.status.phase}} # Return only the phase value of the specified pod
-
 
 kubectl get rc,services # List all replication controllers and services together in ps output format
 

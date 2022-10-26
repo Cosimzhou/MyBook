@@ -10,6 +10,12 @@ docker run <image> /bin/bash -c <command>
 #docker run -it microsoft/dotnet:latest /bin/bash
 docker run -it -v <local path>:/<docker path> <image>:<version> /bin/bash #与docker共享文件
 docker run -p 4000:80 <username>/<repository>:<tag name>
+docker run --rm --network=host \
+			 -w /go/src/codereview.deepmap.ai/deepmap-go/api \  #设置工作路径
+			 -v `pwd -P`:/go/src/codereview.deepmap.ai/deepmap-go \
+			 -v /var/run/docker.sock:/var/run/docker.sock \
+			 deepmap-go-dev:latest \
+			 make ${@#api/}
 ```
 
 docker exec -ti <container id> /bin/bash #进入已退出的docker

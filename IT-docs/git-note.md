@@ -462,3 +462,22 @@ git hash-object --stdin
 
 # 清理空格（及注释）
 git stripspace --strip-comments
+
+
+------------
+# 类似的工具
+
+SVN
+
+略
+
+skaffold
+
+Skaffold handles the workflow for building, pushing and deploying your application, allowing you to focus on what matters most: writing code.
+
+```
+skaffold init
+skaffold run
+skaffold dev
+```
+

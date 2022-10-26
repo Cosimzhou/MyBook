@@ -309,6 +309,19 @@ append(slice, slice...)// ...表示解为分立的单个参数的调用
 
 
 
+# template
+```
+webPageTemplate := `xxx {{.Name}} bbb`
+pageTemplate, _ := template.New("name").Parse(webPageTemplate)
+
+pageTemplate.Execute(writer, &struct{
+	Name string
+}{
+	Name: "xxx"
+})
+```
+
+
 // 泛型
 func Contains[T comparable](s []T, e T) bool {
     for _, v := range s {

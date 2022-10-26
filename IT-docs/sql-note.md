@@ -163,6 +163,33 @@ On t1.device_id = t2.id
 WHERE t2.id = 3;
 ```
 
+```
+SELECT t1.name, t2.image_id, t3.path
+FROM table1 t1
+INNER JOIN table2 t2 ON t1.person_id = t2.person_id
+INNER JOIN table3 t3 ON t2.image_id=t3.image_id
+```
+
+
+```
+WITH pipeline_tasks AS (
+  SELECT t1.job_id, CONCAT(t1.dag_id,'.',t1.task_id),
+    t1.task_status, t1.create_time, alignment_id,
+    ROW_NUMBER() OVER (
+      PARTITION BY (t1.job_id,
+        t1.dag_id,
+        t1.task_id)
+      ORDER BY t1.create_time DESC
+    ) AS rank
+  FROM pipeline.pipeline_job_logs AS t1
+  JOIN pipeline.pipeline_jobs AS t2
+  ON t1.job_id = t2.job_id
+  WHERE CONCAT(t1.dag_id,'.',t1.task_id) IN ('%s')
+    AND t2.alignment_id IN (%s)
+    AND t1.task_status IN ('%s')
+) SELECT * FROM pipeline_tasks WHERE rank = 1;
+```
+
 # Trigger
 ```sql
 CREATE OR REPLACE FUNCTION update_timestamp()
