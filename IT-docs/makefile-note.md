@@ -66,6 +66,7 @@ touch print.o
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
 |  if            | `$(if <condition>, <then>, <else>)` |
+|  foreach       | `$(foreach <iter>, <list split by space>, <command>)` |
 |  filter        | `$(filter <pattern1, 2, 3...>, <text>)` |
 |  filter-out    | `$(filter-out <pattern1, 2, 3...>, <text>)` |
 |  addprefix     | `$(addprefix <prefix>, <name1, 2, 3...>)` |
@@ -74,6 +75,7 @@ touch print.o
 |  call          | `$(call <expression>, <param1>, <param2>, ...)` |
 |  patsubst      | `$(patsubst <pattern_from>, <pattern_to>, <text>)` |
 |  subst         | `$(subst <pattern_from>, <pattern_to>, <text>)` |
+|  shell         | `$(shell <command_and_arguments>)` |
 
 ```makefile
 listfile = $(filter $(if $(2), $(addprefix %.,$(2)),%), $(wildcard $(addsuffix $(SLASH)*, $(1))))

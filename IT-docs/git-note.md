@@ -111,6 +111,7 @@ git symbolic-ref --short -q HEAD                 # master
 git describe                                     # <tag>-<commit count>-g<commit id>
 git describe --match "v[0-9]*" --abbrev=4 HEAD
 git describe --dirty --match "software-v[0-9]*"
+git describe --first-parent --abbrev=10 --long --match='v*' --dirty
 ```
 
 

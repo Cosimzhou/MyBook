@@ -23,6 +23,27 @@ SQL note
     UPDATE  <table> SET <column>=<value>[,<column>=<value>...] WHERE <condition>
 ```
 
+# Insert or Update
+```
+INSERT INTO customers (name, email)
+VALUES('field1_value','field2_value')
+ON CONFLICT (unique_field)
+DO
+  UPDATE SET field2 = "new_field_value";
+```
+
+# Select into
+```
+INSERT INTO table2 (column1, column2, column3, ...)
+SELECT column1, column2, column3, ...
+FROM table1
+WHERE condition;
+
+-- all column
+INSERT INTO table2
+SELECT * FROM table1
+WHERE condition;
+```
 
 # ALTER语句格式
 
@@ -163,11 +184,12 @@ On t1.device_id = t2.id
 WHERE t2.id = 3;
 ```
 
+Multi-Join Query
 ```
 SELECT t1.name, t2.image_id, t3.path
-FROM table1 t1
+FROM table1 AS t1
 INNER JOIN table2 t2 ON t1.person_id = t2.person_id
-INNER JOIN table3 t3 ON t2.image_id=t3.image_id
+INNER JOIN table3 t3 ON t2.image_id = t3.image_id
 ```
 
 
@@ -187,6 +209,31 @@ WITH pipeline_tasks AS (
   WHERE CONCAT(t1.dag_id,'.',t1.task_id) IN ('%s')
     AND t2.alignment_id IN (%s)
     AND t1.task_status IN ('%s')
+) SELECT * FROM pipeline_tasks WHERE rank = 1;
+```
+
+```
+WITH pipeline_tasks AS (
+    SELECT t1.job_id, CONCAT(t1.dag_id, '.', t1.task_id),
+           t1.task_status, t1.create_time, t2.alignment_id,
+					 t2.region_id, t2.track_id,
+          ROW_NUMBER() OVER (
+            PARTITION BY (t1.job_id, t1.dag_id, t1.task_id)
+            ORDER BY t1.create_time DESC
+          ) AS rank
+    FROM pipeline.pipeline_job_logs AS t1
+    JOIN pipeline.pipeline_jobs AS t2
+    ON t1.job_id = t2.job_id
+		WHERE t1.dag_id IN (
+'track_generation_full_workflow',
+'recording_session_alignment',
+'omap_patch_workflow',
+'commit_alignment',
+'lmap_patch_workflow',
+'commit_alignment',
+'lane_el_creation_and_review_iterative_workflow',
+'map_release_full_workflow',
+'map_delivery_workflow')
 ) SELECT * FROM pipeline_tasks WHERE rank = 1;
 ```
 

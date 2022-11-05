@@ -321,6 +321,13 @@ pageTemplate.Execute(writer, &struct{
 })
 ```
 
+```
+Len()int
+Less(i,j int) bool
+Swap(i,j int)
+
+sort.Sort(data)
+```
 
 // 泛型
 func Contains[T comparable](s []T, e T) bool {

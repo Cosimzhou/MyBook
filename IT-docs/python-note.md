@@ -371,6 +371,8 @@ mutex=threading.Lock()
 mutex.acquire([blocking])    #里面可以加blocking(等待的时间)或者不加，不加就会一直等待（堵塞）
 mutex.release()
 
+threading.RLock() #可重入锁
+
 
 # §读写二进制
 ```
