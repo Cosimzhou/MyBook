@@ -40,6 +40,7 @@ hypothesis ~ assumption
 imitate  模仿
 incendiary
 insomnia
+inflation ~ deflation
 
 
 legitimate

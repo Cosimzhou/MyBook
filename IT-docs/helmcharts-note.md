@@ -15,6 +15,8 @@ helm pull bitnami/keycloak --version 7.0.1
 
 helm repo list
 
+helm repo update
+
 helm search repo infra-helm --devel
 
 
@@ -44,4 +46,9 @@ helmfile --namespace anga \
          --environment staging \
          -f helmfile_cradle/mapshop/helmfile.yaml \
          sync
+
+
+
+
+MAPSHOP_VERSION=v1.1-1386-g5d88cb5ab4 NAMESPACE=project-mapshop DATA_NAMESPACE=project_mapshop MAPSHOP_CHART_CHART_VERSION=1.1.1398-g442f33f464 MAPSHOP_CHART_VERSION=1.1.1398-g442f33f464 helmfile --namespace project-mapshop --kube-context default-context --environment individual-dev -f deepmap-deploy/helmfile_cradle/mapshop/helmfile.yaml template
 ```

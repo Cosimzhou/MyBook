@@ -321,6 +321,15 @@ int stoi(string, *idx)
 printf("%.*g", 15, 8.15);
 ```
 
+# va_list
+```
+typedef char *va_list;
+#define va_start(list,param) (list=(va_list)&param+sizeof(param))
+#define va_arg(list,type)    ((type*)(list+=sizeof(type)))[-1]
+#define va_end(list)         (list=(va_list)0)
+#define va_copy(list1,list2) (list1=list2)
+```
+
 # GCC __builtin_
 `__builtin_ffs(x)` 返回x中最后一个为1的位是从后向前的第几位，奇数返回1。
 `__builtin_popcount(x)` x中1的个数。

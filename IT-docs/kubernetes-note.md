@@ -25,6 +25,7 @@ kubectl $NAMESPACE get replicaset
 kubectl $NAMESPACE describe replicaset <relicaset_name>
 
 kubectl --context dev.deepmap.ai -n project-mapshop delete deploy mapshop
+kubectl delete cronjob mapshop-job
 
 kubectl cp <pod>:root/path/file /local/path/file
 
@@ -60,8 +61,9 @@ kubectl top node <NODE_NAME> # Show metrics for a given node
 
 kubectl get pods -o jsonpath='{range .items[*]}{@.metadata.name}{" "}{@.spec.containers[*].image}{"\n"}{end}'| column -t
 
+kubectl get <pod_name> -o yaml
 
-kubect l getsecret <secret-name> -o jsonpath='{.data}'
+kubectl getsecret <secret-name> -o jsonpath='{.data}'
 
 
 kubectl get deployments,statefulsets,daemonsets,cronjobs,jobs,pods -n namespace-name -o yaml

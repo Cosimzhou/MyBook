@@ -63,12 +63,18 @@ ffmpeg -i input.mp4 -ss 0 -t 3 -filter_complex \
       output.gif
 ```
 
+ffmpeg -i input.mp4 -filter_complex \
+      [0:v]fps=15,scale=-1:256,split[a][b];[a]palettegen[p];[b][p]paletteuse \
+      output.gif
+
 
 ```bash
 
 ffmpeg -framerate 10 -i picture-%03d.jpg output.mp4
 
 ffmpeg -i input.mp4 picture-%03d.jpg
+
+ffmpeg -i RPReplay.MP4 -vf "crop=885:1165:0:280" imgs/picture-%04d.png
 ```
 
 

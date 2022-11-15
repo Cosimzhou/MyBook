@@ -141,8 +141,13 @@ OFFSET 2000;
 ```
 SELECT pg_catalog.setval('mapshop.calibrations_id_seq', 4, true);
 ```
+# Join
+* INNER JOIN 两表皆存才输出
+* LEFT JOIN 前表存在就输出
+* RIGHT JOIN 后表存在就输出
+* FULL JOIN 任何表有都会输出
 
-# 内连连表查询
+## 内连连表查询
 ```sql
 SELECT COUNT(*)
 FROM (
