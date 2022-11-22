@@ -73,18 +73,18 @@ else:
 # §利用property制作对象的属性
 ```
 class C:
-　def __init__(self):
-　　self.__x=None
-　@property
-　def x(self):
-　　return self.__x
-　@x.setter
-　def x(self,value):
-　　self.__x=value
-　@x.deleter
-　def x(self):
-　　del self.__x
-　#同一属性的三个函数名要相同哦。。
+  def __init__(self):
+    self.__x=None
+  @property
+  def x(self):
+    return self.__x
+  @x.setter
+  def x(self,value):
+    self.__x=value
+  @x.deleter
+  def x(self):
+    del self.__x
+  #同一属性的三个函数名要相同
 ```
 
 # §装饰器
@@ -166,7 +166,7 @@ os.getcwd()     #得到当前工作目录，即当前Python脚本工作的目录
 os.system(cmd)    #运行系统命令
 os.popen(cmd)    #运行系统命令并将标准输出的结果返回
 os.startfile(file)    #用系统方式打开文件(WIN)
-subprocess.call(["open", "/Users/cosim/tmp/service.png"]) #用系统方式打开文件(POSIX)
+subprocess.call(["open", "./xxx.png"]) #用系统方式打开文件(POSIX)
 os.listdir(dir)        #返回指定目录下的所有文件和目录名
 os.rename(old, new)    #重命名
 os.remove(file)      #函数用来删除一个文件
@@ -333,10 +333,10 @@ datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 # §正则表达
 ```
-ptn = re.compile('/@([a-z]+)@')
-m = ptn.match(word) #从开头匹配
+p = re.compile('/@([a-z]+)@')
+m = p.match(word) #从开头匹配
 print m.groups()[0]
-m = ptn.search(sentence) #全句匹配
+m = p.search(sentence) #全句匹配
 print m.groups()[0]
 ```
 

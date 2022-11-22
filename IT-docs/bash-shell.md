@@ -1214,6 +1214,15 @@ sed 's/\(..\)/\\\x\1/g'
 
 e.g: sed -e '1,/^exit$/d' file #删除从1到exit的内容
 
+## **service**
+
+启动、停止、重新启动和关闭系统服务，还可以显示所有系统服务的当前状态。
+
+```
+service --status-all
+service mysql status
+```
+
 ## **seq**
 
 生成数字序列
@@ -1419,14 +1428,22 @@ cat id_rsa.pub >> ~/.ssh/authenized_keys
 |  -echo         | 不显示键入内容 |
 |  -ctlecho      | 将控制字符输出成'^X'形式 |
 
+## **sysctl**
+
+ 对系统参数进行读写的工具
+
+```
+sysctl -w net.ipv4.ip_forward=1
+sysctl kern.maxfiles=5000
+```
+
 ## **systemctl**
 
-   在`/etc/init.d/`或`/etc/*.service`文件启动服务
+   在`/etc/init.d/`或`/etc/systemd/system/*.service`文件启动服务
 
 /etc/rc.local
 
 service ini文件：
-
 ```
 [Unit]
 Description=
@@ -1444,6 +1461,7 @@ Environment="LD_LIBRARY_PATH=..."
 [Install]
 WantedBy=multi-user.target
 ```
+
 
 ## **systemd**
 
