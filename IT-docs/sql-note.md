@@ -28,8 +28,8 @@ SQL note
 INSERT INTO customers (name, email)
 VALUES('field1_value','field2_value')
 ON CONFLICT (unique_field)
-DO
-  UPDATE SET field2 = "new_field_value";
+DO UPDATE SET field2 = "new_field_value";
+-- or DO NOTHING;
 ```
 
 # Select into

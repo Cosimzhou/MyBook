@@ -328,6 +328,28 @@ update     #更新位置
 
 winheight name +/- line   #调整各个窗口的高度，增加或减少几行
 
+# gdbinit
+.gdbinit
+```
+define cls
+  shell clear
+end
+document cls
+  Clears the screen with a simple command.
+end
+
+define ascii_char
+  set $_c=*(unsigned char *)($arg0)
+  if ( $_c < 0x20 || $_c > 0x7E )
+    printf "."
+  else
+    printf "%c", $_c
+  end
+end
+document ascii_char
+  Print the ASCII value of arg0 or '.' if value is unprintable
+end
+```
 
 
 **归类总结**

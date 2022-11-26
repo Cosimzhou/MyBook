@@ -5,14 +5,16 @@ Tmux note
 | --------- | ------------ | ---------------------------- |
 | 引导键    | Ctrl+b       | 激活控制台；此时以下按键生效 |
 | 系统操作  | ?            | 列出所有快捷键；按q返回 |
-|           | d            | *脱离*当前会话；这样可以暂时返回Shell界面，输入tmux attach能够重新进入之前的会话 |
+|           | d            | 脱离当前会话；这样可以暂时返回Shell界面，输入tmux attach能够重新进入之前的会话 |
 |           | D            | 选择要脱离的会话；在同时开启了多个会话时使用 |
 |           | Ctrl+z       | 挂起当前会话 |
 |           | r            | 强制重绘未脱离的会话 |
-|           | s            | 选择并切换会话；在同时开启了多个会话时使用 |
 |           | :            | 进入命令行模式；此时可以输入支持的命令，例如kill-server可以关闭服务器 |
 |           | [            | 进入复制模式；此时的操作与vi/emacs相同，按q/Esc退出, space 开始复制选区，enter确认复制。<c-b>+] 粘贴, <C-x>+y 复制 |
 |           | ~            | 列出提示信息缓存；其中包含了之前tmux返回的各种提示信息 |
+| 会话操作  | :new         | 创建会话 |
+|           | s            | 选择并切换会话；在同时开启了多个会话时使用 |
+|           | $            | 修改会话名称；在同时开启了多个会话时使用 |
 | 窗口操作  | c            | 创建新窗口 |
 |           | &            | 关闭当前窗口 |
 |           | ,            | 重命名当前窗口；这样便于识别 |
@@ -29,10 +31,13 @@ Tmux note
 |           | !            | 将当前面板置于新窗口；即新建一个窗口，其中仅包含当前面板 |
 |           | Ctrl+方向键  | 以1个单元格为单位移动边缘以调整当前面板大小 |
 |           | Alt+方向键   | 以5个单元格为单位移动边缘以调整当前面板大小 |
-|           | Space        | 在预置的面板布局中循环切换；依次包括even-horizontal、even-vertical、main-horizontal、main-vertical、tiled |
+|           | Space ⍽      | 在预置的面板布局中循环切换；依次包括even-horizontal、even-vertical、main-horizontal、main-vertical、tiled |
+|           | +            | 将面板拆解到一个新的窗口中编号/或还原 |
+|           | -            | 拆解窗口新的面板中 |
 |           | q            | 显示面板编号 |
 |           | t            | 显示时钟 |
 |           | o            | 在当前窗口中选择下一面板 |
+|           | z            | toggle pane zoom |
 |           | 方向键       | 移动光标以选择面板 |
 |           | {            | 向前置换当前面板 |
 |           | }            | 向后置换当前面板 |
@@ -55,28 +60,12 @@ tmux a  #  (or at, or attach)  attach
 tmux a -d  #  (or at, or attach)  attach and disconnect all other sessions first
 tmux a -t myname          # attach to named
 tmux ls          # list sessions
-tmux kill-session -t myname          kill session
-tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill          Kill all the tmux sessions
+tmux kill-session -t myname        # kill session
+tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill        #  Kill all the tmux sessions
 
 In tmux, hit the prefix ctrl+b (my modified prefix is ctrl+a) and then:
 List all shortcuts
 to see all the shortcuts keys in tmux simply use the bind-key ? in my case that would be CTRL-B ?
-
-Sessions
-:new<CR>  new session
-s  list sessions
-$  name session
-Panes (splits)
-%  vertical split
-"  horizontal split
-
-+  break pane into window (e.g. to select text by mouse to copy)
--  restore pane from window
-⍽  space - toggle between layouts
-<prefix> q (Show pane numbers, when the numbers show up type the key to goto that pane)
-<prefix> { (Move the current pane left)
-<prefix> } (Move the current pane right)
-<prefix> z toggle pane zoom
 
 Sync Panes
 You can do this by switching to the appropriate window, typing your Tmux prefix (commonly Ctrl-B or Ctrl-A) and then a colon to bring up a Tmux command line, and typing:
@@ -163,7 +152,4 @@ bind Down last-window \; swap-pane -s tmp.1 \; kill-window -t tmp
 Resources:
 tmux: Productive Mouse-Free Development
 How to reorder windows
-
-
-
 
