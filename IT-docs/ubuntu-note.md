@@ -1,6 +1,15 @@
 Ubuntu Notes
 ============
 
+```
+WINDOWID=`xwininfo -name 'dclock'|grep xwininfo|awk '{print $4}'`
+xprop -id $WINDOWID -format _NET_WM_STATE 32a -set _NET_WM_STATE _NET_WM_STATE_ABOVE
+xprop -id $WINDOWID -format _MOTIF_WM_HINTS 32c -set _MOTIF_WM_HINTS 2
+xdotool windowsize --sync $WINDOWID 96 44
+xdotool windowmove --sync $WINDOWID 1297 2485
+wmctrl -i -r $WINDOWID -b toggle,above
+```
+
 
 
 xdotool key [key name]

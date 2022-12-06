@@ -2529,67 +2529,69 @@ cat txt0 | sort | comm /dev/fd/0 <(cat txt1|sort)
 
 ## 数组操作
 
-\1. 使用[]操作符
+### 1. 使用[]操作符
 
 ```
-names[0]='zrong'
-names[1]='jacky'
+array[0]='zrong'
+array[1]='jacky'
 ```
 
-\2. 使用()直接赋值
+### 2. 使用()直接赋值
 
 ```
-names=('zrong' 'jacky')
+array=('zrong' 'jacky')
  # 或
-names=([0]='zrong' [1]='jacky')
+array=([0]='zrong' [1]='jacky')
 ```
 
 
 ```
-names=(`cat 'names.txt'`)   # 将每一行读取为数组的一个元素
-echo ${#a[@]}  # Len(a)
-echo ${a[n]}   # a[n-1], Start from 1
-echo ${a[ * ]}   # All
+array=(`cat 'names.txt'`)      # 将每一行读取为数组的一个元素
+echo ${#a[@]}                  # Len(a)
+echo ${a[n]}                   # a[n-1], Start from 1
+echo ${a[ * ]}                 # All (string form)
 unset a[1]
-echo ${a[@]:n:m}  # 从n到m的子数组
+echo ${a[@]:n:m}               # 从n到m的子数组
 echo ${a[@]/3/100}
-echo ${a[@]#※}    #删除开头的模式(懒惰匹配)
-echo ${a[@]##※}   #删除开头的模式(贪婪匹配)
-echo ${a[@]/※/str1}  #替换一次
-echo ${a[@]//※/str1}  #替换全部
-newarr=(${a[@]} ${b[@]})
+echo ${a[@]#※}                 # 删除开头的模式(懒惰匹配)
+echo ${a[@]##※}                # 删除开头的模式(贪婪匹配)
+echo ${a[@]/※/str1}            # 替换一次
+echo ${a[@]//※/str1}           # 替换全部
+newarr=(${a[@]} ${b[@]})       # merge array
+array[0]='zrong'
+array[1]='jacky'
 ```
 
 ## 条件判断
 
 1）判断表达式
 
-| 表达式         | 含义          |
-| -------------- | ------------- |
-| `if test (表达式为真)` | |
-| `if test !表达式为假` | |
-| `test 表达式1 -a 表达式2`  | 两个表达式都为真 |
-| `test 表达式1 -o 表达式2`  | 两个表达式有一个为真 |
+| 表达式                 | 含义          |
+| ---------------------- | ------------- |
+| `if test (expr)`       | |
+| `if test !expr`        | |
+| `test expr1 -a expr2`  | 两个表达式都为真 |
+| `test expr1 -o expr2`  | 两个表达式有一个为真 |
 
 2）判断字符串
 
-| 表达式         | 含义          |
-| -------------- | ------------- |
-| `test -n 字符串` | 字符串的长度非零 |
-| `test -z 字符串` | 字符串的长度为零 |
-| `test 字符串1=字符串2` | 字符串相等 |
-| `test 字符串1!=字符串2` |  字符串不等 |
+| 表达式            | 含义          |
+| ----------------- | ------------- |
+| `test -n str`     | 字符串的长度非零 |
+| `test -z str`     | 字符串的长度为零 |
+| `test str1=str2`  | 字符串相等 |
+| `test str1!=str2` |  字符串不等 |
 
 3）判断整数
 
-| 表达式         | 含义          |
-| -------------- | ------------- |
-| `test 整数1 -eq 整数2` | 整数相等 |
-| `test 整数1 -ge 整数2` | 整数1大于等于整数2 |
-| `test 整数1 -gt 整数2` | 整数1大于整数2 |
-| `test 整数1 -le 整数2` | 整数1小于等于整数2 |
-| `test 整数1 -lt 整数2` | 整数1小于整数2 |
-| `test 整数1 -ne 整数2` | 整数1不等于整数2 |
+| 表达式               | 含义          |
+| -------------------- | ------------- |
+| `test num1 -eq num2` | 整数相等 |
+| `test num1 -ge num2` | 整数1大于等于整数2 |
+| `test num1 -gt num2` | 整数1大于整数2 |
+| `test num1 -le num2` | 整数1小于等于整数2 |
+| `test num1 -lt num2` | 整数1小于整数2 |
+| `test num1 -ne num2` | 整数1不等于整数2 |
 
 4）判断文件
 
@@ -3070,6 +3072,15 @@ gzip xxx.tar # xxx.tar.gz
 gunzip xxx.tar.gz # xxx.tar
 ```
 
+```bash
+# uncompress zlib compressed data
+printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" |cat - zlib-compressed-file |gzip -dc
+
+# uncompress gzip compressed data
+gzip -dc file
+```
+
+
 下载deb文件：
 
 ```
@@ -3099,27 +3110,22 @@ help：查看Linux内置命令的帮助，比如cd命令。
 
 文件和目录操作命令(18个)
 
-rmdir：全拼remove empty directories，功能是删除空目录。
-
-tree：功能是以树形结构显示目录下的内容。
-
-basename：显示文件名或目录名。
-
-dirname：显示文件或目录路径。
-
-chattr：改变文件的扩展属性。
-
-lsattr：查看文件扩展属性。
-
-file：显示文件的类型。
-
-md5sum：计算和校验文件的MD5值。
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| rmdir | 全拼remove empty directories，功能是删除空目录 |
+| tree | 功能是以树形结构显示目录下的内容 |
+| basename | 显示文件名或目录名 |
+| dirname | 显示文件或目录路径 |
+| chattr | 改变文件的扩展属性 |
+| lsattr | 查看文件扩展属性 |
+| file | 显示文件的类型 |
+| md5sum | 计算和校验文件的MD5值 |
 
 查看文件及内容处理命令(21个)
-
-iconv：转换文件的编码格式。
-
-dos2unix：将DOS格式文件转换成UNIX格式。
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| iconv | 转换文件的编码格式 |
+| dos2unix | 将DOS格式文件转换成UNIX格式 |
 
 
 信息显示命令(11个)
@@ -3129,74 +3135,56 @@ free：查看系统内存。
 
 用户管理命令(10个)
 
-useradd：添加用户。
-
-usermod：修改系统已经存在的用户属性。
-
-userdel：删除用户。
-
-groupadd：添加用户组。
-
-passwd：修改用户密码。
-
-chage：修改用户密码有效期限。
-
-id：查看用户的uid,gid及归属的用户组。
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| useradd | 添加用户 |
+| usermod | 修改系统已经存在的用户属性 |
+| userdel | 删除用户 |
+| groupadd | 添加用户组 |
+| passwd | 修改用户密码 |
+| chage | 修改用户密码有效期限 |
+| id | 查看用户的uid,gid及归属的用户组 |
 
 
 
 基础网络操作命令(11个)
 
-ping：测试主机之间网络的连通性。
-
-route：显示和设置linux系统的路由表。
-
-ifconfig：查看、配置、启用或禁用网络接口的命令。
-
-ifup：启动网卡。
-
-ifdown：关闭网卡。
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| ping | 测试主机之间网络的连通性 |
+| route | 显示和设置linux系统的路由表 |
+| ifconfig | 查看、配置、启用或禁用网络接口的命令 |
+| ifup | 启动网卡 |
+| ifdown | 关闭网卡 |
 
 
 深入网络操作命令(9个)
 
-mail：发送和接收邮件。
-
-mutt：邮件管理命令。
-
-dig：查找DNS解析过程。
-
-host：查询DNS的命令。
-
-traceroute：追踪数据传输路由状况。
-
-tcpdump：命令行的抓包工具。
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| mail | 发送和接收邮件 |
+| mutt | 邮件管理命令 |
+| dig | 查找DNS解析过程 |
+| host | 查询DNS的命令 |
+| traceroute | 追踪数据传输路由状况 |
+| tcpdump | 命令行的抓包工具 |
 
 有关磁盘与文件系统的命令(16个)
 
-fsck：检查并修复Linux文件系统。
-
-dumpe2fs：导出ext2/ext3/ext4文件系统信息。
-
-dumpe：xt2/3/4文件系统备份工具。
-
-fdisk：磁盘分区命令，适用于2TB以下磁盘分区。
-
-parted：磁盘分区命令，没有磁盘大小限制，常用于2TB以下磁盘分区。
-
-partprobe：更新内核的硬盘分区表信息。
-
-e2fsck：检查ext2/ext3/ext4类型文件系统。
-
-mkswap：创建Linux交换分区。
-
-swapon：启用交换分区。
-
-swapoff：关闭交换分区。
-
-sync：将内存缓冲区内的数据写入磁盘。
-
-resize2fs：调整ext2/ext3/ext4文件系统大小。
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| fsck | 检查并修复Linux文件系统 |
+| dumpe2fs | 导出ext2/ext3/ext4文件系统信息 |
+| dumpe | xt2/3/4文件系统备份工具 |
+| fdisk | 磁盘分区命令，适用于2TB以下磁盘分区 |
+| parted | 磁盘分区命令，没有磁盘大小限制，常用于2TB以下磁盘分区 |
+| partprobe | 更新内核的硬盘分区表信息 |
+| e2fsck | 检查ext2/ext3/ext4类型文件系统 |
+| mkswap | 创建Linux交换分区 |
+| swapon | 启用交换分区 |
+| swapoff | 关闭交换分区 |
+| sync | 将内存缓冲区内的数据写入磁盘 |
+| resize2fs | 调整ext2/ext3/ext4文件系统大小 |
 
 系统权限及用户授权相关命令(4个)
 
@@ -3204,56 +3192,45 @@ umask：显示或设置权限掩码。
 
 查看系统用户登陆信息的命令(7个)
 
-lastlog：显示系统中所有用户最近一次登录信息。
-
-users：显示当前登录系统的所有用户的用户列表。
-
-finger：查找并显示用户信息。
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| lastlog | 显示系统中所有用户最近一次登录信息 |
+| users | 显示当前登录系统的所有用户的用户列表 |
+| finger | 查找并显示用户信息 |
 
 内置命令及其它(19个)
 
-clear：清除屏幕，简称清屏。
-
-eject：弹出光驱。
-
-exec：调用并执行指令的命令。
-
-export：设置或者显示环境变量。
-
-unset：删除变量或函数。
-
-type：用于判断另外一个命令是否是内置命令。
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| clear | 清除屏幕，简称清屏 |
+| eject | 弹出光驱 |
+| exec | 调用并执行指令的命令 |
+| export | 设置或者显示环境变量 |
+| unset | 删除变量或函数 |
+| type | 用于判断另外一个命令是否是内置命令 |
 
 系统管理与性能监视命令(9个)
 
-chkconfig：管理Linux系统开机启动项。
-
-vmstat：虚拟内存统计。
-
-mpstat：显示各个可用CPU的状态统计。
-
-iostat：统计系统IO。
-
-sar：全面地获取系统的CPU、运行队列、磁盘 I/O、分页(交换区)、内存、 CPU中断和网络等性能数据。
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| chkconfig | 管理Linux系统开机启动项 |
+| vmstat | 虚拟内存统计 |
+| mpstat | 显示各个可用CPU的状态统计 |
+| iostat | 统计系统IO |
+| sar | 全面地获取系统的CPU、运行队列、磁盘 I/O、分页(交换区)、内存、 CPU中断和网络等性能数据 |
 
 关机/重启/注销和查看系统信息的命令(6个)
 
-shutdown：关机。
-
-halt：关机。
-
-poweroff：关闭电源。
-
-logout：退出当前登录的Shell。
-
-exit：退出当前登录的Shell。
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| shutdown | 关机 |
+| halt | 关机 |
+| poweroff | 关闭电源 |
+| logout | 退出当前登录的Shell |
+| exit | 退出当前登录的Shell |
 
 进程管理相关命令(15个)
-
-nice/renice：调整程序运行的优先级。
 
 pgrep：查找匹配条件的进程。
 
 init：切换运行级别。
-
-service：启动、停止、重新启动和关闭系统服务，还可以显示所有系统服务的当前状态。

@@ -37,13 +37,11 @@ HEAD^2        # 合并分支的父节点，只有“2”有效
 ```
 
 
-
-
-
-
 删除远程分支tag
 git push origin --delete <branchName>        #删除远程分支
 git push origin --delete tag <tagname>        #删除远程tag
+
+git branch -m <oldBranchName> <newBranchName>  #修改分支名称。 -M 可覆盖目标分支
 
 否则，可以使用这种语法，推送一个空分支到远程分支，其实就相当于删除远程分支：
 git push origin :<branchName>
