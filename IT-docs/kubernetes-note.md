@@ -33,11 +33,13 @@ kubectl get deploy | grep <dep>
 kubectl scale --replicas=1 deploy <dep>
 kubectl rollout restart deployment <dep>
 kubectl rollout history deploy go-anga
+kubectl rollout history deploy go-anga --revision=2
 kubectl rollout undo deploy go-anga --to-revision=1
 
 kubectl annotate pods <pod> app-version="2" --overwrite
 kubectl delete pods --field-selector=status.phase=Failed
 kubectl set env deployment <dep> APP_VERSION="2"
+kubectl set image deployment <dep> <image>=<image_version>
 kubectl logs <pod> --all-containers
 
 kubectl get configmaps/map-factory-job-config
