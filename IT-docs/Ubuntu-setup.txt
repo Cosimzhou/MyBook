@@ -204,10 +204,12 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo apt install goldendict goldendict-wordnet
 
 # Flameshot
-sudo apt install flameshot
+sudo snap install flameshot
+#
+# sudo apt install flameshot
 # sudo ln -s /snap/bin/flameshot /usr/bin/flameshot
 # add shortcut in system configure-> keyboard ->shortcut
-# Name: Screen snap; Command: flameshot gui; Shortcut: Ctrl+Alt+A
+# Name: Screen snap; Command: flameshot gui; Shortcut: Ctrl+Super+A
 
 
 # xclip

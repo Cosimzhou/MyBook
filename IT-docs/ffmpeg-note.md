@@ -12,6 +12,7 @@ ffmpeg -i input.avi -c:v libx264 -crf 20 output.mp4 # 0-51
 ffmpeg -i sound.wav sound.mp3
 
 
+``` bash
 ffmpeg -i input.mp4 -vf "scale=1024:-1" output.mp4
 ffmpeg -i input.mp4 -vf "scale=-1:720" output.mp4
 ffmpeg -i input.mp4 -vf "transpose=2" output.mp4
@@ -19,6 +20,7 @@ ffmpeg -i input.mp4 -vf "crop=w/2:h/2:$x:$y" output.mp4
 
 ffmpeg -i input.mp4 -ss 00:00:02 -t 5 output.mp4
 ffmpeg -i input.mp4 -ss 00:00:02 -to 00:00:05 output.mp4
+```
 
 
 ```bash
@@ -53,6 +55,16 @@ ffmpeg -i input.mp4 -af "loudnorm=I=-5:LRA=1" output.mp4
 ffmpeg -i input.mp4 -af "equalizer=f=1000:width_type=h:width=200:g=-10" output.mp4
 ```
 
+```bash
+# converter
+ffmpeg -i input.webm output.mp4
+ffmpeg -i input.flv -vcodec libx264 output.mp4
+ffmpeg -i input.avi -c:v libx264 output.mp4
+ffmpeg -i input.mkv -map 0:v -map 0:a:1 output.mp4
+ffmpeg -i input.mov output.mp4
+
+```
+
 
 ```bash
 # add a mask or waterprint
@@ -60,6 +72,7 @@ ffmpeg -i input.mp4 -i logo.jpg -filter_complex "overlay=100:100" output.mp4
 ```
 
 ```bash
+# replace the audio on a video
 ffmpeg -i input.mp4 -i input.mp3 -c copy -map 0:v:0 -map 1:a:0 output.mp4
 ```
 
@@ -70,9 +83,6 @@ ffmpeg -i input.mp4 -ss 0 -t 3 -filter_complex \
       output.gif
 ```
 
-ffmpeg -i input.mp4 -filter_complex \
-      [0:v]fps=15,scale=-1:256,split[a][b];[a]palettegen[p];[b][p]paletteuse \
-      output.gif
 
 ```bash
 # filter_complex
@@ -85,6 +95,7 @@ ffmpeg -i input.mp4 -i logo.jpg -filter_complex "overlay=100:100" output.mp4
 ffmpeg -i input.mp4 -filter_complex \
       "[0:v]fps=15,scale=-1:256,split[a][b];[a]palettegen[p];[b][p]paletteuse" \
       output.gif
+
 ffmpeg -f avfoundation -r 30 -s 1280x720 -i "1:1" -vf "hue=H=2*PI*t:s=cos(2*PI*t)+10" output.mkv
 ffmpeg -i input.mp4 -vf "vignette=angle=PI/6" output.mp4
   # vignette   Indicates the vignette filter name
