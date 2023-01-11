@@ -36,6 +36,7 @@ fond - funny
 harrass
 hesitate
 hypothesis ~ assumption
+hiccups
 
 imitate  模仿
 incendiary
@@ -109,3 +110,7 @@ lockdown
 lmk   let me know
 lgtm  looks good to me
 fyi   for you information
+imo   in my opinion
+tbh   to be honest
+brb   be right back
+lol   laugh out loud

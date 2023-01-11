@@ -1,6 +1,7 @@
 Ubuntu Notes
 ============
 
+
 ```
 WINDOWID=`xwininfo -name 'dclock'|grep xwininfo|awk '{print $4}'`
 xprop -id $WINDOWID -format _NET_WM_STATE 32a -set _NET_WM_STATE _NET_WM_STATE_ABOVE
@@ -63,3 +64,11 @@ xdotool search . getwindowname %@
 
 wmctrl -i -r $WINDOWID -b toggle,above #move window topmost
 
+ # 手动启动网络连接
+dmesg|grep eth0
+sudo dhclient en3p40  #eth0 name
+
+ESC 进入recovery mode
+Ctrl+Alt+F1   GUI
+Ctrl+Alt+F2~6 tty1~6
+Ctrl+Alt+f7   GUI in some lsb

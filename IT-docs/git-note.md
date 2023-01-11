@@ -370,6 +370,8 @@ git diff HEAD                              #显示工作目录与上次提交时
 git diff <branch>                          #显示当前工作目录与另外分支的差别。你也以加上路径限定符，来只比较某一个文件或目录。
 git diff HEAD -- <filename/path>           #显示<filename/path>目录/文件与上次提交之间的差别
 git diff --stat                            #统计一下有哪些文件被改动
+
+diff <(git show <commit id1>) <(git show <commit id2>) #
 ```
 
 
