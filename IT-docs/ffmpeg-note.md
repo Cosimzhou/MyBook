@@ -11,6 +11,24 @@ ffmpeg -i input.avi -c:v libx264 -crf 20 output.mp4 # 0-51
 
 ffmpeg -i sound.wav sound.mp3
 
+```
+ffmpeg -hide_banner -devices
+
+
+# Linux camera
+ffmpeg -f v4l2 -framerate 25 -s 640x480 -i /dev/video0 output.mkv
+
+ffmpeg -f alsa -i hw:0 out.wav
+```
+
+```
+ffmpeg -listen 1 -f flv -i rtmp://localhost:1935/live/app -c copy rtsp://YOUR_RTSP_HOST
+
+ffmpeg -re -i /usr/VIDEO/my_video.mp4 -i /usr/VIDEO/x_audio.mp3 \
+  -map 0:v -c:v libx264 -vf format=yuv420p -b:v 2000k -bufsize 3000k -maxrate 2000k -s 1024X576 -g 60 -map 0:a -c:a aac -b:a 192k -ar 44100 -f flv rtmp://my_ip/live/pass \
+  -map 0:v -c:v libx264 -vf format=yuv420p -b:v 2000k -bufsize 3000k -maxrate 2000k -s 1024X576 -g 60 -map 1:a -streamloop -shortest -f flv rtmp://my_ip/noaudio/pass \
+  -map 0:a aac -b:a 192k -ar 44100 -f flv rtmp://my_ip/only_audio/pass
+```
 
 ``` bash
 ffmpeg -i input.mp4 -vf "scale=1024:-1" output.mp4

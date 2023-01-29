@@ -1411,6 +1411,10 @@ cat id_rsa.pub >> ~/.ssh/authenized_keys
 
    -t 指定算法，eg: `ssh-keygen -t rsa`
 
+```
+sh-keygen -f ~/.ssh/known_hosts -R <host_name> # remove expired authorized key for old host
+```
+
 ## **strings**
 
   查看二进制文件中的字符串
@@ -1969,6 +1973,23 @@ apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests --n
 
    upgrade
 
+
+## **update-alternatives**
+
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| `--install link name path priority` | |
+| `--config name`  | |
+| `--set name path`  | |
+| `--remove name path`  | |
+| `--all`  | |
+| `--list name`  | |
+| `--query name`  | |
+| `--display name`  | |
+| `--auto name`  | |
+
+/etc/alternatives
+
 ----------------
 ## **dmesg**
 
@@ -2348,6 +2369,7 @@ inode   套接字对应的inode
 | `$PS2`  |  命令提示符分隔号 |
 | `$PS4` | |
 | `$BASH` | Bash Shell的全路径 |
+| `$BASH_SOURCE` | Bash脚本参数 |
 | `$CDPATH` | 用于快速进入某个目录。 |
 | `$HISTSIZE` | 历史记录数 |
 | `$LOGNAME`  |当前用户的登录名 |
@@ -2691,6 +2713,12 @@ awk的运行方式
 ```
 awk '{if($0~/aaa/ && $0!~/bbb/)next}{print $0}'
 sed '/aaa/{/bbb/{p};d}'
+
+
+lsmod|awk 'BEGIN{print "digraph A {";print "rankdir=\"BT\""}{split($4,a,/,/);for(i=1;i<=length(a);i++) {print $1,"->",a[i],";"}}END{print "}"}'|dot -T svg -o /tmp/a.svg
+
+
+lsmod|awk 'BEGIN{delete c[0]}{split($4,a,/,/);for(i=1;i<=length(a);i++){c[length(c)+1]=sprintf("%s -> %s;",$1,a[i])}}END{print "digraph A {";print "rankdir=\"BT\";";n=asort(c);for(i=1;i<n;i++){print c[i]} print "}"}'|dot -T svg -o /tmp/a.svg
 ```
 
 ------
@@ -3076,7 +3104,7 @@ gunzip xxx.tar.gz # xxx.tar
 
 ```bash
 # uncompress zlib compressed data
-printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" |cat - zlib-compressed-file |gzip -dc
+printf "\x1f\x8b\x08\x00\x00\x00\x00\x00" |cat - <zlib-compressed-file> |gzip -dc
 
 # uncompress gzip compressed data
 gzip -dc file

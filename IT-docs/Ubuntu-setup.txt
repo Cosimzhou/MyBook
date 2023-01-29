@@ -148,6 +148,9 @@ mv buildifier-linux-amd64 /usr/local/bin/buildifier
 # Desktop OS Applications
 #
 
+# Drivers
+sudo apt-get install -y webcam
+
 ######################################
 #
 # Cinnamon (3rd Party Desktop System)
@@ -180,6 +183,9 @@ sudo apt-get update
 sudo apt install open-fprintd fprintd-clients python3-validity
 fprintd-enroll
 sudo pam-auth-update
+
+# Add support for exfat FS
+sudo apt-get install exfat-fuse
 
 # Virtual Display
 cd ~

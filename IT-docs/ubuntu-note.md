@@ -13,6 +13,7 @@ wmctrl -i -r $WINDOWID -b toggle,above
 
 
 
+```
 xdotool key [key name]
 xdotool key alt+Tab
 xdotool type 'word'
@@ -63,12 +64,82 @@ xdotool search . getwindowname %@
 
 
 wmctrl -i -r $WINDOWID -b toggle,above #move window topmost
+```
 
- # 手动启动网络连接
+# 手动启动网络连接
 dmesg|grep eth0
 sudo dhclient en3p40  #eth0 name
+
+```
+ls -al /etc/netplan              # get .yaml filename
+sudo lshw -C network             # identify ethernet device name, enxxxxxx
+
+#Edit it with:
+
+sudo pico /etc/netplan/*.yaml    # <-- change the * to your filename
+
+#Initially make its content the following, with EXACLY the same spacing, indentation, and no tabs:
+#
+#    network:
+#      version: 2
+#      renderer: networkd
+#      ethernets:
+#        en01:
+#          dhcp4: true
+#          dhcp6: true
+#          optional: true
+#      wifis:
+#        wlp6s0:
+#          dhcp4: true
+#          dhcp6: true
+#          access-points:
+#            "YourWifiNetworkName":
+#              password: "WifiNetworkPassword"
+
+sudo netplan generate
+sudo netplan apply
+reboot
+```
+
+sudo vim /etc/resolv.conf
+
+sudo apt install xorg ubuntu-desktop
 
 ESC 进入recovery mode
 Ctrl+Alt+F1   GUI
 Ctrl+Alt+F2~6 tty1~6
 Ctrl+Alt+f7   GUI in some lsb
+
+
+
+# .desktop file
+/usr/share/applications/
+/var/lib/snapd/desktop/applications/
+
+# Upgrade ubuntu
+```
+sudo apt-mark showhold
+  # If there are on hold, packages, you should unhold the packages with:
+	sudo apt-mark unhold <package_name>
+
+ # Refresh the apt list and upgrade all installed packages:
+sudo apt update
+sudo apt upgrade
+
+ # If the kernel is upgraded, reboot the machine, and once booted log back in:
+sudo systemctl reboot
+
+ # Perform a major version upgrade of the installed packages:
+sudo apt full-upgrade # apt full-upgrade may also remove some unnecessary packages.
+
+ # Remove all automatically installed dependencies that are no longer needed by any package:
+sudo apt --purge autoremove
+
+sudo apt install update-manager-core
+sudo do-release-upgrade -d
+```
+
+uvcvideo
+
+snd-hda-intel
+
