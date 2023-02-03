@@ -142,6 +142,8 @@
 
 **ECC**        1）Error Correcting Code，纠错码 2）Elliptic Curve Cryptography，椭圆曲线加密
 
+**EC2**    Elastic Compute Cloud,
+
 **ECMA**     European Computer Manufactures Association，这个组织的目标是评估，开发和认可电信和计算机标准。
 
 **ECMAScript**       是一种基于对象，通过DOM可以操作网页对象的一种标准脚本语言。前身为Netscape javaScript。
@@ -153,6 +155,8 @@
 **EJB**     Enterprise Java Bean，企业级JavaBean
 
 **ELF**     Executable and Linkable Format，可执行/链接格式
+
+**EMR**    Elastic Map Reduce,
 
 **ETL**        Extraction-Transformation-Loading，（数据仓库中）数据抽取、转换和加载
 
@@ -482,6 +486,8 @@
 **SSL**     Secure Sockets Layer, 安全套接层
 
 **SSO**     Single Sign On，单点登录
+
+**S3**   Simple Storage Service,
 
 **ST**     Stress Test，压力测试
 

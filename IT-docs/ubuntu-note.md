@@ -139,7 +139,14 @@ sudo apt install update-manager-core
 sudo do-release-upgrade -d
 ```
 
-uvcvideo
+sudo apt install linux-{headers,image,modules,modules-extra}-5.8.0-63-generic
 
-snd-hda-intel
+sudo ./NVIDIA-Linux-x86_64-470.94.run --kernel-source-path /usr/src/linux-headers-5.4.0-1091-gke
+
+
+sudo apt install linux-modules-extra-`uname -r`
+
+sudo modprobe snd-hda-intel uvcvideo
+sudo apt-get install --reinstall alsa-base pulseaudio
+sudo alsa force-reload
 
