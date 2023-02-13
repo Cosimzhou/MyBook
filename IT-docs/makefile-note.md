@@ -112,6 +112,12 @@ else
  ...
 endif
 
+```
+# judge whether file exists
+  ifneq (,$(wildcard $(version_file)))
+    echo $(GIT_VERSION) > cmd/$*/version.txt
+  endif
+```
 
 
 Makefile 语法简介

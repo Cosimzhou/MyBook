@@ -141,6 +141,14 @@ sudo do-release-upgrade -d
 
 sudo apt install linux-{headers,image,modules,modules-extra}-5.8.0-63-generic
 
+
+
+sudo apt install linux-headers-`uname -r`  # Install linux headers
+cd /usr/src/linux-headers-`uname -r` # Go to linux headers directory
+sudo make include/generated/uapi/linux/version.h # Generate version.h
+sudo ln -s $PWD/include/generated/uapi/linux/version.h include/version.h # Create symbol link to generate file
+
+
 sudo ./NVIDIA-Linux-x86_64-470.94.run --kernel-source-path /usr/src/linux-headers-5.4.0-1091-gke
 
 

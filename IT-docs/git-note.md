@@ -204,6 +204,8 @@ git config --global difftool.prompt false
 git config --global alias.d difftool
 
 git config --global pager.branch false
+
+git config core.ignorecase false
 ```
 
 ## 三、分支

@@ -30,6 +30,14 @@ docker login --username=xxxx --password-stdin <docker-registry-url>
 docker push <username>/<repository>:<tag name>
 docker run -p 4000:80 <username>/<repository>:<tag name>
 
+
+View the container of the docker image
+```
+docker run --rm --entrypoint yes <image>
+CONTAINER_ID=`docker container ls|grep <image> |awk '{print $1}'`
+docker exec -it CONTAINER_ID /bin/sh
+```
+
 e.g.:
 ```
 docker build -t friendlyhello .                   # Create image using this directory's Dockerfile

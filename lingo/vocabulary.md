@@ -64,8 +64,14 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| Kühlschrank | Refrigerator | Réfrigérateur |холодильнике | 冷蔵庫[]|
+| Kühlschrank | Refrigerator | Réfrigérateur | холодильнике | 冷蔵庫[]|
 | Computer | computer | ordinateur | компьютер | コンピュータ/パソコン|
+|  | radio |  |  |  []|
+|  | mobile |  |  |  []|
+|  | clock |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
@@ -339,6 +345,27 @@ Vocabulary
 | Flugzeug| plane | avion | самолет |飛行機[ひこうき]|
 | Rakete | rocket | fusée | ракета |ロケット|
 |         |         |          |         |        []|
+
+| Deutsch | English | Français | Русская | 日本語|
+|---------|---------|----------|---------|--------|
+| Lehrer | teacher | enseignant | учитель |  |
+| Leser | reader | lecteur | читатель |  |
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
 
 ## 常用抽象名词
 
@@ -1005,7 +1032,6 @@ Sie Ihnen Sie
 там         be there
 тут         be here
 
-ещё раз     again, one more time
 так         so
 ещё         more
 хотя        but
@@ -1032,13 +1058,27 @@ Sie Ihnen Sie
 | alle    | all     | tout     | всё     | 全て[すべて] |
 | auch    | too     | aussi    | тоже    | も  |
 | schon   | already | déjà     | уже     | 既に[すでに] |
+| wieder | again | encore | ещё раз |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
+|  |  |  |  |  []|
 |         |         |          |         |        |
+
+
+# 背单词
+| Deutsch | English | Français | Русская | 日本語|
+|---------|---------|----------|---------|--------|
+| obsolet | obsolete | obsolète | устаревший | 廃れた |
+| verbreiten | propagate | propager | распространять | 伝播 |
+| Verdacht | suspicion | soupçon | подозрение | 疑い  |
+| Höflichkeit | courtesy | courtoisie | учтивость |  |
+| aufeinanderfolgend | consecutive | consécutif | последовательный |  |
+|  |  |  |  |  |
+|  |  |  |  |  |
 
 
 ни     neither...nor
 
-читатель    reader
-учитель     teacher
 
 дела             affairs
 дело              a business

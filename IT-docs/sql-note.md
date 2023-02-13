@@ -257,6 +257,10 @@ FOR EACH ROW
 EXECUTE PROCEDURE update_timestamp();
 ```
 
+```
+DROP TRIGGER [ IF EXISTS ] update_time_trigger ON mapshop.devices [ CASCADE | RESTRICT ]
+```
+
 # PostGres命令
 ```
 copy t_aa  from '/tmp/aa.csv' with delimiter ',';
