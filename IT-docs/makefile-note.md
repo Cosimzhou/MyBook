@@ -114,9 +114,12 @@ endif
 
 ```
 # judge whether file exists
-  ifneq (,$(wildcard $(version_file)))
-    echo $(GIT_VERSION) > cmd/$*/version.txt
-  endif
+ifneq (,$(wildcard $(version_file)))
+  echo $(GIT_VERSION) > cmd/$*/version.txt
+endif
+
+# the same effect in bash way
+  ([ -f cmd/$*/version.txt ] && echo $(GIT_VERSION) > cmd/$*/version.txt) || echo "no version file"
 ```
 
 

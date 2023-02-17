@@ -66,22 +66,22 @@ Vocabulary
 |---------|---------|----------|---------|--------|
 | Kühlschrank | Refrigerator | Réfrigérateur | холодильнике | 冷蔵庫[]|
 | Computer | computer | ordinateur | компьютер | コンピュータ/パソコン|
-|  | radio |  |  |  []|
-|  | mobile |  |  |  []|
-|  | clock |  |  |  []|
+| Radio | radio | radio | радио |  []|
+| Mobiltelefon | mobile | téléphone mobile | мобильный телефон |  []|
+| Uhr | clock | horloge | часы |  []|
 |  |  |  |  |  []|
 |  |  |  |  |  []|
 |  |  |  |  |  []|
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| Gesicht| face | visage| лицо| 顔[かお]|
-| Auge| eye| oeil| глаз| 目[め]|
-| Nase| nose| nez| нос| 鼻[はな]|
-| Mund| mouth| bouche| рот| 口[くち]|
-| Ohr| ear| oreille| ухо| 耳[みみ]|
-| Kopf| head| tête| голова| 頭[あたま]|
-| Hals| neck| cou| шея| 首[くび]|
+| Gesicht| face | visage| лицо | 顔[かお]|
+| Auge| eye| oeil| глаз | 目[め]|
+| Nase| nose| nez| нос | 鼻[はな]|
+| Mund| mouth| bouche | рот | 口[くち]|
+| Ohr| ear| oreille| ухо | 耳[みみ]|
+| Kopf| head| tête| голова | 頭[あたま]|
+| Hals| neck| cou | шея | 首[くび]|
 | Schulter| shoulder| épaule| плечо| 肩[かた]|
 | Körper| body| corps| тело| 体[からだ]|
 | Brust| chest| poitrine| грудь| 胸[むね]|
