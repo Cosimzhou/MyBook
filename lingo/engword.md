@@ -16,6 +16,7 @@ clumsy
 competitive
 complaint 抱怨  compliment 赞美
 compliance
+consent согласие
 consolidated
 courtesy
 cumbersome
