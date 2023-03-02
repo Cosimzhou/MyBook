@@ -67,17 +67,17 @@ $A^*=(a^*_{ij})$ ，其中$a^*_{ij}=(-1)^{i+j}M_{ji}$
 
 #### Properties
 
-1. $\exist M=A^{-1}\Leftrightarrow\exist M=(A^*)^{-1}$
-2. $\exist M=A^{-1}\Rightarrow A^*=|A|A^{-1}$
-3. $\exist M=A^{-1}\Rightarrow (A^{-1})^*=(A^*)^{-1}$
+1. $\exists M=A^{-1}\Leftrightarrow\exists M=(A^*)^{-1}$
+2. $\exists M=A^{-1}\Rightarrow A^*=|A|A^{-1}$
+3. $\exists M=A^{-1}\Rightarrow (A^{-1})^*=(A^*)^{-1}$
 4. $|A^*|=|A|^{n-1}$
 5. $(kA)*=k^{n-1}A^*$
 6. $(A^T)^*=(A^*)^T$
 7. $(AB)^*=B^*A^*$
 8. $AA^*=A^*A=|A|E$
-9. $rank(A*)=n\Leftrightarrow rank(A)=n$
-   $rank(A*)=1\Leftrightarrow rank(A)=n-1$
-   $rank(A*)=0\Leftrightarrow rank(A)<n-1$
+9. $rank(A*)=n\Leftrightarrow rank(A)=n$,
+   $rank(A*)=1\Leftrightarrow rank(A)=n-1$,
+   $rank(A*)=0\Leftrightarrow rank(A)\lt n-1$
 
 
 
@@ -209,7 +209,7 @@ $\begin{pmatrix}\cos\theta&\sin\theta\\-\sin\theta&\cos\theta\end{pmatrix}$
 
 3D空间中任意一个 $v=(x,y,z)$ 沿着单位向量$u=(r,s,t)$ 旋转 $\theta$ 角度之后的 $v'$ 为：
 
-$v'=v\cos\theta+(u\cdot v)u(1-\cos\theta)+(u\times v)\sin\theta$
+$$v'=v\cos\theta+(u\cdot v)u(1-\cos\theta)+(u\times v)\sin\theta$$
 
 ##### Calculation:
 
@@ -306,7 +306,7 @@ $$(\theta,\varphi,\psi)^T=\begin{pmatrix}\arctan\frac{2xy+yz}{1-2(x^2+y^2)}\\ \a
 
 $n$阶的满秩方阵$A$的列向量：$\alpha_1,\alpha_2,\alpha_3,\dots,\alpha_n$，通过转换变得到$n$个新的向量，$\beta_1,\beta_2,\beta_3,\dots,\beta_n$，其中$\begin{aligned}\beta_i=\alpha_i-\sum_{j=1}^{i-1}\frac{a_i^T\beta_j}{\beta^T_j\beta_j}\beta_j\end{aligned}$
 
-以$\begin{aligned}\frac{\beta_i}{||\beta_i||}\end{aligned}$为列向量，组成新的方阵$Q=\begin{pmatrix}\frac{\beta_1}{||\beta_1||},\frac{\beta_2}{||\beta_2||},\cdots,\frac{\beta_n}{||\beta_n||}\end{pmatrix}$ 
+以$\begin{aligned}\frac{\beta_i}{||\beta_i||}\end{aligned}$为列向量，组成新的方阵$Q=\begin{pmatrix}\frac{\beta_1}{||\beta_1||},\frac{\beta_2}{||\beta_2||},\cdots,\frac{\beta_n}{||\beta_n||}\end{pmatrix}$
 
 构造$n$阶的方阵$S=\begin{pmatrix}s_{ij}\end{pmatrix}$ ，其中$1\le i,j\le n$，$s_{ij}=\left\{\begin{array}c ||\beta_i||&i=j\\0&i\neq j\end{array}\right.$
 
