@@ -933,6 +933,22 @@ vim	Perl	意义	例子
 "   :5>>(>>>) :>>(>>>)5
 "   :12,14> 此命令将12行到14行的数据都向右移动一个 tab.
 "   :12,14>> 此命令将12行到14行的数据都向右移动两个 tab.
+"   >>   Indent line by shiftwidth spaces
+"   <<   De-indent line by shiftwidth spaces
+"   5>>  Indent 5 lines
+"   5==  Re-indent 5 lines
+"
+"   >%   Increase indent of a braced or bracketed block (place cursor on brace first)
+"   =%   Reindent a braced or bracketed block (cursor on brace)
+"   <%   Decrease indent of a braced or bracketed block (cursor on brace)
+"   ]p   Paste text, aligning indentation with surroundings
+"
+"   =i{  Re-indent the 'inner block', i.e. the contents of the block
+"   =a{  Re-indent 'a block', i.e. block and containing braces
+"   =2a{ Re-indent '2 blocks', i.e. this block and containing block
+"
+"   >i{  Increase inner block indent
+"   <i{  Decrease inner block indent
 "   :set shiftwidth=4 设置自动缩进 4 个空格, 当然要设自动缩进先.
 "   :set sts=4 即设置 softtabstop 为 4. 输入 tab 后就跳了 4 格.
 "   :set tabstop=4 实际的 tab 即为 4 个空格, 而不是缺省的 8 个.
