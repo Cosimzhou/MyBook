@@ -389,6 +389,8 @@
 
 **PMU**     Power Management Unit，电源管理单元
 
+**PoE**   Power over Ethernet，以太网供电
+
 **POP3**     Post Office Protocol - Version 3，即邮局协议的版本3，常用的邮件接收协议
 
 **POSIX**     Portable Operating System Interface，可移植操作系统接口

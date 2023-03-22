@@ -8,18 +8,21 @@ allegation
 arbitrary
 authentic real
 
+backlog
 bully
 
-cease
+
+cease ~ stop, finalized
 chronic
 clumsy
+circumstances
 competitive
 complaint 抱怨  compliment 赞美
 compliance
-consent согласие
+consent     согласие
 consolidated
-courtesy
-cumbersome
+courtesy ~ polite, keep manners
+cumbersome ~ huge and hard to move, verbose, redandunt
 
 ditto    同上
 decouple
@@ -47,12 +50,16 @@ inflation ~ deflation
 
 legitimate
 
+malicious
 metropolis
 
-perjury
+
+perjury ~ make a fake one with malicious
 pinpoint
+postpone <-> prepone
+prepone
 preoccupied
-pretexting
+pretexting ~ excuse
 proper
 provision
 punctual
@@ -65,7 +72,10 @@ snip  略
 specific
 spoof
 spinal
-standoff
+spite
+standoff ~ hung in a circumstance
+
+unforeseen
 
 vigorous
 vowel - consonant
@@ -108,10 +118,10 @@ headwinds - tailwinds
 lockdown
 
 
-lmk   let me know
-lgtm  looks good to me
-fyi   for you information
-imo   in my opinion
-tbh   to be honest
-brb   be right back
-lol   laugh out loud
+LMK   let me know
+LGTM  looks good to me
+FYI   for you information
+IMO   in my opinion
+TBH   to be honest
+BRB   be right back
+LOL   laugh out loud

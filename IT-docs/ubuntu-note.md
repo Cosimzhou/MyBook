@@ -139,7 +139,17 @@ sudo apt install update-manager-core
 sudo do-release-upgrade -d
 ```
 
+```
+sudo lsof -n -w  /dev/nvidia* # show mod using pid
+```
+
+apt install nvidia-470-470
+
+apt remove --purge nvidia-470
+apt autoremove
+
 sudo apt install linux-{headers,image,modules,modules-extra}-5.8.0-63-generic
+sudo apt install linux-{headers,image,modules,modules-extra}-`uname -r`
 
 
 
@@ -148,8 +158,10 @@ cd /usr/src/linux-headers-`uname -r` # Go to linux headers directory
 sudo make include/generated/uapi/linux/version.h # Generate version.h
 sudo ln -s $PWD/include/generated/uapi/linux/version.h include/version.h # Create symbol link to generate file
 
+/lib/modules/6.1.5-060105-generic$ sudo ln -s /usr/src/linux-headers-6.1.5-060105 build
 
 sudo ./NVIDIA-Linux-x86_64-470.94.run --kernel-source-path /usr/src/linux-headers-5.4.0-1091-gke
+--kernel-source-dir
 
 
 sudo apt install linux-modules-extra-`uname -r`

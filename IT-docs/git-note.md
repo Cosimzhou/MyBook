@@ -178,6 +178,7 @@ git commit --amend                               #修改当前前的commit
 git push                                         #将本地代码库推送至仓库服务器中
 git pull                                         #从仓库服务器上拉取代码
 git pull --rebase                                #从仓库服务器上拉取代码,不一致处进行rebase，而非merge
+git pull --tags                                  #从仓库服务器上拉取tag
 git rm <filename>                                #同时删除文件和对其的跟踪
 =>  git rm --cached <filename>                   #删除对文件的跟踪，保留文件
 git push origin <local branch>:<remote branch>   #提交本地<local branch>分支到远程<remote branch>

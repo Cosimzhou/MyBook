@@ -1002,10 +1002,32 @@ pip list
 pip install -r requirements.txt
 pip freeze > requirements.txt
 pip install <package>==<version>
-pip install <package> >= <version>,<<version> --force-reinstall
+pip install <package> >= <version>,< <version> --force-reinstall
 
 import pysnooper
 #@pysnooper.snoop()
 
 
+########################################################
+##
+## pyenv
+
+git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+git clone https://github.com/pyenv/pyenv-virtualenv.git $.pyenv/plugins/pyenv-virtualenv
+  $ brew update
+  $ brew install pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+
+########################################################
+##
+## anaconda
+
+conda install -c channel -n name -p path package
+
+
+conda config --set auto_activate_base false
 
