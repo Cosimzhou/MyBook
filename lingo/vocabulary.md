@@ -471,9 +471,9 @@ Vocabulary
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
 | tun | do | faire | делать | する |
-| können| can |pouvoir|мочь|できる|
-| muss| must| devoir| должен| []|
-| benötigen| need| besoin| нуждаться | []|
+| können| can |pouvoir| мочь |できる|
+| muss| must| devoir| должен | -[]|
+| benötigen| need | besoin| нуждаться | []|
 | wollen| want| vouloir| хотеть| [ほしい]|
 | wagen| dare| oser| сметь| 冒す[おかす]|
 | geben| give| donner| давать| 上げる[あげる]|
@@ -513,7 +513,7 @@ Vocabulary
 | verzeihen | forgive | pardonner | прощать | []|
 | bedauern | regret | regretter | сожалеть | []|
 | strafen | punish | punir | наказывать | []|
-| | | | | []|
+| verstehen | understand | comprendre | понимать | []|
 | | | | | []|
 | | | | | []|
 | | | | | []|
@@ -586,8 +586,8 @@ Vocabulary
 | bitter | bitter | amer | горький | 苦い[にがい]|
 | würzig | spicy | piquant | пряный | 辛い[からい]|
 | salzig | salty | salé | соленый | 塩辛い[しおからい]|
-| | | | | []|
-| | | | | []|
+| wirklich | real | réelle | реальный | []|
+| gefälschte | fake | faux | ненастоящие | []|
 | | | | | []|
 | | | | | []|
 | | | | | []|
