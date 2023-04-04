@@ -176,6 +176,8 @@
 
 # G
 
+**GAN**      Generative Adversarial Network，生成对抗网络
+
 **GDT**    Global Description Table，全局描述表，gdtr寄存器中的信息，用于保存程序分段信息的表
 
 **GIL**     Global Interpreter Lock，解释语言的多线程锁
@@ -190,7 +192,8 @@
 
 **GPL**         General Public License，GNU通用公共授权条款
 
-**GPT**        GUID Partition Table，全局唯一标识分区列表
+**GPT**     1) GUID Partition Table，全局唯一标识分区列表
+            2) Generative Pre-trained Transformer，生成预训练张量
 
 **GPU**        Graphic Processing Unit，图形处理器
 

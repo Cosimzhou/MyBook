@@ -1874,6 +1874,11 @@ echo '0103000000014240'|xxd -r -p
 
 gpasswd -a USER group
 
+usermod -l newuser olduser
+groupmod -n newuser olduser
+usermod -d /home/newuser -m newuser
+
+
 ## **groupadd**
 
 命令可以创建一个新的用户组，其最基本用法为： `groupadd <groupname>`

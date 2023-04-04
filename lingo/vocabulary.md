@@ -343,7 +343,8 @@ Vocabulary
 | Zug | train | train | поезд | 列車[れっしゃ] |
 | U-Bahn | subway | metro | метро | 地下鉄[ちかてつ] |
 | Flugzeug| plane | avion | самолет |飛行機[ひこうき]|
-| Rakete | rocket | fusée | ракета |ロケット|
+| Rakete | rocket | fusée | ракета |ロケット |
+| Fahrzeug | vehicle | véhicule | автомобиль | 車[くるま]|
 |         |         |          |         |        []|
 
 | Deutsch | English | Français | Русская | 日本語|
@@ -371,14 +372,15 @@ Vocabulary
 
 | Deutsch | English | Français | Русская | 日本語|
 |---------|---------|----------|---------|--------|
-| gerechtigkeit | fair    |          |         |        |
-|         | justice | justice | правосудие|        |
+| Gerechtigkeit | fair    |          |         |        |
+| Gerechtigkeit | justice | justice | правосудие|        |
 |         | democracy|         |         |        |
 |         | science |          |         |        |
 |         | religion |          |         |        |
 |         | belief  |          |         |        |
-|         | truth  |          |         |        |
-|         | theory |          |         |        |
+|         | truth   |          |         |        |
+|         | theory  |          |         |        |
+| Zweifel | doubt   | doute    |         |        |
 |         |         |          |         |        |
 |         |         |          |         |        |
 |         |         |          |         |        |
@@ -398,7 +400,8 @@ Vocabulary
 |         |         |          |         |        |
 |         |         |          |         |        |
 |         |         |          |         |        |
-|         |         |          |         |        |
+
+kein Zweifel - sans doute - без сомнения
 
 # 常用数词
 
