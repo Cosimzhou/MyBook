@@ -37,12 +37,19 @@ Tmux note
 |           | o            | 在当前窗口中选择下一面板 |
 |           | z            | toggle pane zoom |
 |           | 方向键       | 移动光标以选择面板 |
+|           | 方向键(Hold) | 改变当前面板大小 |
 |           | Ctrl+方向键  | 以1个单元格为单位移动边缘以调整当前面板大小 |
 |           | Alt+方向键   | 以5个单元格为单位移动边缘以调整当前面板大小 |
 |           | {            | 向前置换当前面板 |
 |           | }            | 向后置换当前面板 |
 |           | Alt+o        | 逆时针旋转当前窗口的面板 |
 |           | Ctrl+o       | 顺时针旋转当前窗口的面板 |
+
+# Some commands (C-b :)
+swap-window -s 3 -t 1
+swap-window -t 0
+move-window -t 0
+bind-key T swap-window -t 0
 
 tmux capture-pane -pS-3|xclip -i -sel clip
 
@@ -58,7 +65,7 @@ tmux     # start new
 tmux new -s myname  # start new with session name
 tmux a  #  (or at, or attach)  attach
 tmux a -d  #  (or at, or attach)  attach and disconnect all other sessions first
-tmux a -t myname          # attach to named
+tmux a -t myname          # attach to named(allow multipair access)
 tmux ls          # list sessions
 tmux kill-session -t myname        # kill session
 tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill        #  Kill all the tmux sessions

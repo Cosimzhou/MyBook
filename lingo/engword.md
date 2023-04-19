@@ -9,7 +9,10 @@ arbitrary
 authentic real
 
 backlog
+breach ~ compromise
 bully
+bureaucracy
+
 
 
 cease ~ stop, finalized
@@ -18,7 +21,8 @@ clumsy
 circumstances
 competitive
 complaint 抱怨  compliment 赞美
-compliance
+compliant compliance ~ agree, follow one's order
+comply ^compliant compliment compliance
 consent     согласие
 consolidated
 courtesy ~ polite, keep manners
@@ -35,13 +39,17 @@ eligible ~ choosen, proper
 ergonomic
 
 fatigue
+feasible ~ viable
+flexible
 fond - funny
 
 harrass
 hesitate
 hypothesis ~ assumption
 hiccups
+hierarchical ~~ bureaucracy
 
+incur ~ suffer
 imitate  模仿
 incendiary
 insomnia
@@ -54,6 +62,7 @@ malicious
 metropolis
 
 
+pedantic
 perjury ~ make a fake one with malicious
 pinpoint
 postpone <-> prepone
@@ -66,7 +75,8 @@ punctual
 
 reluctant ~ hesitating
 reimbursement
-retroactive
+retroactive ~ retrospective
+retrofit ~ improve
 
 snip  略
 specific
@@ -74,13 +84,20 @@ spoof
 spinal
 spite
 standoff ~ hung in a circumstance
+survey ~ measure, statistics, poll
+suspect ~ suspicious
+
+tremendous ~ huge, a lot of
 
 unforeseen
 
 vigorous
+volcano - crater, magma lava
 vowel - consonant
+vulnerability ~ weakness
 
 whore - bitch
+shore - beach
 
 
 set foot
@@ -88,6 +105,10 @@ set up
 set for life
 dead set on
 Show sb up = Sb lose face.
+
+
+tuition
+tutorial
 
 What a shame!
 Bummer.

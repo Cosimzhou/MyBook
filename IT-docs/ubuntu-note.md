@@ -116,6 +116,13 @@ Ctrl+Alt+f7   GUI in some lsb
 /usr/share/applications/
 /var/lib/snapd/desktop/applications/
 
+
+# Unable to enter graphical interface
+sudo apt update
+sudo apt install ubuntu-desktop unity lightdm
+sudo service gdm3 start
+sudo systemctl set-default graphical.target
+
 # Upgrade ubuntu
 ```
 sudo apt-mark showhold

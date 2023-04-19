@@ -372,6 +372,8 @@
 
 **OSPF**     Open Shortest Path First，开放最短路径优先协议，网络层协议
 
+**OSS**     Open Source Software,
+
 **OST**       Original Sound Track，原声音轨
 
 **OS X**       全世界第一个基于FreeBSD系统采用“面向对象操作系统”的全面的操作系统。

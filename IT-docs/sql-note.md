@@ -267,6 +267,22 @@ copy t_aa  from '/tmp/aa.csv' with delimiter ',';
 copy (select * from t_aa where xxxx)  to '/tmp/aa.csv' with delimiter ',';
 ```
 
+```
+
+SELECT uuid_in(
+  overlay(
+    overlay(
+      md5(
+        random()::text || ':' || random()::text
+      ) placing '4' from 13
+    ) placing to_hex(
+      floor(random()*(11-8+1) + 8)::int
+    )::text from 17
+  )::cstring
+);
+
+SELECT uuid_in(md5(random()::text || random()::text)::cstring);
+```
 
 # MySQL
 
