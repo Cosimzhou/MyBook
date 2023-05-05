@@ -2658,6 +2658,17 @@ array[1]='jacky'
 | `test -w File`         | 文件存在并且可写                  |
 | `test -x File`         | 文件存在并且可执行                |
 
+
+```
+[ -c `readlink /proc/$$/fd/0` ]
+not_stdin=$?
+
+[ -c `readlink /proc/$$/fd/1` ]
+not_stdout=$?
+
+echo -e "not_stdin: $not_stdin\x0anot_stdout: $not_stdout"
+
+```
 ---------
 
 # **awk**

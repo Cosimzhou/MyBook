@@ -132,7 +132,7 @@ $ go doc -u example.Generator # 生成某个函数、结构等符号的文档文
 # **godoc**
 
 ```
-$ godoc -http=:8080 -index # 在本机开启Go文档Web服务器，端口为9090
+$ godoc -http=:8080 -index # 在本机开启Go文档Web服务器，端口为8080
 $ godoc -q fmt #查询fmt，列出所有对fmt的引用
 ```
 
@@ -167,6 +167,11 @@ export GOPROXY=https://goproxy.io
 	"github.com/jessevdk/go-flags"
   "github.com/golang-migrate/migrate"
 
+  "github.com/mitchellh/mapstructure"
+  //    ,squash
+  //    ,remain
+  //    ,omitempty
+  //    WeaklyTypedInput   NewDecoder{&DecoderConfig{WeaklyTypedInput: true, Result: &res}} .Decode(input)
 
 
 ------

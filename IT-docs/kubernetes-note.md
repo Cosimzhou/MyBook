@@ -69,6 +69,8 @@ kubectl getsecret <secret-name> -o jsonpath='{.data}'
 
 
 kubectl get deployments,statefulsets,daemonsets,cronjobs,jobs,pods -n namespace-name -o yaml
+
+kubectl apply -f <spec yaml file>
 ```
 
 

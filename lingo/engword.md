@@ -87,10 +87,13 @@ standoff ~ hung in a circumstance
 survey ~ measure, statistics, poll
 suspect ~ suspicious
 
+tenant a person who leases some housing
 tremendous ~ huge, a lot of
+
 
 unforeseen
 
+vice versa
 vigorous
 volcano - crater, magma lava
 vowel - consonant
