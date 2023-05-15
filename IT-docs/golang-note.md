@@ -173,6 +173,13 @@ export GOPROXY=https://goproxy.io
   //    ,omitempty
   //    WeaklyTypedInput   NewDecoder{&DecoderConfig{WeaklyTypedInput: true, Result: &res}} .Decode(input)
 
+  // hocon
+  "github.com/jdevelop/go-hocon"
+  "github.com/gurkankaymak/hocon"
+
+  // toml
+  "github.com/BurntSushi/toml"
+  "github.com/pelletier/go-toml"
 
 ------
 

@@ -1,6 +1,10 @@
 git 笔记
 ========
 
+git review
+git push origin HEAD:refs/for/master
+git push origin HEAD:refs/for/<some-branch>  # review some other branch
+
 git log --diff-filter=D --summary | grep delete #查看删除文件的记录
 
 回退到历史的某一步，即使commit已不存在
@@ -56,6 +60,8 @@ git checkout <branch>
 git rebase origin/<another branch>
 # 冲突修复后 git add ，然后git rebase --continue
 # 或者使用 git rebase --abort 恢复内容
+
+git fetch --all
 
 #远端分支前置commit变动，本地同步
 git fetch origin/<branch-name>
@@ -223,6 +229,8 @@ git checkout HEAD^                      #切换到上一次提交中去
 git checkout HEAD                       #切换到最后一次(最前端)提交中去
 git checkout -                          #切回上一次使用的分支
 git push origin --delete <branchName>   #删除远程分支
+
+git branch --set-upstream-to=<remote>/<branch> <local-branch>
 
 git checkout <file>                     #恢复git中的这个文件
 ```
