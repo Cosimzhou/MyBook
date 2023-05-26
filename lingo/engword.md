@@ -61,6 +61,9 @@ legitimate
 malicious
 metropolis
 
+novel - new
+
+occlusion - blockage
 
 pedantic
 perjury ~ make a fake one with malicious
@@ -84,6 +87,7 @@ spoof
 spinal
 spite
 standoff ~ hung in a circumstance
+strive ~ struggle
 survey ~ measure, statistics, poll
 suspect ~ suspicious
 

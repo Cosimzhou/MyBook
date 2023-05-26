@@ -643,6 +643,8 @@
 
 ## G
 
+**GCP**   Google Cloud Platform
+
 **GM**     General Manager，总经理
 
 **GMV**     Gross Merchandise Volume，成交总额
@@ -682,6 +684,9 @@
 
 
 ## O
+
+**OCI**    1) Open Containers Initiative, 开放容器标准, 2) Oracle Cloud Infrastructure
+
 
 **OP**        Operator/Operation，运维
 

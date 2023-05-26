@@ -81,6 +81,8 @@ docker-compose up
 docker-compose up -d
 docker-compose down
 docker-compose up <service>
+docker-compose restart <service>
+docker-compose restart -t <seconds> <service> # wait a while before killing the service container
 
 ```
 
@@ -274,10 +276,20 @@ CMD ["python", "app.py"]
 --------------------
 # docker-compose
 
+docker-compose --version
 
 docker-compose up
 docker-compose up -d
+docker-compose up <service>
+docker-compose down
 docker-compose stop
+
+
+docker-compose restart <service>
+docker-compose restart -t <seconds> <service> # wait a while before killing the service container
+
+
+docker-machine —version
 
 --------------------
 # docker-compose.yml
