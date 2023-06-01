@@ -692,6 +692,7 @@
 
 **OKR**     Objectives and Key Results，目标与关键成果法，是一套明确和跟踪目标及其完成情况的管理工具和方法，由英特尔公司发明
 
+**OSS**  Open Source Software
 
 
 ## P

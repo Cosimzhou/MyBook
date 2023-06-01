@@ -8,6 +8,7 @@ docker container ls
 docker run <image name/id> [--name <instance name>]
 docker run <image> /bin/bash -c <command>
 #docker run -it microsoft/dotnet:latest /bin/bash
+docker run -it --rm <image> /bin/bash
 docker run -it -v <local path>:/<docker path> <image>:<version> /bin/bash #与docker共享文件
 docker run -p 4000:80 <username>/<repository>:<tag name>
 docker run --rm --network=host \
