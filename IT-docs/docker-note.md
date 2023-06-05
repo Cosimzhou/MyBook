@@ -85,6 +85,7 @@ docker-compose up <service>
 docker-compose restart <service>
 docker-compose restart -t <seconds> <service> # wait a while before killing the service container
 
+docker-compose convert
 ```
 
 

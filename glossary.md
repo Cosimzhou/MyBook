@@ -78,6 +78,8 @@
 
 **CGI**        1）Common Gateway Interface，能用网关接口 2）Computer Graphic Interface，计算机图形接口
 
+**CICD**    Continuous Integration and Continuous Delivery
+
 **CISC**      Complex Instruction Set Computer，复杂指令集机
 
 **CLI**        Command Line Interface，命令行接口
@@ -312,6 +314,8 @@
 **LSB**        1）Linux Standards Base，一套核心标准，它保证了LINUX发行版同LINUX应用程序之间的良好结合 2）Least Significant Bit，二进制数中意为最低有效位
 
 **LSTM**     Long Short-Term Memory，长短期记忆网络
+
+**LTS**    Long-Term Support
 
 **LVS**     Linux Virtual Server，Linux虚拟服务器
 

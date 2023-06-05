@@ -8,7 +8,14 @@ Helm Charts Note
 helm repo add infra-helm https://artifactory.deepmap.ai/artifactory/infra-helm
 
 helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add jenkins https://charts.jenkins.io
+helm repo update
 ```
+
+helm install [RELASE_NAME] jenkins/jenkins [flags]
+   or: helm uninstall [RELASE_NAME]
+helm upgrade [RELEASE_NAME] jenkins/jenkins [flags]
+helm show values jenkins/jenkins
 
 helm pull <repo>/<chart> --version <version>
 helm pull bitnami/keycloak --version 7.0.1
