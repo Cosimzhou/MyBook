@@ -714,6 +714,8 @@
 
 **PRD**   Product Requirements Document，产品要求文档
 
+**PTE**     Private Trading Enterprise
+
 **PTO**     Paid Time Off，带薪假
 
 

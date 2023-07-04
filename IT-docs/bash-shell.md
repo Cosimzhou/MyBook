@@ -143,9 +143,9 @@ ls -d */
 
 周期性的执行给定的命令，默认值大概2秒，并将命令的输出以全屏方式显示。
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-| -n  |  指定周期，单位秒 |
+| 选项 [options] | 含义              |
+| -------------- | ----------------- |
+| -n             | 指定周期，单位秒  |
 
 ## **wc**
 
@@ -153,9 +153,9 @@ ls -d */
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-| -l  |  统计行数 |
-| -c  | 统计字符数 |
-| -w  | 统计词数 |
+| -l             | 统计行数      |
+| -c             | 统计字符数    |
+| -w             | 统计词数      |
 
 ## **whatis**
 
@@ -167,7 +167,7 @@ ls -d */
 
 ## **alias**
 
-    设置\别名，alias <name>   #显示别名
+    设置别名，alias <name>   #显示别名
 
     alias <name>=‘<alias>’     #设置别名
 
@@ -199,11 +199,11 @@ related: atq (定时队列)，atrm（清除定时任务）
 
    pattern {action} action默认为{print} $1,2…0为成条
 
-| 选项[options]| 含义    |
-| ------------ | ------- |
+| 选项[options]| 含义             |
+| ------------ | ---------------- |
 | `NF        ` | 字段数（记录内） |
-| `FS        ` | 分隔符 |
-| `OFS       ` |  输出分隔符 |
+| `FS        ` | 分隔符           |
+| `OFS       ` | 输出分隔符       |
 
    详细见后续awk篇
 
@@ -229,13 +229,17 @@ e.g. :
 
    更改文件系统的目标权限，eg：`chmod 755 file `
 
-   -R  递归其子目录下的所有内容
+| 选项 [options] | 含义                     |
+| -------------- | ------------------------ |
+|  -R            | 递归其子目录下的所有内容 |
 
 ## **chown**
 
    更改属主，eg：`chown user:group file `
 
-   -R  递归其子目录下的所有内容
+| 选项 [options] | 含义                     |
+| -------------- | ------------------------ |
+|  -R            | 递归其子目录下的所有内容 |
 
 
 ## **comm**
@@ -252,11 +256,11 @@ comm -12 <(sort file1) <(sort file2)   #file1 和file2共有的部分
 
 在系统中查找命令是否存在
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-|  -p  | 在标准PATH变量下找，保证在各发行版中通用 |
-|  -v  | 打印 `type' builtin |
-|  -V  | 打印 详细信息 |
+| 选项 [options] | 含义                                     |
+| -------------- | ---------------------------------------- |
+|  -p            | 在标准PATH变量下找，保证在各发行版中通用 |
+|  -v            | 打印 `type' builtin                      |
+|  -V            | 打印 详细信息                            |
 
 
 ## **crontab**
@@ -268,17 +272,18 @@ comm -12 <(sort file1) <(sort file2)   #file1 和file2共有的部分
 |  -e            | 编辑计划任务  |
 
 ```
-# 分 时　 日　 月　 周　 命令
-*　　*　　*　　*　　*　　command
+  # 分   时　 日　 月　 周　 命令
+    *　　*　　*　　*　　*　　command
 ```
 
-
-* 第1列表示分钟1～59 每分钟用`*`或者 `*/1`表示
-* 第2列表示小时1～23（0表示0点）
-* 第3列表示日期1～31
-* 第4列表示月份1～12
-* 第5列标识号星期0～6（0表示星期天）
-* 第6列要运行的命令
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| 第1列 | 表示分钟1～59 每分钟用`*`或者 `*/1`表示 |
+| 第2列 | 表示小时1～23（0表示0点）|
+| 第3列 | 表示日期1～31 |
+| 第4列 | 表示月份1～12 |
+| 第5列 | 标识号星期0～6（0表示星期天）|
+| 第6列 | 要运行的命令 |
 
 eg：
 ```
@@ -292,24 +297,24 @@ eg：
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-| -o | 设置输出的文件（可用于下载文件）|
-| -O | 设置到URL结尾的文件名（可用于下载文件）|
-| -H | 设置http头 |
-| -F | 表单请求|
-| -X | 请求方式POST、GET【默认】|
+| -o             | 设置输出的文件（可用于下载文件）|
+| -O             | 设置到URL结尾的文件名（可用于下载文件）|
+| -H             | 设置http头 |
+| -F             | 表单请求|
+| -X             | 请求方式POST、GET【默认】|
 | -d, --data, --data-ascii | 指定请求提交的文本内容 |
-| --data-binary | 指定请求提交的二进制内容 |
-| --data-raw | 指定请求提交的内容（不转译‘@’） |
+| --data-binary  | 指定请求提交的二进制内容 |
+| --data-raw     | 指定请求提交的内容（不转译‘@’） |
 | --data-urlencode | 指定请求提交的内容 |
 
 
-| 内部格式 | 含义          |
-| -------------- | ------------- |
-| content | 内容本身,不包含‘=’的‘@’ |
-| =content| 内容本身,不包含前导的‘=’ |
-| name=content| 字段名加内容 |
-| @filename| 将文件内容提交 |
-| name@filename | 字段名加文本内容 |
+| 内部格式      | 含义                     |
+| ------------- | ------------------------ |
+| content       | 内容本身,不包含‘=’的‘@’  |
+| =content      | 内容本身,不包含前导的‘=’ |
+| name=content  | 字段名加内容             |
+| @filename     | 将文件内容提交           |
+| name@filename | 字段名加文本内容         |
 
 
 e.g: `curl -H "Content-type: application/json" -X POST -d "$data" $url #POST请求 `
@@ -318,12 +323,12 @@ e.g: `curl -F "name=Joe Smith" -F "email=joe@labstack.com" http://localhost:1323
 
 ## **cut**
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-|  -b |  按字节数进行切割 |
-|  -c |  以字符为主，指定字符序列 |
-|  -d |  指定定界符，默认为Tab |
-|  -f |  以字段为主，指定字段号 |
+| 选项 [options] | 含义                     |
+| -------------- | ------------------------ |
+|  -b            | 按字节数进行切割         |
+|  -c            | 以字符为主，指定字符序列 |
+|  -d            | 指定定界符，默认为Tab    |
+|  -f            | 以字段为主，指定字段号   |
 
 ## **dd**
 
@@ -333,7 +338,7 @@ e.g: `curl -F "name=Joe Smith" -F "email=joe@labstack.com" http://localhost:1323
 | if=file        | 输入文件(或设备名称)。                          |
 | of=file        | 输出文件(或设备名称)。                          |
 | ibs=bytes      | 一次读取bytes字节，即读入缓冲区的字节数。       |
-| skip=blocks    | 跳过读入缓冲区开头的ibs x blocks块。             |
+| skip=blocks    | 跳过读入缓冲区开头的ibs x blocks块。            |
 | obs=bytes      | 一次写入bytes字节，即写 入缓冲区的字节数。      |
 | bs=bytes       | 同时设置读/写缓冲区的字节数(等于设置obs和obs)。 |
 | cbs=bytes      | 一次转换bytes字节。                             |
@@ -344,17 +349,17 @@ e.g: `curl -F "name=Joe Smith" -F "email=joe@labstack.com" http://localhost:1323
 
 conv encode
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-| ebcdic         | 把ASCII码转换为EBCDIC码。|
-| ibm            | 把ASCII码转换为alternate EBCDIC码。|
-| blick          | 把变动位转换成固定字符。|
-| ublock         | 把固定们转换成变动位|
-| ucase          | 把字母由小写变为大写。|
-| lcase          | 把字母由大写变为小写。|
-| notrunc        | 不截短输出文件。|
-| swab           | 交换每一对输入字节。|
-| noerror        | 出错时不停止处理。|
+| 选项 [options] | 含义                                            |
+| -------------- | ----------------------------------------------- |
+| ebcdic         | 把ASCII码转换为EBCDIC码。                       |
+| ibm            | 把ASCII码转换为alternate EBCDIC码。             |
+| blick          | 把变动位转换成固定字符。                        |
+| ublock         | 把固定们转换成变动位                            |
+| ucase          | 把字母由小写变为大写。                          |
+| lcase          | 把字母由大写变为小写。                          |
+| notrunc        | 不截短输出文件。                                |
+| swab           | 交换每一对输入字节。                            |
+| noerror        | 出错时不停止处理。                              |
 | sync           | 把每个输入记录的大小都调到ibs的大小(用ibs填充)。|
 
 
@@ -363,19 +368,19 @@ flags
 | 选项 [options] | 含义                                            |
 | -------------- | ----------------------------------------------- |
 | append         | append mode (makes sense only for output; conv=notrunc suggested) |
-| direct         | use direct I/O for data |
-| directory      | 写目录否则失败 |
-| dsync          | use synchronized I/O for data |
-| sync           | likewise, but also for metadata |
-| fullblock      | accumulate full blocks of input (iflag only) |
-| nonblock       | 非块 I/O |
-| noatime        | 不更新访问时间 |
-| nocache        | Request to drop cache. See also oflag=sync |
-| noctty         | do not assign controlling terminal from file |
-| nofollow       | 不跟入符号链接 |
-| count bytes    | 将'count=N'以byte为单位 (iflag only) |
-| skip bytes     | 将'skip=N'以byte为单位 (iflag only) |
-| seek bytes     | 将'seek=N'以byte为单位 (oflag only) |
+| direct         | use direct I/O for data                         |
+| directory      | 写目录否则失败                                  |
+| dsync          | use synchronized I/O for data                   |
+| sync           | likewise, but also for metadata                 |
+| fullblock      | accumulate full blocks of input (iflag only)    |
+| nonblock       | 非块 I/O                                        |
+| noatime        | 不更新访问时间                                  |
+| nocache        | Request to drop cache. See also oflag=sync      |
+| noctty         | do not assign controlling terminal from file    |
+| nofollow       | 不跟入符号链接                                  |
+| count bytes    | 将'count=N'以byte为单位 (iflag only)            |
+| skip bytes     | 将'skip=N'以byte为单位 (iflag only)             |
+| seek bytes     | 将'seek=N'以byte为单位 (oflag only)             |
 
 
    fdformat命令
@@ -405,9 +410,9 @@ dd if=/disk.mbr of=/dev/hda bs=512 count=1
 
   统计文件系统可用大小
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-|   -h           | 可读部分大小  |
+| 选项 [options] | 含义              |
+| -------------- | ----------------- |
+|   -h           | 可读部分大小      |
 |   -T           | 显示文件系统类型  |
 
 ```
@@ -428,8 +433,8 @@ df -Th|grep /mnt
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|  -c | 清理路径栈 |
-|  -v | 清晰打印内容 |
+|  -c            | 清理路径栈    |
+|  -v            | 清晰打印内容  |
 
 ## **disown**
 
@@ -466,32 +471,34 @@ Linux Only
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|  -d | 最大深度 |
-|  -h | 可读部分大小 |
+|  -d            | 最大深度      |
+|  -h            | 可读部分大小  |
 
 ## **ed**
 
 自带的文本编辑器
 
-| 常用命令 | 含义          |
-| -------- | ------------- |
-|  a   | 追加内容 |
-|  c   | 修改当前行 |
-|  d   | 删除当前行 |
-|  h   | 显示错误原因 |
-|  n   | 显示当前行及行号 |
-|  m   | 移动行，eg: 3m6 |
-|  p   | 打印当前行 |
-|  q   | 退出 |
-|  t   | 复制x行到y处，eg: 4t2 |
-|  w   | 保存文件 |
-|  /   |  搜索模式，eg: /search |
+| 常用命令 | 含义                  |
+| -------- | --------------------- |
+|  a       | 追加内容              |
+|  c       | 修改当前行            |
+|  d       | 删除当前行            |
+|  h       | 显示错误原因          |
+|  n       | 显示当前行及行号      |
+|  m       | 移动行，eg: 3m6       |
+|  p       | 打印当前行            |
+|  q       | 退出                  |
+|  t       | 复制x行到y处，eg: 4t2 |
+|  w       | 保存文件              |
+|  /       | 搜索模式，eg: /search |
 
 ## **env**
 
 显示环境变量
 
--u, --unset=NAME   删除变量
+| 选项 [options]   | 含义    |
+| ---------------- | ------- |
+| -u, --unset=NAME | 删除变量|
 
 ## **exec**
 
@@ -503,7 +510,7 @@ Linux Only
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
 |  -f            | 执行expect脚本文件 |
-|  -c            | 执行命令   |
+|  -c            | 执行命令      |
 
 ```
 set variable "'$variable'" #
@@ -530,18 +537,17 @@ interact #交回控制权
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|  -type  | 查找的目标类型，f为文件、d为目录、l为连接 |
-|  -name  | 目标的名称 |
-|  -user  | 用户名称 |
-|  -atime |  访问时间，时间单位支持wdhms五种，支持+-号表示大于、小于 |
-|  -ctime |  创建时间 |
-|  -mtime |  修改时间 |
-|  -empty |  空的目标 |
-|  -depth |  搜索深度限制 |
-|  -exec  | 执行命令，例如：cp '{}' <path> ';' |
+|  -type         | 查找的目标类型，f为文件、d为目录、l为连接 |
+|  -name         | 目标的名称 |
+|  -user         | 用户名称 |
+|  -atime        | 访问时间，时间单位支持wdhms五种，支持+-号表示大于、小于 |
+|  -ctime        | 创建时间 |
+|  -mtime        | 修改时间 |
+|  -empty        | 空的目标 |
+|  -depth        | 搜索深度限制 |
+|  -exec         | 执行命令，例如：cp '{}' <path> ';' |
 
 e.g:
-
 ```
    find . -type f -name *.jpg -atime +100
    find ./ -name '*.a' -exec cp '{}' <path> ';'
@@ -549,10 +555,10 @@ e.g:
 
 ## **fmt**
 
-| 选项 [options] | 含义    |
-| -------------- | ------- |
-| `-s    ` | 切割长行  |
-| `-w n  ` | 设置行宽限制 |
+| 选项 [options] | 含义         |
+| -------------- | ------------ |
+| `-s    `       | 切割长行     |
+| `-w n  `       | 设置行宽限制 |
 
 ## **fold**
 
@@ -560,9 +566,9 @@ e.g:
 
 | 变量           | 含义          |
 | -------------- | ------------- |
-|     -b   | 字节数 |
-|     -s   | 空白 |
-|     -w   | 设置行宽 |
+|     -b         | 字节数 |
+|     -s         | 空白 |
+|     -w         | 设置行宽 |
 
 ## **getconf**
 
@@ -580,21 +586,21 @@ getopt -o v: --long headers:,libs:,cc:,cxx:,with-glog,with-thrift,nodebugsymbols
 
 | 选项  | 含义          |
 | ----- | ------------- |
-| -A n | 显示下文n行 |
-| -B n | 显示上文n行 |
-| -C n | 显示上下文n行 |
-| -a | 强制作为文本进行匹配 |
-| -c | 只输出匹配行的计数 |
-| -m n | 对单个文件只显示n条记录 |
-| -n | 显示行号 |
-| -H | 显示文件名称 |
-| -I | 忽略二进制文件 |
-| -v | 剔除匹配的行 |
-| -s | 避开二进制文本进行递归 |
-| -r | 递归目录的匹配内容 |
-| -o | 只输出匹配的内容，注意，不要使用单个\*匹配 |
-| -q | 静默执行 |
-| -E | 扩展正则内容匹配（同 -P） |
+| -A n  | 显示下文n行   |
+| -B n  | 显示上文n行   |
+| -C n  | 显示上下文n行 |
+| -a    | 强制作为文本进行匹配 |
+| -c    | 只输出匹配行的计数 |
+| -m n  | 对单个文件只显示n条记录 |
+| -n    | 显示行号      |
+| -H    | 显示文件名称  |
+| -I    | 忽略二进制文件 |
+| -v    | 剔除匹配的行  |
+| -s    | 避开二进制文本进行递归 |
+| -r    | 递归目录的匹配内容 |
+| -o    | 只输出匹配的内容，注意，不要使用单个\*匹配 |
+| -q    | 静默执行      |
+| -E    | 扩展正则内容匹配（同 -P） |
 
   eg:
 
@@ -848,13 +854,6 @@ kill 0 #杀死同所有进程，常用于脚本中
 
    文件定位，从locatedb中进行搜索，`/var/lib/mlocate/mlocate.db` ，使用updatedb更新库。
 
-## **lsof**
-
-列出当前系统打开文件
-
--i tcp:8080 #列出占用8080端口的进程
--n
-
 ## **lsblk**
 
 列出当前块文件（存储盘）
@@ -862,6 +861,17 @@ kill 0 #杀死同所有进程，常用于脚本中
 ## **lsb\_release**
 
    cat /etc/os-release
+
+## **lscpu**
+
+列出CPU信息
+
+## **lsof**
+
+列出当前系统打开文件
+
+-i tcp:8080 #列出占用8080端口的进程
+-n
 
 ## **mesg**
 

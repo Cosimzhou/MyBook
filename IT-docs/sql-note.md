@@ -97,12 +97,45 @@ TRUNCATE xxx_seq RESTART identity;  -- truncating a table back to 1
     SELECT COUNT(DISTINCT <columns>) FROM <table> [WHERE <condition>] [LIMIT <num>] [ORDER BY <column> [DESC|ASC]] [GROUP BY <column>]
 ```
 
+```sql
+SELECT *, (CASE WHEN id > 100 THEN 1 ELSE 0 END) AS seg
+FROM mapshop.change_records;
+
+---
+
+SELECT *, dense_rank() OVER(ORDER BY id) AS rank
+FROM mapshop.change_records
+WHERE table_name='mapshop.maps' AND record_id=1073741905
+ORDER BY update_time ASC
+LIMIT 100;
+
+-- row_number dense_rank and rank
+
+---
+SELECT * FROM (
+  SELECT *, dense_rank() OVER(ORDER BY id) AS rank
+  FROM mapshop.change_records
+  WHERE table_name='mapshop.devices' AND record_id=1
+) AS t
+WHERE rank < 100 AND rank >= 90
+ORDER BY (t.updated_time, t.rank);
+
+-- ntile
+
+SELECT NTILE(4) OVER(ORDER BY id DESC) AS ntile, * FROM mapshop.change_records;
+```
+
 # CREATE TABLE建表
 ```sql
 CREATE TABLE duty_list(
   Id_P int,
   Name varchar(255)
 );
+```
+
+```
+  ALTER TABLE table ALTER COLUMN column_num
+  SET DEFAULT upper(md5(random()::text || clock_timestamp()::text)::varchar);
 ```
 
 # 排序

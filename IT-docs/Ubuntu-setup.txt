@@ -13,6 +13,8 @@ sudo apt install vim vim-gtk3
 sudo apt install sl figlet cmatrix
 sudo gem install lolcat
 
+sudo apt install lm-sensors  # sensor temperature
+
 # sshd server
 sudo apt install openssh-server
 sudo /etc/init.d/ssh start
@@ -206,6 +208,15 @@ sudo apt install terminator
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 
+
+# Edge
+sudo apt update
+sudo apt install software-properties-common apt-transport-https wget
+wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
+sudo apt install microsoft-edge-dev
+
+
 # Goldendict
 sudo apt install goldendict goldendict-wordnet
 
@@ -216,6 +227,8 @@ sudo snap install flameshot
 # sudo ln -s /snap/bin/flameshot /usr/bin/flameshot
 # add shortcut in system configure-> keyboard ->shortcut
 # Name: Screen snap; Command: flameshot gui; Shortcut: Ctrl+Super+A
+
+
 
 
 # xclip

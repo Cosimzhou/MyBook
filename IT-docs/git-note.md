@@ -171,6 +171,8 @@ git push -u origin --tags
 ## 一、克隆
 ```
 git clone git@host:group/repo                    #将host上git仓库里的group/repo项目克隆到本地
+
+git clone https://<user_name>:<api_token>@host/group/path/repo.git
 ```
 
 
@@ -211,6 +213,10 @@ git config --global difftool.prompt false
 git config --global alias.d difftool
 
 git config --global pager.branch false
+
+git config --global credential.helper store
+git config --system --unset credential.helper  #
+git config --global http.emptyAuth true        #
 
 git config core.ignorecase false
 ```

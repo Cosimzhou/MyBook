@@ -9,6 +9,7 @@ arbitrary
 authentic real
 
 backlog
+behalf ~ benefit(financial)
 breach ~ compromise
 bully
 bureaucracy
@@ -17,12 +18,14 @@ bureaucracy
 
 cease ~ stop, finalized
 chronic
-clumsy
+clumsy clunky
 circumstances
+circumvent ~ walk around
 competitive
 complaint 抱怨  compliment 赞美
 compliant compliance ~ agree, follow one's order
 comply ^compliant compliment compliance
+controversial ~ cause argue, disput even quarrel
 consent     согласие
 consolidated
 courtesy ~ polite, keep manners
@@ -31,7 +34,9 @@ cumbersome ~ huge and hard to move, verbose, redandunt
 ditto    同上
 decouple
 deliberate
+disapprove - disagree
 disciplince
+disclaimer
 distinction ~ difference
 dude bro mate
 
@@ -81,6 +86,7 @@ reimbursement
 retroactive ~ retrospective
 retrofit ~ improve
 
+slur -
 snip  略
 specific
 spoof
@@ -92,6 +98,7 @@ survey ~ measure, statistics, poll
 suspect ~ suspicious
 
 tenant a person who leases some housing
+toil
 tremendous ~ huge, a lot of
 
 
