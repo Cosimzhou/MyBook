@@ -65,6 +65,7 @@ legitimate
 
 malicious
 metropolis
+mitigate ~ make less severe
 
 novel - new
 
@@ -97,9 +98,10 @@ strive ~ struggle
 survey ~ measure, statistics, poll
 suspect ~ suspicious
 
-tenant a person who leases some housing
+tenant ~ a person who leases some housing
 toil
 tremendous ~ huge, a lot of
+triage ~ diagnose, check
 
 
 unforeseen

@@ -138,6 +138,12 @@ CREATE TABLE duty_list(
   SET DEFAULT upper(md5(random()::text || clock_timestamp()::text)::varchar);
 ```
 
+# CREATE INDEX
+
+```sql
+CREATE INDEX idx_name ON table_name USING gist (column_name range_ops);
+```
+
 # 排序
 ```sql
 ORDER BY <field> [DESC|ASC]

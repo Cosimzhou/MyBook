@@ -670,9 +670,9 @@ $HISTCONTROL=ignoredups
 |  -o <filename> | 指定输出文件 |
 |  -c  | 忽略不能识别的字符 |
 
-* /usr/lib/gconv
-* /usr/lib/gconv/gconv-modules
-* /usr/lib/gconv/gconv-modules.cache
+* /usr/lib32/gconv
+* /usr/lib32/gconv/gconv-modules
+* /usr/lib32/gconv/gconv-modules.cache
 
 
 ## **install**
@@ -897,6 +897,11 @@ kill 0 #杀死同所有进程，常用于脚本中
   wait $export_pid
   kill $import_pid
   rm -f sendpipe recvpipe
+```
+
+```
+cat /proc/**/fd/2                # read text to an output pipe
+echo 'xxxx' > /proc/**/fd/1      # send text to an input pipe
 ```
 
 ## **mktemp**
@@ -3048,6 +3053,9 @@ function remoterun(){
   send "exit\r"
   expect eof
 }
+
+# or
+(echo "initial command" && cat) | ssh
 ```
 
 ## **@免密码sudo**

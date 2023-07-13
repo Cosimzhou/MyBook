@@ -1,23 +1,70 @@
 Gdb note
 ========
 
-**命令目录**
+# **命令目录**
+
+attach 吸附指定PID的进程，attach 1234
+> detach 断开吸附
 
 b break，设断点，后跟**行号(+/-行号)**或**函数**，后可加文件名行号、if等，eg: b main.cpp:8 if x=10 && y=10
 
-   tb tbreak，临时断点，只断一次
-
-   rb rbreak，正则断点，通过正则表达确定断点函数
+*  tb tbreak，临时断点，只断一次
+*  rb rbreak，正则断点，通过正则表达确定断点函数
 
 
 | 断点表达     | 含义          |
 | ------------ | ------------- |
-| src.c:lineno |  |
-| src.c:func   |  |
-| 0xN          |  |
-| +/-lineno    |  |
+| func         | 对当前正在执行的文件中的指定函数设置断点 |
+| lineno       | 对当前正在执行的文件中的特定行设置断点 |
+| src.c:lineno | 对指定文件的指定行设置断点。最常用的设置断点方式 |
+| src.c:func   | 对指定文件的指定函数设置断点 |
+| +/-lineno    | 当前指令行+/-偏移量出设置断点 |
+| 0xN          | 指定地址处设置断点 |
 
 
+bt backtrace，列出调用栈，列出n层栈
+
+* bt：显示所有栈帧。
+* bt 10：显示前面10个栈帧。
+* bt -10：显示后面10个栈帧。
+* bt full：显示栈帧以及局部变量。
+* bt full 10：显示前面10个栈帧以及局部变量。
+* bt full -10：显示后面10个栈帧以及局部变量。
+
+catch syscall <no> 对系统调用下断点，调用号见 #/usr/include/asm/unistd_64.h or unistd_32.h
+
+   如: catch一个exception，assert，signal，fork甚至syscall
+
+   tcatch, 临时catch点
+
+| event 事件                    | 含 义                                                        |
+| :---------------------------- | :----------------------------------------------------------- |
+| throw [exception]             | 当程序中抛出 exception 指定类型异常时，程序停止执行。如果不指定异常类型（即省略 exception），则表示只要程序发生异常，程序就停止执行。 |
+| catch [exception]             | 当程序中捕获到 exception 异常时，程序停止执行。exception 参数也可以省略，表示无论程序中捕获到哪种异常，程序都暂停执行。 |
+| load [regexp] unload [regexp] | 其中，regexp 表示目标动态库的名称，load 命令表示当 regexp 动态库加载时程序停止执行；unload 命令表示当 regexp 动态库被卸载时，程序暂停执行。regexp 参数也可以省略，此时只要程序中某一动态库被加载或卸载，程序就会暂停执行。 |
+
+checkpoint 进程快照，执行后生成一个快照点
+
+   restart xxx; checkpoint no
+
+断点保存
+
+```
+save breakpoints file #保存断点
+save tracepoint file #保存trace点
+source file #加载断点
+gdb cmd -x file #启动时加载断点
+
+类似的还有
+save tracepoints file
+save gdb-index
+```
+
+c continue，继续从断下位置执行
+
+d delete，删除断点，eg: d breakpoint 1
+
+f frame，n是一个从0开始的整数，是栈中的层编号。比如：frame 0，表示栈顶，frame 1，表示栈的第二层。
 
 watch watchpoint，内存断点
 
@@ -35,51 +82,14 @@ watch <expr>
 | rwatch <expr>  | 读取就停止    |
 | awatch <expr>  | 访问就停止    |
 
-catch syscall <no> 对系统调用下断点，调用号见 #/usr/include/asm/unistd_64.h or unistd_32.h
-
-   如: catch一个exception，assert，signal，fork甚至syscall
-
-   tcatch, 临时catch点
-
-| event 事件                    | 含 义                                                        |
-| :---------------------------- | :----------------------------------------------------------- |
-| throw [exception]             | 当程序中抛出 exception 指定类型异常时，程序停止执行。如果不指定异常类型（即省略 exception），则表示只要程序发生异常，程序就停止执行。 |
-| catch [exception]             | 当程序中捕获到 exception 异常时，程序停止执行。exception 参数也可以省略，表示无论程序中捕获到哪种异常，程序都暂停执行。 |
-| load [regexp] unload [regexp] | 其中，regexp 表示目标动态库的名称，load 命令表示当 regexp 动态库加载时程序停止执行；unload 命令表示当 regexp 动态库被卸载时，程序暂停执行。regexp 参数也可以省略，此时只要程序中某一动态库被加载或卸载，程序就会暂停执行。 |
-
-
 
 trace tracepoint，轨迹点，
 
-checkpoint 进程快照，执行后生成一个快照点
-
-   restart xxx; checkpoint no
-
-\#断点保存
-
-save breakpoints file #保存断点
-
-save tracepoint file #保存trace点
-
-source file #加载断点
-
-gdb cmd -x file #启动时加载断点
-
-类似的还有
-
-save tracepoints file
-
-save gdb-index
 
 
 
-bt backtrace，列出调用栈，列出n层栈
 
-c continue，继续从断下位置执行
 
-d delete，删除断点，eg: d breakpoint 1
-
-f frame，n是一个从0开始的整数，是栈中的层编号。比如：frame 0，表示栈顶，frame 1，表示栈的第二层。
 
 i info，列出信息：
 
@@ -170,16 +180,15 @@ tstatus 显示当前追迹数据状态
 tfind 选择一个轨迹帧
 
 return: 强制函数返回。可以指定返回值
+
 finish 执行到当前函数返回
 
 until 执行到当前循环完成。可简写为u
 
 set var x=10 改变当前变量x的值。也可以这样用：set {int}0x83040 = 10把内存地址0x83040的值强制转换为int并赋值为10
+
 jump使当前执行的程序跳转到某一行，或者跳转到某个地址。由于只会使程序跳转而不会改变栈值，因此若跳出函数到另外的地方 会导致return出错。另外，熟悉汇编的人都知道，程序运行时，有一个寄存器用于保存当前代码所在的内存地址。所以，jump命令也就是改变了这个寄存器中的值。于是，你可以使用“set $pc”来更改跳转执行的地址。如： set $pc = 0x485
 
-attach 吸附指定PID的进程，attach 1234
-
-detach 断开吸附
 
 disassem $pc 反汇编当前函数。简写为：disas $pc
 
@@ -303,6 +312,8 @@ Pass：当信号发生时，该信号是否对程序可见。Yes 表示程序可
 Description：对信号所表示含义的简单描述。
 
 (gdb) signal SIGCONT # 发SIGCONT信号
+
+(gdb) handle SIGPIPE nostop noprint pass
 
 \# layout 模式
 
