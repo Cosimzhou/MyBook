@@ -8,6 +8,8 @@ docker container ls
 docker run <image name/id> [--name <instance name>]
 docker run <image> /bin/bash -c <command>
 #docker run -it microsoft/dotnet:latest /bin/bash
+docker run -it --rm --pid=host alpine:edge sh     # pid: 'container:<name|id>': joins another container's PID namespace
+                                                  #      'host': use the host's PID namespace inside the container
 docker run -it --rm <image> /bin/bash
 docker run -it -v <local path>:/<docker path> <image>:<version> /bin/bash #与docker共享文件
 docker run -p 4000:80 <username>/<repository>:<tag name>
@@ -19,7 +21,7 @@ docker run --rm --network=host \
 			 make ${@#api/}
 ```
 
-docker exec -ti <container id> /bin/bash #进入已退出的docker
+docker exec -it <container id> /bin/bash #进入已退出的docker
 docker ps -a #查看运行中的docker, 类似 docker container ls
 docker stop <instance name>
 docker container stop <container id>

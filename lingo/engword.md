@@ -67,6 +67,7 @@ malicious
 metropolis
 mitigate ~ make less severe
 
+negligible ~ trivial
 novel - new
 
 occlusion - blockage

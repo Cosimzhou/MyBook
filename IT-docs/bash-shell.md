@@ -306,6 +306,7 @@ eg：
 | --data-binary  | 指定请求提交的二进制内容 |
 | --data-raw     | 指定请求提交的内容（不转译‘@’） |
 | --data-urlencode | 指定请求提交的内容 |
+| --unix-socket | |
 
 
 | 内部格式      | 含义                     |
@@ -320,6 +321,10 @@ eg：
 e.g: `curl -H "Content-type: application/json" -X POST -d "$data" $url #POST请求 `
 
 e.g: `curl -F "name=Joe Smith" -F "email=joe@labstack.com" http://localhost:1323/save`
+
+```
+curl --unix-socket /var/run/docker.sock http://localhost/version
+```
 
 ## **cut**
 
@@ -600,6 +605,7 @@ getopt -o v: --long headers:,libs:,cc:,cxx:,with-glog,with-thrift,nodebugsymbols
 | -r    | 递归目录的匹配内容 |
 | -o    | 只输出匹配的内容，注意，不要使用单个\*匹配 |
 | -q    | 静默执行      |
+| -w    | 整词匹配      |
 | -E    | 扩展正则内容匹配（同 -P） |
 
   eg:
@@ -662,29 +668,34 @@ $HISTCONTROL=ignoredups
 
 转换文件的编码格式。
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-|  -f <encoding> | 指定来源编码 |
-|  -t <encoding> | 指定来源编码  |
-|  -l  | 列出支持的编码 |
-|  -o <filename> | 指定输出文件 |
-|  -c  | 忽略不能识别的字符 |
+| 选项 [options] | 含义               |
+| -------------- | ------------------ |
+|  -f <encoding> | 指定来源编码       |
+|  -t <encoding> | 指定来源编码       |
+|  -o <filename> | 指定输出文件       |
+|  -l            | 列出支持的编码     |
+|  -c            | 忽略不能识别的字符 |
 
 * /usr/lib32/gconv
 * /usr/lib32/gconv/gconv-modules
 * /usr/lib32/gconv/gconv-modules.cache
+
+## **info**
+
 
 
 ## **install**
 
    复制并设置属性，eg: `install src1 src2 src3... dest-dir`
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-|  -m xxx | 设置属性 |
-|  -T  | 目标文件名，而不是目标目录名 |
-|  -t <dir> | 后面是目标文件的目录 |
-|  -d | 后面的参数均为目录，并按名称和属性创建这些目录 |
+| 选项 [options]  | 含义          |
+| --------------- | ------------- |
+|  -d             | 后面的参数均为目录，并按名称和属性创建这些目录 |
+|  -m xxx         | 设置属性      |
+|  -g <group>     | 设置目标文件组 |
+|  -o <owner>     | 设置目标文件主 |
+|  -t <dir>       | 后面是目标文件的目录 |
+|  -T             | 目标文件名，而不是目标目录名 |
 
 
 ## **ipcs**
@@ -693,13 +704,13 @@ $HISTCONTROL=ignoredups
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-|  -m   | 共享内存 |
-|  -q   | 消息队列 |
-|  -s   | 信号量 |
-|  -c   | 创建者 |
-|  -p   | 进程号 |
-|  -u   | uid |
-|  -t   | 时间 |
+|  -m            | 共享内存      |
+|  -q            | 消息队列      |
+|  -s            | 信号量        |
+|  -c            | 创建者        |
+|  -p            | 进程号        |
+|  -u            | uid           |
+|  -t            | 时间          |
 
 ## **ipcmk**
 
@@ -711,8 +722,8 @@ $HISTCONTROL=ignoredups
 
 ## **iptables**
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
+| 选项 | 含义          |
+| ---- | ------------- |
 | -j   | 动作 DROP、RETURN、ACCEPT |
 | -t   | 指定表 |
 | -i   | 指定网络接口，如：lo、eth0 |
@@ -742,21 +753,21 @@ eg: `iptables -A INPUT 1 -s $IPADRESS -j DROP`
 
 | 选项  | 含义          |
 | ----- | ------------- |
-| -l | 列出任务的进程id |
-| -p | 列出pid |
-| -n | 列出运行状态 |
-| -r | 列出运行中的任务 |
-| -s | 列出停止中的任务 |
+| -l    | 列出任务的进程id |
+| -p    | 列出pid |
+| -n    | 列出运行状态 |
+| -r    | 列出运行中的任务 |
+| -s    | 列出停止中的任务 |
 
 ## **join**
 
 按两个文件的相同字段合并。
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-|  -t | 指定输入和输出的分隔符 |
-|  -1 | file1 -2 file2 取file1的第一段和file2的第二段 |
-|  -o | file field |
+| 选项 | 含义          |
+| ---- | ------------- |
+|  -t  | 指定输入和输出的分隔符 |
+|  -1  | file1 -2 file2 取file1的第一段和file2的第二段 |
+|  -o  | file field |
 
 ## **kill**
 
@@ -820,21 +831,21 @@ kill 0 #杀死同所有进程，常用于脚本中
 | -x <数字> | 将“tab”键显示为规定的数字空格 |
 
 | 交互按键 | 含义          |
-| -------------- | ------------- |
-| /字符串 | 向下搜索“字符串”的功能 |
-| ?字符串 | 向上搜索“字符串”的功能 |
-| n | 重复前一个搜索（与 / 或 ? 有关） |
-| N | 反向重复前一个搜索（与 / 或 ? 有关） |
-| b |  向后翻一页 |
-| d |  向后翻半页 |
-| h |  显示帮助界面 |
-| Q |  退出less 命令 |
-| u |  向前滚动半页 |
-| y |  向前滚动一行 |
-| 空格键 | 滚动一行 |
-| 回车键 | 滚动一页 |
+| -------- | ------------- |
+| /字符串  | 向下搜索“字符串”的功能 |
+| ?字符串  | 向上搜索“字符串”的功能 |
+| n        | 重复前一个搜索（与 / 或 ? 有关） |
+| N        | 反向重复前一个搜索（与 / 或 ? 有关） |
+| b        | 向后翻一页 |
+| d        | 向后翻半页 |
+| h        | 显示帮助界面 |
+| Q        | 退出less 命令 |
+| u        | 向前滚动半页 |
+| y        | 向前滚动一行 |
+| 空格键   | 滚动一行 |
+| 回车键   | 滚动一页 |
 | [pagedown] | 向下翻动一页 |
-| [pageup] |  向上翻动一页 |
+| [pageup] | 向上翻动一页 |
 
 只要一个文件夹下的文件的被写入，那么这个文件夹的访问时间就会更新。但像less这样的只读打开的话，文件和文件夹都不会改变访问时间
 
@@ -842,11 +853,11 @@ kill 0 #杀死同所有进程，常用于脚本中
 
    建立符号连接
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-| -s  | 建立软链 eg: ln -s 目标 链接符号 |
-|  -f | 更新符号对象 |
-|  -n | 不对符号目标进行解析追踪 |
+| 选项 | 含义          |
+| ---- | ------------- |
+| -s   | 建立软链 eg: ln -s 目标 链接符号 |
+| -f   | 更新符号对象 |
+| -n   | 不对符号目标进行解析追踪 |
 
    `ln -sfn ff symlink   #更新符号连接`
 
@@ -1034,13 +1045,13 @@ mkfifo pp; nc -4 -l $port <pp | tee $req_record_file | nc $srv_host $srv_port | 
 
 程序的性能分析工具
 
-perf list 列出可分析的指标
 
-perf stat 列出执行程序的性能统计，`perf stat ./program`
-
-perf record 记录执行程序的性能统计，`perf record ./program`
-
-perf report 查看程序的性能统计
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| perf list      | 列出可分析的指标 |
+| perf stat      | 列出性能统计，`perf stat ./program` |
+| perf record    | 记录性能统计，`perf record ./program` |
+| perf report    | 查看程序的性能统计 |
 
 Linux Only
 
@@ -1062,13 +1073,13 @@ Linux Only
 
 列出进程信息，process status
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-|  -a  |   全部内容，同-e  |
-|  -f  |    全格式列出进程信息  |
-|  -u  |  |
-|  -x  |   列出无tty的进程  |
-|  -o  |    指定输出字段格式，可选字段名：args, cmd, comm, command, fname, ucmd, ucomm, lstart, bsdstart, start  |
+| 选项  | 含义          |
+| ----- | ------------- |
+|  -a   | 全部内容，同-e  |
+|  -f   | 全格式列出进程信息  |
+|  -u   | |
+|  -x   | 列出无tty的进程  |
+|  -o   | 指定输出字段格式，可选字段名：args, cmd, comm, command, fname, ucmd, ucomm, lstart, bsdstart, start  |
 
 eg: ps -ef|grep defunct #列出僵尸进程
 
@@ -1105,10 +1116,10 @@ Linux Only
 
 当前目录路径
 
-| 选项 [options] | 含义          |
-| -------------- | ------------- |
-|  -L   |  当前目录的逻辑路径 |
-|  -P   |  解析全部符号连接后的路径 |
+| 选项  | 含义          |
+| ----- | ------------- |
+|  -L   | 当前目录的逻辑路径 |
+|  -P   | 解析全部符号连接后的路径 |
 
 ## **python**
 
@@ -1181,9 +1192,9 @@ rsync -av src-dir/ dest-dir/   #拷贝src-dir文件夹下的内容
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-| -dmS <*session name>* | 创建一个会话并指定名字 |
+| -dmS <session name> | 创建一个会话并指定名字 |
 | -list  |列出所有会话 |
-| -r <*session name>*  |重连会话 |
+| -r <session name>  |重连会话 |
 
 ## **sed**
 
@@ -1191,54 +1202,64 @@ rsync -av src-dir/ dest-dir/   #拷贝src-dir文件夹下的内容
 
 | 选项 [options] | 含义          |
 | -------------- | ------------- |
-| -f  | 附加一个带有运行参数的sed文本文件 |
-| -n  | 表示隐藏默认输出内容 |
+| -f             | 附加一个带有运行参数的sed文本文件 |
+| -n             | 表示隐藏默认输出内容 |
 
 eg:
 
 ```
-sed -n '50,100p' file # 指定行输出
-sed ':x;N;s/\n/,/;b x'
-sed 'H;$!d;g;s/\n\n/;/g'    #将连续的两个换行替换成';'，$!
-sed 'H;$!d;g;s/\n\n/;/g;s/\n//g;s/;/\n/g;s/:/: /g;s/v/v /g;s/file/file /g'  #可以进行组合替换
+sed -n '50,100p' file                                 # 指定行输出
+sed ':x;N;s/\n/,/;b x'                                # 合并行
+sed 'H;$!d;g;s/\n\n/;/g'                              # 将连续的两个换行替换成';'，$!
 sed 's/\(..\)/\\\x\1/g'
+sed -n '/Host:/{h}; /Info/{x;p;x;p;}' myfile.txt
+sed -e '1,/^exit$/d' file                             # 删除从1到exit的内容
+sed 'y/his/HIS/' aaa                                  # sed 's/\b[a-z]\b/\u&/g' ddd
+sed 'H;$!d;g;s/\n\n/;/g;s/\n//g;s/;/\n/g;s/:/: /g;s/v/v /g;s/file/file /g'  #可以进行组合替换
+sed '/^[0-9:.]* --> [0-9:.]*/{s/\([0-9:]*\)\.[0-9]\{1,3\}/\1/g;s/ --> /~/;h;N;s/\r\n/ @/;N;s/\r\n/: /}'
 ```
-
-| 命令 | 解释  |
-|----|-------|
-| b x|跳转到标签|
-| D |清空模式空间中开端至\n的内容，放弃之后的命令，对剩余模式空间重新执行sed|
-| d |清空模式空间，放弃之后的命令，重头执行|
-| s |替换指定字符|
-| g |将当前保持空间中内容覆盖至模式空间|
-| G |将当前保持空间中的内容追加至模式空间|
-| h |将当前模式空间中内容覆盖至保持空间|
-| H |将当前模式空间中的内容追加至保持空间|
-| N |模式区追加, 下一行合并到模式空间，但是两行之间依然含有\n换行符，如果命令未执行成功（并非跳过：前端条件不匹配），则放弃之后任何命令，并对新读取的内容，重头执行sed|
-| n |跳过此行|
-| p |打印模式空间内容|
-| P |打印模式空间内容，追加到默认输出之前|
-| x |将保持空间和模式空间内容互换|
-| :x |是一个标签x|
-| y |用于字符转换，eg: `sed 'y/his/HIS/' aaa #sed 's/\b[a-z]\b/\u&/g' ddd`|
-| r file	| 从file中读行 |
-| t label	| if分支，从最后一行开始，条件一旦满足或者T，t命令，将导致分支到带有标号的命令处，或者到脚本的末尾 |
-| T label	| 错误分支，从最后一行开始，一旦发生错误或者T，t命令，将导致分支到带有标号的命令处，或者到脚本的末尾 |
-| w file	| 写并追加模板块到file末尾 |
-| W file	| 写并追加模板块的第一行到file末尾 |
-| !	| 表示后面的命令对所有没有被选定的行发生作用 |
-| =	| 打印当前行号 |
-| #	| 把注释扩展到第一个换行符以前 |
-
-
 
 1、sed执行模板=sed '模式{命令1;命令2}'
 
-即逐行读入模式空间，执行命令，最后输出打印出来
+即逐行读入 模式空间，执行命令，最后输出打印出来
 
 正则范围制定需要加转译：\{n,m\}
 
-e.g: sed -e '1,/^exit$/d' file #删除从1到exit的内容
+```
+    stdin
+      |
+      v
+    模式空间 <---> 保持空间
+      |
+      v
+    stdout
+```
+
+| 命令    | 解释                                    |
+|---------|-----------------------------------------|
+| :x      | 是一个标签x                             |
+| b x     | 跳转到标签                              |
+| t x     | if分支，从最后一行开始，条件一旦满足或者T,t命令，将导致分支到带有标号的命令处，或者到脚本的末尾 |
+| T x     | 错误分支，从最后一行开始，一旦发生错误或者T,t命令，将导致分支到带有标号的命令处，或者到脚本的末尾 |
+| n       | 跳过此行                                |
+| s       | 替换指定字符                            |
+| y       | 用于字符转换，eg: `sed 'y/his/HIS/' aa` |
+| D       | 清空 模式空间 开端至\n的内容，放弃之后的命令，对剩余 模式空间 重新执行sed |
+| d       | 清空 模式空间，放弃之后的命令，重头执行 |
+| g       | 将当前 保持空间 内容覆盖至 模式空间     |
+| G       | 将当前 保持空间 内容追加至 模式空间     |
+| h       | 将当前 模式空间 内容覆盖至 保持空间     |
+| H       | 将当前 模式空间 内容追加至 保持空间     |
+| N       | 模式空间 追加, 下一行合并到 模式空间，但是两行之间依然含有\n换行符，如果命令未执行成功（并非跳过：前端条件不匹配），则放弃之后任何命令，并对新读取的内容，重头执行sed |
+| p       | 打印 模式空间 内容                      |
+| P       | 打印 模式空间 内容，追加到默认输出之前  |
+| x       | 将 保持空间 和 模式空间 内容互换        |
+| r file	| 从file中读行                            |
+| w file	| 写并追加模板块到file末尾                |
+| W file	| 写并追加模板块的第一行到file末尾        |
+| !	      | 后面的命令对所有没有被选定的行发生作用  |
+| =	      | 打印当前行号                            |
+| #	      | 把注释扩展到第一个换行符以前            |
 
 ## **service**
 
@@ -1279,35 +1300,35 @@ seq n #生成1~n
 
 +/- 关闭或打开
 
-| 属性               | 含义          |
-| ------------------ | ------------- |
-| allexport          | set -a, 导出所有变量  |
-| braceexpand        |  |
-| emacs              |  |
-| errexit            | set -e |
-| errtrace           |  |
-| functrace          |  |
-| hashall            |  |
-| histexpand         |  |
-| history            | 记录历史 |
-| ignoreeof          |  |
-| interactive-comments|  |
-| keyword            |  |
-| monitor            |  |
-| noclobber          | 不允许覆盖 |
-| noexec             | set -n, 不执行，仅读取命令 |
-| noglob             | 停止 wildcard 功能 |
-| nolog              |  |
-| notify             |  |
-| nounset            |  |
-| onecmd             | 一次性终端（执行一个命令后自动退出） |
-| physical           |  |
-| pipefail           | 管道中任意失败即失败 |
-| posix              |  |
-| privileged         |  |
-| verbose            |  |
-| vi                 |  |
-| xtrace             |  |
+| 属性                 | 含义          |
+| -------------------- | ------------- |
+| allexport            | set -a, 导出所有变量  |
+| braceexpand          |  |
+| emacs                |  |
+| errexit              | set -e |
+| errtrace             |  |
+| functrace            |  |
+| hashall              |  |
+| histexpand           |  |
+| history              | 记录历史 |
+| ignoreeof            |  |
+| interactive-comments |  |
+| keyword              |  |
+| monitor              |  |
+| noclobber            | 不允许覆盖 |
+| noexec               | set -n, 不执行，仅读取命令 |
+| noglob               | 停止 wildcard 功能 |
+| nolog                |  |
+| notify               |  |
+| nounset              |  |
+| onecmd               | 一次性终端（执行一个命令后自动退出） |
+| physical             |  |
+| pipefail             | 管道中任意失败即失败 |
+| posix                |  |
+| privileged           |  |
+| verbose              |  |
+| vi                   |  |
+| xtrace               |  |
 
 ## **setsid**
 
@@ -1351,11 +1372,11 @@ seq n #生成1~n
 切分文件
 
 | 参数选项 | 解释  |
-|----|------------|
-| -a n | 后缀位数，默认为2 |
-| -b n| 单片大小，单位字节 |
-| -n form| |
-| -u | 输出时不进行缓冲 |
+|----------|------------|
+| -a n     | 后缀位数，默认为2 |
+| -b n     | 单片大小，单位字节 |
+| -n form  | |
+| -u       | 输出时不进行缓冲 |
 
 ## **ss**
 
@@ -1429,6 +1450,9 @@ cat id_rsa.pub >> ~/.ssh/authenized_keys
 
    挂起n秒，eg: `sleep $n`
 
+## **ssh-keyscan**
+   收集已知ssh公钥
+
 ## **ssh-keygen**
 
    生成ssh公私钥对
@@ -1436,7 +1460,7 @@ cat id_rsa.pub >> ~/.ssh/authenized_keys
    -t 指定算法，eg: `ssh-keygen -t rsa`
 
 ```
-sh-keygen -f ~/.ssh/known_hosts -R <host_name> # remove expired authorized key for old host
+ssh-keygen -f ~/.ssh/known_hosts -R <host_name> # remove expired authorized key for old host
 ```
 
 ## **strings**
