@@ -94,6 +94,8 @@
 
 **CSS**        Cascading Style Sheets，层叠样式表
 
+**CVSS**        Common Vulnerability Scoring System，通用漏洞评分体系(https://first.org/cvss)
+
 **CUDA**     Nvidia的并行处理平台API
 
 
