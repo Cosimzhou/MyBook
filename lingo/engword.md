@@ -79,7 +79,7 @@ postpone <-> prepone
 prepone
 preoccupied
 pretexting ~ excuse
-proper
+proper ~ applicable
 provision
 punctual
 

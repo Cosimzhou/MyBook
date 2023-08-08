@@ -123,6 +123,26 @@ sudo apt install ubuntu-desktop unity lightdm
 sudo service gdm3 start
 sudo systemctl set-default graphical.target
 
+sudo dpkg-reconfigure lightdm
+
+
+# update DNS conf
+```
+cat >> /etc/NetworkManager/conf.d/90-dns-none.conf << EOF
+[main]
+dns=none
+EOF
+
+sudo vim /etc/resolv.conf
+sudo systemctl restart systemd-resolved
+sudo systemctl restart NetworkManager
+
+ /etc/systemd/resolved.conf
+
+```
+
+
+
 # Upgrade ubuntu
 ```
 sudo apt-mark showhold
@@ -159,6 +179,8 @@ sudo apt install linux-{headers,image,modules,modules-extra}-5.8.0-63-generic
 sudo apt install linux-{headers,image,modules,modules-extra}-`uname -r`
 
 
+/usr/share/doc/linux-headers-*
+/usr/src/linux-headers-*
 
 sudo apt install linux-headers-`uname -r`  # Install linux headers
 cd /usr/src/linux-headers-`uname -r` # Go to linux headers directory

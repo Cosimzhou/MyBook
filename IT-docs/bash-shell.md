@@ -1972,6 +1972,9 @@ Retype new UNIX password: <comfirm password>
 | update     | 更新软件源的可用接入点 |
 | upgrade    | 升级 |
 
+/usr/share
+/usr/share/doc
+
 ## **apt-cache**
 
    policy <pkg> 帮助调试个性偏好文件的问题
