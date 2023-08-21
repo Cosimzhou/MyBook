@@ -35,7 +35,7 @@ go-examples* hellogo.go
 env CGO_ENABLED=0 GOOS=windows GOARCH=amd64 go build
 ```
 
-
+go build -ldflags "-X main.gitVersion=v1.1-191-g87ffc03502"
 
 # **go mod**
 
@@ -180,6 +180,11 @@ export GOPROXY=https://goproxy.io
   // toml
   "github.com/BurntSushi/toml"
   "github.com/pelletier/go-toml"
+
+
+# dlv
+go install github.com/go-delve/delve/cmd/dlv@latest
+
 
 ------
 

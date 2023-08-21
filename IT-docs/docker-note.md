@@ -110,6 +110,30 @@ docker inspect <image-id>
 docker history —no-trunc <image-id>
 
 
+```
+$ docker manifest create MANIFEST_LIST MANIFEST [MANIFEST...]
+$ docker manifest create username/test \
+      username/x8664-test \
+      username/arm64v8-test   #当要修改一个 manifest 列表时，可以加入 -a 或 --amend 参数。
+
+# 设置 manifest 列表
+# $ docker manifest annotate [OPTIONS] MANIFEST_LIST MANIFEST
+$ docker manifest annotate username/test \
+      username/x8664-test \
+      --os linux --arch x86_64
+
+$ docker manifest annotate username/test \
+      username/arm64v8-test \
+      --os linux --arch arm64 --variant v8
+#这样就配置好了 manifest 列表。
+
+# 查看 manifest 列表
+$ docker manifest inspect username/test
+
+推送 manifest 列表 最后我们可以将其推送到 Docker Hub。
+$ docker manifest push username/test
+```
+
 命令目录
 
 

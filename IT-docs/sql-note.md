@@ -346,3 +346,16 @@ mysqldump --add-drop-table -u%(user)s -p%(password)s %(database)s > %(sqlf
 SELECT uid FROM dianping ORDER BY uid INTO outfile "d://aaa.txt"
 ```
 
+
+
+-------------------
+# SQL 优化
+
+in  >
+exists <
+
+union / union all
+
+in -> join
+
+force index

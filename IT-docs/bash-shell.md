@@ -432,6 +432,15 @@ df -Th|grep /mnt
 | -------------- | ------------- |
 |   -c n         |  n            |
 
+
+## **dig**
+
+dig @8.8.8.8 google.com
+dig google.com +trace
+dig -x 172.217.14.238
+dig +noall +answer -x 172.217.14.238
+dig -f list_file +short
+
 ## **dirs**
 
    列出路径历史栈
@@ -1494,6 +1503,14 @@ sysctl kern.maxfiles=5000
 ## **systemctl**
 
    在`/etc/init.d/`或`/etc/systemd/system/*.service`文件启动服务
+
+get-default
+set-default NAME
+set-property NAME property
+
+$ sudo systemctl enable clamd@scan.service # 等同于  sudo ln -s '/usr/lib/systemd/system/clamd@scan.service' '/etc/systemd/system/multi-user.target.wants/clamd@scan.service'
+
+
 
 /etc/rc.local
 

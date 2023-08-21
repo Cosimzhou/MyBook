@@ -88,6 +88,7 @@ reimbursement
 retroactive ~ retrospective
 retrofit ~ improve
 
+slopy
 slur -
 snip  略
 specific

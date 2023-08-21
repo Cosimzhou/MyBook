@@ -110,6 +110,14 @@ Ctrl+Alt+F1   GUI
 Ctrl+Alt+F2~6 tty1~6
 Ctrl+Alt+f7   GUI in some lsb
 
+# apt fix
+sudo apt-get autoremove
+sudo apt-get --purge remove && sudo apt-get autoclean
+sudo apt-get -f install
+sudo apt-get update
+sudo apt-get upgrade && sudo apt-get dist-upgrade
+sudo dpkg-reconfigure -a
+sudo dpkg --configure -a
 
 
 # .desktop file

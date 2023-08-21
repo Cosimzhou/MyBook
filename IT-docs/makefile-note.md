@@ -29,6 +29,7 @@ make clean
 |  `$@`  | 代表 targets 的值。 |
 |  `$*`  | 代表 targets 所指定的文件名，但不包含扩展名。 |
 
+ https://www.gnu.org/software/make/manual/html_node/Automatic-Variables.html
 
 下例可帮助理解变量的含义：
 

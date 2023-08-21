@@ -266,7 +266,7 @@ $\begin{aligned}-\sqrt[3]{\cos(\frac{\pi}{9})}+\sqrt[3]{\cos(\frac{2\pi}{9})}+\s
 
 $a_1=1,a_2=1,a_n=a_{n-1}+a_{n-2}\quad n>2$
 
-$\begin{aligned}a_n=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5} }{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right]=\frac{1}{\sqrt{5}}\left[\varphi^n(1-\varphi)^n\right]\end{aligned}$
+$\begin{aligned}a_n=\frac{1}{\sqrt{5}}\left[\left(\frac{1+\sqrt{5} }{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right]=\frac{1}{\sqrt{5}}\left[\varphi^n-(1-\varphi)^n\right]\end{aligned}$
 
 
 
@@ -514,23 +514,23 @@ $\begin{aligned}\cos\alpha-\cos\beta=2\sin\frac{\alpha+\beta}{2}\sin\frac{\alpha
 
 #### 一些可以表示为代数数的三角函数
 
-| $\theta$ | $\sin\theta$ | $\cos\theta$ | $\tan\theta$ | $\cot\theta$ | $\sec\theta$ | $\csc\theta$ |
-| -------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
-| $15^{\circ}\quad\frac{\pi}{12}$ | $\frac{\sqrt{6}-\sqrt{2}}{4}$ | $\frac{\sqrt{6} +\sqrt{2}}{4}$ | $2-\sqrt{3}$ | $2+\sqrt{3}$ | $\sqrt{6}-\sqrt{2}$ | $\sqrt{6}+\sqrt{2}$ |
-| $18^{\circ}\quad\frac{\pi}{10}$ | $\frac{\sqrt{5}-1}{4}$ | $\frac{\sqrt{10+2\sqrt{5}}}{4}$ | $\frac{\sqrt{25-10\sqrt{5}}}{5}$ | $\sqrt{5+2\sqrt{5}}$ | $\frac{\sqrt{50-10\sqrt{5}}}{5}$ | $\sqrt{5}+1$ |
-| $22.5^{\circ}\quad\frac{\pi}{8}$ | $\frac{\sqrt{2-\sqrt{2}}}{2}$ | $\frac{\sqrt{2+\sqrt{2}}}{2}$ | $\sqrt{2}-1$ | $\sqrt{2}+1$ | $\sqrt{4-2\sqrt{2}}$ | $\sqrt{4+2\sqrt{2}}$ |
-| $30^{\circ}\quad\frac{\pi}{6}$ | $\frac{1}{2}$ | $\frac{\sqrt{3}}{2}$ | $\frac{\sqrt{3}}{3}$ | $\sqrt{3}$ | $\frac{2\sqrt{3}}{3}$ | $2$ |
-| $36^{\circ}\quad\frac{\pi}{5}$ | $\frac{\sqrt{10-2\sqrt{5}}}{4}$ | $\frac{\sqrt{5}+1}{4}$ | $\sqrt{5-2\sqrt{5}}$ |  $\frac{\sqrt{25+10\sqrt{5}}}{5}$ | $\sqrt{5}-1$ | $\frac{\sqrt{50+10\sqrt{5}}}{5}$ |
-| $45^{\circ}\quad\frac{\pi}{4}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{2}}{2}$ | $1$ | $1$ | $\sqrt{2}$ | $\sqrt{2}$ |
-| $54^{\circ}\quad\frac{3\pi}{10}$ | $\frac{\sqrt{5}+1}{4}$ | $\frac{\sqrt{10-2\sqrt{5}}}{4}$ | $\frac{\sqrt{25+10\sqrt{5}}}{5}$ | $\sqrt{5-2\sqrt{5}}$ | $\frac{50+10\sqrt{5}}{5}$ | $\sqrt{5}-1$ |
-| $60^{\circ}\quad\frac{\pi}{3}$ | $\frac{\sqrt{3}}{2}$ | $\frac{1}{2}$ | $\sqrt{3}$ | $\frac{\sqrt{3}}{3}$ | $2$ | $\frac{2\sqrt{3}}{3}$ |
-| $67.5^{\circ}\quad\frac{3\pi}{8}$ | $\frac{\sqrt{2+\sqrt{2}}}{2}$ | $\frac{\sqrt{2-\sqrt{2}}}{2}$ | $\sqrt{2}+1$ | $\sqrt{2}-1$ | $\sqrt{4+2\sqrt{2}}$ | $\sqrt{4-2\sqrt{2}}$ |
-| $72^{\circ}\quad\frac{2\pi}{5}$ | $\frac{\sqrt{10+2\sqrt{5}}}{4}$ | $\frac{\sqrt{5}-1}{4}$ | $\sqrt{5+2\sqrt{5}}$ | $\frac{\sqrt{25-10\sqrt{5}}}{5}$ | $\sqrt{5}+1$ | $\frac{\sqrt{50-10\sqrt{5}}}{5}$ |
-| $75^{\circ}\quad\frac{5\pi}{12}$ | $\frac{\sqrt{6}+\sqrt{2}}{4}$ | $\frac{\sqrt{6}-\sqrt{2}}{4}$ | $2+\sqrt{3}$ | $2-\sqrt{3}$ | $\sqrt{6}+\sqrt{2}$ | $\sqrt{6}-\sqrt{2}$ |
-| $90^{\circ}\quad\frac{\pi}{2}$ | $1$ | $0$ | $\to\infty$ | $0$ | $\to\infty$ | $1$ |
-| $180^{\circ}\quad\pi$ | $0$ | $-1$ | $0$ | $\to\infty$ | $-1$ | $\to\infty$ |
-| $270^{\circ}\quad\frac{3\pi}{2}$ | $-1$ | $0$ | $\to\infty$ | $0$ | $\to\infty$ | $-1$ |
-| $360^{\circ}\quad 2\pi$ | $0$ | $1$ | $0$ | $\to\infty$ | $1$ | $\to\infty$ |
+| $\theta$ | $\theta$(rad) | $\sin\theta$ | $\cos\theta$ | $\tan\theta$ | $\cot\theta$ | $\sec\theta$ | $\csc\theta$ |
+| -------- | -------- | ------------ | ------------ | ------------ | ------------ | ------------ | ------------ |
+| $15^{\circ}$ | $\frac{\pi}{12}$ | $\frac{\sqrt{6}-\sqrt{2}}{4}$ | $\frac{\sqrt{6} +\sqrt{2}}{4}$ | $2-\sqrt{3}$ | $2+\sqrt{3}$ | $\sqrt{6}-\sqrt{2}$ | $\sqrt{6}+\sqrt{2}$ |
+| $18^{\circ}$ | $\frac{\pi}{10}$ | $\frac{\sqrt{5}-1}{4}$ | $\frac{\sqrt{10+2\sqrt{5}}}{4}$ | $\frac{\sqrt{25-10\sqrt{5}}}{5}$ | $\sqrt{5+2\sqrt{5}}$ | $\frac{\sqrt{50-10\sqrt{5}}}{5}$ | $\sqrt{5}+1$ |
+| $22.5^{\circ}$ | $\frac{\pi}{8}$ | $\frac{\sqrt{2-\sqrt{2}}}{2}$ | $\frac{\sqrt{2+\sqrt{2}}}{2}$ | $\sqrt{2}-1$ | $\sqrt{2}+1$ | $\sqrt{4-2\sqrt{2}}$ | $\sqrt{4+2\sqrt{2}}$ |
+| $30^{\circ}$ | $\frac{\pi}{6}$ | $\frac{1}{2}$ | $\frac{\sqrt{3}}{2}$ | $\frac{\sqrt{3}}{3}$ | $\sqrt{3}$ | $\frac{2\sqrt{3}}{3}$ | $2$ |
+| $36^{\circ}$ | $\frac{\pi}{5}$ | $\frac{\sqrt{10-2\sqrt{5}}}{4}$ | $\frac{\sqrt{5}+1}{4}$ | $\sqrt{5-2\sqrt{5}}$ |  $\frac{\sqrt{25+10\sqrt{5}}}{5}$ | $\sqrt{5}-1$ | $\frac{\sqrt{50+10\sqrt{5}}}{5}$ |
+| $45^{\circ}$ | $\frac{\pi}{4}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{2}}{2}$ | $1$ | $1$ | $\sqrt{2}$ | $\sqrt{2}$ |
+| $54^{\circ}$ | $\frac{3\pi}{10}$ | $\frac{\sqrt{5}+1}{4}$ | $\frac{\sqrt{10-2\sqrt{5}}}{4}$ | $\frac{\sqrt{25+10\sqrt{5}}}{5}$ | $\sqrt{5-2\sqrt{5}}$ | $\frac{50+10\sqrt{5}}{5}$ | $\sqrt{5}-1$ |
+| $60^{\circ}$ | $\frac{\pi}{3}$ | $\frac{\sqrt{3}}{2}$ | $\frac{1}{2}$ | $\sqrt{3}$ | $\frac{\sqrt{3}}{3}$ | $2$ | $\frac{2\sqrt{3}}{3}$ |
+| $67.5^{\circ}$ | $\frac{3\pi}{8}$ | $\frac{\sqrt{2+\sqrt{2}}}{2}$ | $\frac{\sqrt{2-\sqrt{2}}}{2}$ | $\sqrt{2}+1$ | $\sqrt{2}-1$ | $\sqrt{4+2\sqrt{2}}$ | $\sqrt{4-2\sqrt{2}}$ |
+| $72^{\circ}$ | $\frac{2\pi}{5}$ | $\frac{\sqrt{10+2\sqrt{5}}}{4}$ | $\frac{\sqrt{5}-1}{4}$ | $\sqrt{5+2\sqrt{5}}$ | $\frac{\sqrt{25-10\sqrt{5}}}{5}$ | $\sqrt{5}+1$ | $\frac{\sqrt{50-10\sqrt{5}}}{5}$ |
+| $75^{\circ}$ | $\frac{5\pi}{12}$ | $\frac{\sqrt{6}+\sqrt{2}}{4}$ | $\frac{\sqrt{6}-\sqrt{2}}{4}$ | $2+\sqrt{3}$ | $2-\sqrt{3}$ | $\sqrt{6}+\sqrt{2}$ | $\sqrt{6}-\sqrt{2}$ |
+| $90^{\circ}$ | $\frac{\pi}{2}$ | $1$ | $0$ | $\to\infty$ | $0$ | $\to\infty$ | $1$ |
+| $180^{\circ}$ | $\pi$ | $0$ | $-1$ | $0$ | $\to\infty$ | $-1$ | $\to\infty$ |
+| $270^{\circ}$ | $\frac{3\pi}{2}$ | $-1$ | $0$ | $\to\infty$ | $0$ | $\to\infty$ | $-1$ |
+| $360^{\circ}$ | $2\pi$ | $0$ | $1$ | $0$ | $\to\infty$ | $1$ | $\to\infty$ |
 
 
 

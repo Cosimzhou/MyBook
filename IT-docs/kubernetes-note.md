@@ -57,6 +57,10 @@ kubectl attach mypod -c ruby-container -i -t # Switch to raw terminal mode; send
                                              # in ruby-container from pod mypod # and sends
                                              # stdout/stderr from 'bash' back to the client
 
+kubectl config get-contexts
+kubectl config use-context dev.deepmap.ai
+
+
 kubectl top node             # Show metrics for all nodes
 kubectl top node <NODE_NAME> # Show metrics for a given node
 

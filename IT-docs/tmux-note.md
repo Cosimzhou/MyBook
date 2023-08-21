@@ -51,6 +51,7 @@ swap-window -t 0
 move-window -t 0
 bind-key T swap-window -t 0
 
+tmux list-keys
 tmux capture-pane -pS-3|xclip -i -sel clip
 
 set prefix key <c-x>
