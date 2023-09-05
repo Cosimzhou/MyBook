@@ -130,6 +130,7 @@ sudo apt update
 sudo apt install ubuntu-desktop unity lightdm
 sudo service gdm3 start
 sudo systemctl set-default graphical.target
+# sudo systemctl set-default multi-user.target
 
 sudo dpkg-reconfigure lightdm
 

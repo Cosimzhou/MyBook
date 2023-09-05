@@ -40,6 +40,7 @@ disclaimer
 distinction ~ difference
 dude bro mate
 
+eavesdropping ~ sniff
 eligible ~ choosen, proper
 ergonomic
 
@@ -92,7 +93,7 @@ slopy
 slur -
 snip  略
 specific
-spoof
+spoof - kidding, trick
 spinal
 spite
 standoff ~ hung in a circumstance

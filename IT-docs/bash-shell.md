@@ -161,6 +161,11 @@ ls -d */
 
 ==> man -f
 
+FILES
+       /usr/share/man/index.(bt|db|dir|pag)  A traditional global index database cache.
+       /var/cache/man/index.(bt|db|dir|pag)  An FHS compliant global index database cache.
+       /usr/share/man/.../whatis             A traditional whatis text database.
+
 ------
 
 # 进阶级命令
