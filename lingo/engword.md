@@ -61,6 +61,7 @@ incendiary
 insomnia
 inflation ~ deflation
 
+justification ~ excuse
 
 legitimate
 
@@ -71,6 +72,7 @@ mitigate ~ make less severe
 negligible ~ trivial
 novel - new
 
+obtuse - stupid
 occlusion - blockage
 
 pedantic
@@ -101,6 +103,7 @@ strive ~ struggle
 survey ~ measure, statistics, poll
 suspect ~ suspicious
 
+tenable ~ viable, that can be defended successfully against opposition or attack
 tenant ~ a person who leases some housing
 toil
 tremendous ~ huge, a lot of

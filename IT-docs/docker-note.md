@@ -11,6 +11,8 @@ docker run <image> /bin/bash -c <command>
 docker run -it --rm --pid=host alpine:edge sh     # pid: 'container:<name|id>': joins another container's PID namespace
                                                   #      'host': use the host's PID namespace inside the container
 docker run -it --rm <image> /bin/bash
+docker run -it --entrypoint /bin/bash <image>     # Run image with an overrade entrypoint
+docker exec -it <container id> /bin/bash          # Run in a container
 docker run -it -v <local path>:/<docker path> <image>:<version> /bin/bash #与docker共享文件
 docker run -p 4000:80 <username>/<repository>:<tag name>
 docker run --rm --network=host \
@@ -137,6 +139,7 @@ $ docker manifest push username/test
 命令目录
 
 
+
 容器生命周期管理
 run
 start/stop/restart
@@ -184,6 +187,14 @@ info|version
 info
 version
 
+# Clean Up
+docker system prune
+docker system prune --volumes
+
+docker container prune
+docker image prune
+docker network prune
+docker volume prune
 
 -----------
 # Dockerfile
