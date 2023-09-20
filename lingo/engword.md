@@ -1,16 +1,20 @@
-
+Vocabulary
+==========
 
 accountable
-adequate
+adequate [ˈædɪkwət] ~ enough
 ambivalent
 attorney
 allegation
+allegedly ~ it is said that...
 arbitrary
 authentic real
 
 backlog
 behalf ~ benefit(financial)
-breach ~ compromise
+breach ~ compromise, break
+bribe ~ corruption
+boycott
 bully
 bureaucracy
 
@@ -21,6 +25,7 @@ chronic
 clumsy clunky
 circumstances
 circumvent ~ walk around
+coax ~ dissuade 哄劝
 competitive
 complaint 抱怨  compliment 赞美
 compliant compliance ~ agree, follow one's order
@@ -43,6 +48,8 @@ dude bro mate
 eavesdropping ~ sniff
 eligible ~ choosen, proper
 ergonomic
+ethical ~ some goodness of mind
+ethnic ~ racial
 
 fatigue
 feasible ~ viable
@@ -54,20 +61,28 @@ hesitate
 hypothesis ~ assumption
 hiccups
 hierarchical ~~ bureaucracy
+humiliate
 
-incur ~ suffer
 imitate  模仿
+incur ~ suffer
 incendiary
-insomnia
 inflation ~ deflation
+insomnia
+intimidate ~ threaten by words
 
 justification ~ excuse
 
+lavish
 legitimate
+leer -  look at sb slily
+lewd --
+liable ~ should be responsible to sth
 
 malicious
 metropolis
+miscellaneous ~ consisting of a haphazard assortment of different kinds
 mitigate ~ make less severe
+
 
 negligible ~ trivial
 novel - new
@@ -76,42 +91,55 @@ obtuse - stupid
 occlusion - blockage
 
 pedantic
+perceive
 perjury ~ make a fake one with malicious
 pinpoint
 postpone <-> prepone
+pranks - trick
 prepone
 preoccupied
 pretexting ~ excuse
+procure ~ purchase, buy sth for company
 proper ~ applicable
 provision
 punctual
 
+refrain ~ control it, do not let it out
 reluctant ~ hesitating
 reimbursement
+reprisal ~ retaliation
+retaliation ~ 报复
 retroactive ~ retrospective
 retrofit ~ improve
 
+sabotage ~ disturb
+shove - push
 slopy
 slur -
 snip  略
+sophisticated
 specific
 spoof - kidding, trick
 spinal
-spite
+spite ~ hate, hostile
 standoff ~ hung in a circumstance
 strive ~ struggle
 survey ~ measure, statistics, poll
 suspect ~ suspicious
 
+teasing sarcasm ridicule
 tenable ~ viable, that can be defended successfully against opposition or attack
 tenant ~ a person who leases some housing
-toil
+toil ~ suffer a tough large boring work
 tremendous ~ huge, a lot of
 triage ~ diagnose, check
 
 
+undermine ~ reduce/weaken sth
 unforeseen
 
+
+verbal - oral
 vice versa
 vigorous
 volcano - crater, magma lava
@@ -121,6 +149,7 @@ vulnerability ~ weakness
 whore - bitch
 shore - beach
 
+------------------------
 
 set foot
 set up
