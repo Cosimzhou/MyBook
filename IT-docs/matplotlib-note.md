@@ -11,6 +11,7 @@ plt.rcParams['axes.unicode_minus']=False
 plt.figure(figsize=(6, 3))
 plt.plot(6, 3)
 plt.plot(3, 3 * 2)
+plt.savefig("test.svg")
 plt.show()
 
 plt.xlim(0,6) #x轴坐标轴
@@ -27,7 +28,7 @@ plt.show()
 x=np.linspace(0,10,200)#从0到10之间等距产生200个值
 y=np.sin(x)
 plt.plot(x,y,linestyle=':',color='b')
-plt.annotate(s='标记点',xy=(3,np.sin(3)),xytext=(4,-0.5),weight='bold',color='b',\arrowprops=dict(arrowstyle='-|>',color='k'))
+plt.annotate(s='标记点',xy=(3,np.sin(3)),xytext=(4,-0.5),weight='bold',color='b',arrowprops=dict(arrowstyle='-|>',color='k'))
    # s: 注释信息内容
    # xy:箭头点所在的坐标位置
    # xytext:注释内容的坐标位置

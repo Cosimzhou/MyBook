@@ -2028,11 +2028,27 @@ Retype new UNIX password: <comfirm password>
 
 ## **apt-key**
 
-   add filename 0
+Manage apt's list of trusted keys
+
+
+
+| 选项[options]| 含义             |
+| ------------ | ---------------- |
+| add <file>     | add the key contained in <file> ('-' for stdin) |
+| del <keyid>    | remove the key <keyid> |
+| export <keyid> | output the key <keyid> |
+| exportall      | output all trusted keys |
+| update         | update keys using the keyring package |
+| net-update     | update keys using the network |
+| list           | list keys |
+| finger         | list fingerprints |
+| adv            | pass advanced options to gpg (download key) |
+
+ add filename 0
 
  del keyid d
 
-   export keyid 0
+ export keyid 0
 
  adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62
 

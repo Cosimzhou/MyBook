@@ -54,6 +54,7 @@ ethnic ~ racial
 fatigue
 feasible ~ viable
 flexible
+flaw - crack
 fond - funny
 
 harrass
