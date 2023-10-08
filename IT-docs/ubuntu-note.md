@@ -119,6 +119,8 @@ sudo apt-get upgrade && sudo apt-get dist-upgrade
 sudo dpkg-reconfigure -a
 sudo dpkg --configure -a
 
+sudo rm -rf /var/lib/apt/lists/*
+sudo apt-get update
 
 # .desktop file
 /usr/share/applications/

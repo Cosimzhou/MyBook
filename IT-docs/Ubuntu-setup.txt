@@ -351,6 +351,21 @@ sudo snap connect remmina:ssh-public-keys :ssh-public-keys
 # NoMachine
 # https://www.nomachine.com/download/download&id=3
 
+# VLC player
+sudo apt install vlc vlc-plugin-fluidsynth fluid-soundfont-gm fluid-soundfont-gs
+  # Ctrl+P -> Preferences -> All -> Input/Codecs -> Audio codecs -> FluidSynth -> SoundFont File
+  # /usr/share/sounds/sf2/FluidR3_GM.sf2
+  # Save
+
+# QGis
+sudo apt install gnupg software-properties-common
+wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
+sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
+sudo add-apt-repository -s -U "https://qgis.org/ubuntu"
+sudo add-apt-repository -S "deb-src https://qgis.org/ubuntu jammy main"
+# 对于不同linux版本，不同的qgis安装版本，这两行代码有所差异，具体构成规则可查看官网信息
+sudo apt update
+sudo apt install qgis qgis-plugin-grass
 
 # Cuda
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2004/x86_64/cuda-ubuntu2004.pin

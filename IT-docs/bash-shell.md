@@ -2007,14 +2007,24 @@ Retype new UNIX password: <comfirm password>
 | update     | 更新软件源的可用接入点 |
 | upgrade    | 升级 |
 
+apt lock: /var/lib/apt/lists/lock
+
 /usr/share
 /usr/share/doc
 
 ## **apt-cache**
 
-   policy <pkg> 帮助调试个性偏好文件的问题
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+|  policy <pkg>  | 帮助调试个性偏好文件的问题 |
+|  madison <pkg> | 模仿输出 |
+|  show          |  Show a readable record for the package |
+|  showsrc       |  Show source records |
+|  search        |  Search the package list for a regex pattern |
+|  depends       |  Show raw dependency information for a package |
+|  rdepends      |  Show reverse dependency information for a package |
+|  pkgnames      |  List the names of all packages in the system |
 
-   madison <pkg> 模仿输出
 
 ## **apt-file**
 
@@ -2054,8 +2064,47 @@ Manage apt's list of trusted keys
 
 ## **add-apt-repository**
 
+
+| 选项[options]| 含义             |
+| ------------ | ---------------- |
+| -c           | specify a component under the repo. Default value is main |
+| -r           |                  |
+| -s           | also enable the deb-src |
+| -P           | add a PPA(Personal Package Archive) |
+| -U           | add a URI        |
+| -S           | add source list archive |
+| -C           | Add an Ubuntu Cloud Archive. Must be in the format cloud-archive:CANAME, uca:CANAME, or CANAME. |
+
 ```
-apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests --no-conflicts --no-breaks --no-replaces --no-enhances nginx=1.16.0-1~xenial | grep -v i386| grep "^\w" | sort -u)
+add-apt-repository -P ppa:user/repository
+add-apt-repository -P user/repository
+add-apt-repository -C cloud-archive:queens
+add-apt-repository -C uca:queens
+add-apt-repository -C queens
+add-apt-repository -S 'deb http://myserver/path/to/repo stable main'
+add-apt-repository -S deb http://myserver/path/to/repo stable main
+add-apt-repository -U http://myserver/path/to/repo -c main
+add-apt-repository -U https://packages.medibuntu.org -c free -c non-free
+add-apt-repository -U http://extras.ubuntu.com/ubuntu
+add-apt-repository -s
+add-apt-repository -L
+add-apt-repository -s -r
+add-apt-repository -c universe
+add-apt-repository -r -c multiverse
+
+
+type     URI                          suite  components
+deb      http://myserver/path/to/repo stable main
+deb-src  http://myserver/path/to/repo stable main
+```
+
+```
+apt-get download $(apt-cache depends --recurse \
+														 --no-recommends --no-suggests \
+                             --no-conflicts --no-breaks \
+                             --no-replaces --no-enhances \
+                             nginx=1.16.0-1~xenial | \
+                             grep -v i386| grep "^\w" | sort -u)
 ```
 
 ## **dpkg**
@@ -2096,6 +2145,12 @@ apt-get download $(apt-cache depends --recurse --no-recommends --no-suggests --n
 | `--auto name`  | |
 
 /etc/alternatives
+
+sudo update-alternatives --config editor
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2 200
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3 200
+
 
 ----------------
 ## **dmesg**
