@@ -1,8 +1,10 @@
 # wget https://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso
 
-sudo apt install libncurses5-dev libncursesw5-dev build-essential \
+sudo apt install libncurses5-dev libncursesw5-dev build-essential wget \
                  git tig golang graphviz exuberant-ctags zsh tmux curl \
                  python3-pip ca-certificates gnupg lsb-release clang-format
+
+sudo apt install apt-transport-https software-properties-common
 
 sudo chsh -s /usr/bin/zsh $USER
 
@@ -83,17 +85,21 @@ sudo apt-get install openjdk-8-jdk
 sudo apt-get install openjdk-11-jdk
 sudo apt-get install openjdk-17-jdk
 
+
+# python packages
+sudo pip install numpy matplotlib pandas scipy pypdf2 pytesseract pillow
+
 # sbt
 sudo apt-get update
-sudo apt-get install apt-transport-https curl gnupg -yqq
 echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
 echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | sudo tee /etc/apt/sources.list.d/sbt_old.list
-curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo -H gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/scalasbt-release.gpg --import
+curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | \
+    sudo -H gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/scalasbt-release.gpg --import
 sudo chmod 644 /etc/apt/trusted.gpg.d/scalasbt-release.gpg
 sudo apt-get update
 sudo apt-get install sbt=1.5.8
 
-# psql
+# psql client
 sudo apt install postgresql-client
 
 # Starship
@@ -146,7 +152,6 @@ writeable = yes            # writable用来指定该共享路径是否可写
 go install github.com/bazelbuild/bazelisk@latest
 
 # Bazel install
-sudo apt install apt-transport-https curl gnupg
 curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor > bazel.gpg
 sudo mv bazel.gpg /etc/apt/trusted.gpg.d/
 echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
@@ -223,7 +228,6 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 
 # Edge
 sudo apt update
-sudo apt install software-properties-common apt-transport-https wget
 wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main"
 sudo apt install microsoft-edge-dev
@@ -301,7 +305,7 @@ sudo apt install virtualbox-6.1
 # slack
 sudo snap install slack --classic
 
-# Microsoft Office 365
+# Microsoft Office 365 (Not Recommended)
 sudo snap install --beta office365webdesktop
 
 # To fix the dpkg error report
@@ -358,12 +362,9 @@ sudo apt install vlc vlc-plugin-fluidsynth fluid-soundfont-gm fluid-soundfont-gs
   # Save
 
 # QGis
-sudo apt install gnupg software-properties-common
 wget -qO - https://qgis.org/downloads/qgis-2021.gpg.key | sudo gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/qgis-archive.gpg --import
 sudo chmod a+r /etc/apt/trusted.gpg.d/qgis-archive.gpg
 sudo add-apt-repository -s -U "https://qgis.org/ubuntu"
-sudo add-apt-repository -S "deb-src https://qgis.org/ubuntu jammy main"
-# 对于不同linux版本，不同的qgis安装版本，这两行代码有所差异，具体构成规则可查看官网信息
 sudo apt update
 sudo apt install qgis qgis-plugin-grass
 

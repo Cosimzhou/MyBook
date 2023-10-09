@@ -2040,11 +2040,9 @@ apt lock: /var/lib/apt/lists/lock
 
 Manage apt's list of trusted keys
 
-
-
 | 选项[options]| 含义             |
 | ------------ | ---------------- |
-| add <file>     | add the key contained in <file> ('-' for stdin) |
+| add <file>     | add the key contained in <file> ('-' for stdin). gpg or asc file required |
 | del <keyid>    | remove the key <keyid> |
 | export <keyid> | output the key <keyid> |
 | exportall      | output all trusted keys |
@@ -2054,13 +2052,17 @@ Manage apt's list of trusted keys
 | finger         | list fingerprints |
 | adv            | pass advanced options to gpg (download key) |
 
- add filename 0
+| 选项 [options] | 含义    |
+| -------------- | ------- |
+| --keyring <gpg file> | Specify a certain keyring file    |
 
- del keyid d
-
- export keyid 0
-
- adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62
+```
+sudo apt-key --keyring /etc/apt/trusted.gpg.d/qgis-archive.gpg list
+sudo apt-key add filename 0
+sudo apt-key del keyid d
+sudo apt-key export keyid 0
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62
+```
 
 ## **add-apt-repository**
 

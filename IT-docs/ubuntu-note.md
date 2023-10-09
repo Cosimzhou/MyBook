@@ -122,6 +122,23 @@ sudo dpkg --configure -a
 sudo rm -rf /var/lib/apt/lists/*
 sudo apt-get update
 
+* Issue A
+> Skipping acquire of configured file 'main/binary-i386/Packages' as repository
+> 'https://qgis.org/ubuntu jammy InRelease' doesn't support architecture 'i386'
+>
+> Solution: add '[arch=amd64]' option
+
+* Issue B
+> W: https://qgis.org/ubuntu/dists/jammy/InRelease: Key is stored in legacy
+>  trusted.gpg keyring (/etc/apt/trusted.gpg), see the DEPRECATION section in
+>  apt-key(8) for details.
+>
+> Solution: sudo apt-key list |grep -iC 5 qgis
+>           sudo apt-key --keyring /etc/apt/trusted.gpg export A419C5BE | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/qgis.gpg
+>           sudo apt-key --keyring /etc/apt/trusted.gpg del A419C5BE
+
+
+
 # .desktop file
 /usr/share/applications/
 /var/lib/snapd/desktop/applications/
