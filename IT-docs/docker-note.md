@@ -41,6 +41,10 @@ View the container of the docker image
 docker run --rm --entrypoint yes <image>
 CONTAINER_ID=`docker container ls|grep <image> |awk '{print $1}'`
 docker exec -it CONTAINER_ID /bin/sh
+
+docker cp  CONTAINER_ID:/path/to/file <local_path>
+docker cp  <local_path> CONTAINER_ID:/path/to/file
+
 ```
 
 e.g.:

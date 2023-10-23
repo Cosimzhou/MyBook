@@ -110,6 +110,10 @@ Ctrl+Alt+F1   GUI
 Ctrl+Alt+F2~6 tty1~6
 Ctrl+Alt+f7   GUI in some lsb
 
+
+/etc/xdg/autostart/           # autostart
+/usr/share/applications/      # icon show application
+
 # apt fix
 sudo apt-get autoremove
 sudo apt-get --purge remove && sudo apt-get autoclean
@@ -134,7 +138,8 @@ sudo apt-get update
 >  apt-key(8) for details.
 >
 > Solution: sudo apt-key list |grep -iC 5 qgis
->           sudo apt-key --keyring /etc/apt/trusted.gpg export A419C5BE | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/qgis.gpg
+>           sudo apt-key --keyring /etc/apt/trusted.gpg export A419C5BE | \
+>                    sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/qgis.gpg
 >           sudo apt-key --keyring /etc/apt/trusted.gpg del A419C5BE
 
 

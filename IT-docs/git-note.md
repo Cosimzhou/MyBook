@@ -41,6 +41,17 @@ HEAD^2        # 合并分支的父节点，只有“2”有效
 ```
 
 
+
+git sparse clone
+git clone  --filter=blob:none --sparse $git-url
+    # blog tree commit tag
+
+git sparse checkout
+git sparse-checkout set <fold>
+git sparse-checkout add <fold>
+
+
+
 删除远程分支tag
 git push origin --delete <branchName>        #删除远程分支
 git push origin --delete tag <tagname>        #删除远程tag

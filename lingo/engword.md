@@ -22,6 +22,7 @@ bureaucracy
 
 cease ~ stop, finalized
 chronic
+clown crown crowd
 clumsy clunky
 circumstances
 circumvent ~ walk around
@@ -30,6 +31,7 @@ competitive
 complaint 抱怨  compliment 赞美
 compliant compliance ~ agree, follow one's order
 comply ^compliant compliment compliance
+concatenate
 controversial ~ cause argue, disput even quarrel
 consent     согласие
 consolidated
@@ -100,6 +102,7 @@ pranks - trick
 prepone
 preoccupied
 pretexting ~ excuse
+proactive ~ positive
 procure ~ purchase, buy sth for company
 proper ~ applicable
 provision

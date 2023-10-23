@@ -180,8 +180,10 @@ sudo apt install cinnamon
 
 ######################################
 # Input method
-sudo apt-get install fcitx fcitx-table-al
-sudo apt-get install fcitx-configtool fcitx-config-gtk
+sudo apt-get install fcitx fcitx-table-al fcitx-configtool fcitx-config-gtk
+  # install some fcitx and ibus input method
+sudo apt-get install ibus-table-wubi fcitx-table-wbpy
+sudo apt-get install fcitx5 fcitx5-chinese-addons
 
 sudo apt install joystick joy2key
 sudo modprobe joydev
