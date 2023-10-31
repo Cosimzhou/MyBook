@@ -69,7 +69,7 @@
 дети         kids
 
 читатель     reader
-учитель     teacher
+учитель      teacher
 
 
 Пожалуйста     please
@@ -82,12 +82,12 @@
 всё              all
 ещё раз      again, one more time
 тоже          too
-Уже         already
+Уже          already
 так          so
-ещё         more
+ещё          more
 хотя          but
-но but/yet/only
-зато      but/on the other hand
+но           but/yet/only
+зато         but/on the other hand
 
 
 
@@ -105,55 +105,56 @@
 проблема     problem
 
 
-кошка     cat
-лошадь     horse
-мышь       mouse
-собаки     dog
-змея     snake
+кошка         cat
+лошадь      horse
+мышь        mouse
+собаки      dog
+змея        snake
 лев         lion
-птица     bird
+птица       bird
 утка          duck
 волк          wolf
-курица      hen
+курица       hen
 муха          fly
-медведь     bear
+медведь      bear
 реба          fish
 
 
 
-фильм     film/movie
-Рюкзак     backpack
-Свитер     sweater
-полотенце towel
-Стол         table
+Рюкзак      backpack
+Свитер      sweater
 кровать     bed
+школа       school
+фильм       film/movie
+
+полотенце   towel
+Стол        table
 Тарелка     plate
 стакан      glass
-чашка          tea cup
-школа          school
-пиво          beer
-миска          bowl
-ложка     spoon
-вилка     fork
-нож          knife
-очки          glasses
-стул          chair
-мыло      soap
-сумка      bag
-подарок gift
+чашка       tea cup
+пиво        beer
+миска       bowl
+ложка       spoon
+вилка       fork
+нож         knife
+очки        glasses
+стул        chair
+мыло        soap
+сумка       bag
+подарок     gift
 
-слово     word
+слово       word
 тетради     textbooks
 тетрадь     notebook
-книги          book
-машина          car
-велосипед     bike
-здесь     here/there
+книги       book
+машина      car
+велосипед   bike
+здесь       here/there
 Площадь     square
-озеро         lake
-цирк          circus
-дереве     tree
-вещь          thing
+озеро       lake
+цирк        circus
+дереве      tree
+вещь        thing
 
 яблоко     apple
 груща     pear
@@ -183,11 +184,11 @@
 что это за
 
 
-　 动词的时表示行为和时间的关系。俄语动词有三种时：现在时、过去时和将来时。
+ 动词的时表示行为和时间的关系。俄语动词有三种时：现在时、过去时和将来时。
 
-　　现在时表示行为在说话时刻进行，即行为和说话时刻相吻合。
+现在时表示行为在说话时刻进行，即行为和说话时刻相吻合。
 
-　　比如：Учитель [проверяет] письменные работы учащихся. 老师在批改学生的书面作业。
+　比如：Учитель [проверяет] письменные работы учащихся. 老师在批改学生的书面作业。
 
 　　过去时表示行为在说话之前进行过。
 

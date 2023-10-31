@@ -134,6 +134,7 @@ suspect ~ suspicious
 teasing sarcasm ridicule
 tenable ~ viable, that can be defended successfully against opposition or attack
 tenant ~ a person who leases some housing
+tentative ~ in the first step or current step
 toil ~ suffer a tough large boring work
 tremendous ~ huge, a lot of
 triage ~ diagnose, check
