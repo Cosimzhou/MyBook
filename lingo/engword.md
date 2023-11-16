@@ -11,9 +11,12 @@ arbitrary
 authentic real
 
 backlog
+bare metal - bare machine
 behalf ~ benefit(financial)
 breach ~ compromise, break
 bribe ~ corruption
+brink ~ edge
+brute force
 boycott
 bully
 bureaucracy
@@ -45,6 +48,7 @@ disapprove - disagree
 disciplince
 disclaimer
 distinction ~ difference
+dubious
 dude bro mate
 
 eavesdropping ~ sniff
@@ -52,6 +56,7 @@ eligible ~ choosen, proper
 ergonomic
 ethical ~ some goodness of mind
 ethnic ~ racial
+excessive ~ too much
 
 fatigue
 feasible ~ viable
@@ -92,6 +97,7 @@ novel - new
 
 obtuse - stupid
 occlusion - blockage
+overkill
 
 pedantic
 perceive
@@ -150,6 +156,9 @@ vigorous
 volcano - crater, magma lava
 vowel - consonant
 vulnerability ~ weakness
+
+
+degree: deficient  sufficient  excessive
 
 whore - bitch
 shore - beach

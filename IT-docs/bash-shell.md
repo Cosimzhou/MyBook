@@ -146,6 +146,11 @@ ls -d */
 | 选项 [options] | 含义              |
 | -------------- | ----------------- |
 | -n             | 指定周期，单位秒  |
+| -c             | show color        |
+
+watch 'iwconfig wlp0s20f3 | grep -i signal'
+watch --color 'iwconfig wlp0s20f3 | grep -i signal | grep -i --color=always "\-*[0-9]* dbm"'
+
 
 ## **wc**
 
@@ -3201,6 +3206,8 @@ echo "password" | sudo -S $command
 
 <username> ALL=(ALL) NOPASSWD:ALL
 
+## @WIFI signal strength@
+iwconfig wlan0 | grep -i --color signal
 
 ## **@auto mount Network file system**
 

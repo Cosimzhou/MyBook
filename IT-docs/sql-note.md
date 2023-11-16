@@ -11,6 +11,11 @@ SQL note
 # INSERT语句格式
 ```sql
     INSERT INTO <table>[(<column1>, <column2>, ...)] VALUES(<value1>, <value2>, ...)[,(<value1>, <value2>, ...),...]
+
+
+    INSERT IGNORE INTO <table>[(<column1>, <column2>, ...)] VALUES(<value1>, <value2>, ...)[,(<value1>, <value2>, ...),...]
+
+    REPLACE INTO <table>[(<column1>, <column2>, ...)] VALUES(<value1>, <value2>, ...)[,(<value1>, <value2>, ...),...]
 ```
 
 # DELETE语句格式
@@ -146,9 +151,17 @@ CREATE INDEX idx_name ON table_name USING gist (column_name range_ops);
 
 # 排序
 ```sql
-ORDER BY <field> [DESC|ASC]
+ORDER BY <field>[,<field2>,...] [DESC|ASC]
+ORDER BY IF(ISNULL(<field>), 0, 1), <field> [DESC|ASC]
+ORDER BY FIELD(<field>, vals.....)
 ```
 
+```
+CASE WHEN <field> xxx THEN xxx
+     WHEN <field> xxx THEN xxx
+     WHEN <field> xxx THEN xxx
+     ELSE xxx END
+```
 
 # 查询重复的记录
 ```sql

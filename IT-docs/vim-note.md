@@ -85,6 +85,15 @@ set fdm=xxx
 | marker  | 对文中的标志折叠|
 
 
+## Spell
+:set spell in Command Mode to enable spell check feature. You can also specify the language with (or any other language code).
+:set spell spelllang=en_us
+:set nospell
+
+]s     Use ]s and s to move your cursor to the next and previous misspelled word, respectively.
+z=
+Type z= to find suggestions for the misspelled word. You can also add words to the spellfile with zg.
+zg           Add word under the cursor as a good word
 
 :ta var        列出代码
 
@@ -318,14 +327,16 @@ z   上下文
 :bwipe       清理表外缓存
 
 缓存标识及含义
-u 列表外缓冲区 | unlisted-buffer|。
-% 当前缓冲区。
-# 轮换缓冲区。
-a 激活缓冲区，缓冲区被加载且显示。
-h 隐藏缓冲区，缓冲区被加载但不显示。
-= 只读缓冲区。
-- 不可改缓冲区， 'modifiable' 选项不置位。
-+ 已修改缓冲区。
+| Symbol | 含义    |
+| ------ | ------- |
+| % | 当前缓冲区。|
+| # | 轮换缓冲区。|
+| a | 激活缓冲区，缓冲区被加载且显示。|
+| h | 隐藏缓冲区，缓冲区被加载但不显示。|
+| u | 列表外缓冲区 unlisted-buffer。|
+| = | 只读缓冲区。|
+| - | 不可改缓冲区，'modifiable' 选项不置位。|
+| + | 已修改缓冲区。|
 
 
 @显示行号

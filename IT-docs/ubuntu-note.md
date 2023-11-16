@@ -65,6 +65,9 @@ xdotool search . getwindowname %@
 
 wmctrl -i -r $WINDOWID -b toggle,above #move window topmost
 ```
+# Detect the metrics of devices
+sensors  # show CPU temperature related info
+iwconfig # show wireless network device info
 
 # 手动启动网络连接
 dmesg|grep eth0
