@@ -21,8 +21,7 @@ boycott
 bully
 bureaucracy
 
-
-
+casual ~ non-formal
 cease ~ stop, finalized
 chronic
 clown crown crowd
@@ -47,6 +46,7 @@ deliberate
 disapprove - disagree
 disciplince
 disclaimer
+disparate - different
 distinction ~ difference
 dubious
 dude bro mate
@@ -54,6 +54,7 @@ dude bro mate
 eavesdropping ~ sniff
 eligible ~ choosen, proper
 ergonomic
+errand ~ chore -> affair
 ethical ~ some goodness of mind
 ethnic ~ racial
 excessive ~ too much
@@ -83,7 +84,7 @@ justification ~ excuse
 lavish
 legitimate
 leer -  look at sb slily
-lewd --
+lewd -- lustful [(xia)liu de]
 liable ~ should be responsible to sth
 
 malicious
@@ -106,7 +107,7 @@ pinpoint
 postpone <-> prepone
 pranks - trick
 prepone
-preoccupied
+preoccupied - lost in thought
 pretexting ~ excuse
 proactive ~ positive
 procure ~ purchase, buy sth for company
@@ -124,6 +125,7 @@ retrofit ~ improve
 
 sabotage ~ disturb
 shove - push
+significance ~ meaning
 slopy
 slur -
 snip  略
@@ -157,8 +159,10 @@ volcano - crater, magma lava
 vowel - consonant
 vulnerability ~ weakness
 
+------------------------
 
 degree: deficient  sufficient  excessive
+                   adequate
 
 whore - bitch
 shore - beach

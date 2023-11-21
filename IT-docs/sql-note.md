@@ -48,6 +48,9 @@ WHERE condition;
 INSERT INTO table2
 SELECT * FROM table1
 WHERE condition;
+
+-- temp table
+SELECT * INTO table1__backup FROM table1;
 ```
 
 # ALTER语句格式
@@ -90,6 +93,8 @@ WHERE condition;
 ALTER SEQUENCE mapshop.devices_id_seq RESTART WITH 20;
 
 TRUNCATE xxx_seq RESTART identity;  -- truncating a table back to 1
+
+SELECT nextval('serial');
 ```
 
 # DISTINCT 去重
@@ -128,6 +133,16 @@ ORDER BY (t.updated_time, t.rank);
 -- ntile
 
 SELECT NTILE(4) OVER(ORDER BY id DESC) AS ntile, * FROM mapshop.change_records;
+```
+
+```
+SELECT ROW_NUMBER() OVER () AS row_num,
+       article_code,
+       article_name,
+       branch,
+       units_sold
+FROM  Sales
+WHERE article_code IN ( 101, 102, 103 )
 ```
 
 # CREATE TABLE建表
