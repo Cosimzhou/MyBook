@@ -517,7 +517,7 @@ kein Zweifel - sans doute - без сомнения
 | bedauern | regret | regretter | сожалеть | []|
 | strafen | punish | punir | наказывать | []|
 | verstehen | understand | comprendre | понимать | []|
-| | | | | []|
+| | rub | | | []|
 | | | | | []|
 | | | | | []|
 | | | | | []|

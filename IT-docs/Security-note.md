@@ -42,7 +42,7 @@ $4a^3+27b^2(\mod p)\neq 0$ 其中，$x,y,a,b\in F_p$，则满足式(2)的点$(x,
 |           | 二进制 | 支持证书 | 保存私钥 | 密码保护 | 应用场景 | 详情命令 |
 | --------- | ------ | -------- | -------- | -------- | -------- | -------- |
 | .der/.cer |   是   |     是   |     否   |     否   | Java和Windows环境 | `openssl x509 -inform der -text -noout -in x.der` |
-| .crt      |   可   |     是   |     否   |     否   | 同pem | 同pem或der|
+| .crt      |   可   |     是   |     否   |     否   | 同pem | 同pem或der |
 | .pfx/.p12 |   是   |     是   |     是   |     是   | IIS服务器 | `openssl pkcs12 -in for-iis.pfx` |
 | .p7b      |   是   |     是   |     是   |     是   | | |
 | .jks      |   是   |     是   |     是   |     是   | Tomcat服务器 | |

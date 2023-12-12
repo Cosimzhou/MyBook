@@ -23,7 +23,9 @@ bureaucracy
 
 casual ~ non-formal
 cease ~ stop, finalized
+choke
 chronic
+chubby
 clown crown crowd
 clumsy clunky
 circumstances
@@ -52,6 +54,7 @@ dubious
 dude bro mate
 
 eavesdropping ~ sniff
+elaborate ~ add detail
 eligible ~ choosen, proper
 ergonomic
 errand ~ chore -> affair
@@ -64,6 +67,8 @@ feasible ~ viable
 flexible
 flaw - crack
 fond - funny
+
+grind
 
 harrass
 hesitate
@@ -86,6 +91,7 @@ legitimate
 leer -  look at sb slily
 lewd -- lustful [(xia)liu de]
 liable ~ should be responsible to sth
+lodge ~ settle
 
 malicious
 metropolis
@@ -100,21 +106,23 @@ obtuse - stupid
 occlusion - blockage
 overkill
 
-pedantic
+pathetic - pite
+pedantic  书呆子气
 perceive
 perjury ~ make a fake one with malicious
 pinpoint
 postpone <-> prepone
 pranks - trick
-prepone
 preoccupied - lost in thought
 pretexting ~ excuse
 proactive ~ positive
 procure ~ purchase, buy sth for company
+proficient ~ expert
 proper ~ applicable
 provision
 punctual
 
+recant
 refrain ~ control it, do not let it out
 reluctant ~ hesitating
 reimbursement
@@ -122,12 +130,14 @@ reprisal ~ retaliation
 retaliation ~ 报复
 retroactive ~ retrospective
 retrofit ~ improve
+rub
 
 sabotage ~ disturb
 shove - push
 significance ~ meaning
 slopy
 slur -
+smash - crush
 snip  略
 sophisticated
 specific
@@ -136,8 +146,12 @@ spinal
 spite ~ hate, hostile
 standoff ~ hung in a circumstance
 strive ~ struggle
+subtle ~ smart, hidden
 survey ~ measure, statistics, poll
 suspect ~ suspicious
+swollen ~ fat
+swallow ~ drink down
+synonym <-> antonym
 
 teasing sarcasm ridicule
 tenable ~ viable, that can be defended successfully against opposition or attack
@@ -151,6 +165,7 @@ triage ~ diagnose, check
 undermine ~ reduce/weaken sth
 unforeseen
 
+wand
 
 verbal - oral
 vice versa
@@ -161,11 +176,25 @@ vulnerability ~ weakness
 
 ------------------------
 
+napkin diaper tissue
+
+stomp chomp
+chomp - crunch
+
 degree: deficient  sufficient  excessive
                    adequate
 
 whore - bitch
 shore - beach
+
+# Geography
+strait isthmus
+bay gulf
+peninsula
+volcano crater
+
+
+Instantly my hips began to rock again and I was unaware that I had begun to forcefully grind Ming-Lee's wand into my sopping wet pussy.
 
 ------------------------
 
@@ -208,10 +237,11 @@ headwinds - tailwinds
 lockdown
 
 
-LMK   let me know
-LGTM  looks good to me
+BRB   be right back
 FYI   for you information
 IMO   in my opinion
-TBH   to be honest
-BRB   be right back
+LGTM  looks good to me
+LMK   let me know
 LOL   laugh out loud
+TBH   to be honest
+WDYM  what do you mean
